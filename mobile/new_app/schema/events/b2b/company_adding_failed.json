@@ -1,0 +1,19 @@
+{
+  "description": "При добавлении компании возникла ошибка",
+  "properties": {
+    "error_code": {
+      "description": "Код ошибки",
+      "type": "number"
+    },
+    "error_text": {
+      "description": "Текст ошибки",
+      "type": "string"
+    }
+  },
+  "required": [
+    "error_code",
+    "error_text"
+  ],
+  "title": "Company Adding Failed",
+  "type": "object"
+}

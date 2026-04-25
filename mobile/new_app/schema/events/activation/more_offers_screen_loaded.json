@@ -1,0 +1,47 @@
+{
+  "description": "При каждой загрузки экрана с товарами, который открывается после нажатия на кнопку Еще N предложений от X рублей в избранном",
+  "properties": {
+    "price": {
+      "description": "Отображаемая цена товара",
+      "type": "string"
+    },
+    "cnt_offers": {
+      "description": "Сколько еще предложений доступно (параметр N из описания события)",
+      "type": "string"
+    },
+    "min_price": {
+      "description": "Минимальная цена доступных предложений (параметр X из описания события)",
+      "type": "string"
+    },
+    "store_id": {
+      "description": "ID ритейлера, который отображается",
+      "type": "string"
+    },
+    "store_ids": {
+      "description": "Массив с id ритейлеров, у которых есть доступные предложения по данному товару",
+      "type": "array",
+      "items": {
+        "description": "Retailer ID",
+        "type": "number"
+      }
+    },
+    "source": {
+      "description": "В каком разделе Любимых пользователь кликнул на фильтр (Понравилось или Уже покупали)",
+      "type": "string",
+      "enum": [
+        "favourites_liked",
+        "favourites_bought"
+      ]
+    }
+  },
+  "required": [
+    "price",
+    "cnt_offers",
+    "min_price",
+    "store_id",
+    "store_ids",
+    "source"
+  ],
+  "title": "More Offers Screen Loaded",
+  "type": "object"
+}

@@ -1,0 +1,19 @@
+{
+  "description": "Показ информационного баннера, содержимое баннера определяется в title для возможности унификации события",
+  "properties": {
+    "banner_title": {
+      "description": "title из баннера",
+      "type": "string"
+    },
+    "source": {
+      "description": "Экран на котором пользователю показали баннер",
+      "$ref": "#/definitions/InfoBannerSource"
+    }
+  },
+  "required": [
+    "banner_title",
+    "source"
+  ],
+  "title": "Info Banner View",
+  "type": "object"
+}

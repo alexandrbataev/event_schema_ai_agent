@@ -1,0 +1,17 @@
+{
+  "description": "Заказан документ в апп B2B",
+  "properties": {
+    "document_name": {
+      "description": "Выбранный документ",
+      "type": "string",
+      "enum": [
+        "reconciliation_report"
+      ]
+    }
+  },
+  "required": [
+    "document_name"
+  ],
+  "title": "B2B Document Request Completed",
+  "type": "object"
+}

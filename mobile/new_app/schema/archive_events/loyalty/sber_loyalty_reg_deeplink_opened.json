@@ -1,0 +1,14 @@
+{
+  "description": "При переходе по диплинку регистрации СберЛоялти",
+  "properties": {
+    "is_address_selected": {
+      "description": "Выбрал адрес или нет",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "is_address_selected"
+  ],
+  "title": "Sber Loyalty Reg Deeplink Opened",
+  "type": "object"
+}

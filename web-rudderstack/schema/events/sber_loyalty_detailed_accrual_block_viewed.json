@@ -1,0 +1,27 @@
+{
+  "description": "Каждый раз, когда пользователь видит блок с детализацией начисляемых за заказ бонусов",
+  "properties": {
+    "status": {
+      "description": "Состояние детализации бонусов в блоке на момент загрузки: 'hide' - скрыта, 'shown' - развернута",
+      "type": "string",
+      "enum": [
+        "hide",
+        "shown"
+      ]
+    },
+    "source": {
+      "description": "Экран, на катором был отрисован блок",
+      "type": "string",
+      "enum": [
+        "checkout",
+        "postcheckout"
+      ]
+    }
+  },
+  "required": [
+    "status",
+    "source"
+  ],
+  "title": "Sber Loyalty Detailed Accrual Block Viewed",
+  "type": "object"
+}

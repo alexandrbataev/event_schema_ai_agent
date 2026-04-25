@@ -1,0 +1,131 @@
+{
+  "description": "Каждый раз, когда пользователь успешно оформляет заказ (любой). Уточнение: сейчас событие отправляется со страницы Спасибо за заказ",
+  "properties": {
+    "order_items": {
+      "description": "Массив товаров, которые входят в текущий оформленный заказ. Каждый товар представляет собой json вида {currency: валюта, name: наименование товара, price: цена товара, quantity: кол-во товара в заказе, retailerSku: retailerSku, sku: sku, total: итоговая стоимость товара}",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Товар, входящий в оформленный заказ, представляет собой json вида {currency: валюта, name: наименование товара, price: цена товара, quantity: кол-во товара в заказе, retailerSku: retailerSku, sku: sku, total: итоговая стоимость товара}",
+        "properties": {
+          "currency": {
+            "description": "Валюта",
+            "type": "string"
+          },
+          "name": {
+            "description": "Наименование товара",
+            "type": "string"
+          },
+          "price": {
+            "description": "Цена товара",
+            "type": "number"
+          },
+          "quantity": {
+            "description": "Кол-во товара в заказ",
+            "type": "number"
+          },
+          "retailerSku": {
+            "description": "retailerSku",
+            "type": "string"
+          },
+          "sku": {
+            "description": "sku",
+            "type": "string"
+          },
+          "total": {
+            "description": "Итоговая стоимость товара",
+            "type": "number"
+          },
+          "b2b_need_docs": {
+            "description": "Прожата галочка Нужны документы (отправляем true если прожата при оплате по корп карте, false если не прожата по корп карте, и не отправляем в остальных случаях)",
+            "type": "boolean"
+          },
+          "bank_discount_amount": {
+            "description": "Сумма примененной доп. скидки при оплате картой сбера. Если скидка сбера не была применена, то присылать 0",
+            "type": "number"
+          }
+        },
+        "required": [
+          "currency",
+          "name",
+          "price",
+          "quantity",
+          "retailerSku",
+          "sku",
+          "total"
+        ]
+      }
+    },
+    "store_ids": {
+      "description": "Массив сторов, из которых был сделан заказ. В случае мультизаказа может состоять более, чем из одного значения.",
+      "type": "array",
+      "items": {
+        "description": "store_id, из которого оформлен заказ",
+        "type": "number"
+      }
+    },
+    "payment_method": {
+      "description": "Метод оплаты заказа. Примеры: Картой онлайн, Картой курьеру, SberPay и тд.",
+      "type": "string"
+    },
+    "address": {
+      "description": "Адрес заказа: адрес, указанный клиентом, в случае доставки курьером (delivery_method='by_courier') и адрес магазина в случае самовывоза (delivery_method='pickup')",
+      "type": "string"
+    },
+    "ship_total": {
+      "description": "Стоимость доставки",
+      "type": "number"
+    },
+    "order_sequence": {
+      "description": "Номер оформленного заказа пользователем",
+      "type": "number"
+    },
+    "promo_total": {
+      "description": "Размер промо",
+      "type": "number"
+    },
+    "item_total": {
+      "description": "Суммарная стоимость товаров в заказе",
+      "type": "number"
+    },
+    "coupon": {
+      "description": "Промокод",
+      "type": "string"
+    },
+    "delivery_method": {
+      "description": "Метод доставки",
+      "type": "string",
+      "enum": [
+        "pickup",
+        "by_courier"
+      ]
+    },
+    "order_number": {
+      "description": "Идентификатор заказа формата R*********. Может не совпадать с контекстным айдишником заказа в случае, когда пользователь находился в каком-то одном ритейлере, у него заранее была собрана корзина в другом ритейлере и он решил из первого ритейлера выкупить корзину второго.",
+      "type": "string"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера",
+      "type": "string"
+    },
+    "shipment_number": {
+      "description": "Идентификатор доставки. Показывается тот идентификатор, на страницу спасибо которого просматривает пользователь.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "order_items",
+    "store_ids",
+    "payment_method",
+    "address",
+    "ship_total",
+    "order_sequence",
+    "promo_total",
+    "item_total",
+    "coupon",
+    "delivery_method",
+    "order_number"
+  ],
+  "title": "Order Completed",
+  "type": "object"
+}

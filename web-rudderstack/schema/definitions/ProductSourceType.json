@@ -1,0 +1,10 @@
+{
+  "title": "ProductSourceType",
+  "description": "Тип источника добавления",
+  "type": "string",
+  "enum": [
+    "product_card",
+    "listing",
+    "search_suggestions"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "description": "Открытие внешнего окна авторизации",
+  "properties": {
+    "type": {
+      "description": "Способ авторизации",
+      "type": "string",
+      "enum": [
+        "phone",
+        "sber",
+        "social",
+        "apple"
+      ]
+    },
+    "source": {
+      "description": "Откуда именно была открыта модалка",
+      "$ref": "#/definitions/LoginSourceWeb"
+    },
+    "b2b": {
+      "description": "b2b флоу авторизации",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "title": "Login Started",
+  "type": "object"
+}

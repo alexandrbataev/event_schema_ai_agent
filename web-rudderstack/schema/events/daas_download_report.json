@@ -1,0 +1,19 @@
+{
+  "description": "Нажали кнопку Скачать отчет",
+  "properties": {
+    "email": {
+      "description": "Почта пользователя",
+      "type": "string"
+    },
+    "source": {
+      "description": "С какой страницы нажали кнопку",
+      "type": "string"
+    }
+  },
+  "required": [
+    "email",
+    "source"
+  ],
+  "title": "DAAS Download Report",
+  "type": "object"
+}

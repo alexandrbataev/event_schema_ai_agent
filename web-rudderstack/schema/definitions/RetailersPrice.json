@@ -1,0 +1,29 @@
+{
+  "title": "RetailersPrice",
+  "type": "object",
+  "description": "Сущность стоимости корзины для одного ритейлера",
+  "properties": {
+    "retailer_id": {
+      "description": "id ритейлера",
+      "type": "number"
+    },
+    "total_price": {
+      "description": "Итоговая сумма корзины, здесь всегда указываем сумму без скидки сбера",
+      "type": "number"
+    },
+    "bank_total_price": {
+      "description": "Итоговая сумма корзины с учетом скидки сбера. Если скидки сбера нет, то пишем сумму без учета скидки сбера",
+      "type": "number"
+    },
+    "bank_discount_amount": {
+      "description": "Сумма скидки сбера ",
+      "type": "number"
+    }
+  },
+  "required": [
+    "retailer_id",
+    "total_price",
+    "bank_total_price",
+    "bank_discount_amount"
+  ]
+}

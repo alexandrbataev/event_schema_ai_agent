@@ -1,0 +1,52 @@
+{
+  "description": "Событие приходит каждый раз, когда пользователь успешно авторизуется в СМ. Событие приходит для авторизаций любого типа (телефон, сбер, соцсети, apple) и для регистраций, в том числе для регистраций по SberID, при этом событие Login не приходит на привязку SberID к зарегистрированному аккаунту.",
+  "properties": {
+    "type": {
+      "description": "Способ авторизации phone / sber / apple / social / lk Sber / Sber Business Id",
+      "type": "string",
+      "enum": [
+        "phone",
+        "sber",
+        "social",
+        "apple",
+        "lk Sber",
+        "SberBusiness ID"
+      ]
+    },
+    "registration": {
+      "description": "Параметр = 1, если логин является регистрацией.",
+      "type": "boolean"
+    },
+    "source": {
+      "description": "Откуда именно была открыта модалка",
+      "$ref": "#/definitions/LoginSourceWeb"
+    },
+    "is_after_error": {
+      "description": "Флаг, который показывает, что событие логина произошло после ошибки логина, то есть успешный логин произошел не с первой попытки",
+      "type": "boolean"
+    },
+    "b2b": {
+      "description": "Признак пользователя b2b",
+      "type": "boolean"
+    },
+    "repeated_flg": {
+      "description": "Флаг того, что ранее пользователь уже делал хотя бы 1 заказ",
+      "type": "boolean"
+    },
+    "promo_terms_accepted": {
+      "description": "Согласен ли пользователь на подписку",
+      "type": "boolean"
+    },
+    "promo_terms_accepted_at": {
+      "description": "Текущие дата и время",
+      "type": "string"
+    },
+    "success_count": {
+      "description": "Количество успешных попыток",
+      "type": "number"
+    }
+  },
+  "required": [],
+  "title": "Login",
+  "type": "object"
+}

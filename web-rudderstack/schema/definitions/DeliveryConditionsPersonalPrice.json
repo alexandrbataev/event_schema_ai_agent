@@ -1,0 +1,31 @@
+{
+  "title": "DeliveryConditionsPersonalPrice",
+  "type": "object",
+  "description": "Каждый объект содержит информацию по стоимости каждого компонента до и после применения персонального (безакцептного) промо",
+  "properties": {
+    "personal_price_modifier_type": {
+      "description": "Тип компонента (модификатора) стоимости доставки: Сборка/Доставка/Сервис/Сурдж",
+      "type": "string",
+      "enum": [
+        "assembly",
+        "basic_price",
+        "service_charge",
+        "surge_addition",
+        "delivery"
+      ]
+    },
+    "new_price": {
+      "description": "Стоимость компонента доставки после применения безакцептного промо в рублях",
+      "type": "number"
+    },
+    "old_price": {
+      "description": "Стоимость компонента доставки до применения безакцептного промо в рублях",
+      "type": "number"
+    }
+  },
+  "required": [
+    "personal_price_modifier_type",
+    "new_price",
+    "old_price"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз, когда пользователь видит баннер любимая категория",
+  "properties": {},
+  "required": [],
+  "title": "Favorite Category Banner Viewed",
+  "type": "object"
+}

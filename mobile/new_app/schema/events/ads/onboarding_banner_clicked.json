@@ -1,0 +1,34 @@
+{
+  "description": "Клик по кнопке в баннере",
+  "properties": {
+    "banner_id": {
+      "description": "Уникальный идентификатор акции",
+      "type": "number"
+    },
+    "button": {
+      "description": "Текст кнопки (в примере - “Понятно“)",
+      "type": "string"
+    },
+    "description": {
+      "description": "Текст баннера (нижний) - в примере “Воспользуйтесь праздничным промокодом”",
+      "type": "string"
+    },
+    "position": {
+      "description": "Позиция баннера в крутилке",
+      "type": "number"
+    },
+    "title": {
+      "description": "Текст баннера (верхний) - в примере “250 р на следующие два заказа”",
+      "type": "string"
+    }
+  },
+  "required": [
+    "banner_id",
+    "title",
+    "description",
+    "button",
+    "position"
+  ],
+  "title": "Onboarding Banner Clicked",
+  "type": "object"
+}

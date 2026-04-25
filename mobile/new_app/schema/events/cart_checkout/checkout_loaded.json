@@ -1,0 +1,73 @@
+{
+  "description": "Каждый раз, когда пользователь успешно открывает экран чекаута",
+  "properties": {
+    "available_methods": {
+      "description": "Массив из доступных способов оплаты",
+      "type": "array",
+      "items": {
+        "description": "Способ оплаты",
+        "type": "string"
+      }
+    },
+    "cart_type": {
+      "description": "Тип корзины",
+      "type": "string"
+    },
+    "order_number": {
+      "description": "Строковый ID заказа",
+      "type": "string"
+    },
+    "retailers": {
+      "description": "Массив из retailer_id, из которых пользователь пытается зачекаутиться",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "description": "retailer_id"
+      }
+    },
+    "type_delivery": {
+      "description": "Метод доставки выбранного магазина, которым пользователь получит заказ",
+      "$ref": "#/definitions/DeliveryMethod"
+    },
+    "store_id": {
+      "description": "id магазина, в котором пользователь начал чекаут",
+      "type": "number"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (grocery, pharmacy или restaurant)",
+      "type": "string"
+    },
+    "shipment_number": {
+      "description": "К какому шипменту относится заказ, на чекаут которого перешел пользователь",
+      "type": "string"
+    },
+    "is_bank_discount_available": {
+      "description": "Возможность применения доп. скидки при оплате картой сбера",
+      "type": "boolean"
+    },
+    "order_total": {
+      "description": "Общая сумма заказа без учета долга в рублях",
+      "type": "number"
+    },
+    "debt_total": {
+      "description": "Сумма долга в рублях. Если долга нет, отправлять 0. ",
+      "type": "number"
+    },
+    "is_biometrics": {
+      "description": "Есть ли в корзине товары, которые необходимо будет подтвердить биометрией",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "retailers",
+    "order_number",
+    "available_methods",
+    "cart_type",
+    "type_delivery",
+    "store_id",
+    "retailer_vertical",
+    "shipment_number"
+  ],
+  "title": "Checkout Loaded",
+  "type": "object"
+}

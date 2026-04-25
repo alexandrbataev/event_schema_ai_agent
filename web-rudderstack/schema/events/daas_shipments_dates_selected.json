@@ -1,0 +1,29 @@
+{
+  "description": "Выбор дат на странице с историей заявок",
+  "properties": {
+    "email": {
+      "description": "Почта пользователя",
+      "type": "string"
+    },
+    "source": {
+      "description": "С какой страницы нажали кнопку",
+      "type": "string"
+    },
+    "start_date": {
+      "description": "Выбранная дата начала периода",
+      "type": "string"
+    },
+    "end_date": {
+      "description": "Выбранная дата окончания периода",
+      "type": "string"
+    }
+  },
+  "required": [
+    "email",
+    "source",
+    "start_date",
+    "end_date"
+  ],
+  "title": "DAAS Shipments Dates Selected",
+  "type": "object"
+}

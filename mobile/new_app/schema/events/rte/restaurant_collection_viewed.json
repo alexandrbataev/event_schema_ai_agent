@@ -1,0 +1,19 @@
+{
+  "description": "Срабатывает при первом попадании подборки на списке ресторанов в видимую область пользователя. Отправлем при каждой перезагрузке списка ресторанов",
+  "properties": {
+    "collection_info": {
+      "description": "id и название подборки из списка ресторанов, которую увидел пользователь",
+      "$ref": "#/definitions/RestaurantCollectionInfo"
+    },
+    "position": {
+      "description": "Порядковый номер подборки с единицы",
+      "type": "number"
+    }
+  },
+  "required": [
+    "collection_info",
+    "position"
+  ],
+  "title": "Restaurant Collection Viewed",
+  "type": "object"
+}

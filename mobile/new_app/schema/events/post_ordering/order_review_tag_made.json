@@ -1,0 +1,38 @@
+{
+  "description": "Пользователь проставил проставил тег",
+  "properties": {
+    "tag": {
+      "description": "Проставленный тег",
+      "type": "string"
+    },
+    "source": {
+      "description": "С какого экрана пользователь перешел к модалке оценки заказа",
+      "$ref": "#/definitions/ReviewOrderSource"
+    },
+    "shipment_number": {
+      "description": "Идентификатор заказа",
+      "type": "string"
+    },
+    "order_number": {
+      "description": "Номер заказа",
+      "type": "string"
+    },
+    "kind": {
+      "description": "Кому поставлена оценка за заказ",
+      "type": "string",
+      "enum": [
+        "products",
+        "delivery",
+        "both"
+      ]
+    }
+  },
+  "required": [
+    "tag",
+    "shipment_number",
+    "order_number",
+    "kind"
+  ],
+  "title": "Order Review Tag Made",
+  "type": "object"
+}

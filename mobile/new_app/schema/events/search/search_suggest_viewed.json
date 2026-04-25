@@ -1,0 +1,40 @@
+{
+  "description": "Каждый раз, когда пользователь видит холодные саджесты (недавние/популярные запросы или кастомные подсказки)",
+  "properties": {
+    "suggestions_blocks": {
+      "description": "Массив блоков с текстовыми подсказками, содержит ['Блок подсказок': [{'текст подсказки', 'позицию', 'тип подсказки'}] ]",
+      "type": "array",
+      "properties": {
+        "block_name": {
+          "description": "Название блока подсказок",
+          "type": "string"
+        },
+        "suggests": {
+          "description": "Массив подсказок",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BlockSuggestion"
+          }
+        }
+      }
+    },
+    "source": {
+      "description": "Источник поиска, где кликает по саджестеру. Возможные значения в definitions",
+      "type": "string",
+      "$ref": "#/definitions/SearchSource"
+    },
+    "product_centricity_flag": {
+      "description": "Событие сработало в рамкох товароцентричного флоу",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "position",
+    "search_block_name",
+    "item_name",
+    "is_merge",
+    "block_suggestions"
+  ],
+  "title": "Search Suggest Viewed",
+  "type": "object"
+}

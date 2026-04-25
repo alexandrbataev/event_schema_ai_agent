@@ -1,0 +1,82 @@
+{
+  "description": "Каждый раз, когда пользователь просматривает корзину",
+  "properties": {
+    "is_empty": {
+      "description": "True, если в корзине нет товаров , False в остальных случаях",
+      "type": "boolean"
+    },
+    "retailers_prices": {
+      "description": "Словарь с ключами retailer_id, total_price, bank_total_price, bank_discount_amount -  массив id ритейлеров, из которых у пользователя есть корзины если человек заходит даже в пустую корзину, надо присылать событие, заполнять [] (пустой массив)",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/RetailersPrice"
+      }
+    },
+    "is_delivery_change_available": {
+      "description": "Доступна ли смена способа доставки - переключалка 'доставка-самовывоз' как на скрине http://joxi.ru/KAxkwZqHvEQ3v2",
+      "type": "boolean"
+    },
+    "store_ids": {
+      "description": "Перечень id магазинов, отображенных как добавленные в корзину в моменте просмотра корзины (если ничего не добавлено, но корзину открыли, то ничего не отправляем)",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "description": "id магазина"
+      }
+    },
+    "pickup_items_unavaliable": {
+      "description": "Перечень sku товаров, которые недоступны для оформления в рамках заказа доставкой",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "description": "sku товара"
+      }
+    },
+    "weight_info": {
+      "description": "Показывает вес корзин(в граммах) в связке с айди ретейлера (для мультикорзин). В случае показа плашки/плашек (для мультикорзины) о перевесе будет отсылаться тип перевеса",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/WeightInfo"
+      }
+    },
+    "retailers_info": {
+      "description": "Список ритейлеров с информацией о них",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/RetailerInfo"
+      }
+    },
+    "source": {
+      "description": "C какого экрана был клик по корзине",
+      "$ref": "#/definitions/CartSource"
+    },
+    "store_start_time": {
+      "description": "Только если просмотр корзины магазина самовывоза (активного в момент просмотра корзины). Время начала работы магазина. Стрингой в формате hh:mm",
+      "type": "string"
+    },
+    "store_end_time": {
+      "description": "Только если просмотр корзины магазина самовывоза (активного в момент просмотра корзины). Время окончания работы магазина. Стрингой в формате hh:mm",
+      "type": "string"
+    },
+    "is_open_store": {
+      "description": "Только для самовывоза. Открыт ли магазин в момент срабатывания события",
+      "type": "boolean"
+    },
+    "from_now_to_store_time": {
+      "description": "Только для самовывоза. Время, в минутах. Если магазин открыт, то кол-во минут от текущего момента до закрытия, если магазин закрыт, то от текущего момента до открытия",
+      "type": "number"
+    },
+    "product_centricity_flag": {
+      "description": "Событие сработало в рамкох товароцентричного флоу",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "is_empty",
+    "retailers_prices",
+    "weight_info",
+    "retailers_info"
+  ],
+  "title": "Cart Viewed",
+  "type": "object"
+}

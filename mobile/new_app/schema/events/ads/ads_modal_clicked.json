@@ -1,0 +1,33 @@
+{
+  "description": "Срабатывает каждый раз, когда пользователь кликает на кнопку или на баннер на шторке",
+  "properties": {
+    "impression_id": {
+      "description": "Уникальный идентификатор взаимодействия",
+      "type": "string"
+    },
+    "asset_id": {
+      "description": "Уникальный идентификатор ассета",
+      "type": "string"
+    },
+    "source": {
+      "description": "Где именно была размещена шторка",
+      "$ref": "#/definitions/AdsBannerSource"
+    },
+    "next_page_url": {
+      "description": "Ссылка, по которой осуществлен переход",
+      "type": "string"
+    },
+    "is_video": {
+      "description": "Если баннер на шторке с видео",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "impression_id",
+    "asset_id",
+    "source",
+    "next_page_url"
+  ],
+  "title": "Ads Modal Clicked",
+  "type": "object"
+}

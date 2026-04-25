@@ -1,0 +1,22 @@
+{
+  "description": "Пользователь увидел в приложении точку входа в игру",
+  "properties": {
+    "source": {
+      "description": "Где была увидена точка входа",
+      "type": "string",
+      "enum": [
+        "main_main",
+        "product_card",
+        "retailer_main",
+        "profile",
+        "post_checkout",
+        "default"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Game Banner Viewed",
+  "type": "object"
+}

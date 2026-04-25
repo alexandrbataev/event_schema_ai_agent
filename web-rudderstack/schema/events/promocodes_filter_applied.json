@@ -1,0 +1,19 @@
+{
+  "description": "При каждом применение фильтра на экране промокодов",
+  "properties": {
+    "filter_name": {
+      "description": "Название примененного фильтра",
+      "type": "string"
+    },
+    "promocodes_cnt": {
+      "description": "Кол-во доступных промо после применения фильтра",
+      "type": "number"
+    },
+    "source": {
+      "description": "Откуда пользователь открыл экран",
+      "$ref": "#/definitions/PromoSource"
+    }
+  },
+  "title": "Promocodes Filter Applied",
+  "type": "object"
+}

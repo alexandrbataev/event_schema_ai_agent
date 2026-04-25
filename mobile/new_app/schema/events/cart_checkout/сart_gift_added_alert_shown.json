@@ -1,0 +1,24 @@
+{
+  "description": "Каждый раз при показе алерта связанного с добавлением подарка из корзины",
+  "properties": {
+    "retailer_id": {
+      "description": "id ритейлера",
+      "type": "number"
+    },
+    "text_message": {
+      "description": "Текст сообщения, который видит пользователь",
+      "type": "string"
+    },
+    "product_sku": {
+      "description": "sku товара после попытки добавить который показывается уведомление",
+      "type": "string"
+    }
+  },
+  "required": [
+    "retailer_id",
+    "text_message",
+    "product_sku"
+  ],
+  "title": "Cart Gift Added Alert Shown",
+  "type": "object"
+}

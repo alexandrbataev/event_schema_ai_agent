@@ -1,0 +1,30 @@
+{
+  "description": "Отображение предложения с промокодом на первый заказ и таймером внизу экрана (вместо ETA)",
+  "properties": {
+    "offer": {
+      "description": "Предложение",
+      "type": "string"
+    },
+    "promocode": {
+      "description": "Промокод",
+      "type": "string"
+    },
+    "source": {
+      "description": "На каком экране был отображен промокод",
+      "type": "string",
+      "enum": [
+        "main_retailer",
+        "catalogue",
+        "search"
+      ]
+    }
+  },
+  "required": [
+    "offer",
+    "promocode",
+    "source"
+  ],
+  "title": "Timer Promo Viewed",
+  "type": "object",
+  "$comment": "Экраны: main_retailer - на главной странице ритейлера; catalogue - в каталоге, после выбора ритейлера/ресторана; search - в поисковой выдаче"
+}

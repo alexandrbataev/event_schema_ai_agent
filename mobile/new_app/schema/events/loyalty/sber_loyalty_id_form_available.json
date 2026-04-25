@@ -1,0 +1,15 @@
+{
+  "description": "Каждый раз когда пользователю доступна шторка 'до 5% бонусами с покупок' на главном экране",
+  "properties": {
+    "is_available": {
+      "description": "указывает доступность true/false",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "is_available"
+  ],
+  "title": "Sber Loyalty Id Form Available",
+  "type": "object"
+}
+

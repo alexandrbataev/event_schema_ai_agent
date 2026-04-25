@@ -1,0 +1,37 @@
+{
+  "description": "Неуспешное сканирование (штрихкода или датаматрикса), на фронте не прошла валидация",
+  "properties": {
+    "scan_type_code": {
+      "type": "string",
+      "description": "тип отсканированного штрихода (датаматрикс или обычный штрихкод или не поняли, что за штрих-код)",
+      "enum": [
+        "datamatrix",
+        "barcode",
+        "unknown"
+      ]
+    },
+    "what_scan_for": {
+      "type": "string",
+      "description": "цель сканирования (для удаления или добавления)",
+      "enum": [
+        "for_added",
+        "for_deleted"
+      ]
+    },
+    "how_scanned": {
+      "type": "string",
+      "description": "как сканирует, через ручной ввод или через камеру",
+      "enum": [
+        "scan",
+        "manual_entry"
+      ]
+    }
+  },
+  "required": [
+    "scan_type_code",
+    "what_scan_for",
+    "how_scanned"
+  ],
+  "title": "Spg Failed Scanned",
+  "type": "object"
+}

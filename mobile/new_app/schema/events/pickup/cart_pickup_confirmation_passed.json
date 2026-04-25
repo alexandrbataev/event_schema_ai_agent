@@ -1,0 +1,19 @@
+{
+  "description": "Каждый раз, когда пользователь проходит попап подтверждения о нахождении в самовывозе при нажатии на кнопку чекаута",
+  "properties": {
+    "answer": {
+      "description": "Ключевой ответ пользователя на попап: pickup - Да, самовывозом; delivery - Нет, хочу изменить; cross - нажал на крестик / область вне попапа (если такой функционал учтён)",
+      "type": "string",
+      "enum": [
+        "pickup",
+        "delivery",
+        "cross"
+      ]
+    }
+  },
+  "required": [
+    "answer"
+  ],
+  "title": "Сart Pickup Confirmation Passed",
+  "type": "object"
+}

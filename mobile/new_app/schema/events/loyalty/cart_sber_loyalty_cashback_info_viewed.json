@@ -1,0 +1,24 @@
+{
+  "description": "При отображении начислений с заказа на корзине (когда попадает в поле зрения)",
+  "properties": {
+    "store_id": {
+      "description": "Идентификатор стора",
+      "type": "number"
+    },
+    "order_number": {
+      "description": "Номер заказа в рамках которого видно это начисление",
+      "type": "string"
+    },
+    "amount": {
+      "description": "Количество баллов спасибо, которые мы хотим начислить",
+      "type": "number"
+    }
+  },
+  "required": [
+    "store_id",
+    "order_number",
+    "amount"
+  ],
+  "title": "Cart Sber Loyalty Cashback Info Viewed",
+  "type": "object"
+}

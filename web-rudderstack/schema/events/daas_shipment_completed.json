@@ -1,0 +1,24 @@
+{
+  "description": "Нажата кнопка Отправить заявку",
+  "properties": {
+    "email": {
+      "description": "Почта пользователя",
+      "type": "string"
+    },
+    "source": {
+      "description": "С какой страницы нажали кнопку",
+      "type": "string"
+    },
+    "internal_shipment_number": {
+      "description": "Номер заявки в формате DS",
+      "type": "string"
+    }
+  },
+  "required": [
+    "email",
+    "source",
+    "internal_shipment_number"
+  ],
+  "title": "DAAS Shipment Completed",
+  "type": "object"
+}

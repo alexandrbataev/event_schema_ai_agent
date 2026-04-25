@@ -1,0 +1,53 @@
+{
+  "description": "Каждый раз, когда успешно пользователь выбрал товар в качестве предзамены",
+  "properties": {
+    "possible_replacements": {
+      "description": "массив sku возможных замен товара",
+      "type": "array",
+      "items": {
+        "description": "Sku товара",
+        "type": "string"
+      }
+    },
+    "added_order_item_sku": {
+      "description": "sku товара, на который представлены замены",
+      "type": "string"
+    },
+    "added_order_item_retailer_sku": {
+      "description": "sku товара у ритейлера, на который представлены замены",
+      "type": "string"
+    },
+    "selected_order_item_retailer_sku": {
+      "description": "sku товара у ритейлера, который выбран на замену",
+      "type": "string"
+    },
+    "selected_order_item_name": {
+      "description": "название товара, который выбран на замену",
+      "type": "string"
+    },
+    "added_order_item_name": {
+      "description": "название товара",
+      "type": "string"
+    },
+    "possible_replacements_number": {
+      "description": "количество возможных замен товара",
+      "type": "number"
+    },
+    "selected_order_item_sku": {
+      "description": "sku товара, который выбран на замену",
+      "type": "string"
+    }
+  },
+  "required": [
+    "possible_replacements",
+    "added_order_item_sku",
+    "added_order_item_retailer_sku",
+    "selected_order_item_retailer_sku",
+    "selected_order_item_name",
+    "added_order_item_name",
+    "possible_replacements_number",
+    "selected_order_item_sku"
+  ],
+  "title": "Pre Replacements Product Selected",
+  "type": "object"
+}

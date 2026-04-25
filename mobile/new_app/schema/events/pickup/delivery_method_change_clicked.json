@@ -1,0 +1,39 @@
+{
+  "description": "Изменение способа получения заказа по клику на переключалку доставка-самовывоз в шапке ритейлера, корзины, чекаута; событие уходит после ответа бэка об успешной смене способа получения",
+  "properties": {
+    "from_delivery_method": {
+      "description": "текущий метод доставки, тот, который поменяют этим кликом",
+      "$ref": "#/definitions/DeliveryMethod"
+    },
+    "to_delivery_method": {
+      "description": "метод доставки, на который кликнули, на который перешли",
+      "$ref": "#/definitions/DeliveryMethod"
+    },
+    "source": {
+      "description": "Откуда кликнули на переключалку",
+      "$ref": "#/definitions/ChangingShopSource"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (grocery, pharm или restaurant)",
+      "$ref": "#/definitions/RetailerVertical"
+    },
+    "from_store_id": {
+      "description": "store_id, который был до клика на переключалку способа получения заказа",
+      "type": "number"
+    },
+    "to_store_id": {
+      "description": "store_id, который назначился после клика на переключалку способа получения заказа. = from_store_id, если стор не изменился после переключения",
+      "type": "number"
+    }
+  },
+  "required": [
+    "from_delivery_method",
+    "to_delivery_method",
+    "source",
+    "retailer_vertical",
+    "from_store_id",
+    "to_store_id"
+  ],
+  "title": "Delivery Method Change Clicked",
+  "type": "object"
+}

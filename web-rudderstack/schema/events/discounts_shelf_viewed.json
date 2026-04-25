@@ -1,0 +1,26 @@
+{
+  "description": "Событие срабатывает каждый раз при попадании полки со скидками в видимую область пользователя (то есть приходит одно событие в самом начале просмотра полки).",
+  "properties": {
+    "product_ids": {
+      "description": "Список sku товаров, которые доступны в полке",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "sku товара"
+      }
+    },
+    "source": {
+      "description": "Где именно была размещена полка",
+      "$ref": "#/definitions/DiscountsShelfSource"
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника, если есть. Если баннер показан в категории - category_id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Discounts Shelf Viewed",
+  "type": "object"
+}

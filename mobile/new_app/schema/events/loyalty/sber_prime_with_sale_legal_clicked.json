@@ -1,0 +1,21 @@
+{
+  "description": "Каждый раз когда пользователь кликнул на условия оферты в модалке нативной продажи подписки Прайм",
+  "properties": {
+    "source": {
+      "description": "Откуда была открыта модалка",
+      "type": "string",
+      "enum": [
+        "profile",
+        "balance_modal",
+        "cart",
+        "deeplink",
+        "payment processing"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Sber Prime With Sale Legal Clicked",
+  "type": "object"
+}

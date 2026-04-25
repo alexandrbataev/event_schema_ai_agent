@@ -1,0 +1,39 @@
+{
+  "description": "",
+  "properties": {
+    "cart_quantity": {
+      "description": "Число позиций в корзине",
+      "type": "number"
+    },
+    "cart_total": {
+      "description": "Стоимость корзины",
+      "type": "number"
+    },
+    "cart_weight": {
+      "description": "Вес корзины",
+      "type": "number"
+    },
+    "merge_impossibility_reason_code": {
+      "description": "Текст ошибки недоступности",
+      "type": "string"
+    },
+    "source_order_id": {
+      "description": "order_id заказа откуда дозаказывают (корзина)",
+      "type": "string"
+    },
+    "target_order_id": {
+      "description": "order_id заказа куда дозаказывают",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_order_id",
+    "target_order_id",
+    "cart_weight",
+    "cart_quantity",
+    "cart_total",
+    "merge_impossibility_reason_code"
+  ],
+  "title": "Full Cart Merge Failed",
+  "type": "object"
+}

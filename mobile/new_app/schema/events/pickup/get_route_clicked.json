@@ -1,0 +1,19 @@
+{
+  "description": "Нажата кнопка - Как туда добраться (link on picture - http://joxi.ru/12MKa08ugE7Rqr)",
+  "properties": {
+    "shipment_number": {
+      "description": "Номер шипмента",
+      "type": "string"
+    },
+    "store_id": {
+      "description": "id стора, в котором сделали заказ",
+      "type": "number"
+    }
+  },
+  "required": [
+    "shipment_number",
+    "store_id"
+  ],
+  "title": "Get Route Clicked",
+  "type": "object"
+}

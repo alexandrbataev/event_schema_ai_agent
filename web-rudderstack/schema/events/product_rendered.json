@@ -1,0 +1,138 @@
+{
+  "description": "Отрисовка сниппета товара",
+  "properties": {
+    "is_stock": {
+      "description": "В наличии ли товар",
+      "type": "boolean"
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника, где был отрисован сниппет",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник просмотра сниппета товара",
+      "$ref": "#/definitions/ProductSource"
+    },
+    "sku": {
+      "description": "product_sku товара",
+      "type": "string"
+    },
+    "price": {
+      "description": "Цена после скидки",
+      "type": "string"
+    },
+    "sber_price": {
+      "description": "Фактическая, отображаемая цена товара (со скидкой по карте сбера)",
+      "type": "number"
+    },
+    "default_price": {
+      "description": "Цена до скидки",
+      "type": "string"
+    },
+    "position": {
+      "description": "Позиция товара - слева направо, сверху вниз",
+      "type": "string"
+    },
+    "store_id": {
+      "description": "Актуальный стор в случае межрителейрного опыта",
+      "type": "number"
+    },
+    "has_sber_prime_badge": {
+      "description": "Был ли на карточке бейдж СберПрайм",
+      "type": "boolean"
+    },
+    "badges": {
+      "description": "Массив словарей с характеристиками отображенных на сниппете/карточке бейджей. Статус загрузки бейджей записывается в параметр badges_status",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Badge"
+      }
+    },
+    "badges_status": {
+      "description": "Статус запроса бейджей. initial - запрос по какой-то причине не отправился (есть ли бейджи на товаре не знаем); loading - ждем ответ по запросу (при этом badges null, не знаем есть ли они на товаре); failed - ошибка, при этом badges null (есть ли бейджи не знаем); success - бейджи пришли (если badges заполнен, значит бейджи есть, если null – бейджей нет)",
+      "type": "string",
+      "enum": [
+        "initial",
+        "loading",
+        "failed",
+        "success"
+      ]
+    },
+    "is_from_shelf": {
+      "description": "Товар был отрисован на каталожной полке или нет. Если на полке, то True, иначе False",
+      "type": "boolean"
+    },
+    "shelf_position": {
+      "description": "Позиция полки (начиная с 1) в каталоге. Заполняется в случае, если товар был на каталожной полке (то есть когда is_from_shelf=True).",
+      "type": "number"
+    },
+    "parent_category_id": {
+      "description": "category_id родительской категории. Заполняется только для source='category'. Актуален для случаев, когда товар просматривается на каталожной полке внутри категории верхнего уровня.",
+      "type": "number"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (groccery, pharmacy или restaurant)",
+      "type": "string"
+    },
+    "is_promo": {
+      "description": "Является ли товар промоутируемым (проплаченным, продвигаемым) (true/false)",
+      "type": "boolean"
+    },
+    "promo_id": {
+      "description": "Идентификаторы промо-кампании из Trading Desk",
+      "type": "string"
+    },
+    "is_reviewed": {
+      "description": "Флаг, есть ли у товара рейтинг и отзывы",
+      "type": "boolean"
+    },
+    "review": {
+      "description": "{'Средний балл', 'Кол-во отзывов (текстовых комментариев)'} по карточке",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "TBD"
+      }
+    },
+    "is_multiretail_promo_category": {
+      "description": "True, если товар был отрисован внутри промо подборки, False иначе",
+      "type": "boolean"
+    },
+    "multiretail_promo_category_id": {
+      "description": "id промо подборки. Заполняется только в случае поиска внутри промо подборки",
+      "type": "string"
+    },
+    "images_count": {
+      "description": "Количество изображений товара",
+      "type": "number"
+    },
+    "is_active_in_cart": {
+      "description": "Флаг работает на рендере товара в корзине (source=cart); 1, если товар доступен к чекауту, 0 если не доступен (закончился или недоступен с выбранным типом доставки)",
+      "type": "boolean"
+    },
+    "bmpl": {
+      "description": "Для товара доступна механика Buy More Pay Less",
+      "type": "boolean"
+    },
+    "type_delivery": {
+      "description": "способ доставки ",
+      "type": "string",
+      "enum": [
+        "by_courier",
+        "pickup"
+      ]
+    }
+  },
+  "required": [
+    "is_stock",
+    "source_identifier",
+    "source",
+    "sku",
+    "price",
+    "default_price",
+    "position",
+    "store_id"
+  ],
+  "title": "Product rendered",
+  "type": "object"
+}

@@ -1,0 +1,91 @@
+{
+  "description": "Каждый раз при заходе на главный экран выбора ритейлера и при любом возвращении на этот экран с других экранов.",
+  "properties": {
+    "available_shelfs": {
+      "description": "Массив доступных полок",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/FromShelfInfo"
+      }
+    },
+    "available_stores": {
+      "description": "Объект с массивами параметров доступных магазинов",
+      "$ref": "#/definitions/AvailableStores"
+    },
+    "available_tabs": {
+      "description": "Массив всех доступных пользователю джобов",
+      "type": "array",
+      "items": {
+        "description": "Slug категории ритейлеров",
+        "type": "string"
+      }
+    },
+    "shown_tabs": {
+      "description": "Массив джобов отображаемых на главном экране",
+      "type": "array",
+      "items": {
+        "description": "Slug категории ритейлеров на главной-главной",
+        "type": "string"
+      }
+    },
+    "available_widgets": {
+      "description": "Массив доступных виджетов",
+      "type": "array",
+      "items": {
+        "description": "Название элемента виджета",
+        "type": "string"
+      }
+    },
+    "from_deeplink": {
+      "description": "Если перешли с какого-то диплинка, в параметре будет значение диплинка. Например, pickup для самовывоза",
+      "type": "string"
+    },
+    "source": {
+      "description": "Откуда именно была вызвана модалка выбора магазина",
+      "$ref": "#/definitions/ShopSelectionSource"
+    },
+    "with_pickup_store": {
+      "description": "есть выбранный магазин самовывоза, но клиент вернулся назад к выбору по нажатию на его адрес на главной - True",
+      "type": "boolean"
+    },
+    "is_restaurants_available": {
+      "description": "Пользователю доступна кнопка-полка-джоб рестораны или готовая еда",
+      "type": "boolean"
+    },
+    "user_address": {
+      "description": "Адрес, который указал пользователь (город, улица, дом и тд). Пустое значение, если адрес не выбран",
+      "type": "string"
+    },
+    "lat_user_address": {
+      "description": "Координата широты пользовательского адреса, который указан в приложении. Передаем ноль - если адрес не выбран.",
+      "type": "number"
+    },
+    "lon_user_address": {
+      "description": "Координата долготы пользовательского адреса, который указан в приложении. Передаем ноль - если адрес не выбран.",
+      "type": "number"
+    },
+    "is_foodmall_available": {
+      "description": "Флаг того, что пользователю доступен заказ из фудмола",
+      "type": "boolean"
+    },
+    "is_cart_available": {
+      "description": "У пользователя собрана корзина, есть кнопка для перехода в нее",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "available_stores",
+    "source",
+    "available_tabs",
+    "shown_tabs",
+    "available_shelfs",
+    "with_pickup_store",
+    "is_restaurants_available",
+    "is_foodmall_available",
+    "user_address",
+    "lat_user_address",
+    "lon_user_address"
+  ],
+  "title": "Shop Selection Started",
+  "type": "object"
+}

@@ -1,0 +1,38 @@
+{
+  "description": "Клик по баннеру целей",
+  "properties": {
+    "source": {
+      "description": "Источник, где именно был увиден баннер",
+      "$ref": "#/definitions/GoalsSources"
+    },
+    "goal_id": {
+      "description": "id цели, отобрраженной на баннере",
+      "type": "string"
+    },
+    "selection_click": {
+      "description": "1 - если пользователь нажал на кнопку 'выбрать' на баннере. 0 - если пользователь нажал на сам баннер",
+      "type": "boolean"
+    },
+    "state": {
+      "description": "Состояние баннера на момент клика на баннер (ответ с бэка)",
+      "type": "string",
+      "enum": [
+        "unavailable",
+        "not_chosen",
+        "chosen_not_started",
+        "chosen_with_progress",
+        "completed",
+        "finally_completed",
+        "failed"
+      ]
+    }
+  },
+  "required": [
+    "source",
+    "state",
+    "goal_id",
+    "selection_click"
+  ],
+  "title": "Sber Loyalty Goals Banner Clicked",
+  "type": "object"
+}

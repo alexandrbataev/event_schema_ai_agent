@@ -1,0 +1,16 @@
+{
+  "description": "Каждый раз, когда пользователь кликает по баннеру промо (не обычный promo banner, а promo shield)",
+  "properties": {
+    "source": {
+      "description": "Место, где был показан promo shield",
+      "type": "string"
+    },
+    "link": {
+      "description": "deeplink, который встроен в баннер",
+      "type": "boolean"
+    }
+  },
+  "title": "Promo Shield Clicked",
+  "type": "object",
+  "$comment": "https://wiki.sbmt.io/pages/viewpage.action?pageId=3211756988"
+}

@@ -1,0 +1,31 @@
+{
+  "description": "Нажатие на кнопку сбросить все фильтры",
+  "properties": {
+    "source": {
+      "description": "Источник клика на кнопку ",
+      "type": "string",
+      "enum": [
+        "category",
+        "search"
+      ]
+    },
+    "source_identifier": {
+      "description": "Источник идентификатора клика: category_id в случае выдачи каталоге (category) и поисковый запрос в случае поисковой выдачи (search)",
+      "type": "string"
+    },
+    "filters": {
+      "description": "Массив с выбранными фильтрами",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Filters"
+      }
+    }
+  },
+  "required": [
+    "filters",
+    "source_identifier",
+    "source"
+  ],
+  "title": "Clear Filter Button Clicked",
+  "type": "object"
+}

@@ -1,0 +1,14 @@
+{
+  "description": "Клик на карандаш для смены магазина самовывоза",
+  "properties": {
+    "source": {
+      "$ref": "#/definitions/PickupShopChangeSource",
+      "$comment": "main_page - на главной странице ритейлера; cart - на корзине; checkout - на чекауте"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Pickup Shop Change Clicked",
+  "type": "object"
+}

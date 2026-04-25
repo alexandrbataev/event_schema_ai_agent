@@ -1,0 +1,19 @@
+{
+  "description": "Пользователю показана шторка \"Купер для бизнеса\" с возможностью добавить компанию",
+  "properties": {
+    "source": {
+      "description": "С какого экрана перешли на показ баннера",
+      "type": "string",
+      "enum": [
+        "authorization",
+        "checkout_b2c",
+        "profile"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Add Company Onboarding Viewed",
+  "type": "object"
+}

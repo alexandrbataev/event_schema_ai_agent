@@ -1,0 +1,25 @@
+{
+  "description": "Отображается общее условие акции для получения скидки",
+  "properties": {
+    "source": {
+      "description": "Источник отображения условий",
+      "type": "string",
+      "enum": [
+        "beneficial_products_screen",
+        "beneficial_products_modal"
+      ]
+    },
+    "beneficial_item_status": {
+      "description": "Статус выгодного товара на начало сессии. Нужен, если клиент выполнил условия для акции хотя бы для одного магазина (У него ещё нет выбранного товара). Когда он выберет товар, напротив него появляется выбранный SKU (У остальных пусто).",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/BeneficialItemStatus"
+      }
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Beneficial Item Rules Rendered",
+  "type": "object"
+}

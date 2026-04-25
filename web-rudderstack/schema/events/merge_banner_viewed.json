@@ -1,0 +1,24 @@
+{
+  "description": "Каждый раз, когда пользователю на постчекауте отрисовывается баннер Нужно еще что-нибудь?, предлагающий добавить товары к существующему заказу. Баннер отрисовывается для активного заказа, к которому доступен дозаказ",
+  "properties": {
+    "target_order_number": {
+      "description": "Номер активного заказа, к которому предлагается дозаказ",
+      "type": "string"
+    },
+    "store_id": {
+      "description": "Магазин активного заказа",
+      "type": "number"
+    },
+    "retailer_id": {
+      "description": "Ритейлер активного заказа",
+      "type": "number"
+    }
+  },
+  "required": [
+    "target_order_number",
+    "store_id",
+    "retailer_id"
+  ],
+  "title": "Merge Banner Viewed",
+  "type": "object"
+}

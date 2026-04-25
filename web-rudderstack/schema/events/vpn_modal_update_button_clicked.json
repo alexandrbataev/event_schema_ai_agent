@@ -1,0 +1,14 @@
+{
+  "description": "Событие происходит после того как пользователь нажимает на кнопку Обновить на модалке VPN после чего страница либо обновляется (если vpn был отключен) либо пользователь остается на той же модалке (если vpn включен)",
+  "properties": {
+    "update_is_successful": {
+      "type": "boolean",
+      "description": "Успешное обновление - true, неуспешное - false"
+    }
+  },
+  "required": [
+    "update_is_successful"
+  ],
+  "title": "VPN Modal Update Button Clicked",
+  "type": "object"
+}

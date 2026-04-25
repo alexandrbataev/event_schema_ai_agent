@@ -1,0 +1,33 @@
+{
+  "description": "при каждом открытии экрана для редактирования комментария к заказу",
+  "properties": {
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера",
+      "$ref": "#/definitions/RetailerVertical"
+    },
+    "type_delivery": {
+      "description": "Обозначает способ получения для заказа",
+      "$ref": "#/definitions/TypeDelivery"
+    },
+    "shipment_number": {
+      "description": "Номер шипмента для которого открыли модалку для ввода комментария",
+      "type": "string"
+    },
+    "comment_type": {
+      "description": "Комментарий для сборки или для доставки",
+      "type": "string",
+      "enum": [
+        "delivery",
+        "assembly"
+      ]
+    }
+  },
+  "required": [
+    "retailer_vertical",
+    "type_delivery",
+    "shipment_number",
+    "comment_type"
+  ],
+  "title": "Checkout Comment Change Initiated",
+  "type": "object"
+}

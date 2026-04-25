@@ -1,0 +1,62 @@
+{
+  "title": "AdsAllBenefitsBlock",
+  "type": "object",
+  "description": "Сущность блока в разделе Вся выгода",
+  "properties": {
+    "block": {
+      "description": "Наименование блока или логотипа",
+      "type": "string",
+      "enum": [
+        "logo_all_benefits",
+        "timer_promo",
+        "sber_spasibo",
+        "offer",
+        "promocode",
+        "achievements",
+        "present",
+        "delivery"
+      ],
+      "$comment": "logo_all_benefits - Сам значок %(логотип) раздела Вся выгода. Блоки: timer_promo - Промокод с таймером для новичков; sber_spasibo - Оплата бонусами спасибо; offer - Акция; promocode - Промокод; achievements - Цели; present - Подарок; delivery - Доставка"
+    },
+    "position": {
+      "description": "Порядковый номер блока в разделе вся выгода. У блока logo_all_benefits позиция = 0, у остальных блоков нумерация начинается с 1 слева-направо/сверху-вниз (в зависимости от расположения)",
+      "type": "number"
+    },
+    "inner_position": {
+      "description": "Порядковый номер внутри блока в разделе вся выгода. Отправляется, если блок в формате карусели и содержит несколько предложений. Нумерация начинается с 1 слева-направо/сверху-вниз (в зависимости от расположения)",
+      "type": "number"
+    },
+    "header": {
+      "description": "Заголовок блока или Текст предложения. Например: 'Бесплатная доставка'",
+      "type": "string"
+    },
+    "subtitle": {
+      "description": "Текстовое содержание блока. Например: 'Во всех городах присутствия ресторана'",
+      "type": "string"
+    },
+    "promocode": {
+      "description": "Текст промокода. Приходит только для блоков: timer_promo - Промокод с таймером для новичков; promocode - Промокод",
+      "type": "string"
+    },
+    "promocode_id": {
+      "description": "Для блока timer_promo и promocode. Id промокода",
+      "type": "string"
+    },
+    "timer": {
+      "description": "Только для блока таймера - timer_promo. Cколько времени осталось до конца промокода",
+      "type": "string"
+    },
+    "expire_date": {
+      "description": "Для блока promocode. Дата окончания промокода",
+      "type": "string"
+    },
+    "present_id": {
+      "description": "Для блока present. Id подарка",
+      "type": "string"
+    }
+  },
+  "required": [
+    "block",
+    "position"
+  ]
+}

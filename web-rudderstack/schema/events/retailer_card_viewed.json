@@ -1,0 +1,50 @@
+{
+  "description": "Показ карточки ритейлера",
+  "properties": {
+    "closest_delivery_time_displayed": {
+      "description": "Через сколько времени в минутах мы общаем доставку пользователю",
+      "type": "number"
+    },
+    "delivery_window_estimate_type": {
+      "description": "По какому принципу рассчитано окно доставки",
+      "type": "string"
+    },
+    "closest_delivery_time_right_bound": {
+      "description": "Кол-во минут до правой границы ближайшей доставки",
+      "type": "number"
+    },
+    "position": {
+      "description": "Порядковый номер карточки в списке",
+      "type": "number"
+    },
+    "viewed_store": {
+      "description": "Показанный магазин",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/SelectedStore"
+      }
+    },
+    "source": {
+      "description": "Где был показ каротчки ритейлера",
+      "type": "string",
+      "enum": [
+        "landing_retailer_list",
+        "address_modal",
+        "landing_recent_store",
+        "landing"
+      ]
+    },
+    "tab": {
+      "description": "На какой вкладке был просмотр",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "viewed_store",
+    "tab",
+    "position"
+  ],
+  "title": "Retailer Card Viewed",
+  "type": "object"
+}

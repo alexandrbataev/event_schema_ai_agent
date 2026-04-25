@@ -1,0 +1,29 @@
+{
+  "description": "Открыли окно с информацией о заявке",
+  "properties": {
+    "email": {
+      "description": "Почта пользователя",
+      "type": "string"
+    },
+    "internal_shipment_number": {
+      "description": "Номер заказа DS-",
+      "type": "string"
+    },
+    "source": {
+      "description": "С какой страницы нажали кнопку",
+      "type": "string"
+    },
+    "internal_status": {
+      "description": "Статус заказа при просмотре окна",
+      "type": "string"
+    }
+  },
+  "required": [
+    "email",
+    "internal_shipment_number",
+    "source",
+    "internal_status"
+  ],
+  "title": "DAAS Shipment Info Window Opened",
+  "type": "object"
+}

@@ -1,0 +1,15 @@
+{
+  "description": "Вызывается, когда пользователь нажал на баннер Мой выгодный товар в профиле",
+  "properties": {
+    "beneficial_item_status": {
+      "description": "Статус выгодного товара на начало сессии. Нужен, если клиент выполнил условия для акции хотя бы для одного магазина (У него ещё нет выбранного товара). Когда он выберет товар, напротив него появляется выбранный SKU (У остальных пусто).",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/BeneficialItemStatus"
+      }
+    }
+  },
+  "required": [],
+  "title": "Beneficial Item Banner Profile Clicked",
+  "type": "object"
+}

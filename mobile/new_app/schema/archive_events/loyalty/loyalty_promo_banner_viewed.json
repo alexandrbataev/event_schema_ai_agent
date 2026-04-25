@@ -1,0 +1,14 @@
+{
+  "description": "Каждый раз, когда пользователь видит баннер",
+  "properties": {
+    "source": {
+      "description": "Где именно был увиден баннер",
+      "type": "string",
+      "enum": [
+        "cart"
+      ]
+    }
+  },
+  "title": "Loyalty Promo Banner Viewed",
+  "type": "object"
+}

@@ -1,0 +1,29 @@
+{
+  "description": "Редирект в постчекаут после оплаты через Сбербизнес",
+  "properties": {
+    "order_number": {
+      "description": "Строковый ID заказа",
+      "type": "string"
+    },
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    },
+    "shipment_number": {
+      "description": "Идентификатор доставки",
+      "type": "string"
+    },
+    "payment_status": {
+      "description": "Статус оплаты: success / innMismatch / unexpectedFailure",
+      "type": "string"
+    }
+  },
+  "required": [
+    "order_number",
+    "company_id",
+    "shipment_number",
+    "payment_status"
+  ],
+  "title": "B2B SBBOL Instant Payment Status",
+  "type": "object"
+}

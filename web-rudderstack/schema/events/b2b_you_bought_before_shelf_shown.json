@@ -1,0 +1,6 @@
+{
+  "description": "Каждый раз, когда пользователю отрисовывается полка 'Вы Покупали Ранее'",
+  "properties": {},
+  "title": "B2B You Bought Before Shelf Shown",
+  "type": "object"
+}

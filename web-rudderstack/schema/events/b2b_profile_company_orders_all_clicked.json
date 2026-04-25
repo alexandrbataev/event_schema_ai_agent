@@ -1,0 +1,14 @@
+{
+  "description": "Клик на вкладку Все в разделе Заказы в профиле компании",
+  "properties": {
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_id"
+  ],
+  "title": "B2B Profile Company Orders All Clicked",
+  "type": "object"
+}

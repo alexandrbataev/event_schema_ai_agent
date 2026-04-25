@@ -1,0 +1,14 @@
+{
+  "title": "AddressSelectionSource",
+  "description": "Источник перехода к редактированию адреса",
+  "type": "string",
+  "enum": [
+    "first_launch",
+    "shop_selection",
+    "main_page",
+    "deeplink",
+    "profile",
+    "checkout",
+    "cart"
+  ]
+}

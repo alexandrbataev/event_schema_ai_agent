@@ -1,0 +1,6 @@
+{
+  "description": "Срабатывает каждый раз когда пользователь кликает на \"Отправить заявку\" в блоке \"Электронный документооборот\"",
+  "properties": {},
+  "title": "B2B Landing Send Edo Request Clicked",
+  "type": "object"
+}

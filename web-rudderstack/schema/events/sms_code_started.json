@@ -1,0 +1,24 @@
+{
+  "description": "Отправка кода на сервер (как только ввели последнюю цифру кода)",
+  "properties": {
+    "is_signed_in": {
+      "description": "залогинен ли пользователь",
+      "type": "boolean"
+    },
+    "scenario": {
+      "description": "сценарий, для которого был ввод телефона: verification | edit | auth",
+      "type": "string",
+      "enum": [
+        "verification",
+        "edit",
+        "auth"
+      ]
+    }
+  },
+  "required": [
+    "is_signed_in",
+    "scenario"
+  ],
+  "title": "Sms Code Started",
+  "type": "object"
+}

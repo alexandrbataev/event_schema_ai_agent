@@ -1,0 +1,19 @@
+{
+  "description": "Пользователь нажал на кнопку \"Заказываю для себя\"",
+  "properties": {
+    "source": {
+      "description": "На каком экране показан баннер",
+      "type": "string",
+      "enum": [
+        "main",
+        "profile"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Add Company Banner Ordering B2C Clicked",
+  "type": "object"
+}
+

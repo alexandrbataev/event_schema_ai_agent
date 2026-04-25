@@ -1,0 +1,24 @@
+{
+  "description": "Пользователь зашел на окно оценки заказа",
+  "properties": {
+    "shipment_number": {
+      "description": "Идентификатор заказа",
+      "type": "string"
+    },
+    "order_number": {
+      "description": "Номер заказа",
+      "type": "string"
+    },
+    "source": {
+      "description": "С какого экрана пользователь перешел к модалке оценки заказа",
+      "$ref": "#/definitions/ReviewOrderSource"
+    }
+  },
+  "required": [
+    "shipment_number",
+    "order_number",
+    "source"
+  ],
+  "title": "Review Screen Shown",
+  "type": "object"
+}

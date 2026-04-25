@@ -1,0 +1,33 @@
+{
+  "description": "срабатывает при переходе пользователя на страницу бренда",
+  "properties": {
+    "impression_id": {
+      "description": "Уникальный идентификатор взаимодействия",
+      "type": "string"
+    },
+    "asset_id": {
+      "description": "Уникальный идентификатор ассета страницы бренда",
+      "type": "string"
+    },
+    "brand_id": {
+      "description": "Источник перехода на страницу",
+      "type": "string"
+    },
+    "source_identifier": {
+      "description": "asset_id баннера, с которого был переход",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник перехода на страницу",
+      "$ref": "#/definitions/AdsBannerSource"
+    }
+  },
+  "required": [
+    "impression_id",
+    "asset_id",
+    "source_identifier",
+    "source"
+  ],
+  "title": "Ads Brand Screen Viewed",
+  "type": "object"
+}

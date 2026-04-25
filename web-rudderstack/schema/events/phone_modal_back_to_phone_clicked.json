@@ -1,0 +1,24 @@
+{
+  "description": "Нажали кнопку “<-” или “Изменить”",
+  "properties": {
+    "scenario": {
+      "description": "cценарий, по которму была открыта модалка ввода телефона",
+      "type": "string",
+      "enum": [
+        "verification",
+        "edit",
+        "auth"
+      ]
+    },
+    "is_signed_in": {
+      "description": "залогинен ли пользователь",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "scenario",
+    "is_signed_in"
+  ],
+  "title": "Phone Modal Back To Phone Clicked",
+  "type": "object"
+}

@@ -1,0 +1,24 @@
+{
+  "description": "Отправляется при рендере баннера Только Для Вас в модалке с условиями доставки или на чекауте",
+  "properties": {
+    "text": {
+      "description": "Текст который видит пользователь в заголовке баннера",
+      "type": "string"
+    },
+    "source": {
+      "description": "Название страницы, на которой пользователю показали баннер. Если показали в модалке (шторке) с подробностями условий доставки, то название страницы с которой пользователь перешел в эту шторку",
+      "$ref": "#/definitions/DeliveryConditionsSource"
+    },
+    "personal_price_applied": {
+      "description": "Параметр принимает значение 1, если применено персональное (безакцептное) промо предложение на условия доставки, 0 - если не применено",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "text",
+    "source",
+    "personal_price_applied"
+  ],
+  "title": "Personal Price Delivery Conditions Banner Viewed",
+  "type": "object"
+}

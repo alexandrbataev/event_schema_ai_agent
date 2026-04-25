@@ -1,0 +1,18 @@
+{
+  "description": "Каждый раз, когда пользователь перешел на просмотр предзамен другого товара (влево/вправо)",
+  "properties": {
+    "direction": {
+      "description": "left/right, скролл или переход от товара к товару вправо/влево",
+      "type": "string",
+      "enum": [
+        "left",
+        "right"
+      ]
+    }
+  },
+  "required": [
+    "direction"
+  ],
+  "title": "Pre Replacements Product Scrolled",
+  "type": "object"
+}

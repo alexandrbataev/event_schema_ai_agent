@@ -1,0 +1,52 @@
+{
+  "description": "Нажатие на кнопку захода на чекаут",
+  "properties": {
+    "stores": {
+      "description": "Массив из словарей с информацией по магазинам из которых происходит чекаут",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CheckoutStoresInfo"
+      }
+    },
+    "checkout_available": {
+      "description": "Доступен ли вход на чекаут",
+      "type": "boolean"
+    },
+    "address": {
+      "description": "Адрес доставки или места самовывоза",
+      "type": "string"
+    },
+    "item_total": {
+      "description": "Суммарная стоимость товаров в корзине (без стоимости сборки и доставки и без доп. скидки сбера)",
+      "type": "number"
+    },
+    "retailer": {
+      "description": "Id ритейлера",
+      "type": "number"
+    },
+    "bank_item_total": {
+      "description": "Итоговая сумма корзины с учетом скидки сбера. Если скидка сбера недоступна, то пишем стоимость без учета скидки сбера ",
+      "type": "number"
+    },
+    "bank_dicount_amount": {
+      "description": "Cумма скидки сбера ",
+      "type": "number"
+    },
+    "source": {
+      "description": "На какую кнопку нажимает пользователь чтобы перейти к чекауту - на основную или на кнопку из баннера/шторки BNPL в корзине",
+      "type": "string",
+      "enum": [
+        "basic_button",
+        "bnpl_button"
+      ]
+    }
+  },
+  "required": [
+    "stores",
+    "checkout_available",
+    "address",
+    "item_total"
+  ],
+  "title": "Checkout Button Clicked",
+  "type": "object"
+}

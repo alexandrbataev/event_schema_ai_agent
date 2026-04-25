@@ -1,0 +1,46 @@
+{
+  "description": "Отрисовка отзывов на карточке или в списке всех отзывов",
+  "properties": {
+    "source_identifier": {
+      "description": "sku товара, на карточке которой было отрисовано все",
+      "type": "string"
+    },
+    "review_id": {
+      "description": "id отзыва",
+      "type": "string"
+    },
+    "position": {
+      "description": "позиция отрисованного отзыва",
+      "type": "number"
+    },
+    "score": {
+      "description": "оценка в отзыве",
+      "type": "number"
+    },
+    "source_type": {
+      "description": "Где отрисовался отзыв - карточка товара или страница со списком всех отзывов",
+      "type": "string",
+      "enum": [
+        "product_card",
+        "all_reviews"
+      ]
+    },
+    "is_multicard": {
+      "description": "Является ли карточка товара (pdp), где показан отзыв, мультикарточкой.",
+      "type": "boolean"
+    },
+    "source": {
+      "description": "Для отделения СПГ! Источник, откуда была открыта карточка товара",
+      "$ref": "#/definitions/ProductSource"
+    }
+  },
+  "required": [
+    "source_identifier",
+    "review_id",
+    "position",
+    "score",
+    "source_type"
+  ],
+  "title": "Review Rendered",
+  "type": "object"
+}

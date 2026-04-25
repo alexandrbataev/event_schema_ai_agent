@@ -1,0 +1,19 @@
+{
+  "description": "Каждый раз при клике пользователя на кнопку 'Помощь'",
+  "properties": {
+    "source": {
+      "description": "С какого экрана пользователь совершил клик",
+      "type": "string",
+      "enum": [
+        "app_opened",
+        "landing",
+        "handsome_screen"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "FAQ Button Clicked",
+  "type": "object"
+}

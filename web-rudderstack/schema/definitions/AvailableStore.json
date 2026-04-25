@@ -1,0 +1,11 @@
+{
+  "title": "AvailableStore",
+  "type": "object",
+  "description": "Сущность магазина",
+  "properties": {},
+  "required": [
+    "id",
+    "position",
+    "pickup_available"
+  ]
+}

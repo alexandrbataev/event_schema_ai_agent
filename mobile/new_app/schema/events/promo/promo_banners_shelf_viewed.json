@@ -1,0 +1,29 @@
+{
+  "description": "При каждой отрисовке карусели с баннерами промо",
+  "properties": {
+    "name": {
+      "description": "Заголовок карусели, если есть",
+      "type": "string"
+    },
+    "source": {
+      "description": "Место, где отрисовалась полка",
+      "type": "string",
+      "enum": [
+        "main_page",
+        "promo_macro_page",
+        "main_page_job",
+        "notifications"
+      ]
+    },
+    "promo_ids": {
+      "description": "Массив из всех id промо, которые находятся у пользователя в карусели",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "description": "promotion_id"
+      }
+    }
+  },
+  "title": "Promo Banners Shelf Viewed",
+  "type": "object"
+}

@@ -1,0 +1,23 @@
+{
+  "description": "Показ модалки Заказать для бизнеса b2b на чекауте",
+  "properties": {
+    "source": {
+      "description": "Откуда была открыта модалка b2b на чекауте",
+      "type": "string",
+      "enum": [
+        "from_button",
+        "from_payment_method"
+      ]
+    },
+    "is_accepted": {
+      "description": "Согласился ли клиент заказать для бизнеса (нажатие на кнопку Да, хочу)",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "source",
+    "is_accepted"
+  ],
+  "title": "Checkout Order For Business Modal Closed",
+  "type": "object"
+}

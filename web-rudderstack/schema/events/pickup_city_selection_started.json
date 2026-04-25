@@ -1,0 +1,13 @@
+{
+  "description": "Нажали на текущий город выбранные в самовывозе",
+  "properties": {
+    "source": {
+      "$ref": "#/definitions/PickupCityChangedSource"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Pickup City Selection Started",
+  "type": "object"
+}

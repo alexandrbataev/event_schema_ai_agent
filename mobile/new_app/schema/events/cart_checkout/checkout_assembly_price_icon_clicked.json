@@ -1,0 +1,14 @@
+{
+  "description": "При каждом нажатии на иконку с информацией о стоимости сборки и доставки на чек-ауте",
+  "properties": {
+    "shipment_id": {
+      "description": "shipment_id",
+      "type": "number"
+    }
+  },
+  "required": [
+    "shipment_id"
+  ],
+  "title": "Checkout Assembly Price Icon Clicked",
+  "type": "object"
+}

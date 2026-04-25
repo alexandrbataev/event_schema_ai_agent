@@ -1,0 +1,52 @@
+{
+  "description": "Отмена оформленного заказа",
+  "properties": {
+    "coupon": {
+      "description": "Введенный пользователем купон (его текст). Если промокод не использовался-  на iOS null, на Android параметра не будет (из-за особенностей SDK, который не отправляет null, а убирает параметр)",
+      "type": "string"
+    },
+    "order_number": {
+      "description": "Строковый ID заказа",
+      "type": "string"
+    },
+    "order_seq": {
+      "description": "Порядковый номер заказа",
+      "type": "number"
+    },
+    "total": {
+      "description": "Сумма заказа, которую видит пользователь",
+      "type": "number"
+    },
+    "type_delivery": {
+      "description": "Обозначает тип доставки для заказа",
+      "$ref": "#/definitions/TypeDelivery"
+    },
+    "shipment_number": {
+      "description": "shipment_number отменяемого заказа",
+      "type": "string"
+    },
+    "cancellation_fee": {
+      "description": "Суммарная стоимость отмены в рублях. 0 рублей - если отмена бесплатная и платная отмена включена ЛИБО если платная отмена отключена вообще, n рублей - если отмена платная и платная отмена включена ",
+      "type": "number"
+    },
+    "cancellation_fee_detalization": {
+      "description": "Массив с объектами детализации стоимости за что удерживаем деньги в рублях за отмену. Если отмена бесплатная, то отправляем пустой массив",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CancellationFeeDetalization"
+      }
+    },
+    "cancellation_details_info": {
+      "description": "Текстовое поле с заголовком и подзаголовком экрана с информацией о деталях отмены. Например: /Можно вернуть отменить бесплатно. Вернем всю сумму на карту. Промокод можно будет применить еще раз/",
+      "type": "string"
+    }
+  },
+  "required": [
+    "order_number",
+    "order_seq",
+    "total",
+    "type_delivery"
+  ],
+  "title": "Order Cancelled",
+  "type": "object"
+}

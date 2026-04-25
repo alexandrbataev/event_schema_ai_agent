@@ -1,0 +1,30 @@
+{
+  "description": "На экране пользователя отрисовался блок с опциями мультикарточки",
+  "properties": {
+    "product_sku": {
+      "description": "SKU карточки, где отрисовался блок с опциями",
+      "type": "string"
+    },
+    "available_options": {
+      "description": "Список атрибутов для переключения мультикарточки, их значений и состояний до нажатия на кнопку",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/MulticardOptions"
+      }
+    },
+    "option": {
+      "description": "Список из выбранного атрибута, его значения и состояния",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/MulticardOptions"
+      }
+    }
+  },
+  "required": [
+    "product_sku",
+    "option",
+    "available_options"
+  ],
+  "title": "Multicard Option Clicked",
+  "type": "object"
+}

@@ -1,0 +1,32 @@
+{
+  "description": "Каждый раз, когда пользователь кликнул на точку входа подписки СберПрайм",
+  "properties": {
+    "source": {
+      "description": "Источник, где именно была увидена точка входа",
+      "type": "string",
+      "enum": [
+        "profile",
+        "balance_modal",
+        "cart"
+      ]
+    },
+    "type": {
+      "description": "Тип елемента точки входа",
+      "type": "string",
+      "enum": [
+        "button",
+        "banner"
+      ]
+    },
+    "is_prime_user": {
+      "description": "Является ли клиент, который увидел точку входа, подписчиком СберПрайм",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "source",
+    "is_prime_user"
+  ],
+  "title": "Sber Prime Subscription Entry Point Clicked",
+  "type": "object"
+}

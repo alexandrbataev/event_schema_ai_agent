@@ -1,0 +1,22 @@
+{
+  "description": "Введен адрес вне зоны доставки",
+  "properties": {
+    "user_coordinates": {
+      "description": "координаты адреса, который ввел клиент",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/UserCoordinate"
+      }
+    },
+    "pickup_suggest_viewed": {
+      "description": "Если была показана плашка доступности самовывоза - True, иначе - False",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "user_coordinates",
+    "pickup_suggest_viewed"
+  ],
+  "title": "Address Undelivery Viewed",
+  "type": "object"
+}

@@ -1,0 +1,6 @@
+{
+  "description": "Пользователь нажал на кнопку добавления новой карты в поп-апе соц.пакета",
+  "properties": {},
+  "title": "Checkout Social Package Clicked Add New Card",
+  "type": "object"
+}

@@ -1,0 +1,26 @@
+{
+  "description": "Отправляется каждый раз, когда пользователь нажал вернуться на главную со страницы ошибки",
+  "properties": {
+    "type": {
+      "description": "тип ошибки, которую словили",
+      "type": "string",
+      "enum": [
+        "404"
+      ]
+    },
+    "source": {
+      "description": "откуда пользователь попал на страничку с ошибкой",
+      "type": "string",
+      "enum": [
+        "seo",
+        "sbermarket",
+        "smbusiness"
+      ]
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "title": "Move From Not Found To Main Main",
+  "type": "object"
+}

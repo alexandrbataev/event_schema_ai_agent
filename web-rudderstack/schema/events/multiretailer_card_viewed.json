@@ -1,0 +1,33 @@
+{
+  "description": "Пользователю просмотрел межриткарточку товара",
+  "properties": {
+    "why_person_viewed_mechanic": {
+      "description": "Указание того, что человек увидел механику из-за превышения лимита по кол-ву товаров (limit) или из-за того, что нажал на 'в других магазинах' или проскролил до информационного блока 'в других магазинах' (comparison)",
+      "type": "string",
+      "enum": [
+        "limit",
+        "comparison"
+      ]
+    },
+    "product_sku": {
+      "description": "Sbermarket SKU товара, у которого посмотрел межриткарточку",
+      "type": "string"
+    },
+    "product_retailer_sku": {
+      "description": "ритейлер sku товара, у которого посмотрел межриткарточку",
+      "type": "string"
+    },
+    "retailer_id": {
+      "description": "id ритейлера, в товаре которого пользователь просмторел межриткарточку",
+      "type": "number"
+    }
+  },
+  "required": [
+    "why_person_viewed_mechanic",
+    "product_sku",
+    "product_retailer_sku",
+    "retailer_id"
+  ],
+  "title": "Multiretailer Card Viewed",
+  "type": "object"
+}

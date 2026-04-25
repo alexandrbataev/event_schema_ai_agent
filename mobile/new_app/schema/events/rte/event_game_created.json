@@ -1,0 +1,45 @@
+{
+  "description": "Каждый раз, когда пользователь создает игру в эвенте (клик по кнопке создать игру)",
+  "properties": {
+    "game_name": {
+      "description": "Название игры",
+      "type": "string"
+    },
+    "gift_price": {
+      "description": "Стоимость подарка в игре",
+      "type": "number"
+    },
+    "start_date": {
+      "description": "Дата начала игры",
+      "type": "string"
+    },
+    "player_name": {
+      "description": "Имя игрока",
+      "type": "string"
+    },
+    "shipment_address": {
+      "description": "Адрес доставки",
+      "type": "string"
+    },
+    "delivery_date": {
+      "description": "Дата получения подарка",
+      "type": "string"
+    },
+    "game_id": {
+      "description": "ID игры",
+      "type": "number"
+    }
+  },
+  "required": [
+    "game_name",
+    "gift_price",
+    "start_date",
+    "player_name",
+    "shipment_address",
+    "delivery_date",
+    "game_id"
+  ],
+  "title": "Event Game Created",
+  "type": "object"
+}
+  

@@ -1,0 +1,29 @@
+{
+  "description": "Каждый раз когда пользователь кликает на иконку каталога",
+  "properties": {
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (groccery, pharmacy или restaurant)",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник клика по кнопке каталог. catalogue_main - пользователь кликает на 'Все категории' на верху страницы на главной ритейлера; catalogue_tab_main - Пользователь кликает на таб 'Каталог' внизу страницы на главной ритейлера; catalogue_tab_category - Пользователь кликает на таб 'Каталог' внизу страницы из категории",
+      "type": "string",
+      "enum": [
+        "catalogue_main",
+        "catalogue_tab_main",
+        "catalogue_tab_category"
+      ]
+    },
+    "store_id": {
+      "description": "ID стора",
+      "type": "number"
+    }
+  },
+  "required": [
+    "retailer_vertical",
+    "source",
+    "store_id"
+  ],
+  "title": "Catalogue Tab Clicked",
+  "type": "object"
+}

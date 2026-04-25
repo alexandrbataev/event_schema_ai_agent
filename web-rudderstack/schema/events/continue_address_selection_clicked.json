@@ -1,0 +1,7 @@
+{
+  "description": "Нажатие на кнопку \"Продолжить\" при добавлении нового адреса для перехода к вводу квартиры/подъезда в мобильной версии веба",
+  "properties": {},
+  "required": [],
+  "title": "Continue Address Selection Clicked",
+  "type": "object"
+}

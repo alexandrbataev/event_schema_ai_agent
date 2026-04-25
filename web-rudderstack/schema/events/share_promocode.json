@@ -1,0 +1,33 @@
+{
+  "description": "Каждый раз, когда пользователь кликает по кнопке Поделиться для реферального промокода",
+  "properties": {
+    "promocode": {
+      "description": "Промокод",
+      "type": "string"
+    },
+    "source": {
+      "description": "Место, где кликнули на кнопку Поделиться",
+      "type": "string",
+      "enum": [
+        "refferal_screen",
+        "refferal_landing"
+      ]
+    },
+    "share_type": {
+      "description": "Тип взаимодействия с промокодом: copy - копирование в буфер обмена нажатием на иконку копирования, to_buy - нажатие на кнопку За покупками на реферальном лендинге, share_button - клик на кнопку поделиться",
+      "type": "string",
+      "enum": [
+        "copy",
+        "to_buy",
+        "share_button"
+      ]
+    }
+  },
+  "required": [
+    "promocode",
+    "source",
+    "share_type"
+  ],
+  "title": "Share Promocode",
+  "type": "object"
+}

@@ -1,0 +1,24 @@
+{
+  "description": "Клик на карандаш или метод доставки в верхнем левом углу экрана внутри ритейлера(когда выбран ритейлер)",
+  "properties": {
+    "source": {
+      "description": "На какую область кликнуть пользователь",
+      "type": "string"
+    },
+    "click_on": {
+      "description": "На какой способ доставки нажал",
+      "type": "string"
+    },
+    "current": {
+      "description": "Какой способ доставки был",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "click_on",
+    "current"
+  ],
+  "title": "Retailer Shipping Method Clicked",
+  "type": "object"
+}

@@ -1,0 +1,14 @@
+{
+  "title": "OrderExportDocuments",
+  "type": "object",
+  "description": "Сущность доступных документов для выгрузки по заказу из истории заказов.",
+  "properties": {
+    "document_name": {
+      "description": "Читаемое название документа (например, 'Счет-фактура', 'Товарная накладная').",
+      "type": "string"
+    }
+  },
+  "required": [
+    "document_name"
+  ]
+}

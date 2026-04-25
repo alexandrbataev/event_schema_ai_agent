@@ -1,0 +1,14 @@
+{
+  "description": "Отправляем каждый раз, когда пользователь поднимает вверх шторку c корзиной",
+  "properties": {
+    "payment_amount": {
+      "description": "финальная цена корзины пользователя. Цена, которая отображается в зеленой кнопке Оформить заказ",
+      "type": "number"
+    }
+  },
+  "required": [
+    "payment_amount"
+  ],
+  "title": "Spg Cart Viewed",
+  "type": "object"
+}

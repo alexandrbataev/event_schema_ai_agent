@@ -1,0 +1,36 @@
+{
+  "description": "Пользователю загрузился список акций",
+  "properties": {
+    "success_loaded": {
+      "description": "Флаг отсутствия ошибок при открытии раздела",
+      "type": "boolean"
+    },
+    "tab_name": {
+      "description": "С какой категории акций загрузился список",
+      "type": "string"
+    },
+    "source": {
+      "description": "Откуда пользователь открыл экран",
+      "$ref": "#/definitions/PromoSource"
+    },
+    "promotions": {
+      "description": "Список из promotion_id, которые прогрузились у пользователя (с бэкенда)",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "description": "promotion_id"
+      }
+    },
+    "promocodes": {
+      "description": "Список из текстов промокодов, которые прогрузились у пользователя (с бэкенда)",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "promocode"
+      }
+    }
+  },
+  "title": "Your Promocodes Loaded",
+  "type": "object",
+  "$comment": "Каждый раз, либо при заходе в раздел, либо при переходам по табам раздела"
+}

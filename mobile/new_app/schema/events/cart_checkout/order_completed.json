@@ -1,0 +1,141 @@
+{
+  "description": "Каждый раз, когда пользователь успешно оформляет заказ (любой). Не отправляется для заказов BNPL, если пользователь не вернулся в приложение после заказа - лучше использовать бэк событие либо финвитрину. Не будет приходить, если пользователь свернул приложение в момент оформления заказа в случае асинхронного чекаута - лучше использовать финвитрину.",
+  "properties": {
+    "cart_type": {
+      "description": "Тип корзины",
+      "type": "string"
+    },
+    "coupon": {
+      "description": "Введенный пользователем купон (его текст). Если промокод не использовался-  на iOS null, на Android параметра не будет (из-за особенностей SDK, который не отправляет null, а убирает параметр)",
+      "type": "string"
+    },
+    "order_number": {
+      "description": "Строковый ID заказа",
+      "type": "string"
+    },
+    "shipment_number": {
+      "description": "К какому шипменту относится заказ",
+      "type": "string"
+    },
+    "order_seq": {
+      "description": "Порядковый номер заказа",
+      "type": "number"
+    },
+    "payment_method": {
+      "description": "метод оплаты",
+      "type": "string"
+    },
+    "total": {
+      "description": "Сумма заказа, которую видит пользователь. Сумма без учета долга",
+      "type": "number"
+    },
+    "type_delivery": {
+      "description": "Обозначает способ получения для заказа",
+      "$ref": "#/definitions/TypeDelivery"
+    },
+    "is_contactless_selected": {
+      "description": "выбрана ли бесконтактная доставка",
+      "type": "boolean"
+    },
+    "store_id": {
+      "description": "id магазина, в котором пользователь завершил заказ",
+      "type": "number"
+    },
+    "is_toogle_other_person_activated": {
+      "description": "Был ли выбран тогл Заказ другому человеку",
+      "type": "boolean"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (grocery, pharmacy или restaurant)",
+      "type": "string"
+    },
+    "b2b_flg": {
+      "description": "Является ли пользователь представителем компании (б2б)",
+      "type": "boolean"
+    },
+    "is_beneficial_client": {
+      "description": "Если клиенту доступно участие в акции Выгодный товар",
+      "type": "boolean"
+    },
+    "is_sberid_user": {
+      "description": "Параметр заполняется = 1, если у пользователя есть привязанный sber_id.",
+      "type": "boolean"
+    },
+    "store_start_time": {
+      "description": "Только для самовывоза. Время начала работы магазина. Стрингой в формате hh:mm",
+      "type": "string"
+    },
+    "store_end_time": {
+      "description": "Только для самовывоза. Время окончания работы магазина. Стрингой в формате hh:mm",
+      "type": "string"
+    },
+    "is_open_store": {
+      "description": "Только для самовывоза. Открыт ли магазин в момент срабатывания события",
+      "type": "boolean"
+    },
+    "from_now_to_store_time": {
+      "description": "Только для самовывоза. Время, в минутах. Если магазин открыт, то кол-во минут от текущего момента до закрытия, если магазин закрыт, то от текущего момента до открытия",
+      "type": "number"
+    },
+    "payment_tool_id": {
+      "description": "id связки выбранной карты онлайн или sberpay (id из spree_payment_tools).  Если это новая Карта онлайн или новая карта Sberpay, то отдавать 0",
+      "type": "number"
+    },
+    "prereplacement_info": {
+      "description": "Словарь с оформленными скю, есть ли у скю пометка Может закончиться и предзаменами, если они выбраны",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PrereplacementInfo"
+      }
+    },
+    "bank_name": {
+      "description": "Наименование банка выбранного способа оплаты (для карт онлайн и sberpay)",
+      "type": "string"
+    },
+    "is_corporate": {
+      "description": "True если это бизнес-карта",
+      "type": "boolean"
+    },
+    "bank_discount_amount": {
+      "description": "Сумма примененной доп. скидки при оплате картой сбера. Если скидка сбера не была применена, то присылать 0",
+      "type": "number"
+    },
+    "async_checkout_flg": {
+      "description": "Флаг, был ли чекаут асинхронным",
+      "type": "boolean"
+    },
+    "payment_kind": {
+      "description": "Тип метода оплаты. check - Наличными в Сбере ; direct_bank_invoice - По счёту для бизнеса ; lifepay - Картой курьеру ; external_partner_pay - Внешний провайдер ; tinkoff_dolyame - Частями ; direct_bnpl - Частями ; external_invoice - По счёту (внешний банковский перевод) ; cloud_payments - Картой онлайн (новая карта резерв cloud payments) ; direct - Картой онлайн (новая карта основной шлюз) ; credit_card - Картой онлайн (сохраненная карта) ; direct_pay_v2 - SberPay (сохраненная карта и новая) ; plati_qr - PlatiQR ; cash_desk - Картой на кассе. Больше информации: https://wiki.sbmt.io/pages/viewpage.action?pageId=3187542389#APIendpoint'sПСО+ПСП-Контрактыдляполяkind",
+      "type": "string"
+    },
+    "gift_flg": {
+      "description": "Флаг что товар является подарком в рамках фичи подарки в корзине https://wiki.sbmt.io/pages/viewpage.action?pageId=3383236905",
+      "type": "number",
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "debt_total": {
+      "description": "Сумма долга в рублях. Если долга нет, отправлять 0. ",
+      "type": "number"
+    }
+  },
+  "required": [
+    "order_number",
+    "shipment_number",
+    "order_seq",
+    "total",
+    "payment_method",
+    "cart_type",
+    "type_delivery",
+    "is_contactless_selected",
+    "store_id",
+    "retailer_vertical",
+    "payment_tool_id",
+    "async_checkout_flg",
+    "payment_kind"
+  ],
+  "title": "Order Completed",
+  "type": "object"
+}

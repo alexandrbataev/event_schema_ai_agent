@@ -1,0 +1,19 @@
+{
+  "title": "RestaurantCollectionInfo",
+  "type": "object",
+  "description": "Информация о подборке ресторанов",
+  "properties": {
+    "uuid": {
+      "description": "uuid подборки ресторанов",
+      "type": "string"
+    },
+    "name": {
+      "description": "Название подборки ресторанов",
+      "type": "string"
+    }
+  },
+  "required": [
+    "uuid",
+    "name"
+  ]
+}

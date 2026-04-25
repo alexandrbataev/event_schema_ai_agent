@@ -1,0 +1,12 @@
+{
+  "description": "Просмотр попапа с предложением скачать приложение",
+  "properties": {
+    "title": {
+      "description": "Заголовок",
+      "type": "string"
+    }
+  },
+  "required": [],
+  "title": "Download App Banner Viewed",
+  "type": "object"
+}

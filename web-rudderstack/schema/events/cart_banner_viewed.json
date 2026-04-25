@@ -1,0 +1,18 @@
+{
+  "description": "Показ кнопки для перехода в корзину с информацией / Просмотр баннера о недостаточной сумме заказа в корзине",
+  "properties": {
+    "retailers_prices": {
+      "description": "Массив словарей RetailersPrice с ключами retailer_id (id ритейлера), total_price ( итоговая сумма корзины, здесь всегда указывать сумму без скидки сбера), bank_total_price ( итоговая сумма корзины с учетом скидки сбера. Если скидка сбера недоступна, то писать сумму без учета скидки сбера), bank_discount_amount (сумма скидки сбера)",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/RetailersPrice"
+      }
+    },
+    "required_amount": {
+      "description": "Сумма для оформления заказа",
+      "type": "number"
+    }
+  },
+  "title": "Cart Banner Viewed",
+  "type": "object"
+}

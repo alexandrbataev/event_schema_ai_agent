@@ -1,0 +1,7 @@
+{
+  "description": "При показе пользователю модального окна \"Выберите интересные вам категории\"",
+  "properties": {},
+  "required": [],
+  "title": "Choose Preferred Categories Shown",
+  "type": "object"
+}

@@ -1,0 +1,29 @@
+{
+  "description": "Введён корректный код из СМС",
+  "properties": {
+    "is_signed_in": {
+      "description": "залогинен ли пользователь",
+      "type": "boolean"
+    },
+    "scenario": {
+      "description": "сценарий, для которого был ввод телефона: verification | edit | auth",
+      "type": "string",
+      "enum": [
+        "verification",
+        "edit",
+        "auth"
+      ]
+    },
+    "is_registration": {
+      "description": "Произошла ли регистрация",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "scenario",
+    "is_signed_in",
+    "is_registration"
+  ],
+  "title": "Sms Code Success",
+  "type": "object"
+}

@@ -1,0 +1,17 @@
+{
+  "description": "Каждый раз при клике пользователя на кнопку 'Доставка и оплата'",
+  "properties": {
+    "source": {
+      "description": "С какого экрана пользователь совершил клик",
+      "type": "string",
+      "enum": [
+        "profile"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Delivery and Payment Button Clicked",
+  "type": "object"
+}

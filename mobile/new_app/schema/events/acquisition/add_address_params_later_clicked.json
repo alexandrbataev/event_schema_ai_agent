@@ -1,0 +1,7 @@
+{
+  "description": "Нажатие на кнопку 'Заполнить позже' при добавлении нового адреса",
+  "properties": {},
+  "required": [],
+  "title": "Add Address Params Later Clicked",
+  "type": "object"
+}

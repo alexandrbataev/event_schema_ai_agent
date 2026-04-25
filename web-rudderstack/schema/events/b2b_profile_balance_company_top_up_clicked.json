@@ -1,0 +1,14 @@
+{
+  "description": "Клик на Пополнить баланс компании в профиле",
+  "properties": {
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_id"
+  ],
+  "title": "B2B Profile Balance Company Top Up Clicked",
+  "type": "object"
+}

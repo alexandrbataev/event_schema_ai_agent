@@ -1,0 +1,29 @@
+{
+  "description": "Отправляется при любом взаимодействии с картой. Во время открытия экрана постчекаута отправляется только 1 раз, если инициатор движения карты - приложение (initiator = app). До раскрытия карты пользователем не отправляется с параметром initiator = user и при взаимодействии пользователя с картой отправляется также только 1 раз.",
+  "properties": {
+    "shipment_number": {
+      "description": "shipment_number заказа, для которого показана карта с курьером",
+      "type": "string"
+    },
+    "initiator": {
+      "description": "Кто являлся инициатором показа карты [user, app] (открыл юзер или карта открылась сама в зависимости от статуса доставки)",
+      "type": "string"
+    },
+    "courier_shown": {
+      "description": "Отображается ли курьер на карте, 1 - да, 0 - нет",
+      "type": "boolean"
+    },
+    "is_batch_pin_shown": {
+      "description": "Показаны ли пины промежуточных точек курьера, 1 - да, 0 - нет",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "shipment_number",
+    "initiator",
+    "courier_shown",
+    "is_batch_pin_shown"
+  ],
+  "title": "Courier Map Clicked",
+  "type": "object"
+}

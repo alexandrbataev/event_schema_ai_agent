@@ -1,0 +1,23 @@
+{
+  "description": "Сертификат повторно отправлен",
+  "properties": {
+    "status": {
+      "description": "Статус отправки (успешно, лимит смс, ошибка)",
+      "type": "string",
+      "enum": [
+        "success",
+        "sms_limit",
+        "error"
+      ]
+    },
+    "error_code": {
+      "description": "Код ошибки",
+      "type": "number"
+    }
+  },
+  "required": [
+    "status"
+  ],
+  "title": "B2B Certificate Resent",
+  "type": "object"
+}

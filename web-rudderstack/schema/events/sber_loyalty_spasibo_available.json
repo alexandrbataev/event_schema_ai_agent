@@ -1,0 +1,19 @@
+{
+  "description": "Каждый раз, когда на чекауте доступно использование баллов спасибо по новому флоу",
+  "properties": {
+    "amount_total": {
+      "description": "Указывает, сколько доступно бонусов на чекауте",
+      "type": "number"
+    },
+    "amount_reserves": {
+      "description": "Указывает, сколько бонусов должно быть начислено",
+      "type": "number"
+    }
+  },
+  "required": [
+    "amount_total",
+    "amount_reserves"
+  ],
+  "title": "Sber Loyalty Spasibo Available",
+  "type": "object"
+}

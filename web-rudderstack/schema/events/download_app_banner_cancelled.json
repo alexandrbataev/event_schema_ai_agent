@@ -1,0 +1,19 @@
+{
+  "description": "Закрытие попапа с предложением скачать приложение. Приходит в случае закрытия с помощью крестика, нажатия на свободную часть экрана и нажатия кнопки <Продолжить в браузере>",
+  "properties": {
+    "cancel_type": {
+      "description": "Способ закрытия попапа",
+      "type": "string",
+      "enum": [
+        "continue_in_browser",
+        "close_button",
+        "click_on_free_screen"
+      ]
+    }
+  },
+  "required": [
+    "cancel_type"
+  ],
+  "title": "Download App Banner Cancelled",
+  "type": "object"
+}

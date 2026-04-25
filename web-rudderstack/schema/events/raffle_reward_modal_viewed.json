@@ -1,0 +1,48 @@
+{
+  "description": "пользователь увидел модалку с наградой за выполнение конкретного питстопа",
+  "properties": {
+    "source": {
+      "description": "Страница, с которой пользователь перешел на экран розыгрыша",
+      "$ref": "#/definitions/RaffleSource"
+    },
+    "utm_source": {
+      "description": "utm параметр из внешней ссылки",
+      "type": "string"
+    },
+    "utm_medium": {
+      "description": "utm параметр из внешней ссылки",
+      "type": "string"
+    },
+    "utm_campaign": {
+      "description": "utm параметр из внешней ссылки",
+      "type": "string"
+    },
+    "campaign_name": {
+      "description": "Название кампании",
+      "type": "string"
+    },
+    "level": {
+      "description": "уровень (номер) питстопа, за который назначилось вознаграждение",
+      "type": "number"
+    },
+    "promotion_id": {
+      "description": "shadowcat_promotion_id",
+      "type": "string"
+    },
+    "promocode_id": {
+      "description": "shadowcat_promocode_id",
+      "type": "string"
+    },
+    "promotion_value": {
+      "description": "одноименное поле из shadowcat",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "campaign_name",
+    "level"
+  ],
+  "title": "Raffle Reward Modal Viewed",
+  "type": "object"
+}

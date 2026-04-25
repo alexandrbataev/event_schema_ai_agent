@@ -1,0 +1,62 @@
+{
+  "description": "Нажата кнопка - Я пришел (link on picture - http://joxi.ru/Q2KdKMyTO1dNQA)",
+  "properties": {
+    "shipment_number": {
+      "description": "Номер шипмента, за которым пришел пользователь. В контекстный параметр передается другой шипмент, поэтому необходим отдельный параметр с номером заказа, по которому отображается информация в мобилке у пользователя",
+      "type": "string"
+    },
+    "store_id": {
+      "description": "id стора, в котором сделали заказ",
+      "type": "number"
+    },
+    "source": {
+      "description": "На каком экране пользователь нажал на кнопку, main - на главной странице, retailer - на главной ритейлера, order - внутри информации о заказе",
+      "type": "string",
+      "enum": [
+        "main",
+        "retailer",
+        "order",
+        "profile_widget"
+      ]
+    },
+    "chose_way_pickup": {
+      "description": "Какой способ получения заказа выбрал клиент. on_hands - на руки в магазине,  on_car - в машину, without_choice - не было модалки с выбором (просто нажал на кнопку). Для тех, кто не выбрал какой-то способ, но открылась модалка, ничего не отправляем",
+      "type": "string",
+      "enum": [
+        "on_hands",
+        "on_car",
+        "without_chose"
+      ]
+    },
+    "modal_type": {
+      "description": "Где сработала отправка запроса. info_car - на модалке с заполнением данных о машине,  choice_pickup_method - на модалке с выбором способа получения заказа (в тачку или на руки). without_modal - для тех, у кого никаких модалок нет",
+      "type": "string",
+      "enum": [
+        "info_car",
+        "choise_pickup_method",
+        "without_modal"
+      ]
+    },
+    "shipment_status": {
+      "description": "В каком статусе был заказ при нажатии на кнопку. ready - принят, collecting - собираем, ready_to_ship - готов к выдаче",
+      "type": "string",
+      "enum": [
+        "pending",
+        "ready",
+        "collecting",
+        "ready_to_ship",
+        "shipping",
+        "shipped",
+        "canceled"
+      ]
+    }
+  },
+  "required": [
+    "shipment_number",
+    "store_id",
+    "source",
+    "chose_way_pickup"
+  ],
+  "title": "Come Button Clicked",
+  "type": "object"
+}

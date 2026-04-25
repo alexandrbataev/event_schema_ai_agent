@@ -1,0 +1,29 @@
+{
+  "description": "Срабатывает сразу после нажатия на кнопку Добавить в корзину n товаров когда отправляет запрос бэкенду на экране повтора заказа. ",
+  "properties": {
+    "order_number": {
+      "description": "Номер повторяемого заказа",
+      "type": "string"
+    },
+    "shipment_number": {
+      "description": "Номер повторяемой доставки, т.к. будут повторяться именно доставки, а не целые заказы",
+      "type": "string"
+    },
+    "retailer_id": {
+      "description": "id ритейлера повторяемого заказа",
+      "type": "number"
+    },
+    "products_count": {
+      "description": "Количество добавляемых товаров",
+      "type": "number"
+    }
+  },
+  "required": [
+    "order_number",
+    "shipment_number",
+    "retailer_id",
+    "products_count"
+  ],
+  "title": "Repeat Order Products Add Request Sent",
+  "type": "object"
+}

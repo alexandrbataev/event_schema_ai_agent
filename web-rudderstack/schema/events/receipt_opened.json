@@ -1,0 +1,15 @@
+{
+  "description": "Открытие чека",
+  "properties": {
+    "receipt_names": {
+      "description": "Название открытого чека. Возможные значения: advance (аванс), advance_cancel (отмена аванса), closure (закрывающий чек), paid_cancellation (закрывающий чек с платной отменой), refund (возврат)",
+      "type": "string"
+    }
+  },
+  "required": [
+    "receipt_names"
+  ],
+  "title": "Receipt Opened",
+  "type": "object"
+}
+

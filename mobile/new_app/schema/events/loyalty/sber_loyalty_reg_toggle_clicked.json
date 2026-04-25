@@ -1,0 +1,19 @@
+{
+  "description": "При каждом нажатии на тоггл регистрации в СберЛоялти",
+  "properties": {
+    "source": {
+      "description": "Источник показа тоггла регистрации",
+      "$ref": "#/definitions/SberLoyaltyRegToggleSources"
+    },
+    "is_welcome_offer": {
+      "description": "является ли предложение welcome offer, 1-да, 0-нет",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Sber Loyalty Reg Toggle Clicked",
+  "type": "object"
+}
+  

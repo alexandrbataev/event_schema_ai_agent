@@ -1,0 +1,14 @@
+{
+  "description": "Пользователь нажал на чекбокс \"Позвонить мне\"",
+  "properties": {
+    "shipment_number": {
+      "description": "Идентификатор заказа",
+      "type": "string"
+    }
+  },
+  "required": [
+    "shipment_number"
+  ],
+  "title": "Order Review Call Click",
+  "type": "object"
+}

@@ -1,0 +1,6 @@
+{
+  "description": "Отправляем каждый раз, когда у пользователя возникает ошибка при сканировании QR-code",
+  "properties": {},
+  "title": "Spg Check Address Store Scan Fail",
+  "type": "object"
+}

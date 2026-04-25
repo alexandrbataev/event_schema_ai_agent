@@ -1,0 +1,11 @@
+{
+  "title": "LoginType",
+  "description": "Способ авторизации phone / sber / apple / social",
+  "type": "string",
+  "enum": [
+    "phone",
+    "sber",
+    "social",
+    "apple"
+  ]
+}

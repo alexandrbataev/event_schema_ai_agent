@@ -1,0 +1,29 @@
+{
+  "description": "Применение сортировки на странице со всеми отзывами на товар. Отправляется только если сортировка действительно была выбрана кликом и применилась. Если юзер просто кликнул на кнопку сортировки (Product Review Sort Initiated) и потом закрыл модалку не выбрав другую сортировку (то есть, например, оставил выбранную по умолчанию сортировку и просто закрыл модалку крестиком), то событие не отправляется.",
+  "properties": {
+    "source_identifier": {
+      "description": "sku товара, отзывы которого просматриваются",
+      "type": "string"
+    },
+    "n_reviews": {
+      "type": "number",
+      "description": "кол-во отзывов(текстовых комментариев) на товаре"
+    },
+    "sorting_type": {
+      "type": "string",
+      "description": "тип примененной сортировки: created_desc – сначала новые, rating_desc  – сначала положительные, rating_asc –  сначала отрицательные",
+      "enum": [
+        "created_desc",
+        "rating_desc",
+        "rating_asc"
+      ]
+    }
+  },
+  "required": [
+    "source_identifier",
+    "n_reviews",
+    "sorting_type"
+  ],
+  "title": "Product Reviews Sorted",
+  "type": "object"
+}

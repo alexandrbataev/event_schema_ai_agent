@@ -1,0 +1,11 @@
+{
+  "description": "Событие приходит каждый раз, когда пользователь был успешно редиректнут с business.kuper.ru на новый веб/лидлендинг или с лидлендинга на новый веб",
+  "properties": {
+    "source": {
+      "$ref": "#/definitions/RedirectSource"
+    }
+  },
+  "required": [],
+  "title": "External Redirect",
+  "type": "object"
+}

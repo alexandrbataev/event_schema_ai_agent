@@ -1,0 +1,24 @@
+{
+  "title": "CartSkuInfo",
+  "type": "object",
+  "description": "Информация о составе товаров в корзине",
+  "properties": {
+    "sku": {
+      "description": "sku товара",
+      "type": "string"
+    },
+    "quantity": {
+      "description": "Сколько единиц товара в корзине (0 если недоступен)",
+      "type": "number"
+    },
+    "is_available": {
+      "description": "Флаг доступности товара в корзине",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "sku",
+    "quantity",
+    "is_available"
+  ]
+}

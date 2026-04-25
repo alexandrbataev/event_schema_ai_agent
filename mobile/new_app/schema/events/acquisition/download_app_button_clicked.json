@@ -1,0 +1,18 @@
+{
+  "description": "Каждый раз при нажатии на кнопку перехода в стор для скачивания приложения.",
+  "properties": {
+    "source": {
+      "description": "На каком экране была нажата кнопка",
+      "$ref": "#/definitions/DownloadAppSource"
+    },
+    "store_name": {
+      "description": "В какой стор перешел пользователь. Можем различать только ios, android или huawei.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Download App Button Clicked",
+  "type": "object"
+}

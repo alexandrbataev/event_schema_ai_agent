@@ -1,0 +1,47 @@
+{
+  "description": "Гео статус пользователя SPG при открытии карты, списка или после смены статуса (допустим, поделился гео) ",
+  "properties": {
+    "is_geo_data_sended": {
+      "description": "Поделился ли пользователь с нами своими геоданными",
+      "type": "boolean"
+    },
+    "is_near": {
+      "description": "есть магазин рядом (триггер для вы здесь)",
+      "type": "boolean"
+    },
+    "is_geo": {
+      "description": "флаг, что координаты из геопозиции, иначе из адреса доставки",
+      "type": "boolean"
+    },
+    "user_coordinates": {
+      "description": "координаты",
+      "type": "array"
+    },
+    "source": {
+      "type": "string",
+      "description": "текущий экран",
+      "enum": [
+        "map",
+        "list"
+      ]
+    },
+    "trigger": {
+      "type": "string",
+      "description": "причина вызова статуса",
+      "enum": [
+        "open_screen",
+        "change_status"
+      ]
+    }
+  },
+  "required": [
+    "is_geo_data_sended",
+    "is_near",
+    "is_geo",
+    "user_coordinates",
+    "source",
+    "trigger"
+  ],
+  "title": "Spg Geo Status",
+  "type": "object"
+}

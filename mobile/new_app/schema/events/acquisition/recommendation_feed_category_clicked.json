@@ -1,0 +1,19 @@
+{
+  "description": "Клик фильтр-Категории ленты рекомендаций на Главной-Главной для выбора фильтр-категории",
+  "properties": {
+    "category_name": {
+      "description": "Название выбранной категории",
+      "type": "string"
+    },
+    "position": {
+      "description": "Позиция фильтр-категории в слайдере",
+      "type": "number"
+    }
+  },
+  "required": [
+    "category_name",
+    "position"
+  ],
+  "title": "Recommendation Feed Category Clicked",
+  "type": "object"
+}

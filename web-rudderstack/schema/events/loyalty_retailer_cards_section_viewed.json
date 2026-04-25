@@ -1,0 +1,14 @@
+{
+  "description": "Пользователю показан элемент 'Карты лояльности', по нажатию на который пользователь увидит раздел со всеми добавленными и доступными к добавлению картами лояльности ретейлеров",
+  "properties": {
+    "source": {
+      "description": "Место, на котором был показан элемент",
+      "$ref": "#/definitions/BonusesPageSource"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Loyalty Retailer Cards Section Viewed",
+  "type": "object"
+}

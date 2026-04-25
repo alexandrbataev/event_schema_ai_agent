@@ -1,0 +1,28 @@
+{
+  "description": "Клиенту увидел баннер - ответь на вопросы и мы предложим лучшие рекомендации",
+  "properties": {
+    "company_id": {
+      "description": "Айди компании пользователя",
+      "type": "string"
+    },
+    "new_or_repeated": {
+      "description": "Показана баннер для новичка или старичка",
+      "type": "string",
+      "enum": [
+        "NEW_USERS",
+        "ACTIVE_USERS"
+      ]
+    },
+    "source": {
+      "description": "Страница, на которой пользователь увидел баннер",
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_id",
+    "new_or_repeated",
+    "source"
+  ],
+  "title": "B2B Onboarding Banner Shown",
+  "type": "object"
+}

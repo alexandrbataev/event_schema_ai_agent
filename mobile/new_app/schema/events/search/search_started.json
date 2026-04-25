@@ -1,0 +1,66 @@
+{
+  "description": "Каждый раз, когда пользователь кликает на “Поиск по магазину” или”Поиск”. Срабатывает повторно при повторном клике/тапе на поисковую строку, то есть каждый клик/тап должен тригерить отправку события. НЕ отправляется повторно при сортировке/фильтрации/смене ритейлера в межрите и так далее",
+  "properties": {
+    "is_voice_enter": {
+      "description": "если пользователь вводил текст поискового запроса голосом = 1, во всех остальных случаях = 0",
+      "type": "boolean"
+    },
+    "source": {
+      "description": "Где именно случилось событиe клика по поисковой строке. Возможные значения прописаны в definition",
+      "$ref": "#/definitions/SearchSource"
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника",
+      "$ref": "#/definitions/SearchSourceIdentifier"
+    },
+    "store_id": {
+      "description": "Именно тот стор, под которым добавлен товар",
+      "type": "number"
+    },
+    "is_multiretail_promo_category": {
+      "description": "True, если поиск внутри промо подборки, False иначе",
+      "type": "boolean"
+    },
+    "is_gigachat_available": {
+      "description": "Флаг доступности функционала GigaChat",
+      "type": "boolean"
+    },
+    "multiretail_promo_category_id": {
+      "description": "id промо подборки. Заполняется только в случае поиска внутри промо подборки",
+      "type": "string"
+    },
+    "search_multiretail_source": {
+      "description": "Параметр отправляется только при source = search_multiretail и показывает, откуда был совершен клик по поисковой строке в межрите - с главной главной (main_main), из просмотра выдачи (search_results) или с джобы самовывоза (pickup_page); Если поиск был с экрана со списком ритейлеров, в который зашли через джобы, то параметр = job, если зашли через полку параметр = shelf",
+      "type": "string",
+      "enum": [
+        "main_main",
+        "search_results",
+        "pickup_page",
+        "favourites_wishlist",
+        "job",
+        "shelf",
+        "category"
+      ]
+    },
+    "search_multiretail_job": {
+      "description": "Параметр отправляется только при  source = search_multiretail и показывает на каком фильтре 2го уровня (на каком джобе) находится строка межрит поиска. Отправляется код джобы. Аналогично параметру tab_clicked в Shop Selection Tab Clicked",
+      "type": "string"
+    },
+    "product_centricity_flag": {
+      "description": "Событие сработало в рамкох товароцентричного флоу",
+      "type": "boolean"
+    },
+    "is_search_rte": {
+      "description": "Флаг того, что поисковая выдача была реализована через поисковик РТЕ вертикали в списке ресторанов или внутри конкретного ресторана",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "source",
+    "source_identifier",
+    "is_voice_enter",
+    "is_merge"
+  ],
+  "title": "Search Started",
+  "type": "object"
+}

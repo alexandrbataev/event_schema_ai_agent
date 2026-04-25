@@ -1,0 +1,14 @@
+{
+  "description": "Клик на кнопку сформировать счет",
+  "properties": {
+    "deposit_amount": {
+      "description": "Сумма пополнения",
+      "type": "string"
+    }
+  },
+  "required": [
+    "deposit_amount"
+  ],
+  "title": "B2B Company Profile Generate Invoice Clicked",
+  "type": "object"
+}

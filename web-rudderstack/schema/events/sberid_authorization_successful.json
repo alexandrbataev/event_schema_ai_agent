@@ -1,0 +1,21 @@
+{
+  "description": "Каждый раз при успешной авторизации по Сбер ID",
+  "properties": {
+    "source": {
+      "description": "После нажатия на какой элемент пользователь попал на модалку входа по Сбер Id",
+      "type": "string",
+      "enum": [
+        "button",
+        "banner",
+        "cart",
+        "order_completed_spasibo"
+      ]
+    },
+    "is_welcome_offer": {
+      "description": "Если пользователю на момент открытия модалки доступен велкам оффер",
+      "type": "boolean"
+    }
+  },
+  "title": "SberID Authorization Successful",
+  "type": "object"
+}

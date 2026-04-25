@@ -1,0 +1,24 @@
+{
+  "description": "Каждый раз когда пользователю показывается карта с курьером",
+  "properties": {
+    "shipment_number": {
+      "description": "shipment_number заказа, для которого показана карта с курьером",
+      "type": "string"
+    },
+    "initiator": {
+      "description": "Кто являлся инициатором показа карты [user, app] (открыл юзер или карта открылась сама в зависимости от статуса доставки)",
+      "type": "string"
+    },
+    "courier_shown": {
+      "description": "Отображается ли курьер на карте, 1 - да, 0 - нет",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "shipment_number",
+    "initiator",
+    "courier_shown"
+  ],
+  "title": "Courier Map Shown",
+  "type": "object"
+}

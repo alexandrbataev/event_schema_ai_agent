@@ -1,0 +1,82 @@
+{
+  "description": "Каждый раз, когда пользователь нажимает кнопку “Оформить заказ”",
+  "properties": {
+    "payment_method": {
+      "description": "Метод оплаты",
+      "type": "string"
+    },
+    "payment_tool_id": {
+      "description": "id связки выбранной карты онлайн или sberpay  (id из spree_payment_tools).  Если это новая Карта онлайн или новая карта Sberpay, то отдавать 0.",
+      "type": "string"
+    },
+    "bank_name": {
+      "description": "Наименование банка выбранного способа оплаты (для карт онлайн и sberpay)",
+      "type": "string"
+    },
+    "is_corporate": {
+      "description": "True если это бизнес-карта",
+      "type": "boolean"
+    },
+    "address_from_details": {
+      "description": "Массив с деталями адреса 'Откуда': [адрес, квартира, подъезд, домофон, этаж]. Если какое-то значение не заполнено, то ставится пустая строка.",
+      "type": "array",
+      "items": {
+        "description": "Данные адреса",
+        "type": "string"
+      }
+    },
+    "address_to_details": {
+      "description": "Массив с деталями адреса 'Откуда': [адрес, квартира, подъезд, домофон, этаж]. Если какое-то значение не заполнено, то ставится пустая строка.",
+      "type": "array",
+      "items": {
+        "description": "Данные адреса",
+        "type": "string"
+      }
+    },
+    "delivery_price_displayed": {
+      "description": "Цена доставки",
+      "type": "number"
+    },
+    "pickup_time_range": {
+      "description": "Данные с отображаемого времени через которое ориентировачно может подъехать курьер к указанному адресу",
+      "type": "string"
+    },
+    "delivery_time_range": {
+      "description": "Время к которому ориентировачно обещаем доставить посылку к конечному адресу",
+      "type": "string"
+    },
+    "pickup_time_sec": {
+      "description": "сколько в секундах до времени, когда мы предположительно заберем посылку",
+      "type": "number"
+    },
+    "delivery_time_sec": {
+      "description": "сколько в секундах до времени, когда мы предположительно доставим посылку",
+      "type": "number"
+    },
+    "sender_name": {
+      "description": "Имя отправителя, если не заполнено, то пустая строка",
+      "type": "string"
+    },
+    "receiver_name": {
+      "description": "Имя получателя, если не заполнено, то пустая строка",
+      "type": "string"
+    },
+    "comment_sender": {
+      "description": "Комментарий для адреса отправителя, пустое значение, если не заполнено",
+      "type": "string"
+    },
+    "comment_receiver": {
+      "description": "Комментарий для адреса получателя, пустое значение, если не заполнено",
+      "type": "string"
+    }
+  },
+  "required": [
+    "payment_method",
+    "payment_tool_id",
+    "address_from_details",
+    "address_to_details",
+    "delivery_price_displayed"
+  ],
+  "title": "Daas Click Order Complete",
+  "type": "object"
+}

@@ -1,0 +1,6 @@
+{
+  "description": "Показ попапа с текстом, что алкоголь можно купить только в магазине",
+  "properties": {},
+  "title": "Alcohol Pickup Popup Viewed",
+  "type": "object"
+}

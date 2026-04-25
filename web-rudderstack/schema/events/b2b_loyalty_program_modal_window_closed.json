@@ -1,0 +1,6 @@
+{
+  "description": "Когда пользователь закрывает модальное окно с условиями программы лояльности",
+  "properties": {},
+  "title": "B2B Loyalty Program Modal Window Closed",
+  "type": "object"
+}

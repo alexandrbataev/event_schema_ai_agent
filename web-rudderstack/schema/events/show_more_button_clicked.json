@@ -1,0 +1,20 @@
+{
+  "description": "Каждый раз когда пользователь скроллит каталог товаров до конца и нажимает кнопку Показать еще",
+  "properties": {
+    "source": {
+      "description": "Страница, на которой был совершен скролл",
+      "type": "string",
+      "enum": [
+        "retailer_search_results",
+        "multi_search_results",
+        "retailer_catalogue",
+        "seo_catalogue"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Show More Button Clicked",
+  "type": "object"
+}

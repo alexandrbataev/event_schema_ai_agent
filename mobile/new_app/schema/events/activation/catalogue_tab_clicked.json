@@ -1,0 +1,18 @@
+{
+  "description": "Клик по табу Каталог",
+  "properties": {
+    "is_empty_page_shown": {
+      "type": "boolean",
+      "description": "Была ли показана заглушка (пустая выдача)"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (grocery, pharmacy или restaurant)",
+      "type": "string"
+    }
+  },
+  "required": [
+    "is_empty_page_shown"
+  ],
+  "title": "Catalogue Tab Clicked",
+  "type": "object"
+}

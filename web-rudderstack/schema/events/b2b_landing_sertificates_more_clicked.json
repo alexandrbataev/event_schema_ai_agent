@@ -1,0 +1,6 @@
+{
+  "description": "Срабатывает когда на главной б2б нажимают на кнопку \"Подробнее\" в разделе \"Подарочные сертификаты СберМаркета\"",
+  "properties": {},
+  "title": "B2B Landing Sertificates More Clicked",
+  "type": "object"
+}

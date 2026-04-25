@@ -1,0 +1,6 @@
+{
+  "description": "Клик на элемент 'О сервисе' в профиле",
+  "properties": {},
+  "title": "About Service Button Clicked",
+  "type": "object"
+}

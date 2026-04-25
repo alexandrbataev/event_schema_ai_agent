@@ -1,0 +1,50 @@
+{
+  "description": "1. Каждый раз, при клике на табы (джобы) на Главной-главной, на экране Самовывоза или при клике из модалки джобов. 2. При клике на джоб-фильтры в полке \"Магазины\".",
+  "properties": {
+    "available_tabs": {
+      "description": "Массив с названиями доступных джобов/фильтров",
+      "type": "array",
+      "items": {
+        "description": "Slug категории ритейлеров",
+        "type": "string"
+      }
+    },
+    "active_filters": {
+      "description": "Массив с названиями выбранных фильтров при обновлении экрана",
+      "type": "array",
+      "items": {
+        "description": "Slug категории ритейлеров",
+        "type": "string"
+      }
+    },
+    "is_job_filters_enabled": {
+      "description": "Включение/отключение джоб-фильтра в полке \"Магазины\". Принимает значение 1, если пользователь кликает на джоб-фильтр и ограничивает себя магазинами этого фильтра. Принимает значение 0, если выключает фильтр.",
+      "type": "boolean"
+    },
+    "tab_clicked": {
+      "description": "Название джоба/фильтра на который кликнули",
+      "type": "string"
+    },
+    "filter_clicked_source": {
+      "description": "Заполняется только есть source='filter'. Название экрана c которого кликнули по фильтру, например с полки Магазины = shopsFilter, с полки Продукты = grocery",
+      "type": "string"
+    },
+    "source": {
+      "description": "Откуда был клик по табу (джобу): home_page - Главная-главная, pickup_page - экран Самовывоза, tabs_modal - модалка со списком всех джобов, filter - когда пользователь кликает по джоб-фильтру в полке \"Магазины\".",
+      "type": "string",
+      "enum": [
+        "home_page",
+        "pickup_page",
+        "tabs_modal",
+        "filter"
+      ]
+    }
+  },
+  "required": [
+    "source",
+    "tab_clicked",
+    "available_tabs"
+  ],
+  "title": "Shop Selection Tab Clicked",
+  "type": "object"
+}

@@ -1,0 +1,12 @@
+{
+  "description": "Каждый раз, когда пользователь кликает на кнопку видеостримов",
+  "properties": {
+    "retailer_id": {
+      "description": "id ритейлера",
+      "type": "number"
+    }
+  },
+  "required": [],
+  "title": "Stream Button Clicked",
+  "type": "object"
+}

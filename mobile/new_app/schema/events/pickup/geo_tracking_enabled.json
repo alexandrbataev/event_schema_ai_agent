@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз когда пользователь дает доступ к отслеживанию геопозиции",
+  "properties": {},
+  "required": [],
+  "title": "Geo Tracking Enabled",
+  "type": "object"
+}

@@ -1,0 +1,42 @@
+{
+  "description": "Пользователь выбрал предзамену для товара, кликнул на цену товара либо сниппет товара, товар помечен как выбранный, пришел ответ с бэка об успешном выборе предзамены. Если пользователь снял выбор с товара, то придет это же событие с пустым product_sku_new",
+  "properties": {
+    "is_oos_risky": {
+      "description": "1, если оригинальный товар имеет пометку Может закончиться, 0 иначе",
+      "type": "boolean"
+    },
+    "product_sku_orig": {
+      "description": "Скю оригинального товара, для которого выбирается предзамена, если он закончится",
+      "type": "string"
+    },
+    "product_sku_new": {
+      "description": "Скю товара, который выбрали в качестве предзамены, если оригинальный товар закончится. Если пользователь снял выбор с товара, событие уходит с пустым product_sku_new.",
+      "type": "string"
+    },
+    "retailer_id": {
+      "description": "Идентификатор ритейлера",
+      "type": "number"
+    },
+    "order_number": {
+      "description": "order_number заказа, в котором выбрана предзамена",
+      "type": "string"
+    },
+    "source": {
+      "description": "Откуда выбиралась предзамена - из чекаута или постчекаута",
+      "type": "string",
+      "enum": [
+        "checkout",
+        "postcheckout"
+      ]
+    }
+  },
+  "required": [
+    "is_oos_risky",
+    "product_sku_orig",
+    "retailer_id",
+    "order_number",
+    "source"
+  ],
+  "title": "Prereplacement Selected",
+  "type": "object"
+}

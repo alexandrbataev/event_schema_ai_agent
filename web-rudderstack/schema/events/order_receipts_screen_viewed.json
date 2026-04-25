@@ -1,0 +1,32 @@
+{
+  "description": "Событие открытия экрана со списком чеков или пустого состояния.",
+  "properties": {
+    "is_empty_screen": {
+      "description": "Пустой ли экран. true — нет чеков, false — чеки отображаются.",
+      "type": "boolean"
+    },
+    "receipt_names": {
+      "description": "Названия чеков, присутствующих в заказе. Если пустой экран, то слать пустой массив. advance (аванс), advance_cancel (отмена аванса), closure (закрывающий чек), paid_cancellation (закрывающий чек с платной отменой), refund (возврат)",
+      "type": "array",
+      "items": {
+        "description": "Название чека",
+        "type": "string"
+      }
+    },
+    "receipts_availability": {
+      "description": "Доступность чеков. Массив, где 1 — чек доступен, 0 — недоступен (порядок соответствует receipt_types).",
+      "type": "array",
+      "items": {
+        "description": "1 — чек доступен, 0 — недоступен",
+        "type": "number"
+      }
+    }
+  },
+  "required": [
+    "is_empty_screen",
+    "receipt_names",
+    "receipts_availability"
+  ],
+  "title": "Order Receipts Screen Viewed",
+  "type": "object"
+}

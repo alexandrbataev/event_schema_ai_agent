@@ -1,0 +1,10 @@
+{
+  "title": "RetailerVertical",
+  "description": "Вертикаль ритейлера",
+  "type": "string",
+  "enum": [
+    "grocery",
+    "restaurant",
+    "pharm"
+  ]
+}

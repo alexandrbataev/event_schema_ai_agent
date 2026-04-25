@@ -1,0 +1,28 @@
+{
+  "description": "Пользователь открыл экран прогресса выбранной 'Цели'",
+  "properties": {
+    "source": {
+      "description": "Источник, где именно был увиден баннер, по нажатию на который был открыт экран",
+      "$ref": "#/definitions/GoalsSources"
+    },
+    "goal_state": {
+      "description": "Отображаемое состояние достижения пользователем цели",
+      "type": "string",
+      "enum": [
+        "not_complete",
+        "complete"
+      ]
+    },
+    "goal_id": {
+      "description": "Id отображаемой цели",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "goal_id",
+    "goal_state"
+  ],
+  "title": "Sber Loyalty Goals Status Form Opened",
+  "type": "object"
+}

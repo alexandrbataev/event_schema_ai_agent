@@ -1,0 +1,54 @@
+{
+  "description": "отправляется, когда пользователь в приложении заходит в совершённый заказ (в любом статусе и любым способом) - и внутри него нажимает на кнопку с количеством товаров и весом заказа, либо через диплинк - тем самым попадая на экран со статусами сборки товаров и вызывая это событие",
+  "properties": {
+    "retailer_id": {
+      "type": "number",
+      "description": "ID ритейлера"
+    },
+    "shipment_id": {
+      "type": "string",
+      "description": "ID шипмента"
+    },
+    "source": {
+      "description": "Источник, из которого клиент попадает на экран статуса сборки товаров",
+      "type": "string",
+      "enum": [
+        "main_retailer_page_active_order_banner",
+        "main_retailer_last_order_banner",
+        "profile_order_history",
+        "checkout",
+        "deep_link",
+        "shipment_review",
+        "order_info",
+        "history_orders",
+        "previous_order",
+        "postcheckout_prereplacement_bottomsheet"
+      ]
+    },
+    "status": {
+      "description": "статус заказа в момент открытия окна (принят, собирается и т.д.) - статус берется из ответа бэкенда, инфа по статусам здесь",
+      "type": "string"
+    },
+    "type_delivery": {
+      "description": "Метод доставки, которым пользователь получит/л заказ",
+      "$ref": "#/definitions/DeliveryMethod"
+    },
+    "is_prereplacement_available": {
+      "type": "boolean",
+      "description": "Возможна ли фича на предзамены"
+    },
+    "prereplacement_risky_items_cnt": {
+      "type": "number",
+      "description": "Число, отрисованное на плашке 'Х товаров могут закончиться - подберите предзамены'. Если таких товаров нет, то шлем 0. Если для всех рисковых товаров уже подобраны замены, то 0. Если фича предзамен в целом невозможна, параметр пустой."
+    }
+  },
+  "required": [
+    "source",
+    "status",
+    "shipment_id",
+    "retailer_id",
+    "type_delivery"
+  ],
+  "title": "Order Products Viewed",
+  "type": "object"
+}

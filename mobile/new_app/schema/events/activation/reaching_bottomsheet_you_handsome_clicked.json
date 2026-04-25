@@ -1,0 +1,14 @@
+{
+  "description": "Клик на дотягивающий боттомшит на главной ритейлера",
+  "properties": {
+    "bottomsheet_type": {
+      "type": "string",
+      "description": "Тип боттомшита (order — на заказ, amount — на сумму)"
+    }
+  },
+  "required": [
+    "bottomsheet_type"
+  ],
+  "title": "Reaching Bottomsheet You Handsome Clicked",
+  "type": "object"
+}

@@ -1,0 +1,69 @@
+{
+  "description": "При открытии экрана с информацией о партнере",
+  "properties": {
+    "partner_uuid": {
+      "description": "UUID партнера",
+      "type": "string"
+    },
+    "partner_role": {
+      "description": "Роль партнера: courier для курьера и shopper для сборщика",
+      "type": "string",
+      "enum": [
+        "shopper",
+        "courier"
+      ]
+    },
+    "order_number": {
+      "description": "Номер заказа, с которого перешли к информации о партнере",
+      "type": "string"
+    },
+    "source": {
+      "description": "Откуда открыли информацию о партнере: review - с экрана оценки, order_info - с экрана информации о заказе, history_orders - с истории заказов, partner_photo - если клик был по иконке партнера в постчекауте",
+      "type": "string",
+      "enum": [
+        "review",
+        "order_info",
+        "history_orders",
+        "partner_photo"
+      ]
+    },
+    "is_birthday": {
+      "description": "Есть ли фишка 'У купера день рождения'",
+      "type": "boolean"
+    },
+    "is_photo": {
+      "description": "Есть ли фото у партнера",
+      "type": "boolean"
+    },
+    "chips": {
+      "description": "Массив названий фишек, которые есть у партнера",
+      "type": "array",
+      "chip_name": {
+        "type": "string",
+        "description": "Название фишки"
+      },
+      "$comment": "Заполняется только если у партнера есть хотя бы 1 фишка (включая фишку дня рождения)"
+    },
+    "partner_orders_completed": {
+      "description": "Число заказов, выполненных за время работы",
+      "type": "number"
+    },
+    "is_goal_filled": {
+      "description": "Заполнена ли у партнера цель в блоке чаевых",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "partner_uuid",
+    "partner_role",
+    "is_birthday",
+    "is_photo",
+    "chips",
+    "partner_orders_completed",
+    "source",
+    "is_goal_filled",
+    "order_number"
+  ],
+  "title": "Partner Info Viewed",
+  "type": "object"
+}

@@ -1,0 +1,34 @@
+{
+  "description": "Клиенту показана анкета онбординга",
+  "properties": {
+    "company_id": {
+      "description": "Айди компании, которую добавил пользователь",
+      "type": "string"
+    },
+    "new_or_repeated": {
+      "description": "Показана анкета новичка или старичка",
+      "type": "string",
+      "enum": [
+        "NEW_USERS",
+        "ACTIVE_USERS"
+      ]
+    },
+    "source": {
+      "description": "Показана анкета новичка после добавления компании или после клика на одной из страниц. lk - личный кабинет, onboarding_banner - любая страница витрины, кроме личного кабинета и постчекаута, post_checkout - постчекаут",
+      "type": "string",
+      "enum": [
+        "adding_company",
+        "onboarding_banner",
+        "lk",
+        "post_checkout"
+      ]
+    }
+  },
+  "required": [
+    "company_id",
+    "new_or_repeated",
+    "source"
+  ],
+  "title": "B2B Onboarding Form Opened",
+  "type": "object"
+}

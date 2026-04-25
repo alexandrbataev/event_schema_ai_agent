@@ -1,0 +1,7 @@
+{
+  "description": "Клик на кнопку 'Выбрать на карте' на экране онбординга после скачивания приложения",
+  "properties": {},
+  "required": [],
+  "title": "Choose On Map Button Clicked",
+  "type": "object"
+}

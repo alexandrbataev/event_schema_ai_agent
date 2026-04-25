@@ -1,0 +1,7 @@
+{
+  "description": "Вызывается, когда пользователь видит баннер рассрочки в профиле",
+  "properties": {},
+  "required": [],
+  "title": "BNPL Banner Profile Shown",
+  "type": "object"
+}

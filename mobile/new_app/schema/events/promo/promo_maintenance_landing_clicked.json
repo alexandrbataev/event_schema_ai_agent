@@ -1,0 +1,11 @@
+{
+  "description": "Клик по точке входа на страницу всех акций",
+  "properties": {
+    "shelf_name": {
+      "description": "Для объекта shelf (полки) - заголовок, отображаемый у пользователя",
+      "type": "string"
+    }
+  },
+  "title": "Promo Maintenance Landing Clicked",
+  "type": "object"
+}

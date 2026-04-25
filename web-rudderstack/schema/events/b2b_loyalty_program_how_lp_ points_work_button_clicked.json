@@ -1,0 +1,14 @@
+{
+  "description": "Пользователь кликнул на кнопку Как работают баллы",
+  "properties": {
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_id"
+  ],
+  "title": "B2B Loyalty Program How LP Points Work Button Clicked",
+  "type": "object"
+}

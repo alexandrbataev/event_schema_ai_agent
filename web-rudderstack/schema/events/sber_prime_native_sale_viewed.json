@@ -1,0 +1,15 @@
+{
+  "description": "Пользователь увидел баннер нативной продажи",
+  "properties": {
+    "source": {
+      "description": "Источник, где именно был увиден баннер",
+      "type": "string",
+      "enum": [
+        "profile"
+      ]
+    }
+  },
+  "required": [],
+  "title": "Sber Prime Banner Viewed",
+  "type": "object"
+}

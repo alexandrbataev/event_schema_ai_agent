@@ -1,0 +1,27 @@
+{
+  "title": "RetailersPrice",
+  "type": "object",
+  "description": "Пара ритейлера и цены в корзине",
+  "properties": {
+    "retailer_id": {
+      "description": "Идентификатор ритейлера",
+      "type": "number"
+    },
+    "total_price": {
+      "description": "Количественное значение цены без учета скидки сбера",
+      "type": "number"
+    },
+    "bank_total_price": {
+      "description": "итоговая сумма корзины с учетом скидки сбера. Если скидка сбера недоступна, то писать сумму без учета скидки сбера",
+      "type": "number"
+    },
+    "bank_discount_amount": {
+      "description": "Сумма скидки сбера ",
+      "type": "number"
+    }
+  },
+  "required": [
+    "retailer_id",
+    "total_price"
+  ]
+}

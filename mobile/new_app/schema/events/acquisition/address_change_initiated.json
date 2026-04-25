@@ -1,0 +1,29 @@
+{
+  "description": "При каждом открытии экрана с выбором адреса",
+  "properties": {
+    "from_deeplink": {
+      "description": "Указываем название диплинка, с которого пришел пользователь",
+      "type": "string"
+    },
+    "source": {
+      "description": "C какого экрана был переход к выбору адреса",
+      "$ref": "#/definitions/AddressSelectionSource"
+    },
+    "has_address": {
+      "description": "Если у пользователя уже введен адрес - True",
+      "type": "boolean"
+    },
+    "is_new_address": {
+      "description": "Если пользователь вводит новый адрес - True, если изменяет старый - False",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "from_deeplink",
+    "source",
+    "has_address",
+    "is_new_address"
+  ],
+  "title": "Address Change Initiated",
+  "type": "object"
+}

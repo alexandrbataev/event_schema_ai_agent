@@ -1,0 +1,14 @@
+{
+  "description": "Клик по кнопке 'Оставить заявку' в баннере 'Пополните баланс с кредитом от Сбера'",
+  "properties": {
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_id"
+  ],
+  "title": "B2B Profile Banner Top Up Sber Credit Clicked",
+  "type": "object"
+}

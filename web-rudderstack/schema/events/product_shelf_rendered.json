@@ -1,0 +1,38 @@
+{
+  "description": "Рендер полки категории в каталоге или на главной ритейлера",
+  "properties": {
+    "category_id": {
+      "description": "category_id категории полки",
+      "type": "string"
+    },
+    "source": {
+      "description": "Где отрендерилась полка: 'main_page' – полка была на главной ритейлера, 'category' – полка находилась внутри какой-то категории",
+      "type": "string",
+      "enum": [
+        "main_page",
+        "category"
+      ]
+    },
+    "category_name": {
+      "description": "Название категории полки",
+      "type": "string"
+    },
+    "shelf_position": {
+      "description": "Позиция полки на странице, начиная с 1",
+      "type": "number"
+    },
+    "parent_category_id": {
+      "description": "id родительской категории (если полка внутри какой-то категории, если на главной ритейлера, то null)",
+      "type": "string"
+    }
+  },
+  "required": [
+    "category_id",
+    "source",
+    "category_name",
+    "shelf_position",
+    "parent_category_id"
+  ],
+  "title": "Product Shelf Rendered",
+  "type": "object"
+}

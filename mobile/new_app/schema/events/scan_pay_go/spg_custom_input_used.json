@@ -1,0 +1,38 @@
+{
+  "description": "Использование функционала ввода количества товара с клавиатуры в корзине SPG",
+  "properties": {
+    "product_name": {
+      "type": "string",
+      "description": "Название товара"
+    },
+    "product_sku": {
+      "type": "string",
+      "description": "sku товара"
+    },
+    "error_type": {
+      "type": "string",
+      "description": "Ошибка изменения товара после ввода, если присутствует"
+    },
+    "source": {
+      "type": "string",
+      "description": "Как закрыл клавиатуру",
+      "enum": [
+        "ready_buttom",
+        "other"
+      ]
+    },
+    "input_value": {
+      "type": "string",
+      "description": "Значение, которое ввёл пользователь в окне ввода"
+    }
+  },
+  "required": [
+    "source",
+    "product_sku",
+    "product_name",
+    "error_type",
+    "input_value"
+  ],
+  "title": "Spg Custom Input Used",
+  "type": "object"
+}

@@ -1,0 +1,17 @@
+{
+  "description": "Каждый раз, когда открывается модалка с выбором адреса на карте или пользователь кликает на поле ввода адреса на лендинге",
+  "properties": {
+    "source": {
+      "$ref": "#/definitions/AddressChangeSource"
+    },
+    "is_new_address": {
+      "description": "Если пользователь вводит новый адрес - True, если изменяет старый - False",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Address Change Initiated",
+  "type": "object"
+}

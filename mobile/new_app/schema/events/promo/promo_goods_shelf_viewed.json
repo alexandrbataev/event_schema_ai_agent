@@ -1,0 +1,32 @@
+{
+  "description": "При каждой отрисовке промо полки с товарами",
+  "properties": {
+    "name": {
+      "description": "Заголовок полки, если есть",
+      "type": "string"
+    },
+    "promo_category_id": {
+      "description": "id промо подборки",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник, который привел на страницу",
+      "type": "string",
+      "enum": [
+        "main_page",
+        "goals_modal",
+        "promo_macro_page"
+      ]
+    },
+    "product_skus": {
+      "description": "Массив из sku, которые находятся на полке",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "sku, которые находятся на полке"
+      }
+    }
+  },
+  "title": "Promo Goods Shelf Viewed",
+  "type": "object"
+}

@@ -1,0 +1,36 @@
+{
+  "description": "Смена профиля из таба \"Переключить профиль\"",
+  "properties": {
+    "profile_type": {
+      "description": "Тип переключенного профиля",
+      "type": "string",
+      "enum": [
+        "personal_profile",
+        "company_profile"
+      ]
+    },
+    "profile_id": {
+      "description": "User_id или company_id переключенного профиля",
+      "type": "string"
+    },
+    "source": {
+      "description": "Откуда именно была открыта модалка. change_profile_button - b2b пользователь в профиле нажал на кнопку Переключить профиль; buy_for_business_button - b2c пользователь нажал кнопку Переключиться на компанию; checkout - смена профиля на чекауте; main_page_upper_profile - на гл-гл зажал значок профиля вверху экрана; tab_bar_profile - на таббаре снизу зажал значок профиля",
+      "type": "string",
+      "enum": [
+        "change_profile_button",
+        "buy_for_business_button",
+        "checkout",
+        "buy_for_yourself_button",
+        "main_page_upper_profile",
+        "tab_bar_profile"
+      ]
+    }
+  },
+  "required": [
+    "profile_type",
+    "profile_id",
+    "source"
+  ],
+  "title": "Profile Switched",
+  "type": "object"
+}

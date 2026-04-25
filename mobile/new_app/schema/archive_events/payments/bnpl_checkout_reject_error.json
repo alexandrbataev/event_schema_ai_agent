@@ -1,0 +1,7 @@
+{
+  "description": "Вызывается, когда пользователю отказали в оплате частями (выводится ошибка об отказе в одобрении)",
+  "properties": {},
+  "required": [],
+  "title": "BNPL Checkout Reject Error",
+  "type": "object"
+}

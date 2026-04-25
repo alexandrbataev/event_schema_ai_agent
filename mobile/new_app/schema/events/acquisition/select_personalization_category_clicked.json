@@ -1,0 +1,19 @@
+{
+  "description": "Нажатие на категорию (выбор категории)",
+  "properties": {
+    "category_name": {
+      "description": "Название категории",
+      "type": "string"
+    },
+    "selection_enabled": {
+      "description": "Доступен ли выбор (не превышен лимит выбранных категорий)",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "category_name",
+    "selection_enabled"
+  ],
+  "title": "Select Personalization Category Clicked",
+  "type": "object"
+}

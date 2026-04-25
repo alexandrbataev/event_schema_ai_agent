@@ -1,0 +1,19 @@
+{
+  "description": "Срабатывает, когда пользователь успешно отправляет лид-форму.",
+  "properties": {
+    "form_id": {
+      "description": "Уникальный идентификатор лид-формы",
+      "type": "string"
+    },
+    "source": {
+      "description": "Где именно была размещена шторка лид-формы",
+      "$ref": "#/definitions/AdsBannerSource"
+    }
+  },
+  "required": [
+    "form_id",
+    "source"
+  ],
+  "title": "Ads Lead Form Sent",
+  "type": "object"
+}

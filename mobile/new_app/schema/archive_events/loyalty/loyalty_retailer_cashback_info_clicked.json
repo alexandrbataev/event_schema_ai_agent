@@ -1,0 +1,27 @@
+{
+  "description": "При каждом клике на элемент с информацией о начисляемых баллах ПЛ ритейлера за заказ (сейчас только icon i в корзине)",
+  "properties": {
+    "source": {
+      "description": "Источник отображения элемента",
+      "type": "string",
+      "enum": [
+        "cart"
+      ]
+    },
+    "amount": {
+      "description": "Сумма отображаемых бонусов к начислению",
+      "type": "number"
+    },
+    "loyalty_id": {
+      "description": "Наименование ПЛ ритейлера",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "amount",
+    "loyalty_id"
+  ],
+  "title": "Loyalty Retailer Cashback Info Сlicked",
+  "type": "object"
+}

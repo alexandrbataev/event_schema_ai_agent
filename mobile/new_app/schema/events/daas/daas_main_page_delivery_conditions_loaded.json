@@ -1,0 +1,28 @@
+{
+  "description": "Каждый раз, когда данные по цене доставки, времени доставки и доступность адресов успешно подтягиываются с бека",
+  "properties": {
+    "delivery_price_displayed": {
+      "description": "Цена доставки",
+      "type": "number"
+    },
+    "pickup_time_range": {
+      "description": "Данные с отображаемого времени через которое ориентировачно может подъехать курьер к указанному адресу",
+      "type": "string"
+    },
+    "delivery_time_range": {
+      "description": "Время к которому ориентировачно обещаем доставить посылку к конечному адресу",
+      "type": "string"
+    },
+    "errors": {
+      "description": "Список отображаемым ошибок, которые получил пользователь",
+      "type": "array",
+      "items": {
+        "description": "Текст ошибки",
+        "type": "string"
+      }
+    }
+  },
+  "required": [],
+  "title": "Daas Main Page Delivery Conditions Loaded",
+  "type": "object"
+}

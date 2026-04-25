@@ -1,0 +1,60 @@
+{
+  "description": "Первая загрузка карты самовывоза (вместе с магазинами, не открытие карты). Если выйти из карты и опять зайти, событие отправляется, но если просто передвигать карту, то событие не отправляется",
+  "properties": {
+    "store_count": {
+      "description": "Количество логотипов и точек с магазинами",
+      "type": "number"
+    },
+    "current_retailer_id": {
+      "description": "id ритейлера, если пришли на карту самовывоза с выбранным магазином самовывоза (только старый веб, в будущем удалим и там)",
+      "type": "number"
+    },
+    "current_store": {
+      "description": "Характеристики текущего магазина",
+      "$ref": "#/definitions/PickupStore"
+    },
+    "have_open_store": {
+      "description": "Если карта открылась сразу с загруженным баблом магазина с кнопкой <Заберу отсюда>, то true, иначе false",
+      "type": "boolean"
+    },
+    "filter_count": {
+      "description": "Количество доступных фильтров. Если фильтров нет, отправляем 0",
+      "type": "number"
+    },
+    "filter_available": {
+      "description": "Названия доступных фильтров в порядке, в котором они расположены",
+      "type": "array",
+      "items": {
+        "description": "Название фильтра",
+        "type": "string"
+      }
+    },
+    "pre_used_filter": {
+      "description": "Название прожатого фильтра, который уже был активен при загрузке карты. Если загрузка карты была без прожатого фильтра, то отправляем пустую строку",
+      "type": "string"
+    },
+    "source": {
+      "description": "Откуда пришлина карту",
+      "type": "string",
+      "enum": [
+        "main_page",
+        "preview_cart",
+        "cart",
+        "other",
+        "landing"
+      ],
+      "$comment": "main_page - главная ритейлера, preview_cart - клик по пред.корзине, cart - в корзине, other - любой другой источник, landing - на лэндинге самовывоза в старом вебе"
+    },
+    "is_only_pharma": {
+      "description": "Булевый флаг все ли ритейлеры на карте - аптеки. True возможно скорее всего только из фильтра аптек или внутри ритейлера аптек",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "store_count",
+    "have_open_store",
+    "is_only_pharma"
+  ],
+  "title": "Pickup Map Loaded",
+  "type": "object"
+}

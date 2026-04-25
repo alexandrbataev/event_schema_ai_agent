@@ -1,0 +1,39 @@
+{
+  "description": "Каждый раз, когда пользователь переходит на страницу с условиями доставки и выбором адресов",
+  "properties": {
+    "address_from": {
+      "description": "Полный адрес из поля ввода адреса 'Откуда'",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник откуда пользователь попал на главную страницу доставки. main_page - главная приложения, onboarding - онбординг, daas_deeplink - внешняя ссылка",
+      "type": "string",
+      "enum": [
+        "main_page",
+        "onboarding",
+        "daas_deeplink",
+        "daas_checkout"
+      ]
+    },
+    "deeplink_url": {
+      "description": "УРЛ адрес откуда был сделан переход",
+      "type": "string"
+    },
+    "is_night_mode": {
+      "description": "Видна ли пользователю плашка о том, что ночью мало курьеров",
+      "type": "boolean"
+    },
+    "list_of_active_orders": {
+      "description": "JSON активных заказов (в том числе тех, которые скрыты от пользователя). active_orders состоит из claim_number - номер заказа и status - текущий статус заказа)",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/DaasActiveOrders"
+      }
+    }
+  },
+  "required": [
+    "address_from"
+  ],
+  "title": "Daas Main Page Loaded",
+  "type": "object"
+}

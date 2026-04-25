@@ -1,0 +1,16 @@
+{
+  "description": "Нажатие кнопки Подключить ЭДО на странице документов",
+  "properties": {
+    "source": {
+      "description": "Источник из которого нажата кнопка",
+      "type": "string",
+      "enum": [
+        "landing",
+        "banner",
+        "checkout"
+      ]
+    }
+  },
+  "title": "B2B Go to Connect EDC Clicked",
+  "type": "object"
+}

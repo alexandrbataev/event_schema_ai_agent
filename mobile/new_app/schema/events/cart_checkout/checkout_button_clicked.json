@@ -1,0 +1,75 @@
+{
+  "description": "Каждый раз, когда пользователь в корзине нажимает на кнопку, чтобы начать чекаут",
+  "properties": {
+    "cart_type": {
+      "description": "Тип корзины",
+      "type": "string",
+      "enum": [
+        "default",
+        "mix",
+        "alcohol"
+      ]
+    },
+    "payment_amount": {
+      "description": "Сумма корзины без учета скидки сбера, с которой клиент пытался зачекаутиться (фактически отправляется order.total со всех имеющихся у пользователя корзин)",
+      "type": "number"
+    },
+    "retailers": {
+      "description": "Массив из retailer_id, из которых пользователь пытается зачекаутиться. В реальности всегда длиной 1, пока не перешли к мультиритейлерным заказам",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "description": "retailer_id"
+      }
+    },
+    "is_delivery_change_available": {
+      "description": "Доступна ли смена способа доставки - переключалка 'доставка-самовывоз' (в корзине доступна только если можно переключиться в рамках того же магазина) ",
+      "type": "boolean"
+    },
+    "is_pickup_payment_reached": {
+      "description": "Флаг, набрана ли минимальная сумма для самовывоза из этого магазина. Если набрана, то 1, иначе 0. Заполняется только если выполнены два условия: 1.выбран магазин 2.есть переключалка (то есть доступен самовывоз из этого магазина). Если одно из условий не выполняется, то в параметр отправляется null.",
+      "type": "boolean"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (grocery, pharmacy или restaurant)",
+      "type": "string"
+    },
+    "shipment_number": {
+      "description": "К какому шипменту относится заказ, на чекаут которого переходит пользователь",
+      "type": "string"
+    },
+    "bank_discount_amount": {
+      "description": "Сумма возможной доп. скидки при оплате картой сбера. Если скидка сбера недоступна, то присылать 0",
+      "type": "number"
+    },
+    "bank_payment_amount": {
+      "description": "Итоговая сумма корзины с учетом скидки сбера. Если скидка сбера недоступна, то пишем стоимость без учета скидки сбера ",
+      "type": "number"
+    },
+    "source": {
+      "description": "На какую кнопку нажимает пользователь чтобы перейти к чекауту - на основную или на кнопку из баннера/шторки BNPL в корзине",
+      "type": "string",
+      "enum": [
+        "basic_button",
+        "bnpl_button"
+      ]
+    },
+    "gift_flg": {
+      "description": "Флаг что товар является подарком в рамках фичи подарки в корзине https://wiki.sbmt.io/pages/viewpage.action?pageId=3383236905",
+      "type": "number",
+      "enum": [
+        0,
+        1
+      ]
+    }
+  },
+  "required": [
+    "retailers",
+    "cart_type",
+    "payment_amount",
+    "retailer_vertical",
+    "shipment_number"
+  ],
+  "title": "Checkout Button Clicked",
+  "type": "object"
+}

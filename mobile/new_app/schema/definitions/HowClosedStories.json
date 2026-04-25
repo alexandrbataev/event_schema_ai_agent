@@ -1,0 +1,11 @@
+{
+  "title": "HowClosedStories",
+  "description": "Как закрылась сторя: свайп, автоматом/линком, крестиком, android: hw_back",
+  "type": "string",
+  "enum": [
+    "swipe",
+    "cross_click",
+    "auto",
+    "hw_back"
+  ]
+}

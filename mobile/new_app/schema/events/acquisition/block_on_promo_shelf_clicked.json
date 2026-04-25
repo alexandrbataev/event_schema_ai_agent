@@ -1,0 +1,23 @@
+{
+  "description": "Каждый раз при клике пользователя на один из блоков в полке 'Покупайте с выгодой'",
+  "properties": {
+    "block_name": {
+      "description": "Название блока",
+      "type": "string"
+    },
+    "block_position": {
+      "description": "Порядковый номер блока на полке",
+      "type": "number"
+    },
+    "shelf_position": {
+      "description": "Порядковый номер полки, начиная сверху на Главной-Главной",
+      "type": "number"
+    }
+  },
+  "required": [
+    "block_name",
+    "block_position"
+  ],
+  "title": "Block on Promo Shelf Clicked",
+  "type": "object"
+}

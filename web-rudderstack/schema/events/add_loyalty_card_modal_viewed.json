@@ -1,0 +1,39 @@
+{
+  "description": "Отображение модалки с картой лояльности ритейлера",
+  "properties": {
+    "source": {
+      "description": "Место, где показали элемент, по нажатию на который открылась модалка",
+      "type": "string",
+      "enum": [
+        "card_catalog"
+      ]
+    },
+    "auth_type": {
+      "description": "Способ активации ПЛ (phone - по номеру телефона, card_number - по номеру карты)",
+      "type": "string",
+      "enum": [
+        "phone",
+        "card_number"
+      ]
+    },
+    "loyalty_id": {
+      "description": "Наименование ПЛ ретейлера",
+      "type": "string"
+    },
+    "modal_type": {
+      "description": "Тип открытой модалки:  enter_card - модалка с вводом карты",
+      "type": "string",
+      "enum": [
+        "enter_card"
+      ]
+    }
+  },
+  "required": [
+    "source",
+    "auth_type",
+    "loyalty_id",
+    "modal_type"
+  ],
+  "title": "Add Loyalty Card Modal Viewed",
+  "type": "object"
+}

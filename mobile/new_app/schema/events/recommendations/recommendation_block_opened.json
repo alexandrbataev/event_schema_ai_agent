@@ -1,0 +1,40 @@
+{
+  "description": "У пользователя открылась страница со всей выдачей товаров рек-блока",
+  "properties": {
+    "source": {
+      "description": "Где был показан блок",
+      "$ref": "#/definitions/RecommendationBlockSource"
+    },
+    "source_identifier": {
+      "description": "Идентификатор места показа блока",
+      "type": "string"
+    },
+    "rec_block_id": {
+      "description": "ID рекомендательного блока",
+      "type": "number"
+    },
+    "rec_block_name": {
+      "description": "Наименование рекомендательного блока",
+      "type": "string"
+    },
+    "store_id": {
+      "description": "Значение актуального магазина",
+      "type": "number"
+    },
+    "product_ids": {
+      "description": "Массив sku доступных в выдаче блока",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "TBD"
+      }
+    }
+  },
+  "required": [
+    "source",
+    "store_id",
+    "product_ids"
+  ],
+  "title": "Recommendation Block Opened",
+  "type": "object"
+}

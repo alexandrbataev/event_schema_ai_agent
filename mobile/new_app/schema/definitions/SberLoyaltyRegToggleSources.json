@@ -1,0 +1,10 @@
+{
+  "title": "SberLoyaltyRegToggleSources",
+  "description": "Источник показа/клика на тогл регистрации в Сберлоялти",
+  "type": "string",
+  "enum": [
+    "cart",
+    "checkout"
+  ]
+}
+  

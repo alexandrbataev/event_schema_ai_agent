@@ -1,0 +1,19 @@
+{
+  "description": "Загрузка баланса компании в профиле",
+  "properties": {
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    },
+    "current_balance": {
+      "description": "Текущий баланс счета",
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_id",
+    "current_balance"
+  ],
+  "title": "B2B Balance Company Loaded",
+  "type": "object"
+}

@@ -1,0 +1,14 @@
+{
+  "description": "Пользователь кликнул на внопку Смотреть все в истории транзакций",
+  "properties": {
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_id"
+  ],
+  "title": "B2B Loyalty Program View All Button Clicked",
+  "type": "object"
+}

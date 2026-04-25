@@ -1,0 +1,44 @@
+{
+  "title": "MulticardOptions",
+  "type": "object",
+  "description": "Список доступных опций в мультикарточке",
+  "properties": {
+    "groupKey": {
+      "type": "string",
+      "description": "Бэковое название группы атрибутов"
+    },
+    "groupName": {
+      "description": "Фронтовое название группы атрибутов",
+      "type": "string"
+    },
+    "itemKey": {
+      "type": "string",
+      "description": "Бэковое название значения атрибута"
+    },
+    "itemName": {
+      "description": "Фронтовое название значения атрибута",
+      "type": "string"
+    },
+    "selected": {
+      "description": "Является ли отображаемая опция выбранной",
+      "type": "boolean"
+    },
+    "active": {
+      "description": "Есть ли карточка товара для такого набора характеристик",
+      "type": "boolean"
+    },
+    "clickable": {
+      "description": "Кликабельный ли чипс",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "groupKey",
+    "groupName",
+    "itemKey",
+    "itemName",
+    "selected",
+    "active",
+    "clickable"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "description": "Успешная загрузка ин-апп чата с поддержкой в приложении",
+  "properties": {
+    "source": {
+      "description": "С какой страницы был переход на чата с поддержкой: profile = с главной страницы профиля, order_info = со страницы информации по заказу, daas_order_info = со страницы информации по daas заказу, daas_main_page = с главной daas, checkout_payments = при ошибке пеймент инструментов на чекауте, deeplink - ссылка из пуша",
+      "type": "string",
+      "enum": [
+        "profile",
+        "order_info",
+        "daas_order_info",
+        "daas_main_page",
+        "checkout_payments",
+        "deeplink"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Contact Us Chat Loaded",
+  "type": "object"
+}

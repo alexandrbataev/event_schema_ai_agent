@@ -1,0 +1,37 @@
+{
+  "description": "В поисковой выдаче межрита отрисована полка (не просмотрена)",
+  "properties": {
+    "store_ids": {
+      "description": "Список идентификаторов сторов, отрисованных на полке в порядке отображения",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "description": "Идентификатор стора"
+      }
+    },
+    "product_ids": {
+      "description": "Список идентификаторов товаров, отрисованных на полке в порядке отображения",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "description": "Идентификатор товара"
+      }
+    },
+    "shelf_category": {
+      "description": "К какому типу относится полка: рестораны, аптеки и тд",
+      "type": "string"
+    },
+    "search_query_orig": {
+      "description": "Запрос, который был введен пользователем в поиске",
+      "type": "string"
+    }
+  },
+  "required": [
+    "shelf_category",
+    "store_ids",
+    "product_ids",
+    "search_query_orig"
+  ],
+  "title": "Multiretail Search Shelf Shown",
+  "type": "object"
+}

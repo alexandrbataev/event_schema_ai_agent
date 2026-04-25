@@ -1,0 +1,14 @@
+{
+  "description": "Показ скрина 'Спасибо за ответы' после завершения опроса",
+  "properties": {
+    "survey_id": {
+      "description": "идентификатор опроса",
+      "type": "string"
+    }
+  },
+  "required": [
+    "survey_id"
+  ],
+  "title": "Survey Thank You Screen Rendered",
+  "type": "object"
+}

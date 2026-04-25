@@ -1,0 +1,6 @@
+{
+  "description": "Показ зеро скрина после ввода адреса в временной корзине (магазины не найдены)",
+  "properties": {},
+  "title": "Sharecart Zero Screen Viewed",
+  "type": "object"
+}

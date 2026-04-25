@@ -1,0 +1,52 @@
+{
+  "description": "Открыта карта SPG",
+  "properties": {
+    "available_stores": {
+      "description": "Массив с характеристиками доступных магазинов",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PickupStore"
+      }
+    },
+    "source": {
+      "type": "string",
+      "description": "Источник экрана, откуда перешёл на карту",
+      "enum": [
+        "main",
+        "retailer_page",
+        "deeplink",
+        "stories",
+        "other"
+      ]
+    },
+    "retailer_id": {
+      "description": "id выбранного ритейлера",
+      "type": "number"
+    },
+    "available_stores_count": {
+      "description": "Количество доступных магазинов ритейлера (полное количество, не только то, что отображается на одной странице без скролла)",
+      "type": "number"
+    },
+    "user_coordinates": {
+      "description": "координаты пользователя при включённой геопозиции, иначе адреса доставки",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/UserCoordinate"
+      }
+    },
+    "is_geo": {
+      "description": "координаты по геопозиции, иначе выбранного адреса доставки",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "available_stores",
+    "source",
+    "retailer_id",
+    "available_stores_count",
+    "user_coordinates",
+    "is_geo"
+  ],
+  "title": "Spg Map Loaded",
+  "type": "object"
+}

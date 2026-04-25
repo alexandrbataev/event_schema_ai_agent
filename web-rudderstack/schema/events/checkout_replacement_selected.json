@@ -1,0 +1,40 @@
+{
+  "description": "Выбрана политика замен",
+  "properties": {
+    "option": {
+      "description": "Описание выбранной опции замены",
+      "type": "string"
+    },
+    "shipment_number": {
+      "description": "Массив идентификаторов доставки. Для старого чекаута может быть мультиритейлерная корзина и с нового чекаута может приходить два идентификатора при заказе алкоголя",
+      "type": "array",
+      "items": {
+        "description": "Идентификатор доставки",
+        "type": "string"
+      }
+    },
+    "retailer_verticals": {
+      "description": "Список вертикалей ритейлеров, так как возможен мультизаказ.",
+      "type": "array",
+      "items": {
+        "description": "Вертикаль ритейлера",
+        "type": "string"
+      }
+    },
+    "delivery_method": {
+      "description": "Метод доставки, в котором находится пользователь (в котором делает заказ)",
+      "type": "string",
+      "enum": [
+        "pickup",
+        "by_courier"
+      ],
+      "$comment": "pickup - в самовывозе, by_courier - в доставке"
+    }
+  },
+  "required": [
+    "shipment_number",
+    "delivery_method"
+  ],
+  "title": "Checkout Replacement Selected",
+  "type": "object"
+}

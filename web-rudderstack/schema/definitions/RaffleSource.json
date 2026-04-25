@@ -1,0 +1,13 @@
+{
+  "title": "RaffleSource",
+  "description": "Источник перехода на лендинг розыгрыша",
+  "type": "string",
+  "enum": [
+    "thank_you_page",
+    "main_page",
+    "main",
+    "profile",
+    "product_card",
+    "other"
+  ]
+}

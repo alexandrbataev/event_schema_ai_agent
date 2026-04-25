@@ -1,0 +1,14 @@
+{
+  "description": "Событие после успешной авторизации",
+  "properties": {
+    "email": {
+      "description": "Почта пользователя",
+      "type": "string"
+    }
+  },
+  "required": [
+    "email"
+  ],
+  "title": "DAAS Login",
+  "type": "object"
+}

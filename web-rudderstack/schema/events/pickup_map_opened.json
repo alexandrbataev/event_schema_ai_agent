@@ -1,0 +1,12 @@
+{
+  "description": "Открытие карты самовывоза (не загрузка, а просто открытие)",
+  "properties": {
+    "current_retailer_id": {
+      "description": "id ритейлера, если пришли на карту самовывоза с выбранным магазином самовывоза",
+      "type": "number"
+    }
+  },
+  "required": [],
+  "title": "Pickup Map Opened",
+  "type": "object"
+}

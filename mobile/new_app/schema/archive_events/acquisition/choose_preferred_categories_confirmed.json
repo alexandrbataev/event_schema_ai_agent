@@ -1,0 +1,18 @@
+{
+  "description": "При нажатии \"Продолжить\" в модальном окне \"Выберите интересные вам категории\"",
+  "properties": {
+    "categories_clicked": {
+      "description": "Массив с выбранными категориями",
+      "type": "array",
+      "items": {
+        "description": "Название категории",
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "categories_clicked"
+  ],
+  "title": "Choose Preferred Categories Confirmed",
+  "type": "object"
+}

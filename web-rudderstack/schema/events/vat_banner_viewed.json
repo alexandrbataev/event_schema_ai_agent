@@ -1,0 +1,37 @@
+{
+  "description": "Срабатывает, когда пользователь впервые смотрит на баннер, информирующий про особенности НДС в разных ретейлерах, в течение 1 секунды на открытой странице",
+  "properties": {
+    "banner_type": {
+      "description": "Тип баннера",
+      "type": "string",
+      "enum": [
+        "reminder",
+        "info"
+      ]
+    },
+    "retailer_id": {
+      "description": "Массив идентификаторов ретейлеров",
+      "type": "array",
+      "items": {
+        "description": "Идентификатор ретейлера",
+        "type": "number"
+      }
+    },
+    "source": {
+      "description": "Место, где показывается баннер",
+      "type": "string",
+      "enum": [
+        "cart",
+        "checkout",
+        "catalogue"
+      ]
+    }
+  },
+  "required": [
+    "banner_type",
+    "retailer_id",
+    "source"
+  ],
+  "title": "Vat Banner Viewed 1 sec",
+  "type": "object"
+}

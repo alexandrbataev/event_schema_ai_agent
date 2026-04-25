@@ -1,0 +1,76 @@
+{
+  "description": "Открытие модалки выбора магазина при клике на иконку выбранного магазина",
+  "properties": {
+    "source": {
+      "description": "источник открытия модалки: landing, header или Retailer Main Page (клик на иконку магазина), address_modal",
+      "type": "string"
+    },
+    "address": {
+      "description": "Адрес, по которому пользователь ищет магазины",
+      "type": "string"
+    },
+    "available_shelfs": {
+      "description": "Массив доступных полок",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/FromShelfInfo"
+      }
+    },
+    "available_stores": {
+      "description": "доступные магазины в формате словарей",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/AvailableStores"
+      }
+    },
+    "current_store_operational_zone": {
+      "description": "TBD",
+      "type": "string"
+    },
+    "current_store_address": {
+      "description": "TBD",
+      "type": "string"
+    },
+    "current_store_name": {
+      "description": "TBD",
+      "type": "string"
+    },
+    "current_store_express_delivery": {
+      "description": "TBD",
+      "type": "number"
+    },
+    "current_store_pickup_available": {
+      "description": "TBD",
+      "type": "number"
+    },
+    "available_tabs": {
+      "description": "Массив доступных вкладок",
+      "type": "array",
+      "items": {
+        "description": "Slug категории ритейлеров",
+        "type": "string"
+      }
+    },
+    "vertical_switcher_value": {
+      "description": "Какая из верхних вертикалей выбрана (shops, restaurants). ",
+      "$ref": "#/definitions/VerticalSwitcherValue"
+    },
+    "available_restaurants_types": {
+      "description": "Список типов ресторанов, доступных пользователю",
+      "type": "array",
+      "items": {
+        "description": "Тип ресторана, доступного пользователю. Например: regular, foodmall, catering",
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "source",
+    "address",
+    "available_stores",
+    "available_tabs"
+  ],
+  "title": "Shop Selection Started",
+  "$comment": "RTE: Присылаем событие при переключении свитчера. При положении свитчера 'магазины' в массив будут приходить первые 10 ресторанов и все магазины. Для свитчера 'рестораны' будут прилетать пачки ресторанов. Если ручка web_frontend_rte_enabled выключена, то массив рестораны в параметр не передаем.",
+  "type": "object"
+}

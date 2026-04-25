@@ -1,0 +1,67 @@
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+*.class
+*.log
+*.iml
+*.ipr
+*.iws
+.idea
+out
+.cache/
+.history/
+.lib/
+bin/
+libexec/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+logs/
+project/project/
+project/target/
+target/
+.worksheet
+.DS_Store
+
+# User-specific stuff:
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+
+# Sensitive or high-churn files:
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+
+# Mongo Explorer plugin:
+.idea/mongoSettings.xml
+
+# IntelliJ
+/out/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+__pycache__
+
+# test env files
+s3.env
+venv
+markdown
+new_app/schema/all.json
+
+# ignore misplaced json
+*.json
+!new_app/schema/**/*.json
+!meta-schema/*.json

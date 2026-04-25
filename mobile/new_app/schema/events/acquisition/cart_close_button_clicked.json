@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз при клике пользователя по крестику для закрытия корзины.",
+  "properties": {},
+  "required": [],
+  "title": "Cart Close Button Clicked",
+  "type": "object"
+}

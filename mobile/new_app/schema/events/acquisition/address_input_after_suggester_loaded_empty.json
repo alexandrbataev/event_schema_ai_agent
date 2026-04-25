@@ -1,0 +1,14 @@
+{
+  "description": "Адрес, введенный пользователем, после того как саджестер прогрузился пустым",
+  "properties": {
+    "address_input": {
+      "description": "Что было введено пользователем в момент, когда прогрузился пустой саджестер",
+      "type": "string"
+    }
+  },
+  "required": [
+    "address_input"
+  ],
+  "title": "Address Input After Suggester Loaded Empty",
+  "type": "object"
+}

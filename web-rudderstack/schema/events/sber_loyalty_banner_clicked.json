@@ -1,0 +1,14 @@
+{
+  "description": "Каждый раз, когда пользователь нажимает на баннер СберЛоялти на главной ритейлера",
+  "properties": {
+    "retailer_id": {
+      "description": "Id ритейлера, на чьей странице был увиден баннер",
+      "type": "number"
+    }
+  },
+  "required": [
+    "retailer_id"
+  ],
+  "title": "Sber Loyalty Banner Clicked",
+  "type": "object"
+}

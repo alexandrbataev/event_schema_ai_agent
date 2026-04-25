@@ -1,0 +1,29 @@
+{
+  "description": "клик на выбрать магазин в попапе с текстом Этот товар можно забрать только в аптеке",
+  "properties": {
+    "source": {
+      "type": "string",
+      "description": "Источник экрана, с кот был вызван попап.",
+      "enum": [
+        "category",
+        "product",
+        "search",
+        "favourite",
+        "search_multiretail"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "description": "Используется для определения типа попапа. Например, в алкоголе можно ввести такой же с type = alcohol.",
+      "enum": [
+        "prescription"
+      ]
+    }
+  },
+  "required": [
+    "source",
+    "type"
+  ],
+  "title": "Pickup Popup Completed",
+  "type": "object"
+}

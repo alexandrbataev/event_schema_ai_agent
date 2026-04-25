@@ -1,0 +1,24 @@
+{
+  "title": "LoginSourceWeb",
+  "description": "Экран, на котором была открыта модалка авторизации",
+  "type": "string",
+  "enum": [
+    "before_checkout",
+    "favourites_list",
+    "add_to_favourites",
+    "landing",
+    "profile",
+    "additional_phone_auth",
+    "sberbank_online",
+    "make_review",
+    "b2b_landing",
+    "b2b_header",
+    "b2b_authorization",
+    "shared_cart",
+    "after_login",
+    "after_registration",
+    "regular_auto",
+    "million_spasibo_landing"
+  ],
+  "$comment": "before_checkout - кнопка Оформить в корзине, favourites_list - избранное, add_to_favourites - кнопка Добавить в избранное, landing - при заходе на лендинг (при первом посещении или клике на лого СБЕРМАРКЕТ), profile - кнопка Войти в шапке сайта, additional_phone_auth - дополнительная аутентификация по телефону в случае, когда регистрация происходит через сторонний сервис, sberbank_online - авторизация через сбер_айди, не шлется на привязку сбер_айди, make_review - авторизация, которая произошла после попытки оставить отзыв, b2b_landing - авторизация с лендинга б2б через кнопку ЗАРЕГИСТРИРОВАТЬСЯ, b2b_header - через хэдер на лэндинге + ритейлере, b2b_authorization - приходит только на новом вебе после регистрации/авторизации с b2b модалки, shared_cart - если пользователь перешел по ссылке пошаренной корзины"
+}

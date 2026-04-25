@@ -1,0 +1,35 @@
+{
+  "description": "Каждый раз, когда пользователь кликает на кнопку 'Оставить на чай' для конкретного партнера или на кнопку 'Оставить на чай другому куперу' после оставления чаевых одному из партнеров",
+  "properties": {
+    "order_number": {
+      "description": "Строковый идентификатор заказа, которому оставляют чаевые",
+      "type": "string"
+    },
+    "partner_role": {
+      "description": "Роль партнера: courier для курьера и shopper для сборщика",
+      "type": "string",
+      "enum": [
+        "shopper",
+        "courier"
+      ]
+    },
+    "source": {
+      "description": "Название предыдущего экрана, откуда был совершен клик. history_orders - если предыдущий экран это история заказов, order_details - если предыдущий экран это детали заказа, review - если предыдущий экран это экран оставления отзыва о заказе, deeplink - если попали на экран оценки заказа и затем на чаевые через пуш, partner_photo - если попали на чаевые через клик по фото партнера на постчекауте",
+      "type": "string",
+      "enum": [
+        "history_orders",
+        "order_details",
+        "review",
+        "deeplink",
+        "partner_photo"
+      ]
+    }
+  },
+  "required": [
+    "order_number",
+    "partner_role",
+    "source"
+  ],
+  "title": "Order Tips For Partner Clicked",
+  "type": "object"
+}

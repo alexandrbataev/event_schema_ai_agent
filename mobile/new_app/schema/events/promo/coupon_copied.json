@@ -1,0 +1,46 @@
+{
+  "description": "Отправляется при копировании промокода",
+  "properties": {
+    "coupon": {
+      "description": "Текст скопированного промокода",
+      "type": "string"
+    },
+    "source": {
+      "description": "На какой фиче был отображен промокод",
+      "$ref": "#/definitions/PromoCodeSource",
+      "$comment": "Название задается в формате FeatureName_ToolName_AppPlace"
+    },
+    "impression_id": {
+      "description": "Уникальный идентификатор взаимодействия",
+      "type": "string",
+      "$comment": "параметр Ads"
+    },
+    "asset_id": {
+      "description": "Уникальный идентификатор ассета",
+      "type": "string",
+      "$comment": "параметр Ads"
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника, где было копирование",
+      "type": "string",
+      "$comment": "Если banner_main_page, то - {{bannerId}}. Если banner_category, то - {“banner_id”: {{banner_id}}, “category_id”: {{category_id}}}. Если your_promocodes или main_incut, то - {{promotion_id}}. "
+    },
+    "with_timer": {
+      "description": "Флаг наличия таймера для купона",
+      "type": "boolean",
+      "$comment": "событие для time_banner: https://wiki.sbmt.io/pages/viewpage.action?pageId=3088660779"
+    },
+    "applied_filter": {
+      "description": "Фильтр, который был применен при копировании промокода",
+      "type": "string",
+      "$comment": "Фильтрация доступна на странице промокодов"
+    }
+  },
+  "required": [
+    "coupon",
+    "source"
+  ],
+  "title": "Coupon Copied",
+  "type": "object",
+  "$comment": "Общая идея событий купона https://wiki.sbmt.io/pages/viewpage.action?pageId=3137252545"
+}

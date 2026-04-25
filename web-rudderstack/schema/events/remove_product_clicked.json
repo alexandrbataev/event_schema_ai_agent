@@ -1,0 +1,50 @@
+{
+  "description": "Каждый раз, когда пользователь кликает на удаление товара (приходит на каждый клик, без ожидания ответа бэка). Отправляется только на экране корзины",
+  "properties": {
+    "is_available": {
+      "description": "Флаг, доступен ли товар к заказу",
+      "type": "boolean"
+    },
+    "line_item_uuid": {
+      "description": "uuid из таблицы spree_line_items",
+      "type": "string"
+    },
+    "source": {
+      "description": "Окно, на котором пользователь пытается удалить товар. Сейчас только cart",
+      "$ref": "#/definitions/ProductSource"
+    },
+    "source_type": {
+      "description": "Где пользователь кликнула на блок числа товара - в карточке или в выдаче (сниппет в листинге)",
+      "$ref": "#/definitions/ProductSourceType"
+    },
+    "click_type": {
+      "description": "Каким способом пользователь пытается удалить товар: minus - нажатием на '-', x - крестик на сниппете в корзине (старая версия) либо значок мусорки (новая версия), swipe_and_approve - короткий свайп и нажатие на кнопку Удалить, long_swipe - длинный свайп, удаляет товар без апрува",
+      "type": "string",
+      "enum": [
+        "swipe_and_approve",
+        "minus",
+        "x",
+        "long_swipe"
+      ]
+    },
+    "retailer_id": {
+      "description": "Ритейлер, в корзине которого находится пользователь",
+      "type": "number"
+    },
+    "store_id": {
+      "description": "Стор, в корзине которого находится пользователь",
+      "type": "number"
+    }
+  },
+  "required": [
+    "is_available",
+    "line_item_uuid",
+    "source",
+    "source_type",
+    "click_type",
+    "retailer_id",
+    "store_id"
+  ],
+  "title": "Remove Product Clicked",
+  "type": "object"
+}

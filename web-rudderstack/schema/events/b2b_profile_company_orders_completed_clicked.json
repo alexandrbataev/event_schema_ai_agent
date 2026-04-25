@@ -1,0 +1,14 @@
+{
+  "description": "Клик на вкладку Завершенные в разделе Заказы в профиле компании",
+  "properties": {
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_id"
+  ],
+  "title": "B2B Profile Company Orders Completed Clicked",
+  "type": "object"
+}

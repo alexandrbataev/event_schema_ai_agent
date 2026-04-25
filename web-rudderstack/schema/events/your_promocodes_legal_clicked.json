@@ -1,0 +1,7 @@
+{
+  "description": "Пользователь кликнул на оферту в разделе Ваши промокоды",
+  "properties": {},
+  "title": "Your Promocodes Legal Clicked",
+  "type": "object",
+  "$comment": "https://wiki.sbmt.io/pages/viewpage.action?pageId=3120601966"
+}

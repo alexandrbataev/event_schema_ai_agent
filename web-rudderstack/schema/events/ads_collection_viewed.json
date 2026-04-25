@@ -1,0 +1,42 @@
+{
+  "description": "срабатывает при переходе пользователя на страницу подборок",
+  "properties": {
+    "impression_id": {
+      "description": "Уникальный идентификатор взаимодействия",
+      "type": "string"
+    },
+    "asset_id": {
+      "description": "Уникальный идентификатор ассета страницы подборок",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник перехода на страницу",
+      "$ref": "#/definitions/AdsBannerSource"
+    },
+    "source_identifier": {
+      "description": "asset_id рекламного инструмента, с которого был переход на страницу подборок (например asset_id полки, asset_id баннера)",
+      "type": "string"
+    },
+    "has_coupon": {
+      "description": "есть ли промокод на странице подборки",
+      "type": "boolean"
+    },
+    "product_ids": {
+      "description": "Массив sku товаров на странице",
+      "type": "array",
+      "items": {
+        "description": "sku",
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "impression_id",
+    "asset_id",
+    "source",
+    "has_coupon",
+    "product_ids"
+  ],
+  "title": "Ads Collection Viewed",
+  "type": "object"
+}

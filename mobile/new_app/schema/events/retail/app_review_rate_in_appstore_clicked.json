@@ -1,0 +1,7 @@
+{
+  "description": "Вызывается, когда пользователь нажимает на кнопку Оценить в AppStore на попапе оценки приложения с редиректом в AppStore",
+  "properties": {},
+  "required": [],
+  "title": "App Review Rate In AppStore Clicked",
+  "type": "object"
+}

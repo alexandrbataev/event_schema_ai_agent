@@ -1,0 +1,18 @@
+{
+  "description": "Клик на переключатель авторизации B2C/B2B на новом вебе",
+  "properties": {
+    "type": {
+      "description": "Выбранный способ входа. b2c_authorization - клик Для Себя, b2b_authorization - клик Для Бизнеса",
+      "type": "string",
+      "enum": [
+        "b2c_authorization",
+        "b2b_authorization"
+      ]
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "title": "Switch Login Type Button Clicked",
+  "type": "object"
+}

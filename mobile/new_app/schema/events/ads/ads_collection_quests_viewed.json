@@ -1,0 +1,39 @@
+{
+  "description": "срабатывает при показе пользователю заданий бренда на странице подборок",
+  "properties": {
+    "impression_id": {
+      "description": "Уникальный идентификатор взаимодействия",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник перехода на страницу",
+      "$ref": "#/definitions/AdsBannerSource"
+    },
+    "source_identifier": {
+      "description": "asset_id баннера, с которого был переход",
+      "type": "string"
+    },
+    "asset_id": {
+      "description": "Уникальный идентификатор ассета страницы подборок",
+      "type": "string"
+    },
+    "brand_id": {
+      "description": "Уникальный идентификатор бренда заданий",
+      "type": "string"
+    },
+    "quests_todo": {
+      "description": "Кол-во незавершенных квестов у пользователя",
+      "type": "string"
+    }
+  },
+  "required": [
+    "impression_id",
+    "source",
+    "source_identifier",
+    "asset_id",
+    "brand_id",
+    "quests_todo"
+  ],
+  "title": "Ads Collection Quests Viewed",
+  "type": "object"
+}

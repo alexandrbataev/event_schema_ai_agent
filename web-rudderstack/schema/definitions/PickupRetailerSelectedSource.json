@@ -1,0 +1,11 @@
+{
+  "title": "PickupRetailerSelectedSource",
+  "description": "Где выбрали ретейлера",
+  "type": "string",
+  "enum": [
+    "map_list",
+    "landing",
+    "popup_list"
+  ],
+  "$comment": "map_list - в списке на карте, store_list - на попапе на лендинге самовывоза, popup_list - на попапе самовывоза для мобильных устройств или если отсуствует выбранный магазин"
+}

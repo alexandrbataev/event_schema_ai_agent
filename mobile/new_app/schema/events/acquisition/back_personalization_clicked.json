@@ -1,0 +1,14 @@
+{
+  "description": "Нажатие на стрелочку \"Назад\" с экрана выбранных категорий",
+  "properties": {
+    "selected_categories": {
+      "description": "Список выбранных категорий (может быть пустым)",
+      "type": "array"
+    }
+  },
+  "required": [
+    "selected_categories"
+  ],
+  "title": "Back Personalization Clicked",
+  "type": "object"
+}

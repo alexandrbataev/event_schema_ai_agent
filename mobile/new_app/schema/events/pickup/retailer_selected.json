@@ -1,0 +1,39 @@
+{
+  "description": "Выбран ритейлер для самовывоза",
+  "properties": {
+    "available_retailers": {
+      "description": "Массив с характеристиками доступных ритейлеров: position (позиция магазина на странице, нумерация с 1), store_id - id магазина, который уже был выбран для самовывоза, если такого магазина нет, то ничего не отправляем",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PickupRetailer"
+      }
+    },
+    "retailer_clicked": {
+      "description": "массив с характеристиками выбранного ритейлера store_id - id магазина, который уже был выбран для самовывоза, возможно только при source = with_pickup_store нумерация position с 1",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PickupRetailer"
+      }
+    },
+    "tab": {
+      "description": "С какого таба был выбран ритейлер (фильтры 2го уровня). Фильтры 2го уровня это косметика, алкоголь, аптеки и т.п.",
+      "type": "string"
+    },
+    "source": {
+      "description": "На какой странице выбрали ритейлера",
+      "type": "string",
+      "enum": [
+        "retailers_pickup_tab",
+        "twist_on_tab_all",
+        "scan_pay_go"
+      ],
+      "$comment": "retailers_pickup_tab -  на табе самовывоза, twist_on_tab_all - с карусели на табе все, scan_pay_go - внутри флоу SPG"
+    }
+  },
+  "required": [
+    "source",
+    "retailer_clicked"
+  ],
+  "title": "Retailer Selected",
+  "type": "object"
+}

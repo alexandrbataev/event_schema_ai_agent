@@ -1,0 +1,21 @@
+{
+  "description": "Каждый раз при клике пользователя на кнопку 'Аккаунт' или 'Профиль' (аккаунт - в боковом меню в разделе user; профиль - в хэдере)",
+  "properties": {
+    "source": {
+      "description": "С какого экрана пользователь совершил клик (landing - шапка на главной-главной, header - шапка сайта дальше по флоу после гг, profile - из открытого профиля, history_orders - из открытой истории заказов, your_promocodes - из списка промокодов) ",
+      "type": "string",
+      "enum": [
+        "landing",
+        "header",
+        "profile",
+        "history_orders",
+        "your_promocodes"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Profile Button Clicked",
+  "type": "object"
+}

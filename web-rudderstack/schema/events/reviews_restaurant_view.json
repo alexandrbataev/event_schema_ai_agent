@@ -1,0 +1,15 @@
+{
+  "description": "Событие отправляется каждый раз при открытии странички с отзывами на ресторан.",
+  "properties": {
+    "source": {
+      "description": "Откуда попали на экран с отзывами о ресторане.",
+      "type": "string",
+      "enum": [
+        "reviews_amount",
+        "info"
+      ]
+    }
+  },
+  "title": "Reviews Restaurant View",
+  "type": "object"
+}

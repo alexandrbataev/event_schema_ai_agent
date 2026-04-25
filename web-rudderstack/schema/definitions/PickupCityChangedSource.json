@@ -1,0 +1,11 @@
+{
+  "title": "PickupCityChangedSource",
+  "description": "Где выбрали город",
+  "type": "string",
+  "enum": [
+    "map_list",
+    "landing",
+    "popup_list"
+  ],
+  "$comment": "map_list - в списке на карте, landing - на лендинге самовывоза, popup_list - на попапе самовывоза для мобильных устройств или если отсуствует выбранный магазин"
+}

@@ -1,0 +1,25 @@
+{
+  "description": "При каждой успешной отправке голосового ввода",
+  "properties": {
+    "source": {
+      "description": "откуда был вызван голосовой ввод",
+      "type": "string",
+      "enum": [
+        "address_change",
+        "search_main_page",
+        "search_string",
+        "checkout_comment"
+      ]
+    },
+    "text": {
+      "description": "текст сообщения, который был введен голосом",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "text"
+  ],
+  "title": "Voice Enter Finalized",
+  "type": "object"
+}

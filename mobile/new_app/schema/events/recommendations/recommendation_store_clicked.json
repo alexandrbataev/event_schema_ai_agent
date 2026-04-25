@@ -1,0 +1,31 @@
+{
+  "description": "Нажата кнопка Перейти в магазин, переводящая из блока рекомендаций к ритейлеру",
+  "properties": {
+    "source": {
+      "description": "Где был показан блок",
+      "$ref": "#/definitions/RecommendationBlockSource"
+    },
+    "source_identifier": {
+      "description": "Идентификатор места показа блока",
+      "type": "string"
+    },
+    "rec_block_id": {
+      "description": "ID рекомендательного блока",
+      "type": "number"
+    },
+    "rec_block_name": {
+      "description": "Наименование рекомендательного блока",
+      "type": "string"
+    },
+    "store_id": {
+      "description": "Значение актуального магазина",
+      "type": "number"
+    }
+  },
+  "required": [
+    "source",
+    "store_id"
+  ],
+  "title": "Recommendation Store Clicked",
+  "type": "object"
+}

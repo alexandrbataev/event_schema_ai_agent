@@ -1,0 +1,6 @@
+{
+  "description": "Нажал кнопку Изменить заказ",
+  "properties": {},
+  "title": "Spg Change Order Composition",
+  "type": "object"
+}

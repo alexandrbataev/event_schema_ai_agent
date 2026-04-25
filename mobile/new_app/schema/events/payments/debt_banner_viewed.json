@@ -1,0 +1,28 @@
+{
+  "description": "Показ баннера с информацией о наличии долга. Отправляется каждый раз при показе",
+  "properties": {
+    "source": {
+      "description": "Экран на котором показываем баннер",
+      "type": "string",
+      "enum": [
+        "main",
+        "order_info"
+      ]
+    },
+    "debt_order_number": {
+      "description": "Номер заказа к которому относится долг",
+      "type": "string"
+    },
+    "debt_sum": {
+      "description": "Сумма долга в рублях",
+      "type": "number"
+    }
+  },
+  "required": [
+    "debt_order_number",
+    "debt_sum",
+    "source"
+  ],
+  "title": "Debt Banner Viewed",
+  "type": "object"
+}

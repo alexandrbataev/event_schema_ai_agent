@@ -1,0 +1,19 @@
+{
+  "description": "Пользователь нажал на кнопку (radio button) цели на экране выбора 'Цели' (до сохранения Цели может быть несколько нажатий на кнопку)",
+  "properties": {
+    "source": {
+      "description": "Источник, где именно был увиден баннер, по нажатию на который был открыт экран",
+      "$ref": "#/definitions/GoalsSources"
+    },
+    "goal_id": {
+      "description": "Id цели, на кнопку которой совершил нажатие пользователь",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "goal_id"
+  ],
+  "title": "Sber Loyalty Goals Select Button Clicked",
+  "type": "object"
+}

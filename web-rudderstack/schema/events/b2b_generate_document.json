@@ -1,0 +1,32 @@
+{
+  "description": "Генерация документа пользователем",
+  "properties": {
+    "document_type": {
+      "description": "Вид документа",
+      "type": "string",
+      "enum": [
+        "agent_report",
+        "universal_transfer_document",
+        "sberbank_invoice",
+        "vat_invoice",
+        "consignment_note",
+        "agent_sberbank_invoice"
+      ]
+    },
+    "source": {
+      "description": "Источник (страница) откуда нажата кнопка генерации документа",
+      "type": "string",
+      "enum": [
+        "order_page",
+        "landing_last_shipment_widget",
+        "profile_last_shipment_widget"
+      ]
+    }
+  },
+  "required": [
+    "document_type",
+    "source"
+  ],
+  "title": "B2B Document Generated",
+  "type": "object"
+}

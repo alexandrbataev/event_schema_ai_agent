@@ -1,0 +1,24 @@
+{
+  "description": "Редирект в модальное окно 'Пополнение в кредит' после авторизации в Сбер Бизнес",
+  "properties": {
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    },
+    "current_balance": {
+      "description": "Текущий баланс",
+      "type": "number"
+    },
+    "balance_top_up": {
+      "description": "Сумма для пополнения",
+      "type": "number"
+    }
+  },
+  "required": [
+    "company_id",
+    "current_balance",
+    "balance_top_up"
+  ],
+  "title": "B2B Sber Credit Redirect To Personal Account",
+  "type": "object"
+}

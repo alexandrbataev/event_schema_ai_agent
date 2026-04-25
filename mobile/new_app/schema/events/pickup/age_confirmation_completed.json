@@ -1,0 +1,58 @@
+{
+  "description": "Клик на \"да\" в попапе",
+  "properties": {
+    "product_sku": {
+      "description": "массив sku продукта, который клиент хотел лайкнуть, добавить в корзину, открыть, массив sku продуктов, которые были в предыдущем заказе, который клиент захотел повторить или открыть с главной страницы",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "sku продукта"
+      }
+    },
+    "type": {
+      "description": "тип попапа",
+      "type": "string",
+      "enum": [
+        "like",
+        "add",
+        "cart",
+        "show",
+        "checkout",
+        "open_order",
+        "null"
+      ]
+    },
+    "source": {
+      "description": "откуда пришли на попап",
+      "type": "string",
+      "enum": [
+        "category",
+        "search",
+        "cart",
+        "search_multiretail",
+        "search_suggestions",
+        "favourites_liked",
+        "favourites_bought",
+        "main_page",
+        "previous_order",
+        "main_main",
+        "catalogue",
+        "scan_pay_go"
+      ]
+    },
+    "source_identifier": {
+      "description": "Дополнительное уточнение истчоника. category_id - если пользователь заходит в категорию 18+; retailer_id - пользователь заходит в ретейлера 18+; product_sku - взаимодействует с карточкой 18+",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/AgePopUp"
+      }
+    }
+  },
+  "required": [
+    "source",
+    "product_sku",
+    "type"
+  ],
+  "title": "Age Confirmation Completed",
+  "type": "object"
+}

@@ -1,0 +1,21 @@
+{
+  "description": "Пользователь увидел баннер розыгрыша вне главной страницы",
+  "properties": {
+    "source": {
+      "description": "Где был увиден баннер",
+      "type": "string",
+      "enum": [
+        "thank_you_page",
+        "product_card",
+        "main",
+        "profile",
+        "product_card_catalogue"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Raffle Banner Viewed",
+  "type": "object"
+}

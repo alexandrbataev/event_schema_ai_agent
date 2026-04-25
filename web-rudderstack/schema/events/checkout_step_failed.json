@@ -1,0 +1,21 @@
+{
+  "description": "Возникает какая-то проблема при попытке кликнуть на кнопку \"продолжить\" на этапе чекаута",
+  "properties": {
+    "step": {
+      "description": "На каком этапе чекаута возникла ошибка",
+      "type": "string",
+      "enum": [
+        "payment",
+        "contacts",
+        "replacements",
+        "delivery",
+        "address"
+      ]
+    }
+  },
+  "required": [
+    "step"
+  ],
+  "title": "Checkout Step Failed",
+  "type": "object"
+}

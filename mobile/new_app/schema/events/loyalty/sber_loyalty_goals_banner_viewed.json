@@ -1,0 +1,33 @@
+{
+  "description": "Пользователь увидел баннер целей, показанный целиком",
+  "properties": {
+    "source": {
+      "description": "Источник, где именно был увиден баннер",
+      "$ref": "#/definitions/GoalsSources"
+    },
+    "goal_id": {
+      "description": "id цели, отобрраженной на баннере",
+      "type": "string"
+    },
+    "state": {
+      "description": "Состояние баннера на момент отображения баннера (ответ с бэка)",
+      "type": "string",
+      "enum": [
+        "unavailable",
+        "not_chosen",
+        "chosen_not_started",
+        "chosen_with_progress",
+        "completed",
+        "finally_completed",
+        "failed"
+      ]
+    }
+  },
+  "required": [
+    "source",
+    "state",
+    "goal_id"
+  ],
+  "title": "Sber Loyalty Goals Banner Viewed",
+  "type": "object"
+}

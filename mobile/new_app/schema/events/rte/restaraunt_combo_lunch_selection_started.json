@@ -1,0 +1,28 @@
+{
+  "description": "Каждый раз, при когда пользователь попадает на полку комбо-обедов. Отправляется для каждой подгрузки, включая самую первую.",
+  "properties": {
+    "source": {
+      "description": "Источник откуда именно был показан экран выбора ресторана с комбо-обедами. main_page – главная приложения, rte_selection_started - список ресторанов, push_notification - через пуш уведомление, initial_filter - фильтр комбо-обедов (срабатывает при перевом переходе на полку комбо-обедов)",
+      "type": "string",
+      "enum": [
+        "main_page",
+        "rte_selection_started",
+        "push_notification",
+        "initial_filter"
+      ]
+    },
+    "available_restaurants": {
+      "description": "Объект с массивами параметров доступных ресторанов с комбо-обедами. Отправляем рестораны пачками, то есть только те, которые загрузились на странице.",
+      "$ref": "#/definitions/AvailableCombos"
+    },
+    "selected_filters": {
+      "description": "Массив примененных пользователем фильтров ресторанов с комбо-обедами.",
+      "$ref": "#/definitions/FiltersCombos"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Restaurant Combo Lunch Selection Started",
+  "type": "object"
+}

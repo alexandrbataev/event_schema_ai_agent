@@ -1,0 +1,19 @@
+{
+  "description": "Каждый раз при показе баннера с информацией о СберПрайм для участников лоялти",
+  "properties": {
+    "source": {
+      "description": "Место нахождения баннера",
+      "type": "string",
+      "enum": [
+        "landing",
+        "retailer",
+        "profile"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Sber Prime Native Sale Banner Viewed",
+  "type": "object"
+}

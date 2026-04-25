@@ -1,0 +1,14 @@
+{
+  "description": "Каждый раз, при клике пользователя на кнопку \"Подробнее\" на экране \"Услуги около вас\".",
+  "properties": {
+    "position": {
+      "description": "Порядковый номер позиции услуги на экране \"Услуги около вас\". Нумерация начинается с 1.",
+      "type": "number"
+    }
+  },
+  "required": [
+    "position"
+  ],
+  "title": "Services Nearby Details Clicked",
+  "type": "object"
+}

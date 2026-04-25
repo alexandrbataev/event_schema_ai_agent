@@ -1,0 +1,41 @@
+{
+  "description": "Каждый раз при клике пользователя по фильтру на экране со списком ритейлеров.",
+  "properties": {
+    "available_filters": {
+      "description": "Массив с названиями доступных фильтров",
+      "type": "array",
+      "items": {
+        "description": "Название фильтра",
+        "type": "string"
+      }
+    },
+    "active_filters": {
+      "description": "Массив с названиями примененных фильтров",
+      "type": "array",
+      "items": {
+        "description": "Название фильтра",
+        "type": "string"
+      }
+    },
+    "name": {
+      "description": "Название фильтра, на который кликнули",
+      "type": "string"
+    },
+    "is_filter_enabled": {
+      "description": "Включение/отключение фильтра. Принимает значение 1, если пользователь кликает на фильтр и ограничивает себя магазинами этого фильтра. Принимает значение 0, если выключает фильтр",
+      "type": "boolean"
+    },
+    "quick_filter_clicked_source": {
+      "description": "Название экрана, с которого кликнули по быстрому фильтру, т.е. названия джобов (например с полки Магазины = shopsFilter, с полки Продукты = grocery и т.д.)",
+      "type": "string"
+    }
+  },
+  "required": [
+    "available_filters",
+    "active_filters",
+    "is_filter_enabled",
+    "name"
+  ],
+  "title": "Quick Filter Clicked",
+  "type": "object"
+}

@@ -1,0 +1,14 @@
+{
+  "description": "Нажатие на кнопку 'Пропустить' на экране персонализации категорий",
+  "properties": {
+    "selected_categories": {
+      "description": "Список выбранных категорий (может быть пустым)",
+      "type": "array"
+    }
+  },
+  "required": [
+    "selected_categories"
+  ],
+  "title": "Skip Personalization Clicked",
+  "type": "object"
+}

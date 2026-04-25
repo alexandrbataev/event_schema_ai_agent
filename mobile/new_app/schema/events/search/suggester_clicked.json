@@ -1,0 +1,41 @@
+{
+  "description": "Каждый раз, когда пользователь кликает по саджестору в поиске",
+  "properties": {
+    "text_suggestions": {
+      "description": "Массив с перечислением поисковых саджестов в том порядке, в котором должны отобразиться",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/BlockSuggestion"
+      }
+    },
+    "item_name": {
+      "description": "Текстовая подсказка, на которую кликнул пользователь",
+      "type": "string"
+    },
+    "position": {
+      "description": "Позиция кликнутого саджеста в массиве саджестов, нумерация начинается с 1",
+      "type": "number"
+    },
+    "store_id": {
+      "description": "Именно тот стор, для которого была отрисована поисковая выдача.",
+      "type": "number"
+    },
+    "source": {
+      "description": "Источник поиска, где кликает по саджестеру. Возможные значения в definitions",
+      "$ref": "#/definitions/SearchSource"
+    },
+    "search_query_orig": {
+      "description": "Поисковый запрос, введенный пользователем",
+      "type": "string"
+    }
+  },
+  "required": [
+    "text_suggestions",
+    "item_name",
+    "position",
+    "search_query_orig",
+    "source"
+  ],
+  "title": "Suggester Clicked",
+  "type": "object"
+}

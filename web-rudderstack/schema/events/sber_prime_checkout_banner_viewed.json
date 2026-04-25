@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз при отображении на чекауте баннера для подписчиков Прайм",
+  "properties": {},
+  "required": [],
+  "title": "Sber Prime Checkout Banner Viewed",
+  "type": "object"
+}

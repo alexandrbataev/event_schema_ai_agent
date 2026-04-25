@@ -1,0 +1,11 @@
+{
+  "description": "Срабатывает каждый раз когда пользователь нажимает на \"показать N магазинов/товаров/подробнее о сертификатах\"",
+  "properties": {
+    "block_name": {
+      "description": "название полки",
+      "type": "string"
+    }
+  },
+  "title": "B2B Landing Show N Items",
+  "type": "object"
+}

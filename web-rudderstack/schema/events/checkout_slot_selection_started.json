@@ -1,0 +1,51 @@
+{
+  "description": "Каждый раз, когда пользователь начинает этап выбора времени получения на чекауте",
+  "properties": {
+    "is_express_delivery_available_on_checkout": {
+      "description": "Был ли доступен слот быстрой доставки на чекауте",
+      "type": "boolean"
+    },
+    "order_number": {
+      "description": "Номер заказа",
+      "type": "string"
+    },
+    "closest_delivery_time_right_bound": {
+      "description": "Сколько времени в минутах до правой границы ближайшего слота",
+      "type": "number"
+    },
+    "delivery_window_estimate_type": {
+      "description": "Каким методом рассчитано время до ближайшего слота",
+      "type": "string"
+    },
+    "closest_delivery_time_displayed": {
+      "description": "Сколько времени в минутах до левой границы ближайшего слота",
+      "type": "number"
+    },
+    "shipment_number": {
+      "description": "Массив идентификаторов доставки. Для старого чекаута может быть мультиритейлерная корзина и с нового чекаута может приходить два идентификатора при заказе алкоголя",
+      "type": "array",
+      "items": {
+        "description": "Идентификатор доставки",
+        "type": "string"
+      }
+    },
+    "retailer_verticals": {
+      "description": "Список вертикалей ритейлеров, так как возможен мультизаказ.",
+      "type": "array",
+      "items": {
+        "description": "Вертикаль ритейлера",
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "is_express_delivery_available_on_checkout",
+    "order_number",
+    "closest_delivery_time_right_bound",
+    "delivery_window_estimate_type",
+    "closest_delivery_time_displayed",
+    "shipment_number"
+  ],
+  "title": "Checkout Slot Selection Started",
+  "type": "object"
+}

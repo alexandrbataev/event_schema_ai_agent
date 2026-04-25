@@ -1,0 +1,11 @@
+{
+  "description": "Клик на кнопку реквизиты",
+  "properties": {
+    "error_code": {
+      "description": "Код ошибки",
+      "type": "number"
+    }
+  },
+  "title": "B2B Company Profile Banking Details Clicked",
+  "type": "object"
+}

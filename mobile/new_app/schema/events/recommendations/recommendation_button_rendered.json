@@ -1,0 +1,34 @@
+{
+  "description": "На экране пользователя отрендорилась кнопка, ведущая к блоку рекомендаций",
+  "properties": {
+    "button_name": {
+      "description": "Название кнопки",
+      "type": "string"
+    },
+    "rec_block_id": {
+      "description": "ID рекомендательного блока, на который ведет кнопка",
+      "type": "number"
+    },
+    "rec_block_name": {
+      "description": "Наименование рекомендательного блока, на который ведет кнопкаа",
+      "type": "string"
+    },
+    "source": {
+      "description": "Где был показан блок",
+      "$ref": "#/definitions/RecommendationBlockSource"
+    },
+    "store_id": {
+      "description": "Значение актуального магазина",
+      "type": "number"
+    }
+  },
+  "required": [
+    "button_name",
+    "rec_block_id",
+    "rec_block_name",
+    "source",
+    "store_id"
+  ],
+  "title": "Recommendation Button Rendered",
+  "type": "object"
+}

@@ -1,0 +1,46 @@
+{
+  "description": "Каждый раз, когда пользователь после ввода поискового запроса в поисковую строку нажимает на Enter/лупу/другой триггер для ввода поискового запроса, в том числе на кнопку 'Показать все результаты' в саджестере, при этом событие не приходит на клик по текстовому саджесту (на клик по саджестеру приходит событие Search Suggest Clicked) ",
+  "properties": {
+    "query": {
+      "description": "Поисковый запрос, который вводил пользователь",
+      "type": "string"
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника, откуда был клик на поисковую строку, после которого пришло событие клика по поиску",
+      "$ref": "#/definitions/SearchSourceIdentifier"
+    },
+    "click_way": {
+      "description": "Куда пользователь кликнул после ввода поискового запроса (показать все товары (show_all_results) - кнопка в саджестере, или поиск (complete_query) - нажатие на энтер/лупу/ввод",
+      "type": "string",
+      "enum": [
+        "show_all_results",
+        "complete_query"
+      ]
+    },
+    "source": {
+      "description": "Где именно случилось событие клика по поисковой строке, после которого пользователь ввел поисковый запрос",
+      "$ref": "#/definitions/SearchSource"
+    },
+    "store_id": {
+      "description": "Значение актуального магазина - выбранный магазин или, в случае межрит поиска, магазин соответствующей корзины",
+      "type": "number"
+    },
+    "is_multiretail_promo_category": {
+      "description": "True, если поиск внутри промо подборки, False иначе",
+      "type": "boolean"
+    },
+    "multiretail_promo_category_id": {
+      "description": "id промо подборки. Заполняется только в случае поиска внутри промо подборки",
+      "type": "string"
+    }
+  },
+  "required": [
+    "query",
+    "source_identifier",
+    "source",
+    "click_way",
+    "store_id"
+  ],
+  "title": "Search Completed",
+  "type": "object"
+}

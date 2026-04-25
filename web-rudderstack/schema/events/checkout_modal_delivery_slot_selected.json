@@ -1,0 +1,84 @@
+{
+  "description": "Каждый раз, когда пользователь выбирает кастомный слот доставки на модалке для выбора слота доставки (выбрал слот и нажал на кнопку Сохранить)",
+  "properties": {
+    "delivery_time_left": {
+      "description": "сколько в минутах до левой границы слота доставки, в который мы обещаем доставку пользователю",
+      "type": "number"
+    },
+    "delivery_time_right": {
+      "description": "сколько в минутах до правой границы слота доставки, в который мы обещаем доставку пользователю",
+      "type": "number"
+    },
+    "delivery_window": {
+      "description": "id слота из таблицы delivery_window, который был выбран пользователем",
+      "type": "number"
+    },
+    "delivery_window_estimate_type": {
+      "description": "параметр показывает, по какому принципу рассчитано окно доставки",
+      "type": "string"
+    },
+    "order_number": {
+      "description": "номер заказа",
+      "type": "string"
+    },
+    "delivery_cost": {
+      "description": "Стоимость доставки, которую видит пользователь на этом слоте",
+      "type": "number"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (grocery, pharm или restaurant)",
+      "$ref": "#/definitions/RetailerVertical"
+    },
+    "retailer_id": {
+      "description": "идентификатор ритейлера",
+      "type": "number"
+    },
+    "store_id": {
+      "description": "идентификатор магазина",
+      "type": "number"
+    },
+    "surge": {
+      "description": "Наличие суржа в выбранном слоте, 1 - да, 0-нет",
+      "type": "boolean"
+    },
+    "personal_price_available": {
+      "description": "Параметр принимает значение 1, если в выбранном слоте доступно персональное (безакцептное) промо предложение на условия доставки, 0 - если нет доступного предложения",
+      "type": "boolean"
+    },
+    "personal_price_applied": {
+      "description": "Параметр принимает значение 1, если применено персональное (безакцептное) промо предложение на условия доставки, 0 - если не применено",
+      "type": "boolean"
+    },
+    "personal_price_discount_type": {
+      "description": "Тип скидки в персональном (безакцептном) промо: фиксированная скидка или процент от стоимости каждого компонента",
+      "type": "string",
+      "enum": [
+        "absolute",
+        "relative"
+      ]
+    },
+    "personal_price_discount_amount": {
+      "description": "Размер скидки в персональном (безакцептном) промо: например, значение = 50 при personal_price_discount_type = 'absolute' значит 50 рублей, а при personal_price_discount_type = relative значит 50%",
+      "type": "number"
+    },
+    "personal_price_info": {
+      "description": "Содержит массив с информацией по компонентам условий доставки на которые пользователю доступно безакцептное промо предложение",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/DeliveryConditionsPersonalPrice"
+      }
+    }
+  },
+  "required": [
+    "delivery_window",
+    "order_number",
+    "delivery_time_left",
+    "delivery_time_right",
+    "delivery_cost",
+    "retailer_vertical",
+    "surge",
+    "personal_price_available"
+  ],
+  "title": "Checkout Modal Delivery Slot Selected",
+  "type": "object"
+}

@@ -1,0 +1,15 @@
+{
+  "description": "Пользователь нажал на таб категории уведомлений",
+  "properties": {
+    "unread_count": {
+      "description": "К-во непрочитанных нотификаций в разделе",
+      "type": "number"
+    },
+    "selected_type": {
+      "description": "В какую вкладу зашел пользователь system / promotion / other",
+      "type": "string"
+    }
+  },
+  "title": "History Notifications Category Opened",
+  "type": "object"
+}

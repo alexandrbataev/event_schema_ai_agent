@@ -1,0 +1,32 @@
+{
+  "description": "Cмена способа получения заказа",
+  "properties": {
+    "current": {
+      "description": "Предыдущий способ получения",
+      "type": "string"
+    },
+    "click_on": {
+      "description": "Выбранный способ получения",
+      "type": "string"
+    },
+    "source": {
+      "$ref": "#/definitions/DeliveryMethodChangeSource"
+    },
+    "shipment_number": {
+      "description": "Массив идентификаторов доставки. Для старого чекаута может быть мультиритейлерная корзина и с нового чекаута может приходить два идентификатора при заказе алкоголя",
+      "type": "array",
+      "items": {
+        "description": "Идентификатор доставки",
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "current",
+    "click_on",
+    "source",
+    "shipment_number"
+  ],
+  "title": "Delivery Method Clicked",
+  "type": "object"
+}

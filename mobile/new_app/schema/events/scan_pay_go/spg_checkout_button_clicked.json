@@ -1,0 +1,14 @@
+{
+  "description": "Отправляем каждый раз, когда пользователь в корзине нажимает на кнопку Оформить заказ, чтобы начать чекаут",
+  "properties": {
+    "payment_amount": {
+      "description": "финальная цена корзины пользователя. Цена, которая отображается в зеленой кнопке Оформить заказ",
+      "type": "number"
+    }
+  },
+  "required": [
+    "payment_amount"
+  ],
+  "title": "Spg Checkout Button Clicked",
+  "type": "object"
+}

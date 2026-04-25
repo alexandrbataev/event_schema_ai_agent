@@ -1,0 +1,21 @@
+{
+  "description": "При нажатии на информер Выгодного товара в карточке товара",
+  "properties": {
+    "beneficial_item_status": {
+      "description": "Статус выгодного товара на начало сессии. Нужен, если клиент выполнил условия для акции хотя бы для одного магазина (У него ещё нет выбранного товара). Когда он выберет товар, напротив него появляется выбранный SKU (У остальных пусто).",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/BeneficialItemStatus"
+      }
+    },
+    "sku_id": {
+      "description": "ID товара, в карточке которого нажат информер",
+      "type": "string"
+    }
+  },
+  "required": [
+    "sku_id"
+  ],
+  "title": "Beneficial Item Informer Clicked",
+  "type": "object"
+}

@@ -1,0 +1,19 @@
+{
+  "title": "RecommendationBlockSource",
+  "description": "Источник показа блока рекомендаций",
+  "type": "string",
+  "enum": [
+    "recommendations_main",
+    "recommendations_cart",
+    "recommendations_product_card",
+    "recommendations_search",
+    "recommendations_favourites_bought",
+    "recommendations_favourites_liked",
+    "recommendations_retailer",
+    "recommendations_order_info",
+    "recommendations_catalogue",
+    "recommendations_category",
+    "recommendations_home_landing",
+    "recommendations_post_cart"
+  ]
+}

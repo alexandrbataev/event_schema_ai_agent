@@ -1,0 +1,18 @@
+{
+  "title": "ChangingShopSource",
+  "description": "Откуда перешли на смену магазина или нажали на переключалку метода доставки. Используется при подтверждении потерь на модалках (алкоголь, аптеки и т.д)",
+  "type": "string",
+  "enum": [
+    "checkout",
+    "shop_selection",
+    "main_page_pickup",
+    "main_page_by_courier",
+    "pickup_shop_modal",
+    "cart",
+    "first_launch",
+    "favorites",
+    "multiretail_promo_category",
+    "job_grocery"
+  ],
+  "$comment": "checkout - на странице чекаута http://joxi.ru/8Anlw4nHoQeblm; shop_selection из меню с выбором магазина http://joxi.ru/DmBYGVjcgyndkr; main_page_by_courier - с главной страницы ритейлера для магазина доставки http://joxi.ru/RmzywRMSjngX5r; main_page_pickup - с главной страницы ритейлера для магазина самовывоза; pickup_shop_modal - на модалке с выбором магазина самовывоза; cart - в корзине;first_launch - первый заход в приложение, выбор адреса на карте, favorites - в разделе Любимое, multiretail_promo_category - список товаров в товароцентричном флоу, job_grocery - внутри джоба продукты"
+}

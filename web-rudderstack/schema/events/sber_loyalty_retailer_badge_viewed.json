@@ -1,0 +1,18 @@
+{
+  "description": "Каждый раз, когда пользователь видит бейдж о доступном списании бонусов на карточке ритейлера",
+  "properties": {
+    "retailer_id": {
+      "description": "Id ритейлера, на чьей карточке был увиден бейдж",
+      "type": "number"
+    },
+    "source": {
+      "description": "На каком экране была отрисована карточка ритейлера",
+      "type": "string"
+    }
+  },
+  "required": [
+    "retailer_id"
+  ],
+  "title": "Sber Loyalty Retailer Badge Viewed",
+  "type": "object"
+}

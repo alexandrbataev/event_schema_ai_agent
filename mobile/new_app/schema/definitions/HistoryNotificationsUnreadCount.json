@@ -1,0 +1,19 @@
+{
+  "title": "HistoryNotificationsUnreadCount",
+  "type": "object",
+  "description": "Массив со словарями ключей {раздел, общее кол-во, кол-во непрочитанных}",
+  "properties": {
+    "type": {
+      "description": "Раздел system / promotion / all",
+      "type": "string"
+    },
+    "total_count": {
+      "description": "Общее кол-во нотификаций в разделе",
+      "type": "number"
+    },
+    "unread_count": {
+      "description": "Кол-во непрочитанных нотификаций в разделе",
+      "type": "number"
+    }
+  }
+}

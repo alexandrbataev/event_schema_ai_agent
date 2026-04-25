@@ -1,0 +1,31 @@
+{
+  "description": "Каждый раз, когда пользователю назначается цель(задание)",
+  "properties": {
+    "asset_id": {
+      "description": "Уникальный идентификатор ассета цели",
+      "type": "string"
+    },
+    "is_multistep_goal": {
+      "description": "Если цель состоит из нескольких шагов (составная)",
+      "type": "boolean"
+    },
+    "number_of_steps": {
+      "description": "Для цели из нескольких шагов, количество шагов в цели (всего)",
+      "type": "integer"
+    },
+    "status": {
+      "description": "Статус цели на данный момент (ответ с бэка): assign - цель назначена",
+      "type": "string",
+      "enum": [
+        "assign"
+      ]
+    }
+  },
+  "required": [
+    "asset_id",
+    "is_multistep_goal",
+    "status"
+  ],
+  "title": "Ads Achievements Goal Assigned",
+  "type": "object"
+}

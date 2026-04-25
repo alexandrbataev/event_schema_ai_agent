@@ -1,0 +1,34 @@
+{
+  "description": "Показан баннер \"Покупайте для бизнеса\" (или аналогичный по смыслу)",
+  "properties": {
+    "source": {
+      "description": "Место, где был показан баннер",
+      "type": "string",
+      "enum": [
+        "checkout",
+        "cart_top",
+        "cart_bottom",
+        "shipment_page",
+        "shipments",
+        "favorites",
+        "profile",
+        "product_card",
+        "listing"
+      ]
+    },
+    "text": {
+      "description": "Текст, написанный на баннере",
+      "type": "string"
+    },
+    "show_reason": {
+      "description": "Причина показа баннера",
+      "type": "string"
+    }
+  },
+  "required": [
+    "text",
+    "source"
+  ],
+  "title": "Order for Business Banner Showed",
+  "type": "object"
+}

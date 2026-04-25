@@ -1,0 +1,18 @@
+{
+  "description": "Нажатие кнопки Включить на инфо-баннере Включите Уведомления",
+  "properties": {
+    "source": {
+      "description": "Экран на котором размещен баннер с кнопкой 1) order_info - экран с инфо о заказе 2) main_main - главная-главная",
+      "type": "string",
+      "enum": [
+        "postcheckout",
+        "landing"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Allow Notification Button Click",
+  "type": "object"
+}

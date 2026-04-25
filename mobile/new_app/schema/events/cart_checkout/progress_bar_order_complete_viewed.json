@@ -1,0 +1,39 @@
+{
+  "description": "Показ модалки оплаты заказа с прогресс баром",
+  "properties": {
+    "order_number": {
+      "description": "Строковый ID заказа",
+      "type": "string"
+    },
+    "type_delivery": {
+      "description": "Обозначает способ получения для заказа",
+      "$ref": "#/definitions/TypeDelivery"
+    },
+    "payment_tool_id": {
+      "description": "id связки выбранной карты онлайн или sberpay  (id из spree_payment_tools).  Если это новая Карта онлайн или новая карта Sberpay, то отдавать 0.",
+      "type": "number"
+    },
+    "store_id": {
+      "description": "id магазина, в котором пользователь пытается оформить заказ",
+      "type": "number"
+    },
+    "retailer_id": {
+      "description": "id ритейлера, в котором пользователь пытается оформить заказ",
+      "type": "number"
+    },
+    "payment_kind": {
+      "description": "Тип метода оплаты. check - Наличными в Сбере ; direct_bank_invoice - По счёту для бизнеса ; lifepay - Картой курьеру ; external_partner_pay - Внешний провайдер ; tinkoff_dolyame - Частями ; direct_bnpl - Частями ; external_invoice - По счёту (внешний банковский перевод) ; cloud_payments - Картой онлайн (новая карта резерв cloud payments) ; direct - Картой онлайн (новая карта основной шлюз) ; credit_card - Картой онлайн (сохраненная карта) ; direct_pay_v2 - SberPay (сохраненная карта и новая) ; plati_qr - PlatiQR ; cash_desk - Картой на кассе. Больше информации: https://wiki.sbmt.io/pages/viewpage.action?pageId=3187542389#APIendpoint'sПСО+ПСП-Контрактыдляполяkind",
+      "type": "string"
+    }
+  },
+  "required": [
+    "order_number",
+    "type_delivery",
+    "payment_tool_id",
+    "store_id",
+    "retailer_id",
+    "payment_kind"
+  ],
+  "title": "Progress Bar Order Complete Viewed",
+  "type": "object"
+}

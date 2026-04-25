@@ -1,0 +1,11 @@
+{
+  "description": "Переключение между личным и бизнес аккаунтом",
+  "properties": {
+    "company_id": {
+      "description": "ID компании, куда переключается пользователь",
+      "type": "string"
+    }
+  },
+  "title": "Account Type Switched",
+  "type": "object"
+}

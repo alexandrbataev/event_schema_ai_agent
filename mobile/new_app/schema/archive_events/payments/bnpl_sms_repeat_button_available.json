@@ -1,0 +1,7 @@
+{
+  "description": "Вызывается, если кнопка отправить смс еще раз стала доступна",
+  "properties": {},
+  "required": [],
+  "title": "BNPL SMS Repeat Button Available",
+  "type": "object"
+}

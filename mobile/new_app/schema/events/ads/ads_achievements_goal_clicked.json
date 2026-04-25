@@ -1,0 +1,47 @@
+{
+  "description": "Каждый раз, когда пользователь кликает на цель(задание)",
+  "properties": {
+    "asset_id": {
+      "description": "Уникальный идентификатор ассета цели",
+      "type": "string"
+    },
+    "goal_position": {
+      "description": "Если цель в карусели, то позиция цели в карусели слева направо, начиная с 1",
+      "type": "number"
+    },
+    "source": {
+      "description": "Где именно была размещена цель",
+      "$ref": "#/definitions/AdsBannerSource"
+    },
+    "is_multistep_goal": {
+      "description": "Если цель состоит из нескольких шагов (составная)",
+      "type": "boolean"
+    },
+    "number_of_steps": {
+      "description": "Для цели из нескольких шагов, количество шагов в цели (всего)",
+      "type": "integer"
+    },
+    "number_of_completed_steps": {
+      "description": "Для цели из нескольких шагов, сколько шагов в цели выполнено полностью. 0 - если пока не выполнено ни одного шага",
+      "type": "integer"
+    },
+    "status": {
+      "description": "Статус цели на момент клика (ответ с бэка): assign - цель назначена; accepted - цель выбрана и начата; done - цель выполнена; not_completed - цель не выполнена",
+      "type": "string",
+      "enum": [
+        "assign",
+        "accepted",
+        "done",
+        "not_completed"
+      ]
+    }
+  },
+  "required": [
+    "asset_id",
+    "source",
+    "is_multistep_goal",
+    "status"
+  ],
+  "title": "Ads Achievements Goal Clicked",
+  "type": "object"
+}

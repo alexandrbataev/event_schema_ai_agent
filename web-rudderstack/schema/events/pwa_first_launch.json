@@ -1,0 +1,6 @@
+{
+  "description": "Событие первого запуска приложения в режиме PWA",
+  "properties": {},
+  "title": "PWA first launch",
+  "type": "object"
+}

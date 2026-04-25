@@ -1,0 +1,19 @@
+{
+  "description": "Пользователь нажал на кнопку “выбрать замену“/”выбрать другую замену” в корзине",
+  "properties": {
+    "source": {
+      "description": "Источник открытия попапа предзамен",
+      "type": "string",
+      "enum": [
+        "bubble",
+        "cart",
+        "product_card"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Pre Replacements Popup Opened",
+  "type": "object"
+}

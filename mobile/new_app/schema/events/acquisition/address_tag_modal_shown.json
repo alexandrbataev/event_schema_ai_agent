@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз, при показе модалки для ввода кастомного Тега \"Свой тег\"",
+  "properties": {},
+  "required": [],
+  "title": "Address Tag Modal Shown",
+  "type": "object"
+}

@@ -1,0 +1,19 @@
+{
+  "description": "Каждый раз, когда пользователь видит баннер",
+  "properties": {
+    "is_orders": {
+      "description": "Флаг, есть ли у пользователя доставленные заказы",
+      "type": "boolean"
+    },
+    "is_discounts": {
+      "description": "Флаг, есть ли скидки в заказе",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "is_orders",
+    "is_discounts"
+  ],
+  "title": "Saving Banner Viewed",
+  "type": "object"
+}

@@ -1,0 +1,7 @@
+{
+  "description": "Событие необходимо для сплитования пользователей в тестовую и контрольную группы. Должно отрабатывать только на старом вебе kuper.ru при попадании пользователя на страницы с которых мы должны его редиректить на новый веб. https://paas-content-growth-ab-platform-front.sbmt.io/ab/4f6cc8c2-5ecd-4b2f-a93f-208a58ba81bd",
+  "properties": {},
+  "required": [],
+  "title": "Old Web Event For Test",
+  "type": "object"
+}

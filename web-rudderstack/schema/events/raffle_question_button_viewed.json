@@ -1,0 +1,36 @@
+{
+  "description": "пользователь увидел плашку с вопросом в разделе FAQ",
+  "properties": {
+    "source": {
+      "description": "Страница, с которой пользователь перешел на экран розыгрыша",
+      "$ref": "#/definitions/RaffleSource"
+    },
+    "utm_source": {
+      "description": "utm параметр из внешней ссылки",
+      "type": "string"
+    },
+    "utm_medium": {
+      "description": "utm параметр из внешней ссылки",
+      "type": "string"
+    },
+    "utm_campaign": {
+      "description": "utm параметр из внешней ссылки",
+      "type": "string"
+    },
+    "campaign_name": {
+      "description": "Название кампании",
+      "type": "string"
+    },
+    "question_text": {
+      "description": "текст на плашке с вопросом",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "campaign_name",
+    "question_text"
+  ],
+  "title": "Raffle Question Button Viewed",
+  "type": "object"
+}

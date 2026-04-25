@@ -1,0 +1,11 @@
+{
+  "title": "RetailerCardType",
+  "description": "Вид карточки ритейлера/ресторана",
+  "type": "string",
+  "enum": [
+    "standard",
+    "standard_mini",
+    "small",
+    "rte"
+  ]
+}

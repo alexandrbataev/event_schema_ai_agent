@@ -1,0 +1,18 @@
+{
+  "description": "Показана модалка СБП после выбора СБП как способа оплаты",
+  "properties": {
+    "banks_array": {
+      "description": "Доступные банки - пустой массив если нет",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Имя банка (напр. Тинькофф, Альфа-банк)"
+      }
+    }
+  },
+  "required": [
+    "banks_array"
+  ],
+  "title": "Sbp Banks Modal Showed",
+  "type": "object"
+}

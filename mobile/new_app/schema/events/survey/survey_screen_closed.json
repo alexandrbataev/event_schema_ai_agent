@@ -1,0 +1,24 @@
+{
+  "description": "Закрытие скрина опроса на крестик или другим способом до завершения прохождения опроса",
+  "properties": {
+    "step": {
+      "description": "Номер вопроса на котором произошло действие начиная с 1, 0 если закрыт не на вопросе",
+      "type": "number"
+    },
+    "survey_id": {
+      "description": "идентификатор опроса",
+      "type": "string"
+    },
+    "question_id": {
+      "description": "идентификатор вопроса на котором произошло действие. Пустая строка, если закрыт не на вопросе",
+      "type": "string"
+    }
+  },
+  "required": [
+    "step",
+    "survey_id",
+    "question_id"
+  ],
+  "title": "Survey Screen Closed",
+  "type": "object"
+}

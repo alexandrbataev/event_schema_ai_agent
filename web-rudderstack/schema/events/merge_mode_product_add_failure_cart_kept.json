@@ -1,0 +1,18 @@
+{
+  "description": "Поведение после отказа в дозаказе",
+  "properties": {
+    "action": {
+      "description": "Действие после отказа: kept_in_cart – оставили в корзине, closed_merge_mode – закрыли режим дозаказа",
+      "type": "string",
+      "enum": [
+        "kept_in_cart",
+        "closed_merge_mode"
+      ]
+    }
+  },
+  "required": [
+    "action"
+  ],
+  "title": "Merge Mode Product Add Failure Cart Kept",
+  "type": "object"
+}

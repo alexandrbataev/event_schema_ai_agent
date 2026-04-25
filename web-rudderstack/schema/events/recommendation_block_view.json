@@ -1,0 +1,51 @@
+{
+  "description": "Блок отрисован для пользователя",
+  "properties": {
+    "algorithm": {
+      "description": "Параметр для различной технической инфы команды RecSyS",
+      "type": "string"
+    },
+    "product_ids": {
+      "description": "Массив sku доступных в блоке",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник рекомендаций",
+      "type": "string"
+    },
+    "source_identifier": {
+      "description": "TBD",
+      "type": "string"
+    },
+    "rec_block_id": {
+      "description": "ID рекомендательного блока",
+      "type": "number"
+    },
+    "rec_block_position": {
+      "description": "Позиция рекомендательного блока на странице",
+      "type": "number"
+    },
+    "rec_block_name": {
+      "description": "Наименование рекомендательного блока",
+      "type": "string"
+    },
+    "recommendation_type": {
+      "description": "Тип рекомендаций: персональные или популярные",
+      "type": "string"
+    },
+    "is_multicard": {
+      "description": "Если отрисовка блока произошла в карточке товара, то является ли она мультикарточкой",
+      "type": "boolean"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (grocery, pharmacy или restaurant)",
+      "type": "string"
+    }
+  },
+  "required": [
+    "product_ids",
+    "source"
+  ],
+  "title": "Recommendation Block View",
+  "type": "object"
+}

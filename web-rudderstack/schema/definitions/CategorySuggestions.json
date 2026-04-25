@@ -1,0 +1,19 @@
+{
+  "title": "CategorySuggestions",
+  "type": "object",
+  "description": "Словарь с информацией категорий для фильтрации в саджестера/поисковой выдаче",
+  "properties": {
+    "identifier": {
+      "description": "Скю товара",
+      "type": "string"
+    },
+    "position": {
+      "description": "номер позиции кликнутой категории, нумерация начинается с 1",
+      "type": "number"
+    }
+  },
+  "required": [
+    "identifier",
+    "position"
+  ]
+}

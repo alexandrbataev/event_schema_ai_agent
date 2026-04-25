@@ -1,0 +1,19 @@
+{
+  "description": "Открытие модалки с информацией про самовывоз после клика на кнопку Как это работает",
+  "properties": {
+    "source": {
+      "description": "С какого типа доставки открыли модалку",
+      "type": "string",
+      "enum": [
+        "by_courier",
+        "pickup"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Pickup How It Works Opened",
+  "type": "object"
+}
+  

@@ -1,0 +1,16 @@
+{
+  "description": "Пользователь увидел экран с ошибкой при нажатии на кнопку на баннере 'Цели'",
+  "properties": {
+    "source": {
+      "source": {
+        "description": "Источник, где именно был увиден баннер, по нажатию на который появилась ошибка",
+        "$ref": "#/definitions/GoalsSources"
+      }
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Sber Loyalty Goals Error Screen Opened",
+  "type": "object"
+}

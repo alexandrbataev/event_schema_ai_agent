@@ -1,0 +1,14 @@
+{
+  "description": "Каждый раз, когда тогл списания баллов отключается системой",
+  "properties": {
+    "state": {
+      "description": "Тогл был включен или выключен на момент отключения",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "state"
+  ],
+  "title": "B2B Loyalty Program Points Toggle Disabled",
+  "type": "object"
+}

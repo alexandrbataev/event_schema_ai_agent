@@ -1,0 +1,23 @@
+{
+  "description": "На экране пользователя отрисована кнопка с переходом в поиск по рецептам, то есть кнопка попала в область видимости пользователя. ",
+  "properties": {
+    "source": {
+      "description": "Источник, где была отрисована кнопка перехода в поиск по рецептам",
+      "type": "string",
+      "enum": [
+        "main_page",
+        "search_regular"
+      ]
+    },
+    "store_id": {
+      "description": "Именно тот стор, где отрисовали кнопку",
+      "type": "number"
+    }
+  },
+  "required": [
+    "source",
+    "store_id"
+  ],
+  "title": "Recipes Button Rendered",
+  "type": "object"
+}

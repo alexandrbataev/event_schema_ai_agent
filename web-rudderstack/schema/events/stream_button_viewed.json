@@ -1,0 +1,22 @@
+{
+  "description": "Каждый раз, когда пользователь видит кнопку видеостримов",
+  "properties": {
+    "retailer_id": {
+      "description": "id ритейлера (при наличии)",
+      "type": "number"
+    },
+    "source": {
+      "description": "источник события: баннер в меню каталога или плавающая кнопка в углу",
+      "type": "string",
+      "enum": [
+        "menu_banner",
+        "float_button"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Stream Button Viewed",
+  "type": "object"
+}

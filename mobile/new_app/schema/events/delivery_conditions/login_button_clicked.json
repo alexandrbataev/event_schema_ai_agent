@@ -1,0 +1,14 @@
+{
+  "description": "При клике пользователя на “войти” и открытии модалки авторизации",
+  "properties": {
+    "source": {
+      "description": "Откуда именно была открыта модалка",
+      "$ref": "#/definitions/LoginSource"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Login Button Clicked",
+  "type": "object"
+}

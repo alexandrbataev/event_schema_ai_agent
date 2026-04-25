@@ -1,0 +1,37 @@
+{
+  "description": "Отправляется при успешном сохранении выбранной цели (инфа приходит с бэка)",
+  "properties": {
+    "source": {
+      "description": "Источник, где именно был увиден баннер, по нажатию на который был открыт экран",
+      "$ref": "#/definitions/GoalsSources"
+    },
+    "selected_at": {
+      "description": "Где произошел выбор цели: на экране со списком целей, или нет",
+      "type": "string",
+      "enum": [
+        "base_screen",
+        "goals_list_page"
+      ]
+    },
+    "selected_from": {
+      "description": "Как была выбрана цель: из модалки или из баннера",
+      "type": "string",
+      "enum": [
+        "modal",
+        "banner"
+      ]
+    },
+    "goal_id": {
+      "description": "id выбранной цели",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "selected_at",
+    "selected_from",
+    "goal_id"
+  ],
+  "title": "Sber Loyalty New Goal Saved",
+  "type": "object"
+}

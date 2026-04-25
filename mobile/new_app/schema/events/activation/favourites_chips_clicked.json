@@ -1,0 +1,25 @@
+{
+  "description": "клик по любому из чипсов в Любимых",
+  "properties": {
+    "tab_name": {
+      "description": "Название чипсы",
+      "type": "string"
+    },
+    "source": {
+      "description": "Откуда пользователь попал в Любимые",
+      "type": "string",
+      "enum": [
+        "main_retailer",
+        "favourites_tab",
+        "button_on_main",
+        "profile"
+      ]
+    }
+  },
+  "required": [
+    "tab_name",
+    "source"
+  ],
+  "title": "Favourites Chips Clicked",
+  "type": "object"
+}

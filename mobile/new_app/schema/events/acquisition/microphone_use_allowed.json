@@ -1,0 +1,14 @@
+{
+  "description": "Если пользователь разрешил использование микрофона в прилоежнии",
+  "properties": {
+    "source": {
+      "description": "откуда был вызван голосовой ввод",
+      "$ref": "#/definitions/MicrophoneUseSource"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Microphone Use Allowed",
+  "type": "object"
+}

@@ -1,0 +1,7 @@
+{
+  "description": "Отказ от использования геолокации",
+  "properties": {},
+  "required": [],
+  "title": "Geo Tracking Disabled",
+  "type": "object"
+}

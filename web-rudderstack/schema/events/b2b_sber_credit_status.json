@@ -1,0 +1,32 @@
+{
+  "description": "Изменение статуса пополнения баланса в кредит от Сбера",
+  "properties": {
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    },
+    "payment_state": {
+      "description": "Статус пополнения в кредит от Сбера",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/SberCreditStatus"
+      }
+    },
+    "is_success": {
+      "description": "Успешное пополнение баланса в кредит",
+      "type": "boolean"
+    },
+    "balance_top_up": {
+      "description": "Сумма для пополнения",
+      "type": "number"
+    }
+  },
+  "required": [
+    "company_id",
+    "payment_state",
+    "is_success",
+    "balance_top_up"
+  ],
+  "title": "B2B Sber Credit Status",
+  "type": "object"
+}

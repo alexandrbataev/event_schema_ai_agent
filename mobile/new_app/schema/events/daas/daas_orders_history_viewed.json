@@ -1,0 +1,32 @@
+{
+  "description": "Загрузка страницы истории и/или догрузка бакета",
+  "properties": {
+    "is_active_orders": {
+      "description": "есть ли активные заказы в момент просмотра страницы (не доставленные и не отмененные)",
+      "type": "boolean"
+    },
+    "count_orders": {
+      "description": "общее количество заказов у пользователя на момент просмотра страницы",
+      "type": "number"
+    },
+    "page_number": {
+      "description": "номер текущей загруженной страницы у пользователя (1 страница - 10 заказов)",
+      "type": "number"
+    },
+    "source": {
+      "description": "источник захода на историю заказов: daas - если переход был через daas, profile - если переход был из профиля купера, через обычную историю заказов",
+      "type": "string",
+      "enum": [
+        "profile",
+        "daas"
+      ]
+    }
+  },
+  "required": [
+    "is_active_orders",
+    "count_orders",
+    "page_number"
+  ],
+  "title": "Daas Orders History Viewed",
+  "type": "object"
+}

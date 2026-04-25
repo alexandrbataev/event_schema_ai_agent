@@ -1,0 +1,19 @@
+{
+  "description": "Пользователю показывается модалка или алерт о перевесе в случае когда мы не можем доставить заказ",
+  "properties": {
+    "modal_type": {
+      "description": "Какая из двух модалок - та, что в случае присутствия грузовых слотов и та, что в случае отсутствия",
+      "type": "string",
+      "enum": [
+        "with_no_heavy_cargo_slots",
+        "with_heavy_cargo_slots",
+        "over_heavy_cargo_slots"
+      ]
+    }
+  },
+  "required": [
+    "modal_type"
+  ],
+  "title": "Weight Modal Shown",
+  "type": "object"
+}

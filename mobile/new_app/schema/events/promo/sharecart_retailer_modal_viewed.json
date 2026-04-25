@@ -1,0 +1,17 @@
+{
+  "description": "Каждый раз, когда пользователь видит модалку с выбором ритейлера для временной корзины",
+  "properties": {
+    "available_retailers": {
+      "description": "Массив с доступными ритейлерами",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/TempCartRetailer"
+      }
+    }
+  },
+  "required": [
+    "available_retailers"
+  ],
+  "title": "Sharecart Retailer Modal Viewed",
+  "type": "object"
+}

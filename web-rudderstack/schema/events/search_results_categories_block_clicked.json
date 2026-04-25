@@ -1,0 +1,28 @@
+{
+  "description": "Каждый раз при клике на какую-то категорию в блоке «Возможно вам будет интересно» в результатах поиска.",
+  "properties": {
+    "search_query": {
+      "description": "По какому запросу была показана выдача, в которой отрисовался блок «Возможно вам будет интересно»",
+      "type": "string"
+    },
+    "categories": {
+      "description": "Массив с category_id доступных в блоке категорий",
+      "type": "array",
+      "items": {
+        "description": "category_id",
+        "type": "string"
+      }
+    },
+    "clicked_category_id": {
+      "description": "category_id категории, на которую кликнули",
+      "type": "string"
+    }
+  },
+  "required": [
+    "search_query",
+    "categories",
+    "clicked_category_id"
+  ],
+  "title": "Search Results Categories Block Clicked",
+  "type": "object"
+}

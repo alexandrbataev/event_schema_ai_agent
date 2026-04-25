@@ -1,0 +1,14 @@
+{
+  "description": "Срабатывает когда на главной б2б нажимают на кнопку \"Зарегистрироваться\"",
+  "properties": {
+    "module": {
+      "description": "под каким блоком нажали на кнопку",
+      "type": "string"
+    }
+  },
+  "required": [
+    "module"
+  ],
+  "title": "B2B Landing Register Clicked",
+  "type": "object"
+}

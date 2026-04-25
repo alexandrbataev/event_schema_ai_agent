@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз при клике пользователя на кнопку скролла наверх.",
+  "properties": {},
+  "required": [],
+  "title": "Scroll Up Button Clicked",
+  "type": "object"
+}

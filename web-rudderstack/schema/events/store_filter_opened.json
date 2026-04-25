@@ -1,0 +1,27 @@
+{
+  "description": "Каждый раз когда пользователь попадает на страницу со списком ритейлеров",
+  "properties": {
+    "store_filter_name": {
+      "description": "Название полки/джоба, на который кликнули для открытия страницы",
+      "type": "string"
+    },
+    "source": {
+      "description": "Откуда был переход на страницу, store_filter - перешли через клик по джобу, from_shelf - перешли через клик по полке",
+      "type": "string",
+      "enum": [
+        "store_filter",
+        "from_shelf"
+      ]
+    },
+    "has_delivery_address": {
+      "description": "Флаг наличия введенного адреса на момент открытия страницы",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "store_filter_name",
+    "source"
+  ],
+  "title": "Store Filter Opened",
+  "type": "object"
+}

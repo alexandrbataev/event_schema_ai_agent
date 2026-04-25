@@ -1,0 +1,6 @@
+{
+  "description": "Направили юзера на авторизацию по SberID.",
+  "properties": {},
+  "title": "Sberid Authorization Prompt Shown",
+  "type": "object"
+}

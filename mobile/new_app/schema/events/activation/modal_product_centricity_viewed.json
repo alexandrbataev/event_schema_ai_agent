@@ -1,0 +1,31 @@
+{
+  "description": "Каждый раз при открытии шторки, открывается при добавлении товара в корзину из каталога, без раскрытия карточки товара (на данный момент элемент есть только в нонфуде).",
+  "properties": {
+    "store_id": {
+      "description": "Магазин, откуда был выбран товар",
+      "type": "number"
+    },
+    "product_sku": {
+      "description": "sku товара",
+      "type": "string"
+    },
+    "product_sku_total": {
+      "description": "sku всех товаров, которые отображаются в шторке",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "sku товара"
+      }
+    },
+    "category_id": {
+      "description": "ID категории",
+      "type": "number"
+    }
+  },
+  "required": [
+    "store_id",
+    "product_sku"
+  ],
+  "title": "Modal Product Centricity Viewed",
+  "type": "object"
+}

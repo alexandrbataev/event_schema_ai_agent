@@ -1,0 +1,7 @@
+{
+  "description": "Вызывается, когда пользователь открывает попап подтверждения номера телефона",
+  "properties": {},
+  "required": [],
+  "title": "BNPL SMS Code Popup Opened",
+  "type": "object"
+}

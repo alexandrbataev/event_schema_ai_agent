@@ -1,0 +1,19 @@
+{
+  "description": "Пользователю показан Баннер \"Закупаете для бизнеса?\"",
+  "properties": {
+    "source": {
+      "description": "На каком экране показан баннер",
+      "type": "string",
+      "enum": [
+        "main",
+        "profile"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Add Company Banner Viewed",
+  "type": "object"
+}
+

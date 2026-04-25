@@ -1,0 +1,22 @@
+{
+  "title": "PromoModalSource",
+  "description": "С какой фичи пользователь открыл модалку",
+  "type": "string",
+  "enum": [
+    "deeplink",
+    "incut_main",
+    "your_promocodes",
+    "profile",
+    "button_on_main",
+    "order_completed_spasibo",
+    "checkout",
+    "goals_banner",
+    "ads_product_selection",
+    "ads_modal_brand_screen",
+    "b2b_reg_first_company",
+    "rte_main",
+    "referral_screen",
+    "notifications"
+  ],
+  "$comment": "incut_main - врезка на гл гл, profile - Ваши промокоды в профиле, button_on_main - выгода на главной, b2b_reg_first_company - показ промокода после регистрации первой компании"
+}

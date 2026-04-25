@@ -1,0 +1,48 @@
+{
+  "description": "Cрабатывает при каждом клике на кнопку Показать товары",
+  "properties": {
+    "impression_id": {
+      "description": "Уникальный идентификатор взаимодействия",
+      "type": "string"
+    },
+    "asset_id": {
+      "description": "Уникальный идентификатор полки",
+      "type": "string"
+    },
+    "source": {
+      "description": "Где именно была размещена полка",
+      "$ref": "#/definitions/AdsBannerSource"
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника, если есть. Если баннер показан в категории - category_id",
+      "type": "string"
+    },
+    "store_id": {
+      "description": "ID магазина, чьи товары представлены на полке",
+      "type": "string"
+    },
+    "is_clickout": {
+      "description": "Если полка кликаут",
+      "type": "boolean"
+    },
+    "is_complementary": {
+      "description": "Если полка комплиментарная",
+      "type": "boolean"
+    },
+    "is_already_ordered": {
+      "description": "Если полка Уже заказывали",
+      "type": "boolean"
+    },
+    "is_interactive": {
+      "description": "Если полка интерактивная",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "impression_id",
+    "asset_id",
+    "source"
+  ],
+  "title": "Ads Shelf Clicked",
+  "type": "object"
+}

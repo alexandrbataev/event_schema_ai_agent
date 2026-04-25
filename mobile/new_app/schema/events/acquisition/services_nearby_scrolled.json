@@ -1,0 +1,14 @@
+{
+  "description": "Каждый раз при скролле экрана \"Услуги около вас\".",
+  "properties": {
+    "max_position": {
+      "description": "Порядковый номер последней позиции услуги отображенной на экране пользователя",
+      "type": "number"
+    }
+  },
+  "required": [
+    "max_position"
+  ],
+  "title": "Services Nearby Scrolled",
+  "type": "object"
+}

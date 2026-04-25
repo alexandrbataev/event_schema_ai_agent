@@ -1,0 +1,19 @@
+{
+  "title": "CancellationFeeDetalization",
+  "type": "object",
+  "description": "Словарь с детализацией стоимости отмены",
+  "properties": {
+    "reason": {
+      "description": "За что удерживаем деньги в отмене",
+      "type": "string"
+    },
+    "sum": {
+      "description": "Сумма денег в рублях которую удерживаем за отмену",
+      "type": "number"
+    }
+  },
+  "required": [
+    "reason",
+    "sum"
+  ]
+}

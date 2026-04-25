@@ -1,0 +1,20 @@
+{
+  "description": "Выбран раздел документов для перехода в апп B2B",
+  "properties": {
+    "source": {
+      "description": "Выбранный раздел",
+      "type": "string",
+      "enum": [
+        "order_documents",
+        "ordered_documents",
+        "edm_request",
+        "requests_statuses"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "B2B Documents Section Chosen",
+  "type": "object"
+}

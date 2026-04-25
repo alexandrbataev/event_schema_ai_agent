@@ -1,0 +1,31 @@
+{
+  "root": true,
+  "extends": [
+    "@nstmrt/eslint-config",
+    "@nstmrt/eslint-config/commonjs",
+    "@nstmrt/eslint-config/typescript",
+    "@nstmrt/eslint-config/typescript-requiring-type-checking"
+  ],
+  "env": {
+    "node": true,
+    "browser": true,
+    "commonjs": true
+  },
+  "parserOptions": {
+    "tsconfigRootDir": "./",
+    "project": ["./tsconfig.json"]
+  },
+  "plugins": [
+    "json"
+  ],
+  "rules": {
+    "no-magic-numbers": "off",
+    "jsdoc/require-param": "off",
+    "jsdoc/require-returns": "off",
+    "@typescript-eslint/no-unnecessary-type-arguments": "off",
+    "json/*": ["error", "allowComments"]
+  },
+  "ignorePatterns": [
+    "dist/*"
+  ]
+}

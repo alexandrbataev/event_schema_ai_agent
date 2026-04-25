@@ -1,0 +1,6 @@
+{
+  "description": "Показана шторка с выбором \"Для кого покупаете?\"",
+  "properties": {},
+  "title": "Checkout Purpose of Order Selector Showed",
+  "type": "object"
+}

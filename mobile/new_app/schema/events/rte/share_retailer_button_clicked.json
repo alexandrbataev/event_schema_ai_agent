@@ -1,0 +1,34 @@
+{
+  "description": "Клик на кнопку - поделиться на главном экране ритейлера",
+  "properties": {
+    "delivery_cost": {
+      "description": "Стоимость доставки. Если минимум и максимум совпадают, значит стоимость доставки фиксирована, если нет, значит что это лесенка.",
+      "type": "object",
+      "properties": {
+        "min": {
+          "description": "Минимальная стоимость доставки",
+          "type": "number"
+        },
+        "max": {
+          "description": "Максимальная стоимость доставки",
+          "type": "number"
+        }
+      }
+    },
+    "max_sberloyalty_spend_percent": {
+      "description": "Значение максимальной скидки в процентах",
+      "type": "string"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (grocery, pharmacy или restaurant)",
+      "type": "string"
+    }
+  },
+  "required": [
+    "delivery_cost",
+    "max_sberloyalty_spend_percent",
+    "retailer_vertical"
+  ],
+  "title": "Share Retailer Button Clicked",
+  "type": "object"
+}

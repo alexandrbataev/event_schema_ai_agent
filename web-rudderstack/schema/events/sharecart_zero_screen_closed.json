@@ -1,0 +1,18 @@
+{
+  "description": "Закрытие зеро скрина временной корзины (магазины не найдены)",
+  "properties": {
+    "how_closed": {
+      "description": "Как именно был закрыт скрин",
+      "type": "string",
+      "enum": [
+        "cross",
+        "button"
+      ]
+    }
+  },
+  "required": [
+    "how_closed"
+  ],
+  "title": "Sharecart Zero Screen Closed",
+  "type": "object"
+}

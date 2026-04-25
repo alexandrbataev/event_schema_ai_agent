@@ -1,0 +1,34 @@
+{
+  "description": "Событие открытия экрана со списком чеков или пустого состояния.",
+  "properties": {
+    "is_empty_screen": {
+      "description": "Пустой ли экран. true — нет чеков, false — чеки отображаются.",
+      "type": "boolean"
+    },
+    "receipt_names": {
+      "description": "Названия чеков, присутствующих в заказе.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "receipts_availability": {
+      "description": "Доступность чеков. Массив, где 1 — чек доступен, 0 — недоступен (порядок соответствует receipt_types).",
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "enum": [
+          0,
+          1
+        ]
+      }
+    }
+  },
+  "required": [
+    "is_empty_screen",
+    "receipt_names",
+    "receipts_availability"
+  ],
+  "title": "Order Receipts Screen Viewed",
+  "type": "object"
+}

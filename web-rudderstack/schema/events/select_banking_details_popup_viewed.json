@@ -1,0 +1,19 @@
+{
+  "description": "Срабатывает когда открылся попап \"Выбрать реквизиты\"",
+  "properties": {
+    "edm_flg": {
+      "description": "Флаг того, что подключен эдо",
+      "type": "boolean"
+    },
+    "source": {
+      "description": "Источник из которого нажата кнопка",
+      "type": "string",
+      "enum": [
+        "checkout"
+      ]
+    }
+  },
+  "title": "Select Banking Details Popup Viewed",
+  "type": "object"
+}
+

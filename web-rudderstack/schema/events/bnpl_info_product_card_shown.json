@@ -1,0 +1,15 @@
+{
+  "description": "Вызывается, когда пользователь видит информацию о bnpl в карточке товара",
+  "properties": {
+    "product_sku": {
+      "description": "sku товара",
+      "type": "string"
+    }
+  },
+  "required": [
+    "product_sku"
+  ],
+  "title": "BNPL Info Product Card Shown",
+  "type": "object"
+}
+

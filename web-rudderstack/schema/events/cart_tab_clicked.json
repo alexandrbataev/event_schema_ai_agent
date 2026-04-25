@@ -1,0 +1,13 @@
+{
+  "description": "Нажатие на таб корзины в шапке профиля",
+  "properties": {
+    "header_type": {
+      "$ref": "#/definitions/HeaderType"
+    }
+  },
+  "required": [
+    "header_type"
+  ],
+  "title": "Cart Tab Clicked",
+  "type": "object"
+}

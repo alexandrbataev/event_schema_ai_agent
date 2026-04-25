@@ -1,0 +1,24 @@
+{
+  "description": "Отображение предложения с промокодом на первый заказ и таймером внизу экрана (вместо ETA)",
+  "properties": {
+    "offer": {
+      "description": "Предложение",
+      "type": "string"
+    },
+    "promocode": {
+      "description": "Промокод",
+      "type": "string"
+    },
+    "source": {
+      "description": "На каком экране был отображен промокод",
+      "$ref": "#/definitions/PromoCodeSource"
+    }
+  },
+  "required": [
+    "offer",
+    "promocode",
+    "source"
+  ],
+  "title": "Timer Promo Viewed",
+  "type": "object"
+}

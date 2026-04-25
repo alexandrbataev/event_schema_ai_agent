@@ -1,0 +1,18 @@
+{
+  "description": "Каждый раз, когда идет клик на кнопку 'Перейти в профиль' b2b",
+  "properties": {
+    "source": {
+      "type": "string",
+      "description": "Откуда сделал клик на кнопку перейти в профиль",
+      "enum": [
+        "landing_banner",
+        "profile_icon"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Profile Button Clicked B2B",
+  "type": "object"
+}

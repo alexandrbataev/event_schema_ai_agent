@@ -1,0 +1,42 @@
+{
+  "description": "Показ модалки со списком магазинов самовывоза одного ритейлера. Модалка открывается, например, при клике на ритейлера самовывоза",
+  "properties": {
+    "available_stores": {
+      "description": "Массив с характеристиками доступных магазинов",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PickupStore"
+      }
+    },
+    "current_store": {
+      "description": "Характеристики текущего магазина",
+      "$ref": "#/definitions/PickupStore"
+    },
+    "retailer_id": {
+      "description": "id выбранного ритейлера",
+      "type": "number"
+    },
+    "city": {
+      "description": "Название выбранного города, в котором ищем магазины самовывоза",
+      "type": "string"
+    },
+    "available_stores_count": {
+      "description": "Количество доступных магазинов ритейлера (полное количество, не только то, что отображается на одной странице без скролла)",
+      "type": "number"
+    },
+    "source": {
+      "description": "Откуда пришлина карту",
+      "type": "string",
+      "enum": [
+        "main_page",
+        "preview_cart",
+        "cart",
+        "other"
+      ],
+      "$comment": "main_page - главная ритейлера, preview_cart - клик по пред.корзине, cart - в корзине, other - любой другой источник"
+    }
+  },
+  "required": [],
+  "title": "Pickup Store List Showed",
+  "type": "object"
+}

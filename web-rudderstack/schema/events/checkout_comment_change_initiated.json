@@ -1,0 +1,6 @@
+{
+  "description": "при каждом открытии экрана для редактирования комментария к заказу на постчекауте",
+  "properties": {},
+  "title": "Checkout Comment Change Initiated",
+  "type": "object"
+}

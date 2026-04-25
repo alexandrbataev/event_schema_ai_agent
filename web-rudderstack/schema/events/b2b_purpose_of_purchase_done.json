@@ -1,0 +1,21 @@
+{
+  "description": "Каждый раз, когда пользователь нажимает на кнопку Выбрать",
+  "properties": {
+    "category_name": {
+      "description": "Название сохраненной категории: office - Офис, restaurant - Ресторан, cafe - Кафе, hotel - Гостиница, resale - Перепродажа",
+      "type": "string",
+      "enum": [
+        "office",
+        "restaurant",
+        "cafe",
+        "hotel",
+        "resale"
+      ]
+    }
+  },
+  "required": [
+    "category_name"
+  ],
+  "title": "B2B Purpose Of Purchase Done",
+  "type": "object"
+}

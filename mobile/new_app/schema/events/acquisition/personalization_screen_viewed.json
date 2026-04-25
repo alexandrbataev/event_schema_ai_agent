@@ -1,0 +1,7 @@
+{
+  "description": "Просмотр экрана персонализации категорий",
+  "properties": {},
+  "required": [],
+  "title": "Personalization Screen Viewed",
+  "type": "object"
+}

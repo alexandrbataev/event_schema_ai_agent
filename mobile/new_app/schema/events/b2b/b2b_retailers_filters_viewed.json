@@ -1,0 +1,27 @@
+{
+  "description": "Когда человек посмотрел бэйджи ретейлера (мы ему показали)",
+  "properties": {
+    "source": {
+      "description": "На каком экране был нажат фильтр",
+      "type": "string"
+    },
+    "store_id": {
+      "description": "Идентификатор магазина",
+      "type": "number"
+    },
+    "retailer_informer_name": {
+      "description": "Массив с названиями бэйджей у ретейлера",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/B2BRetailerInfo"
+      }
+    }
+  },
+  "required": [
+    "source",
+    "store_id",
+    "retailer_informer_name"
+  ],
+  "title": "B2B Retailers Filters Viewed",
+  "type": "object"
+}

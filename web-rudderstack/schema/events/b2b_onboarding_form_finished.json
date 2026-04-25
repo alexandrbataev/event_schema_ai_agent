@@ -1,0 +1,14 @@
+{
+  "description": "Клиенту завершил анкету онбординга",
+  "properties": {
+    "company_id": {
+      "description": "Айди компании, которую добавил пользователь",
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_id"
+  ],
+  "title": "B2B Onboarding Form Finished",
+  "type": "object"
+}

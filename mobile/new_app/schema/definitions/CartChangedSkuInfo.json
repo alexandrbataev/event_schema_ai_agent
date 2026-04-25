@@ -1,0 +1,24 @@
+{
+  "title": "CartChangedSkuInfo",
+  "type": "object",
+  "description": "Тройка - sku, количество товаров в корзине и количество товаров в стоке",
+  "properties": {
+    "sku": {
+      "description": "Идентификатор товара",
+      "type": "string"
+    },
+    "sku_count_was": {
+      "description": "Количество товаров в корзине (зачеркнутое количество)",
+      "type": "number"
+    },
+    "sku_count_is": {
+      "description": "Новое доступное количество товаров после обращения в продакт хаб. Если товаров нет, отправляем 0 ",
+      "type": "number"
+    }
+  },
+  "required": [
+    "sku",
+    "sku_count_was",
+    "sku_count_is"
+  ]
+}

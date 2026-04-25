@@ -1,0 +1,13 @@
+{
+  "description": "Срабатывает когда открылся попап \"Добавить реквизит\"",
+  "properties": {
+    "source": {
+      "$ref": "#/definitions/BankingDetailsAddSource"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Add Banking Details Popup Viewed",
+  "type": "object"
+}

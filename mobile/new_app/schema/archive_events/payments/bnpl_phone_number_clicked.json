@@ -1,0 +1,7 @@
+{
+  "description": "Вызывается, когда пользователь нажимает на номер телефона (попытка изменить номер из модального окна)",
+  "properties": {},
+  "required": [],
+  "title": "BNPL Phone Number Clicked",
+  "type": "object"
+}

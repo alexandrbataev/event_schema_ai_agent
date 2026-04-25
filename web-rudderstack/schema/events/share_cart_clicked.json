@@ -1,0 +1,23 @@
+{
+  "description": "Каждый раз когда пользователь кликает на кнопку 'Поделиться корзиной'",
+  "properties": {
+    "retailer_id": {
+      "description": "Идентификатор ритейлера корзины, которую шэрят",
+      "type": "number"
+    },
+    "source": {
+      "description": "откуда был клик по кнопке 'поделиться корзиной'. cart - корзина, preview_cart - пред корзина на десктопе",
+      "type": "string",
+      "enum": [
+        "cart",
+        "preview_cart"
+      ]
+    }
+  },
+  "required": [
+    "retailer_id",
+    "source"
+  ],
+  "title": "Share Cart Clicked",
+  "type": "object"
+}

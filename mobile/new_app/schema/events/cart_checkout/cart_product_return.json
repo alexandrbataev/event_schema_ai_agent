@@ -1,0 +1,14 @@
+{
+  "description": "Нажатие на кнопку Вернуть в корзине",
+  "properties": {
+    "product_sku": {
+      "description": "Идентификатор товара, который вернули в корзине",
+      "type": "string"
+    }
+  },
+  "required": [
+    "product_sku"
+  ],
+  "title": "Cart Product Return",
+  "type": "object"
+}

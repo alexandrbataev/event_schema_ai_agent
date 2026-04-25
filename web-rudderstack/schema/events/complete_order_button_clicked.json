@@ -1,0 +1,67 @@
+{
+  "description": "Нажата кнопка “Оформить заказ“",
+  "properties": {
+    "steps_completed": {
+      "description": "Количество шагов завершенных на момент нажатия на кнопку",
+      "type": "number"
+    },
+    "source": {
+      "description": "Источник клика: с панели щшагов и инфо заказа или summary по заказу справа",
+      "type": "string",
+      "enum": [
+        "panel",
+        "summary"
+      ]
+    },
+    "complete_available": {
+      "description": "Доступно ли оформление заказа",
+      "type": "boolean"
+    },
+    "payment_tools_available": {
+      "description": "Массив доступных способов оплаты",
+      "type": "array",
+      "items": {
+        "description": "Способ оплаты",
+        "type": "string"
+      }
+    },
+    "payment_tool": {
+      "description": "Выбранный способ оплаты",
+      "type": "string"
+    },
+    "payment_method": {
+      "description": "Выбранный метод оплаты",
+      "type": "string"
+    },
+    "total_cost": {
+      "description": "Сумма заказа, которую видит пользователь",
+      "type": "number"
+    },
+    "needs_closing_documents": {
+      "description": "Положение свитчера “Получить закрывающие документы“ при оформлении заказа",
+      "type": "boolean"
+    },
+    "is_contactless_selected": {
+      "description": "Заказ оформлен с бесконтактной доставкой",
+      "type": "boolean"
+    },
+    "shipment_number": {
+      "description": "Массив идентификаторов доставки. Для старого чекаута может быть мультиритейлерная корзина и с нового чекаута может приходить два идентификатора при заказе алкоголя",
+      "type": "array",
+      "items": {
+        "description": "Идентификатор доставки",
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "source",
+    "payment_tools_available",
+    "payment_tool",
+    "payment_method",
+    "total_cost",
+    "shipment_number"
+  ],
+  "title": "Complete Order Button Clicked",
+  "type": "object"
+}

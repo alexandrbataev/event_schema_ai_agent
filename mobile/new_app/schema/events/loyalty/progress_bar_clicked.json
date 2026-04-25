@@ -1,0 +1,28 @@
+{
+  "description": "Каждый раз при клике на элемент СберПрайм прогресс бара, подробно показывающий лесенку Прайм",
+  "properties": {
+    "source": {
+      "description": "Где был загружен или обновлен прогресс бар, на который кликнули",
+      "type": "string",
+      "enum": [
+        "cart",
+        "catalogue"
+      ]
+    },
+    "bonuses_state": {
+      "description": "Процент кэшбека, отображаемый в прогресс баре",
+      "type": "number"
+    },
+    "steps_type": {
+      "description": "Тип лесенки кешбека: 1 - grocery, 2 - rte",
+      "type": "number"
+    }
+  },
+  "required": [
+    "source",
+    "bonuses_state",
+    "steps_type"
+  ],
+  "title": "Progress Bar Clicked",
+  "type": "object"
+}

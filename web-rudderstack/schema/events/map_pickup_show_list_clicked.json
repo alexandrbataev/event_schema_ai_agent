@@ -1,0 +1,18 @@
+{
+  "description": "На карте самовывоза клик на кнопку показать списком",
+  "properties": {
+    "store_count": {
+      "description": "Количество логотипов и точек с магазинами на карте самовывоза - аналогично событию pickup_map_loaded",
+      "type": "number"
+    },
+    "current_retailer_id": {
+      "description": "id ритейлера, если пришли на карту с выбранным магазином самовывоза - аналогично событию pickup_map_loaded",
+      "type": "number"
+    }
+  },
+  "required": [
+    "store_count"
+  ],
+  "title": "Map Pickup Show List Clicked",
+  "type": "object"
+}

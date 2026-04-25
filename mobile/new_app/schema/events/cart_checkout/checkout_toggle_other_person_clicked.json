@@ -1,0 +1,6 @@
+{
+  "description": "Когда пользователь нажал на тоггл Заказать другому челвоеку на чекауте",
+  "properties": {},
+  "title": "Checkout Toggle Other Person Clicked",
+  "type": "object"
+}

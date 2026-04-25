@@ -1,0 +1,25 @@
+{
+  "description": "Каждый раз, при открытии корзины, когда приходит ответ о кол-ве товаров в корзине и сервиса предзамен",
+  "properties": {
+    "order_skus": {
+      "description": "Массив значений store_id: skus представленных в корзине полученные в ответе от бэкенда",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/OrderSkus"
+      }
+    },
+    "replacement_skus": {
+      "description": "Массив значений store_id: skus товаров, для которых есть предзамены",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ReplacementSkus"
+      }
+    }
+  },
+  "required": [
+    "order_skus",
+    "replacement_skus"
+  ],
+  "title": "Pre Replacements Skus Viewed",
+  "type": "object"
+}

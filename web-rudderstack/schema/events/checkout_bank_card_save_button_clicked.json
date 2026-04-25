@@ -1,0 +1,32 @@
+{
+  "description": "Нажатие на кнопку сохранить при заполнении данных по новой банковской карте",
+  "properties": {
+    "is_successful": {
+      "description": "Успешно ли добавилась новая карта",
+      "type": "boolean"
+    },
+    "errors": {
+      "description": "Ошибки, с которыми столкнулся пользователь при нажатии кнопки сохранить",
+      "type": "array",
+      "items": {
+        "description": "Текст ошибки",
+        "type": "string"
+      }
+    },
+    "shipment_number": {
+      "description": "Массив идентификаторов доставки. Для старого чекаута может быть мультиритейлерная корзина и с нового чекаута может приходить два идентификатора при заказе алкоголя",
+      "type": "array",
+      "items": {
+        "description": "Идентификатор доставки",
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "is_successful",
+    "errors",
+    "shipment_number"
+  ],
+  "title": "Checkout Bank Card Save Button Clicked",
+  "type": "object"
+}

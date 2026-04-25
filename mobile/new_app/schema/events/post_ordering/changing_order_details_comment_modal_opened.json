@@ -1,0 +1,14 @@
+{
+  "description": "Каждый раз, когда пользователь открывает модалку с изменением комментария на экране активного заказа после оформления",
+  "properties": {
+    "available_changing_comment": {
+      "description": "Возможность изменения комментария. Можно поменять только до начала сборки",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "available_changing_comment"
+  ],
+  "title": "Changing Order Details Comment Modal Opened",
+  "type": "object"
+}

@@ -1,0 +1,14 @@
+{
+  "description": "Клик на кнопку \"Мои награды\" на экране коронок",
+  "properties": {
+    "source": {
+      "type": "string",
+      "description": "Экран, с которого был совершён клик (например, handsome_screen)"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "My Rewards Button Clicked",
+  "type": "object"
+}

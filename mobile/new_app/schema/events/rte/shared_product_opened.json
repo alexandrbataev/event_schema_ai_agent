@@ -1,0 +1,34 @@
+{
+  "description": "Пользователь открыл КТ, которой поделился другой пользователь, увидел надпись С вами поделились КТ",
+  "properties": {
+    "product_id": {
+      "description": "id товара, которым делится пользователь",
+      "type": "number"
+    },
+    "product_name": {
+      "description": "Название товара, которым делится пользователь",
+      "type": "string"
+    },
+    "price": {
+      "description": "Стоимость товара, которым делится пользователь",
+      "type": "number"
+    },
+    "product_sku": {
+      "description": "SKU товара, которым делится пользователь",
+      "type": "string"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (grocery, pharmacy или restaurant)",
+      "type": "string"
+    }
+  },
+  "required": [
+    "product_id",
+    "product_name",
+    "price",
+    "product_sku",
+    "retailer_vertical"
+  ],
+  "title": "Shared Product Opened",
+  "type": "object"
+}

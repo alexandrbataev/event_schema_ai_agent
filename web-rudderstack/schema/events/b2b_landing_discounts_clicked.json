@@ -1,0 +1,16 @@
+{
+  "description": "Срабатывает каждый раз когда пользователь кликает на \"Скидки и акции для вас\"",
+  "properties": {
+    "landing_type": {
+      "description": "Тип лендинга, на котором сработало событие",
+      "type": "string",
+      "enum": [
+        "office",
+        "traders",
+        "horeca"
+      ]
+    }
+  },
+  "title": "B2B Landing Discounts Clicked",
+  "type": "object"
+}

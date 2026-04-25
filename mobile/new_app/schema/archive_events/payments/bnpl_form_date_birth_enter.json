@@ -1,0 +1,7 @@
+{
+  "description": "Вызывается, когда пользователь ввел дату рождения",
+  "properties": {},
+  "required": [],
+  "title": "BNPL Form Date Birth Enter",
+  "type": "object"
+}

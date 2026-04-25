@@ -1,0 +1,19 @@
+{
+  "description": "Каждый раз, когда открывается модалка/страница со списком адресов",
+  "properties": {
+    "source": {
+      "description": "Откуда перешли в список адресов",
+      "$ref": "#/definitions/AddressChangeSource"
+    },
+    "address_count": {
+      "description": "Количество сохраненных адресов",
+      "type": "number"
+    }
+  },
+  "required": [
+    "source",
+    "address_count"
+  ],
+  "title": "Address List Viewed",
+  "type": "object"
+}

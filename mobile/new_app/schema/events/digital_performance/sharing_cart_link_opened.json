@@ -1,0 +1,14 @@
+{
+  "description": "Открытие ссылки с корзиной, которой поделились",
+  "properties": {
+    "source": {
+      "description": "Источник откуда пришла пришлы ссылка на корзину",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Sharing Cart Link Opened",
+  "type": "object"
+}

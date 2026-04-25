@@ -1,0 +1,30 @@
+{
+  "description": "Каждый раз, когда пользователь начинает игру",
+  "properties": {
+    "game_name": {
+      "description": "Название игры",
+      "type": "string"
+    },
+    "gift_price": {
+      "description": "Стоимость подарка в игре",
+      "type": "number"
+    },
+    "start_date": {
+      "description": "Дата начала игры",
+      "type": "string"
+    },
+    "number_of_players": {
+      "description": "Кол-во игроков",
+      "type": "number"
+    }
+  },
+  "required": [
+    "game_name",
+    "gift_price",
+    "start_date",
+    "number_of_players"
+  ],
+  "title": "Event Start Game",
+  "type": "object"
+}
+  

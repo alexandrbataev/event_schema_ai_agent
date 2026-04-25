@@ -1,0 +1,70 @@
+{
+  "description": "Клик по Отправить отзыв/Отправить или клик по звездам в блоке оценки товара",
+  "properties": {
+    "is_source_reviewed": {
+      "description": "является ли карточка товара оцененной или нет - в смысле есть хотя бы одна оценка,соответствует предыдущему событию Make Review Clicked",
+      "type": "boolean"
+    },
+    "source_identifier": {
+      "description": "sku товара, где можно оставить отзыв, соответствует предыдущему событию Make Review Clicked",
+      "type": "string"
+    },
+    "review_form_filled": {
+      "description": "Какие поля заполнены при оценивании",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ReviewFormFilled"
+      }
+    },
+    "score": {
+      "description": "Оценка",
+      "type": "number"
+    },
+    "review_id": {
+      "description": "review_id",
+      "type": "string"
+    },
+    "store_id": {
+      "description": "Значение id стора",
+      "type": "number"
+    },
+    "retailer_id": {
+      "description": "Значение id ритейлера",
+      "type": "number"
+    },
+    "source_type": {
+      "description": "Где был вызван отзыв - карточка товара (вверху - product_card_top, внизу - product_card_bottom), страница со списком всех отзывов (all_reviews) или это промо отзыв (promo_ads_creative - заход в отзыв произошел с креатива рекламной платформы, promo_product_card_top - вверху КТ, promo_product_card_bottom - внизу КТ)",
+      "type": "string",
+      "enum": [
+        "all_reviews",
+        "product_card_top",
+        "product_card_bottom",
+        "promo_ads_creative",
+        "promo_product_card_top",
+        "promo_product_card_bottom",
+        "product_review_block",
+        "product_card_from_review_block"
+      ]
+    },
+    "review_submission_type": {
+      "description": "Если оценка отправлена через кнопку Отправить/Отправить отзыв в модалке для написания отзыва, implicit_rating – если оценка записана автоматически при выборе звёзд в блоке оценки товара",
+      "type": "string"
+    },
+    "promo_id": {
+      "description": "если промо отзыв, то указывается id инструмента в Trading desk, с которого совершен переход (asset_id), иначе - не проставляется",
+      "type": "string"
+    }
+  },
+  "required": [
+    "is_source_reviewed",
+    "source_identifier",
+    "review_form_filled",
+    "score",
+    "review_id",
+    "store_id",
+    "retailer_id",
+    "source_type"
+  ],
+  "title": "Review Made",
+  "type": "object"
+}

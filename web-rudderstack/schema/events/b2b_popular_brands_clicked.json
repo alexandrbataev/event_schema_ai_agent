@@ -1,0 +1,23 @@
+{
+  "description": "Нажали на бренд в строке популярных брендов",
+  "properties": {
+    "landing_type": {
+      "description": "Тип лендинга, на котором сработало событие",
+      "type": "string",
+      "enum": [
+        "office",
+        "traders",
+        "horeca"
+      ]
+    },
+    "brand_name": {
+      "description": "Название бренда, на который нажали",
+      "type": "string"
+    }
+  },
+  "required": [
+    "brand_name"
+  ],
+  "title": "B2B Popular Brands Clicked",
+  "type": "object"
+}

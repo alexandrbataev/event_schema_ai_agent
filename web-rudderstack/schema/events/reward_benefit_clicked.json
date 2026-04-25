@@ -1,0 +1,24 @@
+{
+  "description": "Клик на бенефит внутри боттомшита \"Мои награды\" на экране коронок",
+  "properties": {
+    "benefit_name": {
+      "type": "string",
+      "description": "Имя бенефита (например, cashback_25, cashback_fri, goals)"
+    },
+    "deeplink": {
+      "type": "string",
+      "description": "Диплинк, на который ведёт клик по бенефиту"
+    },
+    "source": {
+      "type": "string",
+      "description": "Источник открытия боттомшита (например, my_rewards_bottomsheet)"
+    }
+  },
+  "required": [
+    "benefit_name",
+    "deeplink",
+    "source"
+  ],
+  "title": "Reward Benefit Clicked",
+  "type": "object"
+}

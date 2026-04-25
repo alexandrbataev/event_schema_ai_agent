@@ -1,0 +1,15 @@
+{
+  "description": "Отправляем каждый раз, когда на карте самовывоза пользователь кликнул на фильтр",
+  "properties": {
+    "filter_name": {
+      "description": "Название фильтра на который кликнули",
+      "type": "string",
+      "$comment": "название фильтра, например: drive_in, pharmacy, alcohol, wide_choice, cosmetics, for_home, zoo, flowers, sale_alcohol"
+    }
+  },
+  "required": [
+    "filter_name"
+  ],
+  "title": "Map Pickup Filter Clicked",
+  "type": "object"
+}

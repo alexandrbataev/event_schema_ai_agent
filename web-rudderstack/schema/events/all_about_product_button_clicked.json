@@ -1,0 +1,23 @@
+{
+  "description": "Отправляется каждый раз, когда пользователь кликает на \"Детальное описание\" или разворчивает блок с информацией \"О товаре\" в карточке товара",
+  "properties": {
+    "product_sku": {
+      "description": "sku товара, в карточке которого произошел клик",
+      "type": "string"
+    },
+    "is_multicard": {
+      "description": "Если лик по кнопке «Все о товаре» произошел в мультикарточке",
+      "type": "boolean"
+    },
+    "store_id": {
+      "description": "id стора, в карточке которого пользователь кликнул на детальное описание товара",
+      "type": "number"
+    }
+  },
+  "required": [
+    "product_sku",
+    "store_id"
+  ],
+  "title": "All About Product Button Clicked",
+  "type": "object"
+}

@@ -1,0 +1,39 @@
+{
+  "description": "Удаления товара из корзины SPG",
+  "properties": {
+    "is_alcohol": {
+      "description": "является ли продукт алкоголем",
+      "type": "boolean"
+    },
+    "is_discount": {
+      "description": "Флаг, есть ли скидка (true/false)",
+      "type": "boolean"
+    },
+    "price": {
+      "description": "Фактическая, отображаемая цена товара (со скидкой)",
+      "type": "number"
+    },
+    "pricer": {
+      "description": "тип фасовки товара",
+      "type": "string"
+    },
+    "product_name": {
+      "description": "Название товара",
+      "type": "string"
+    },
+    "product_sku": {
+      "description": "sku товара",
+      "type": "string"
+    }
+  },
+  "required": [
+    "product_sku",
+    "product_name",
+    "price",
+    "is_discount",
+    "is_alcohol",
+    "pricer"
+  ],
+  "title": "Spg Product Removed",
+  "type": "object"
+}

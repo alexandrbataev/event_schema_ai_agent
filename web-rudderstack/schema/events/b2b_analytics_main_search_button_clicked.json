@@ -1,0 +1,19 @@
+{
+  "description": "Клик по кнопке 'Поиск на главной' на странице Аналитики",
+  "properties": {
+    "user_uuid": {
+      "description": "UUID пользователя",
+      "type": "string"
+    },
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    }
+  },
+  "required": [
+    "user_uuid",
+    "company_id"
+  ],
+  "title": "B2B Analytics Main Search Button Clicked",
+  "type": "object"
+}

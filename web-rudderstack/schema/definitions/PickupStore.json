@@ -1,0 +1,40 @@
+{
+  "title": "PickupStore",
+  "type": "object",
+  "description": "Сущность магазина самовывоз",
+  "properties": {
+    "store_id": {
+      "type": "number",
+      "description": "id магазина"
+    },
+    "position": {
+      "type": "number",
+      "description": "позиция магазина на странице, нумерация с 1"
+    },
+    "distance": {
+      "type": "number",
+      "description": "расстояние до магазина в метрах, отрисовывается в модалке"
+    },
+    "store_start_time": {
+      "description": "Только для самовывоза. Время начала работы магазина. Стрингой в формате hh:mm",
+      "type": "string"
+    },
+    "store_end_time": {
+      "description": "Только для самовывоза. Время окончания работы магазина. Стрингой в формате hh:mm",
+      "type": "string"
+    },
+    "is_open_store": {
+      "description": "Открыт ли магазин в момент срабатывания события",
+      "type": "boolean"
+    },
+    "from_now_to_store_time": {
+      "description": "Время, в минутах. Если магазин открыт, то кол-во минут от текущего момента до закрытия, если магазин закрыт, то от текущего момента до открытия",
+      "type": "number"
+    }
+  },
+  "required": [
+    "store_id",
+    "position",
+    "distance"
+  ]
+}

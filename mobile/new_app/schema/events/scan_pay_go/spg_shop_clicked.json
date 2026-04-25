@@ -1,0 +1,45 @@
+{
+  "description": "Кликнул на магазин на карте, раскрытом или нераскрытом списке",
+  "properties": {
+    "available_stores": {
+      "description": "ЗДЕСЬ ТОЛЬКО МАГАЗИН, НА КОТОРЫЙ БЫЛ КЛИК!!! Массив с характеристиками доступных магазинов",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PickupStore"
+      }
+    },
+    "part": {
+      "type": "string",
+      "description": "где нажал на магазин",
+      "enum": [
+        "half list",
+        "full list",
+        "map"
+      ]
+    },
+    "retailer_id": {
+      "description": "id выбранного ритейлера",
+      "type": "number"
+    },
+    "user_coordinates": {
+      "description": "координаты пользователя при включённой геопозиции, иначе адреса доставки",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/UserCoordinate"
+      }
+    },
+    "is_geo": {
+      "description": "координаты по геопозиции, иначе выбранного адреса доставки",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "available_stores",
+    "part",
+    "retailer_id",
+    "user_coordinates",
+    "is_geo"
+  ],
+  "title": "Spg Shop Clicked",
+  "type": "object"
+}

@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз, при открытии пользователем карты на экране \"Услуги около вас\".",
+  "properties": {},
+  "required": [],
+  "title": "Services Nearby Map Opened",
+  "type": "object"
+}

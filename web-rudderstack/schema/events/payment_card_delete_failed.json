@@ -1,0 +1,19 @@
+{
+  "description": "Каждый раз когда показываем пользователю сообщение об ошибке при попытке удалить банковскую карту в разделе Банковские карты в Профиле",
+  "properties": {
+    "card": {
+      "description": "Номер карты которую пытались удалить в формате •••• 6712",
+      "type": "string"
+    },
+    "message": {
+      "description": "Сообщение с текстом ошибки",
+      "type": "string"
+    }
+  },
+  "required": [
+    "card",
+    "message"
+  ],
+  "title": "Payment Card Delete Failed",
+  "type": "object"
+}

@@ -1,0 +1,18 @@
+{
+  "description": "Вызывается, когда пользователь нажал на крестик",
+  "properties": {
+    "popup_type": {
+      "description": "на каком именно этапе клиент нажал крестик. Этапы: форма подтверждения телефона, форма ввода данных клиента",
+      "type": "string",
+      "enum": [
+        "phone",
+        "full_name"
+      ]
+    }
+  },
+  "required": [
+    "popup_type"
+  ],
+  "title": "BNPL Popup Closed",
+  "type": "object"
+}

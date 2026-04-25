@@ -1,0 +1,19 @@
+{
+  "description": "При каждом нажатии на фильтр по ритейлерам в разделе Любимые",
+  "properties": {
+    "source": {
+      "description": "В каком разделе Любимых пользователь кликнул на фильтр (Понравилось или Уже покупали)",
+      "type": "string",
+      "enum": [
+        "favourites_liked",
+        "favourites_bought",
+        "favourites_wishlist"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Favourites Filter Clicked",
+  "type": "object"
+}

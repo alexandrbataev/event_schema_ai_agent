@@ -1,0 +1,79 @@
+{
+  "description": "Просмотр главной ритейлера",
+  "properties": {
+    "address": {
+      "description": "адрес пользователя",
+      "type": "string"
+    },
+    "closest_delivery_time_displayed": {
+      "description": "сколько в минутах до левой границы ближайшего слота доставки из этого магазина",
+      "type": "number"
+    },
+    "delivery_window_estimate_type": {
+      "description": "параметр показвает, по какому принципу рассчитано окно доставки",
+      "type": "string"
+    },
+    "closest_delivery_time_right_bound": {
+      "description": "сколько в минутах до правой границы ближайшего слота доставки из этого магазина",
+      "type": "number"
+    },
+    "shipping_method_kind": {
+      "description": "способ доставки",
+      "type": "string",
+      "enum": [
+        "pickup",
+        "by_courier"
+      ]
+    },
+    "store": {
+      "description": "позиция выбранного магазина",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/SelectedStore"
+      }
+    },
+    "source": {
+      "description": "Где был выбран магазин (postcheckout - кликабельная кнопка-логотип ритейлера на постчекауте, merge_banner - кнопка В каталог на постчекауте, предлагающая добавить товары к заказу (дозаказ), cart - клик по иконке ритейлера на корзине)",
+      "type": "string",
+      "enum": [
+        "landing_retailer_list",
+        "address_modal",
+        "landing_recent_store",
+        "cart",
+        "landing",
+        "search_multiretail",
+        "category",
+        "search",
+        "postcheckout",
+        "merge_banner"
+      ]
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (groccery, pharmacy или restaurant)",
+      "type": "string"
+    },
+    "source_type": {
+      "description": "По какой кнопке был совершен переход. Актуально для source = category.Если переход на главную был через кнопку ретейлера в хедере, то source_type = retailer_button. Если переход на главную был через кнопку Назад на главную, то source_type = back_to_main ",
+      "type": "string",
+      "enum": [
+        "retailer_button",
+        "back_to_main"
+      ]
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника, откуда был переход из категории или поиска",
+      "$ref": "#/definitions/ProductSourceIdentifier"
+    }
+  },
+  "required": [
+    "address",
+    "closest_delivery_time_displayed",
+    "delivery_window_estimate_type",
+    "closest_delivery_time_right_bound",
+    "shipping_method_kind",
+    "store",
+    "source"
+  ],
+  "title": "Main Page Viewed",
+  "type": "object"
+}

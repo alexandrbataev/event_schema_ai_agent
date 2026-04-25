@@ -1,0 +1,27 @@
+{
+  "description": "Попытка перейти в рестораны с диплинка",
+  "properties": {
+    "deeplink_result": {
+      "description": "Показан экран с ресторанами (screen_with_content); заглушка, если по адресу нет ресторанов, но функционал доступен (empty_screen); тост, если функционал ресторанов недоступен (toast)",
+      "type": "string",
+      "enum": [
+        "screen_with_content",
+        "empty_screen",
+        "toast"
+      ]
+    },
+    "link_or_push": {
+      "description": "Попытка перехода совершена по ссылке или пушу.",
+      "type": "string",
+      "enum": [
+        "link",
+        "push"
+      ]
+    }
+  },
+  "required": [
+    "deeplink_result"
+  ],
+  "title": "Restaurant Deeplink Handled",
+  "type": "object"
+}

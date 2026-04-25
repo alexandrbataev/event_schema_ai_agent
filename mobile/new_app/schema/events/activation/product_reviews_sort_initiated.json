@@ -1,0 +1,19 @@
+{
+  "description": "Клик по кнопке сортировки отзывов на товар на странице со всеми отзывами (клик по «Сначала новые»)",
+  "properties": {
+    "source_identifier": {
+      "description": "sku товара, отзывы которого просматриваются",
+      "type": "string"
+    },
+    "n_reviews": {
+      "type": "number",
+      "description": "кол-во отзывов (текстовых комментариев) на товаре"
+    }
+  },
+  "required": [
+    "source_identifier",
+    "n_reviews"
+  ],
+  "title": "Product Reviews Sort Initiated",
+  "type": "object"
+}

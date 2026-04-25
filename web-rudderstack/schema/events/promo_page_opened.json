@@ -1,0 +1,43 @@
+{
+  "description": "При каждой загрузке страницы с акциями/макро-акцией",
+  "properties": {
+    "name": {
+      "description": "Заголовок страницы, если есть",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник, который привел на страницу",
+      "type": "string"
+    },
+    "promo_page_type": {
+      "description": "Тип промо страницы",
+      "type": "string",
+      "enum": [
+        "regular",
+        "macro"
+      ]
+    },
+    "promo_ids": {
+      "description": "Массив из всех id промо, которые находятся у пользователя на странице",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "description": "promotion_id"
+      }
+    },
+    "shelves_tags": {
+      "description": "Массив из всех тегов полок, которые находятся у пользователя на странице ",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "тег полки"
+      }
+    },
+    "link": {
+      "description": "deeplink",
+      "type": "string"
+    }
+  },
+  "title": "Promo Page Opened",
+  "type": "object"
+}

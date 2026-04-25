@@ -1,0 +1,7 @@
+{
+  "description": "Нажатие на кнопку 'Вернуться к списку адресов' в модальном окне 'По этому адресу из магазина доставить не получится'",
+  "properties": {},
+  "required": [],
+  "title": "Back To Address List Button Clicked",
+  "type": "object"
+}

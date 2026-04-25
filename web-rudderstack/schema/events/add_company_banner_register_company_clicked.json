@@ -1,0 +1,19 @@
+{
+  "description": "Пользователь нажал на кнопку \"Зарегистрировать компанию\"",
+  "properties": {
+    "source": {
+      "description": "На каком экране показан баннер",
+      "type": "string",
+      "enum": [
+        "main",
+        "profile"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Add Company Banner Register Company Clicked",
+  "type": "object"
+}
+

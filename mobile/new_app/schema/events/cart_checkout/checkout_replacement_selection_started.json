@@ -1,0 +1,19 @@
+{
+  "description": "Клик по опциям замены",
+  "properties": {
+    "cart_type": {
+      "description": "Тип корзины",
+      "type": "string"
+    },
+    "order_number": {
+      "description": "Номер заказа",
+      "type": "string"
+    }
+  },
+  "required": [
+    "order_number",
+    "cart_type"
+  ],
+  "title": "Checkout Replacement Selection Started",
+  "type": "object"
+}

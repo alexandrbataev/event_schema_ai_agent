@@ -1,0 +1,41 @@
+{
+  "description": "Появилась модалка с кастомным вводом количества добавляемого товара. Отправляется 1 раз при каждом открытии модалки.",
+  "properties": {
+    "product_sku": {
+      "description": "sku товара",
+      "type": "string"
+    },
+    "source": {
+      "description": "Где была открыта карточка товара или просмотрен сниппет.",
+      "$ref": "#/definitions/ProductSource"
+    },
+    "source_type": {
+      "description": "Тип источника добавления listing или product_card",
+      "$ref": "#/definitions/ProductSourceType"
+    },
+    "unit": {
+      "description": "единица измерения",
+      "type": "string",
+      "enum": [
+        "kg",
+        "g",
+        "ml",
+        "l",
+        "items"
+      ]
+    },
+    "quantity_step": {
+      "description": "шаг (если есть)",
+      "type": "number"
+    }
+  },
+  "required": [
+    "product_sku",
+    "source",
+    "source_type",
+    "unit",
+    "quantity_step"
+  ],
+  "title": "Product Quantity Modal Opened",
+  "type": "object"
+}

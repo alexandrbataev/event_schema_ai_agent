@@ -1,0 +1,12 @@
+{
+  "description": "При отрисовке элемента с партнерами. Отправляется один раз при каждом заходе на экран розыгрыша.",
+  "properties": {
+    "campaign_name": {
+      "description": "Название кампании",
+      "type": "string"
+    }
+  },
+  "title": "Raffle Partners Element Viewed",
+  "type": "object"
+}
+  

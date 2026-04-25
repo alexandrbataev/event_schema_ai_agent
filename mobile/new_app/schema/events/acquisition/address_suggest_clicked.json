@@ -1,0 +1,34 @@
+{
+  "description": "Кликнул на саджет в окне ввода адреса",
+  "properties": {
+    "position": {
+      "description": "Каким по порядку был саджест, на который кликнул юзер. В Android начинается с 0, это будет поправлено в будущих версиях(пока неизвестно в каких). В iOS нумерация начинается с 1",
+      "type": "number"
+    },
+    "address_subtitle": {
+      "description": "Subtitle адреса из саджеста (то, что указано под основным адресом маленькими буквами - как правило страна, город)",
+      "type": "string"
+    },
+    "address_full_title": {
+      "description": "Полный адрес из саджеста",
+      "type": "string"
+    },
+    "latitude": {
+      "description": "Широта выбранного адреса",
+      "type": "number"
+    },
+    "longitude": {
+      "description": "Долгота выбранного адреса",
+      "type": "number"
+    }
+  },
+  "required": [
+    "position",
+    "address_subtitle",
+    "address_full_title",
+    "latitude",
+    "longitude"
+  ],
+  "title": "Address Suggest Clicked",
+  "type": "object"
+}

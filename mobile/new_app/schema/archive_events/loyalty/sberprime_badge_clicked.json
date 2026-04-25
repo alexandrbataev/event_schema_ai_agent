@@ -1,0 +1,19 @@
+{
+  "description": "нажатие на бейдж в карточке товара",
+  "properties": {
+    "is_prime_user": {
+      "description": "Являлся ли клиент, который увидел карточку, подписчиком СберПрайм",
+      "type": "boolean"
+    },
+    "product_sku": {
+      "description": "sku продукта, в котором клиент кликнул на бейдж",
+      "type": "string"
+    }
+  },
+  "required": [
+    "is_prime_user",
+    "product_sku"
+  ],
+  "title": "SberPrime Badge Clicked",
+  "type": "object"
+}

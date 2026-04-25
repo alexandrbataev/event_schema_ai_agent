@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз, когда пользователь кликает на Все Правила Акции в разделе в личном кабинете",
+  "properties": {},
+  "title": "B2B Loyalty Program All Rules Of Promotion Personal Account Clicked",
+  "type": "object"
+}
+  

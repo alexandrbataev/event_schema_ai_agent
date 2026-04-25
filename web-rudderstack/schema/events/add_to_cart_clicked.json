@@ -1,0 +1,60 @@
+{
+  "description": "Каждый раз когда пользователь кликает на добавление в корзину товара",
+  "properties": {
+    "source_type": {
+      "description": "Откуда добавлен товар - из карточки или из выдачи",
+      "$ref": "#/definitions/ProductSource"
+    },
+    "sku": {
+      "description": "sku добавленного товара (артикул)",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник добавления товара: category - каталог; search_page - поисковая выдача; search_suggestions - саджестер; cart - корзина; product_card - карточка товара ; retailer_main_page - главная ритейлера; favourite_list - любимые; previous_order - прошлый заказ; banner_category_main - категория в баннере на главной; banner_main_page - баннер на главной; banner_category - баннер в каталоге, discounts_shelf_category - полка со скидками, promo_product_shelf - полка 'Скидки недели' при добавлении с Главной-главной",
+      "type": "string"
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника добавления товара: category - category_id; search_page - поисковая кверя; search_suggestions - поисковая кверя; product_card - product_sku ",
+      "type": "number"
+    },
+    "source_identifier_temp": {
+      "description": "Идентификатор источника добавления товара: category - category_id; search_page - поисковая кверя; search_suggestions - поисковая кверя; product_card - product_sku ",
+      "type": "string"
+    },
+    "is_prime_user": {
+      "description": "является ли клиент, в момент срабатывания события, подписчиком СберПрайм",
+      "type": "boolean"
+    },
+    "has_sber_prime_badge": {
+      "description": "на странице каталога увиден хотя бы один бейдж сберпрайм (хотя бы на одной карточке товара)",
+      "type": "boolean"
+    },
+    "product_position": {
+      "description": "Позиция добавленного товара",
+      "type": "number"
+    },
+    "is_from_show_all_page": {
+      "description": "Если источник действия - рекомендательный блок на главной, который раскрывается по кнопке Показать все",
+      "type": "boolean"
+    },
+    "is_alcohol": {
+      "description": "Является ли алкогольным товаром",
+      "type": "boolean"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (groccery, pharmacy или restaurant)",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_type",
+    "sku",
+    "source",
+    "is_prime_user",
+    "has_sber_prime_badge",
+    "product_position",
+    "is_from_show_all_page"
+  ],
+  "title": "Add To Cart Clicked",
+  "type": "object"
+}

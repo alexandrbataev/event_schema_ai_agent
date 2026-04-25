@@ -1,0 +1,6 @@
+{
+  "description": "Отправляем каждый раз, когда пользователь нажимает на кнопку - Как найти стойку",
+  "properties": {},
+  "title": "Spg Check Address Store Instruction Clicked",
+  "type": "object"
+}

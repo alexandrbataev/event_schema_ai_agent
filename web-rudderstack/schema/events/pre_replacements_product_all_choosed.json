@@ -1,0 +1,38 @@
+{
+  "description": "Каждый раз, когда пользователь успешно нажимает на кнопку 'Подойдет любой товар'",
+  "properties": {
+    "added_order_item_name": {
+      "description": "название товара",
+      "type": "string"
+    },
+    "added_order_item_sku": {
+      "description": "sku товара, на который представлены замены",
+      "type": "string"
+    },
+    "added_order_item_retailer_sku": {
+      "description": "sku товара у ритейлера, на который представлены замены",
+      "type": "string"
+    },
+    "possible_replacements": {
+      "description": "массив sku возможных замен товара",
+      "type": "array",
+      "items": {
+        "description": "Sku товара",
+        "type": "string"
+      }
+    },
+    "possible_replacements_number": {
+      "description": "количество возможных замен товара",
+      "type": "number"
+    }
+  },
+  "required": [
+    "added_order_item_name",
+    "added_order_item_sku",
+    "added_order_item_retailer_sku",
+    "possible_replacements",
+    "possible_replacements_number"
+  ],
+  "title": "Pre Replacements Product All Choosed",
+  "type": "object"
+}

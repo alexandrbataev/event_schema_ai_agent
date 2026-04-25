@@ -1,0 +1,19 @@
+{
+  "title": "OperationalZone",
+  "type": "object",
+  "description": "Массив с информацией об операционной зоне",
+  "properties": {
+    "name": {
+      "description": "Название зоны",
+      "type": "string"
+    },
+    "id": {
+      "description": "Идентификатор зоны",
+      "type": "number"
+    }
+  },
+  "required": [
+    "name",
+    "id"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "description": "Отправляем каждый раз, когда показываем саджест с предложением о сканировании QR-code для проверки адреса выбранного магазина",
+  "properties": {},
+  "title": "Spg Check Address Store Showed",
+  "type": "object"
+}

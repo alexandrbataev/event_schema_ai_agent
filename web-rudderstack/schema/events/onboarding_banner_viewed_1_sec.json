@@ -1,0 +1,39 @@
+{
+  "description": "Онбординг баннер находится в активном окне пользователя не менее 1 секунды. Засчитывается каждый раз когда пользователь видит баннер (80% видимой области).",
+  "properties": {
+    "impression_id": {
+      "description": "Уникальный идентификатор взаимодействия",
+      "type": "string"
+    },
+    "asset_id": {
+      "description": "Уникальный идентификатор ассета",
+      "type": "string"
+    },
+    "button": {
+      "description": "Текст кнопки (в примере - “Понятно“)",
+      "type": "string"
+    },
+    "description": {
+      "description": "Текст баннера (нижний) - в примере “Воспользуйтесь праздничным промокодом”",
+      "type": "string"
+    },
+    "position": {
+      "description": "Позиция баннера в крутилке",
+      "type": "number"
+    },
+    "title": {
+      "description": "Текст баннера (верхний) - в примере “250 р на следующие два заказа”",
+      "type": "string"
+    }
+  },
+  "required": [
+    "impression_id",
+    "asset_id",
+    "title",
+    "description",
+    "button",
+    "position"
+  ],
+  "title": "Onboarding Banner Viewed 1 Sec",
+  "type": "object"
+}

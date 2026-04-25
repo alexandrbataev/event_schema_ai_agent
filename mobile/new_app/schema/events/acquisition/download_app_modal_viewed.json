@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз, когда пользователю показывается модальное окно с предложением скачать новую версию приложения.",
+  "properties": {},
+  "required": [],
+  "title": "Download App Modal Viewed",
+  "type": "object"
+}

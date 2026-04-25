@@ -1,0 +1,61 @@
+{
+  "description": "Пользователь кликает на кнопку 'Отменить заказ' на экране отмены заказа",
+  "properties": {
+    "reason": {
+      "description": "Причина, которую выбрал пользователь",
+      "type": "string"
+    },
+    "comment": {
+      "description": "Комментарий, который ввел пользователь",
+      "type": "string"
+    },
+    "shipment_number": {
+      "description": "Shipment_number отменяемой доставки",
+      "type": "string"
+    },
+    "shipment_state": {
+      "description": "Shipment_state на момент отмены. Если на момент нажатия на кнопку статус протух, то все равно отправляем устаревший неактуальный статус",
+      "type": "string"
+    },
+    "source": {
+      "description": "Страница, с которой пользователь перешел на постчекаут, где кликнул на кнопку Отменить заказ",
+      "type": "string",
+      "enum": [
+        "checkout",
+        "orders_history",
+        "profile_widget",
+        "main_page_widget",
+        "main_retailer_widget",
+        "deeplink"
+      ]
+    },
+    "order_number": {
+      "description": "order_number отменяемого заказа",
+      "type": "string"
+    },
+    "cancellation_fee": {
+      "description": "Суммарная стоимость отмены в рублях. 0 рублей - если отмена бесплатная, n рублей - если отмена платная ",
+      "type": "number"
+    },
+    "cancellation_fee_detalization": {
+      "description": "Массив с объектами детализации стоимости за что удерживаем деньги в рублях за отмену. Если отмена бесплатная, то отправляем пустой массив",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CancellationFeeDetalization"
+      }
+    },
+    "cancellation_details_info": {
+      "description": "Текстовое поле с заголовком и подзаголовком экрана с информацией о деталях отмены. Например: /Можно вернуть отменить бесплатно. Вернем всю сумму на карту. Промокод можно будет применить еще раз/",
+      "type": "string"
+    }
+  },
+  "required": [
+    "reason",
+    "comment",
+    "shipment_number",
+    "shipment_state",
+    "source"
+  ],
+  "title": "Order Cancellation Confirmed",
+  "type": "object"
+}

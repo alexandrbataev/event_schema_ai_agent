@@ -1,0 +1,15 @@
+{
+  "description": "Клик по табу Профиль",
+  "properties": {
+    "source": {
+      "description": "Откуда произошел показ Профиля, из Главной Главной или таббара на Главной Ритейлера",
+      "type": "string",
+      "enum": [
+        "home_main",
+        "tabbar"
+      ]
+    }
+  },
+  "title": "Profile Tab Clicked",
+  "type": "object"
+}

@@ -1,0 +1,6 @@
+{
+  "description": "Каждый раз, когда пользователю отрисовывается модальное окно с условиями программы лояльности",
+  "properties": {},
+  "title": "B2B Loyalty Program Modal Window Shown",
+  "type": "object"
+}

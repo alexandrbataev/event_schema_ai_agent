@@ -1,0 +1,14 @@
+{
+  "description": "Срабатывает когда на главной б2б нажимают раскрытие ответа в блоке \"Часто задаваемые воросы\"",
+  "properties": {
+    "question": {
+      "description": "выбранный вопрос",
+      "type": "string"
+    }
+  },
+  "required": [
+    "question"
+  ],
+  "title": "B2B Landing Answer Clicked",
+  "type": "object"
+}

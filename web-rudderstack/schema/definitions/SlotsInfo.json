@@ -1,0 +1,53 @@
+{
+  "title": "SlotsInfo",
+  "type": "object",
+  "description": "Тройка - слот, временя доставки и стоимость доставки",
+  "properties": {
+    "slot_id": {
+      "description": "Идентификатор слота",
+      "type": "number"
+    },
+    "delivery_time_left": {
+      "description": "Время в минутах до доставки (если задан диапазон - левая граница)",
+      "type": "number"
+    },
+    "delivery_time_right": {
+      "description": "Время в минутах до правой границы доставки (если задано время до доставки, а не диапазон, то нужно отправить пустое значение)",
+      "type": "number"
+    },
+    "delivery_cost": {
+      "description": "Стоимость доставки, которую видит пользователь",
+      "type": "number"
+    },
+    "surge": {
+      "description": "наличие суржа в слоте, 1 - да, 0-нет",
+      "type": "boolean"
+    },
+    "slot_name": {
+      "description": "Название слота (fastest, most_optimal, cheapest, other,pickup). Для кастомных слотов отправляем other",
+      "type": "string",
+      "enum": [
+        "fastest",
+        "most_optimal",
+        "cheapest",
+        "other",
+        "pickup"
+      ]
+    },
+    "personal_price_available": {
+      "description": "Параметр принимает значение 1, если в показанных условиях доставки доступно персональное (безакцептное) промо предложение на условия доставки, 0 - если нет доступного предложения",
+      "type": "boolean"
+    },
+    "delivery_cost_before_personal_price": {
+      "description": "Стоимость доставки до применения перс (безакцептного) промо которую видит пользователь как перечеркнутую цену",
+      "type": "number"
+    }
+  },
+  "required": [
+    "slot_id",
+    "delivery_time_left",
+    "delivery_time_right",
+    "delivery_cost",
+    "surge"
+  ]
+}

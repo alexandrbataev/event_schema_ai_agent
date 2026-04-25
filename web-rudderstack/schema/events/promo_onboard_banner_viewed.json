@@ -1,0 +1,23 @@
+{
+  "description": "Пользователю отображается онбординговый баннер в новую функциональность",
+  "properties": {
+    "feature": {
+      "description": "Название фичи, страницы в интерфейсе, куда ведем пользователя",
+      "type": "string",
+      "enum": [
+        "your_promocodes"
+      ]
+    },
+    "is_open": {
+      "description": "  True, если пользователь нажал на кнопку 'Перейти' на нужную страницу, в остальных False",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "feature",
+    "is_open"
+  ],
+  "title": "Promo Onboard Banner Viewed",
+  "type": "object",
+  "$comment": "https://wiki.sbmt.io/pages/viewpage.action?pageId=3129587176"
+}

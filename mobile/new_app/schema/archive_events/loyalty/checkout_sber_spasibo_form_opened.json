@@ -1,0 +1,18 @@
+{
+  "description": "У юзера открылся экран для выбора карты и кол-ва бонусов СберСпасибо",
+  "properties": {
+    "source": {
+      "description": "Источник, откуда была открыта форма: checkout - с чекаута, payment_method - со способов оплаты",
+      "type": "string",
+      "enum": [
+        "checkout",
+        "payment_method"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Checkout Sber Spasibo Form Opened",
+  "type": "object"
+}

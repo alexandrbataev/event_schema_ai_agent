@@ -1,0 +1,11 @@
+{
+  "title": "DownloadAppSource",
+  "description": "Источник клика на кнопку скачивания приложения",
+  "type": "string",
+  "enum": [
+    "modal_main_screen",
+    "profile_banner",
+    "hard_update_screen"
+  ],
+  "$comment": "modal_main_screen - модальное окно на главной-главной; profile_banner - баннер в профиле; hard_update_screen - блокирующий экран с просьбой обновить проложение."
+}

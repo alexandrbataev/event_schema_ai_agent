@@ -1,0 +1,18 @@
+{
+  "description": "Пользователь нажал кнопку 'Добавить компанию' на лид лендинге",
+  "properties": {
+    "source": {
+      "description": "Откуда была нажата кнопка добавления компании",
+      "type": "string",
+      "enum": [
+        "hello_banner",
+        "sticky_button"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "B2B LeadLanding Add Company Clicked",
+  "type": "object"
+}

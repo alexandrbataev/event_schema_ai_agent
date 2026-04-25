@@ -1,0 +1,21 @@
+{
+  "description": "Скачать корзину",
+  "properties": {
+    "cart_order_items": {
+      "description": "Массив со списоком товаров в корзине",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CartItems"
+      }
+    },
+    "weight_info": {
+      "description": "Массив с информацией о весе корзины",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/WeightInfoItems"
+      }
+    }
+  },
+  "title": "B2B Cart Downloaded",
+  "type": "object"
+}

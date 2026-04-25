@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз, когда пользователь видит кнопку 'Достижения в экономии' в личном кабинете",
+  "properties": {},
+  "required": [],
+  "title": "Achievement Button Viewed",
+  "type": "object"
+}

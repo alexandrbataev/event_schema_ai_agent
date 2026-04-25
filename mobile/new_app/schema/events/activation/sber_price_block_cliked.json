@@ -1,0 +1,6 @@
+{
+  "description": "Событие отправляется при нажатии на блок с информацией о цене по карте сбера",
+  "properties": {},
+  "title": "Sber Price Block Clicked",
+  "type": "object"
+}

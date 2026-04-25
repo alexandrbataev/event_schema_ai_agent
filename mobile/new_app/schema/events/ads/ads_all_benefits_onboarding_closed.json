@@ -1,0 +1,38 @@
+{
+  "description": "Срабатывает, когда пользователь закрывает онбординг блока Вся выгода (пользователь тапает вне предложений или на крестик)",
+  "properties": {
+    "source": {
+      "description": "Где именно был размещен раздел Вся выгода",
+      "$ref": "#/definitions/AdsBannerSource"
+    },
+    "is_logo_all_benefits": {
+      "description": "Отображается ли логотип раздела Вся выгода",
+      "type": "boolean"
+    },
+    "available_blocks": {
+      "description": "Массив всех доступных блоков для пользователя",
+      "type": "array",
+      "items": {
+        "description": "Наименование доступных блоков: timer_promo, sber_spasibo, offer, promocode, achievements, present, delivery.",
+        "type": "string"
+      }
+    },
+    "retailer_id": {
+      "description": "Ритейлер, на экране которого располагается блок Вся выгода",
+      "type": "number"
+    },
+    "store_id": {
+      "description": "Магазин, на экране которого располагается блок Вся выгода",
+      "type": "number"
+    }
+  },
+  "required": [
+    "source",
+    "is_logo_all_benefits",
+    "available_blocks",
+    "retailer_id",
+    "store_id"
+  ],
+  "title": "Ads All Benefits Onboarding Closed",
+  "type": "object"
+}

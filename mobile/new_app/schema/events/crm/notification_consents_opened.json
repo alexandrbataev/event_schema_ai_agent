@@ -1,0 +1,31 @@
+{
+  "description": "Пользователь перешел в раздел Настройка уведомлений",
+  "properties": {
+    "source": {
+      "description": "источник центр уведомлений или профиль",
+      "type": "string",
+      "title": "NotificationConsentChangeSource",
+      "enum": [
+        "history_notifications",
+        "profile"
+      ]
+    },
+    "success_opened": {
+      "description": "Флаг отсутствия ошибок при открытии раздела",
+      "type": "boolean"
+    },
+    "available_channels": {
+      "description": "Список каналов (push, sms, phone, email) и состояние вкл/выкл уведомления",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/NotificationConsentsChannels"
+      }
+    }
+  },
+  "required": [
+    "source",
+    "success_opened"
+  ],
+  "title": "Notification Consents Opened",
+  "type": "object"
+}

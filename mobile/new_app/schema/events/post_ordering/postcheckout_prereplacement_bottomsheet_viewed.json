@@ -1,0 +1,19 @@
+{
+  "description": "Каждый раз при показе боттом-шита на постчекауте с уведомлнеием о том, что часть товаров может закончится к моменту сборки и предложением сделать для них предзамену. Условия для показа боттом-шита: заказ в статусе ‘Принят’; у магазина доступны предзамены (grocery и integration_type = shopper); В заказе есть рисковые товары, не покрытые предзаменами",
+  "properties": {
+    "prereplacement_risky_items_cnt": {
+      "description": "Число, отрисованное на плашке 'Х товаров могут закончиться - подберите предзамены' ",
+      "type": "number"
+    },
+    "order_number": {
+      "description": "Номер заказа на постчекауте",
+      "type": "string"
+    }
+  },
+  "required": [
+    "prereplacement_risky_items_cnt",
+    "order_number"
+  ],
+  "title": "Postcheckout Prereplacement Bottomsheet Viewed",
+  "type": "object"
+}

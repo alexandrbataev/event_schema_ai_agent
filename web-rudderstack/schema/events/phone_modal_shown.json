@@ -1,0 +1,33 @@
+{
+  "description": "Показана модалка запроса верификации номера телефона",
+  "properties": {
+    "has_predefined_phone": {
+      "description": "имеет уже заполненный телефон",
+      "type": "boolean"
+    },
+    "source": {
+      "description": "Откуда именно была открыта модалка",
+      "$ref": "#/definitions/LoginSourceWeb"
+    },
+    "is_signed_in": {
+      "description": "залогинен ли пользователь",
+      "type": "boolean"
+    },
+    "scenario": {
+      "description": "сценарий, для которого был ввод телефона: verification | edit | auth",
+      "type": "string",
+      "enum": [
+        "verification",
+        "edit",
+        "auth"
+      ]
+    }
+  },
+  "required": [
+    "has_predefined_phone",
+    "is_signed_in",
+    "scenario"
+  ],
+  "title": "Phone Modal Shown",
+  "type": "object"
+}

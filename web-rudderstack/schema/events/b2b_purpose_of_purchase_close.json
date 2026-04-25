@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз, когда пользователь закрывает модальное окно с выбором цели закупки кликом на крестик или вне окна",
+  "properties": {},
+  "title": "B2B Purpose Of Purchase Close",
+  "type": "object"
+}
+  

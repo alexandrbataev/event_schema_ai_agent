@@ -1,0 +1,14 @@
+{
+  "description": "Клик по кнопке 'Документы' в Истории заказов",
+  "properties": {
+    "order_id": {
+      "description": "ID заказа",
+      "type": "string"
+    }
+  },
+  "required": [
+    "order_id"
+  ],
+  "title": "B2B Order Documents Button Clicked",
+  "type": "object"
+}

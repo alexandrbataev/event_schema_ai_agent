@@ -1,0 +1,23 @@
+{
+  "description": "Клик по табу Любимые",
+  "properties": {
+    "is_empty_page_shown": {
+      "type": "boolean",
+      "description": "Была ли показана заглушка (пустая выдача)"
+    },
+    "source": {
+      "description": "Откуда произошел показ Любимых, из профиля, из таббара, из виджета на ГГ",
+      "type": "string",
+      "enum": [
+        "profile",
+        "tabbar",
+        "widget"
+      ]
+    }
+  },
+  "required": [
+    "is_empty_page_shown"
+  ],
+  "title": "Favorites Tab Clicked",
+  "type": "object"
+}

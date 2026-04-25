@@ -1,0 +1,14 @@
+{
+  "description": "Пользователь кликнул на любую кнопку транзакции (начисление/списание/сгорание) внутри истории начислений/списания/сгорания",
+  "properties": {
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_id"
+  ],
+  "title": "B2B Loyalty Program Transaction Button Clicked",
+  "type": "object"
+}

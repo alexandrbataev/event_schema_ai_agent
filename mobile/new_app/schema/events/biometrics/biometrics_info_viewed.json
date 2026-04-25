@@ -1,0 +1,17 @@
+{
+  "description": "Каждый раз, когда пользователь открывает информацию о биометрии",
+  "properties": {
+    "source": {
+      "description": "Откуда была раскрыта информация о биометрии. catalog - если в листинге, product_card - если карточка товара, cart - корзина",
+      "type": "string",
+      "enum": [
+        "catalog",
+        "product_card",
+        "cart"
+      ]
+    }
+  },
+  "required": [],
+  "title": "Biometrics Info Viewed",
+  "type": "object"
+}

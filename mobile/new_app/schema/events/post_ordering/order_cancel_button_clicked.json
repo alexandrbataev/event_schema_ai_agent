@@ -1,0 +1,41 @@
+{
+  "description": "Пользователь кликает на кнопку 'Отменить заказ' на странице с информацией о заказе (постчекаут)",
+  "properties": {
+    "shipment_number": {
+      "description": "Shipment_number отменяемой доставки",
+      "type": "string"
+    },
+    "shipment_state": {
+      "description": "Shipment_state на момент отмены",
+      "type": "string"
+    },
+    "can_cancel": {
+      "description": "Возможность отменить заказ на момент клик на кнопку. (1 - возможно, 0 -нет)",
+      "type": "boolean"
+    },
+    "source": {
+      "description": "Страница, с которой пользователь перешел на постчекаут, где кликнул на кнопку Отменить заказ",
+      "type": "string",
+      "enum": [
+        "checkout",
+        "orders_history",
+        "profile_widget",
+        "main_page_widget",
+        "main_retailer_widget",
+        "deeplink"
+      ]
+    },
+    "order_number": {
+      "description": "order_number отменяемого заказа",
+      "type": "string"
+    }
+  },
+  "required": [
+    "shipment_number",
+    "shipment_state",
+    "can_cancel",
+    "source"
+  ],
+  "title": "Order Cancel Button Clicked",
+  "type": "object"
+}

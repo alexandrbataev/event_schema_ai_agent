@@ -1,0 +1,13 @@
+{
+  "title": "GoalState",
+  "description": "Состояние цели",
+  "type": "string",
+  "enum": [
+    "unavailable",
+    "not_chosen",
+    "chosen_not_started",
+    "chosen_with_progress",
+    "not_completed",
+    "completed"
+  ]
+}

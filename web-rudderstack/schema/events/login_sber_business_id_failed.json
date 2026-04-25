@@ -1,0 +1,14 @@
+{
+  "description": "Появилась ошибка при регистрации/авторизации через СберБизнес ID",
+  "properties": {
+    "fail_reason": {
+      "description": "Текст ошибки",
+      "type": "string"
+    }
+  },
+  "required": [
+    "fail_reason"
+  ],
+  "title": "Login Sber Business ID Failed",
+  "type": "object"
+}

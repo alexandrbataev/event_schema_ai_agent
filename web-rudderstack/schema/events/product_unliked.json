@@ -1,0 +1,166 @@
+{
+  "description": "Разлайкивание товара",
+  "properties": {
+    "source": {
+      "description": "Источник дизлайка товара",
+      "$ref": "#/definitions/ProductSource"
+    },
+    "store_id": {
+      "description": "Актуальный стор в случае межрителейрного опыта",
+      "type": "number"
+    },
+    "product_price": {
+      "description": "цена товара",
+      "type": "number"
+    },
+    "sber_price": {
+      "description": "Фактическая, отображаемая цена товара (со скидкой по карте сбера)",
+      "type": "number"
+    },
+    "product_sku": {
+      "description": "sku товара",
+      "type": "string"
+    },
+    "product_retailer_sku": {
+      "description": "ритейлер sku товара",
+      "type": "string"
+    },
+    "product_currency": {
+      "description": "валюта цены",
+      "type": "string"
+    },
+    "product_name": {
+      "description": "название товара",
+      "type": "string"
+    },
+    "is_alcohol": {
+      "description": "Является ли продукт алкогольным",
+      "type": "boolean"
+    },
+    "rec_block_id": {
+      "description": "ID рекомендательного блока",
+      "type": "number"
+    },
+    "rec_block_position": {
+      "description": "Позиция рекомендательного блока на странице",
+      "type": "number"
+    },
+    "rec_block_name": {
+      "description": "Наименование рекомендательного блока",
+      "type": "string"
+    },
+    "is_discount": {
+      "description": "Флаг, есть ли скидка (true/false)",
+      "type": "boolean"
+    },
+    "default_price": {
+      "description": "Цена товара (без скидки, если скидка есть)",
+      "type": "number"
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника добавления товара: category - category_id; search_page - поисковая кверя; search_suggestions - поисковая кверя; product_card - product_sku ",
+      "type": "number"
+    },
+    "source_type": {
+      "description": "Откуда добавлен товар - из карточки или из выдачи",
+      "$ref": "#/definitions/ProductSourceType"
+    },
+    "badges": {
+      "description": "Массив словарей с характеристиками отображенных на сниппете/карточке бейджей. Статус загрузки бейджей записывается в параметр badges_status",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Badge"
+      }
+    },
+    "badges_status": {
+      "description": "Статус запроса бейджей. initial - запрос по какой-то причине не отправился (есть ли бейджи на товаре не знаем); loading - ждем ответ по запросу (при этом badges null, не знаем есть ли они на товаре); failed - ошибка, при этом badges null (есть ли бейджи не знаем); success - бейджи пришли (если badges заполнен, значит бейджи есть, если null – бейджей нет)",
+      "type": "string",
+      "enum": [
+        "initial",
+        "loading",
+        "failed",
+        "success"
+      ]
+    },
+    "is_from_shelf": {
+      "description": "Товар был удален из избранного из каталожной полки или нет. Если с полки, то True, иначе False",
+      "type": "boolean"
+    },
+    "shelf_position": {
+      "description": "Позиция полки (начиная с 1) в каталоге. Заполняется в случае, если товар был на каталожной полке (то есть когда is_from_shelf=True).",
+      "type": "number"
+    },
+    "parent_category_id": {
+      "description": "category_id родительской категории. Заполняется только для source='category'. Актуален для случаев, когда товар был удален из избранного с каталожной полки внутри категории верхнего уровня.",
+      "type": "number"
+    },
+    "is_promo": {
+      "description": "Является ли товар промоутируемым (проплаченным, продвигаемым) (true/false)",
+      "type": "boolean"
+    },
+    "promo_id": {
+      "description": "Идентификаторы промо-кампании из Trading Desk",
+      "type": "string"
+    },
+    "is_reviewed": {
+      "description": "Флаг, есть ли у товара рейтинг и отзывы",
+      "type": "boolean"
+    },
+    "review": {
+      "description": "{'Средний балл', 'Кол-во отзывов (текстовых комментариев)'} по карточке",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "TBD"
+      }
+    },
+    "is_multicard": {
+      "description": "Если событие совершено в карточке товара, то является ли она мультикарточкой. Отправляется только для source_type = product_card ",
+      "type": "boolean"
+    },
+    "is_from_multicard": {
+      "description": "Если событие совершено в карточке товара, то является ли она карточкой, в которую попали через опции-атрибуты другой мультикарточки. Отправляется только для is_multicard = True",
+      "type": "boolean"
+    },
+    "is_multiretail_promo_category": {
+      "description": "True, если товар был отрисован внутри промо подборки, False иначе",
+      "type": "boolean"
+    },
+    "multiretail_promo_category_id": {
+      "description": "id промо подборки. Заполняется только в случае поиска внутри промо подборки",
+      "type": "string"
+    },
+    "filters": {
+      "description": "Массив словарей с характеристиками примененной фильтрации.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Filters"
+      }
+    },
+    "sorting_type": {
+      "description": "Тип примененной сортировки",
+      "type": "string",
+      "enum": [
+        "price_desc",
+        "price_asc",
+        "popularity",
+        "unit_price_asc"
+      ],
+      "$comment": "price_desc - сначала дорогие; price_asc - сначала дешевы; popularity - По популярности; unit_price_asc - Выгоднее по весу"
+    }
+  },
+  "required": [
+    "source",
+    "product_price",
+    "product_sku",
+    "product_retailer_sku",
+    "product_currency",
+    "product_name",
+    "is_alcohol",
+    "store_id",
+    "source_type",
+    "is_from_shelf"
+  ],
+  "title": "Product Unliked",
+  "type": "object"
+}

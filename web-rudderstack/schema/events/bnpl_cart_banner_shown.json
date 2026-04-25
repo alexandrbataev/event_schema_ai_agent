@@ -1,0 +1,34 @@
+{
+  "description": "Вызывается, когда пользователь видит баннер рассрочки в корзине",
+  "properties": {
+    "type": {
+      "description": "Есть три стейта этого баннера - когда сумма достаточная для рассрочки, когда нужно набрать еще N рублей, когда сумма больше",
+      "type": "string",
+      "enum": [
+        "enough_sum",
+        "not_enough_sum",
+        "more_enough_sum"
+      ]
+    },
+    "sum_to_complete": {
+      "description": "Сколько еще нужно добавить, чтобы достичь мин. суммы для рассрочки",
+      "type": "number"
+    },
+    "retailer_id": {
+      "description": "id ритейлера в котором пользователь находится в момент совершения события.",
+      "type": "string"
+    },
+    "store_id": {
+      "description": "id стора в котором пользователь находится в момент совершения события.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "type",
+    "sum_to_complete",
+    "retailer_id",
+    "store_id"
+  ],
+  "title": "BNPL Cart Banner Shown",
+  "type": "object"
+}

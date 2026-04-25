@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз, когда пользователь кликает на баннер 'Вы красавчик'",
+  "properties": {},
+  "required": [],
+  "title": "Banner You Handsome Clicked",
+  "type": "object"
+}

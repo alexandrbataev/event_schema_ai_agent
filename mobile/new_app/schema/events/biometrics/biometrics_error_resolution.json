@@ -1,0 +1,32 @@
+{
+  "description": "Как пользователь отреагировал на ошибку биометрии",
+  "properties": {
+    "error": {
+      "description": "Текст ошибки, которую видит пользователь",
+      "type": "string"
+    },
+    "action": {
+      "description": "Как пользователь отреагировал на ошибку биометрии: repeat - если нажал повторить, pickup - если нажал 'заказать с самовывозом', more_info - 'узнать больше', back_in_cart - 'Вернуться в корзину', сlosed - если закрыл баннер через клик на крестик/тап по свободному месту, go_to_settings - если перешел в настройки",
+      "type": "string",
+      "enum": [
+        "repeat",
+        "pickup",
+        "more_info",
+        "back_in_cart",
+        "closed",
+        "go_to_settings"
+      ]
+    },
+    "source": {
+      "description": "На какой этапе прозошла ошибки биометрии: checkout - чекаут (первичное подтверждение), postcheckout - постчекаут (при получении заказа)",
+      "type": "string",
+      "enum": [
+        "checkout",
+        "postcheckout"
+      ]
+    }
+  },
+  "required": [],
+  "title": "Biometrics Error Resolution",
+  "type": "object"
+}

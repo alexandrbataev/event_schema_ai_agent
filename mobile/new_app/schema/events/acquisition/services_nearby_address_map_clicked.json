@@ -1,0 +1,7 @@
+{
+  "description": "Клик на карту 2Гис из раздела Адрес в деталях о точке.",
+  "properties": {},
+  "required": [],
+  "title": "Services Nearby Address Map Clicked",
+  "type": "object"
+}

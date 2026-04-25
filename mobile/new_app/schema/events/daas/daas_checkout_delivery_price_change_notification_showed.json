@@ -1,0 +1,19 @@
+{
+  "description": "Каждый раз, когда в процессе оформления заказа, после нажиматия на кнопку “Оформить заказ”, изменилась цена и пользователю показывается уведомление об этом",
+  "properties": {
+    "price_change": {
+      "description": "Разница между предыдущей и текущей ценой доставки в рублях",
+      "type": "number"
+    },
+    "new_price": {
+      "description": "Новая цена доставки",
+      "type": "number"
+    }
+  },
+  "required": [
+    "price_change",
+    "new_price"
+  ],
+  "title": "Daas Checkout Delivery Price Change Notification Showed",
+  "type": "object"
+}

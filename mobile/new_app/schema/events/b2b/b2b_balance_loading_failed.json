@@ -1,0 +1,14 @@
+{
+  "description": "Ошибка при загрузке баланса компании",
+  "properties": {
+    "inn": {
+      "description": "ИНН компании",
+      "type": "string"
+    }
+  },
+  "required": [
+    "inn"
+  ],
+  "title": "B2B Balance Loading Failed",
+  "type": "object"
+}

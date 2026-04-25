@@ -1,0 +1,39 @@
+{
+  "title": "RestaurantProductOption",
+  "type": "object",
+  "description": "Набор опций доступных при выборе блюда в ресторане",
+  "properties": {
+    "option_id": {
+      "description": "Идентификатор опции",
+      "type": "number"
+    },
+    "option_name": {
+      "description": "Название опции",
+      "type": "string"
+    },
+    "is_optional": {
+      "description": "Является ли опция необязательной (true) или обязательной (false)",
+      "type": "boolean"
+    },
+    "selected_items": {
+      "description": "Список sku с выбранными айтемами",
+      "type": "array",
+      "items": {
+        "description": "Sku айтема",
+        "type": "string"
+      }
+    },
+    "items": {
+      "description": "Список словарей с доступными айтемами и их названиями",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/RestaurantProductOptionItems"
+      }
+    }
+  },
+  "required": [
+    "option_id",
+    "option_name",
+    "items"
+  ]
+}

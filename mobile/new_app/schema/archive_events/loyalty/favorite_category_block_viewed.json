@@ -1,0 +1,28 @@
+{
+  "description": "Каждый раз, когда пользователь видит блок 'Любимая категория'",
+  "properties": {
+    "source": {
+      "description": "Источник, где именно был увиден блок",
+      "type": "string",
+      "enum": [
+        "retailer_main",
+        "balance_modal"
+      ]
+    },
+    "status": {
+      "description": "Одно из 4х состояний блока",
+      "type": "string",
+      "enum": [
+        "order_not_shipped",
+        "can_pick_category",
+        "category_picked",
+        "undefined"
+      ]
+    }
+  },
+  "required": [
+    "status"
+  ],
+  "title": "Favorite Category Block Viewed",
+  "type": "object"
+}

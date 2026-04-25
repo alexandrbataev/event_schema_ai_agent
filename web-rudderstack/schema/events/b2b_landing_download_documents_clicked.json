@@ -1,0 +1,16 @@
+{
+  "description": "Переход в ЛК для скачивания документов (с лендинга)",
+  "properties": {
+    "landing_type": {
+      "description": "Тип лендинга, на котором сработало событие",
+      "type": "string",
+      "enum": [
+        "office",
+        "traders",
+        "horeca"
+      ]
+    }
+  },
+  "title": "B2B Landing Download Documents Clicked",
+  "type": "object"
+}

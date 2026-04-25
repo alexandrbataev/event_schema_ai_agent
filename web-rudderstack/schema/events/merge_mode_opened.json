@@ -1,0 +1,28 @@
+{
+  "description": "Пользователь успешно вошел в режим дозаказа через одну из точек входа",
+  "properties": {
+    "source": {
+      "description": "откуда пользователь открыл дозаказ: main_page_widget - виджет активного заказа на главной странице; main_retailer_widget - виджет активного заказа на главной ритейлера; profile_widget - виджет активного заказа в профиле; order - кнопка на экране посчтекауте, вверху, зеленая; recommendations_order - кнопка в конце скролла рек на экране постчекаута; orders_history_products - кнопка на экране списка товаров в заказе; orders_history - кнопка на истории заказов",
+      "type": "string",
+      "enum": [
+        "main_page_widget",
+        "profile_widget",
+        "main_retailer_widget",
+        "order",
+        "orders_history",
+        "orders_history_products",
+        "recommendations_order"
+      ]
+    },
+    "target_order_id": {
+      "description": "в какой заказ пользователь будет делать дозаказ",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "target_order_id"
+  ],
+  "title": "Merge Mode Opened",
+  "type": "object"
+}

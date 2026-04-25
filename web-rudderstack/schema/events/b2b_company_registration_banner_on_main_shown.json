@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз, когда пользователю отрисовывается приветственный банер для регистрации компании на главной",
+  "properties": {},
+  "title": "B2B Company Registration Banner On Main Shown",
+  "type": "object"
+}
+  

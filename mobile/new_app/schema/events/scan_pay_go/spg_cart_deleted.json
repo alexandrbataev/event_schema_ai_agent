@@ -1,0 +1,14 @@
+{
+  "description": "Отправляем каждый раз, когда пользователь нажимает на значок серового мусорного ведра в коризне",
+  "properties": {
+    "payment_amount": {
+      "description": "цена корзины на момент ее отчистики",
+      "type": "number"
+    }
+  },
+  "required": [
+    "payment_amount"
+  ],
+  "title": "Spg Cart Deleted",
+  "type": "object"
+}

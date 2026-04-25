@@ -1,0 +1,11 @@
+{
+  "description": "Клик на кнопку 'Показать все товары' на сайте B2B",
+  "properties": {
+    "smb_block_name": {
+      "description": "Название полки, для которой была нажата кнопка",
+      "type": "string"
+    }
+  },
+  "title": "B2B Show All Items Button",
+  "type": "object"
+}

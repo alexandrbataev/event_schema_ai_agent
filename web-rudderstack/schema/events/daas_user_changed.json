@@ -1,0 +1,35 @@
+{
+  "description": "Нажали кнопку Добавить пользователя",
+  "properties": {
+    "email": {
+      "description": "Почта пользователя",
+      "type": "string"
+    },
+    "source": {
+      "description": "С какой страницы нажали кнопку",
+      "type": "string"
+    },
+    "user_changed_email": {
+      "description": "Email измененного пользователя",
+      "type": "string"
+    },
+    "role_changed": {
+      "description": "На какую роль была изменена роль",
+      "type": "string",
+      "enum": [
+        "no_change",
+        "admin",
+        "report_downloader",
+        "user"
+      ]
+    }
+  },
+  "required": [
+    "email",
+    "source",
+    "user_changed_email",
+    "role_changed"
+  ],
+  "title": "DAAS User Changed",
+  "type": "object"
+}

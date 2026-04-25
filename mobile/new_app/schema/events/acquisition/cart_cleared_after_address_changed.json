@@ -1,0 +1,24 @@
+{
+  "description": "Удаление товаров из корзины после смены адреса",
+  "properties": {
+    "products_amount": {
+      "description": "Количество позиций в корзине",
+      "type": "number"
+    },
+    "deleted_amount": {
+      "description": "Количество удаленных позиций",
+      "type": "number"
+    },
+    "deleted_all_products": {
+      "description": "Удалены все товары: true/false",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "products_amount",
+    "deleted_amount",
+    "deleted_all_products"
+  ],
+  "title": "Cart Cleared After Address Changed",
+  "type": "object"
+}

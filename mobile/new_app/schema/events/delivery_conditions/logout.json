@@ -1,0 +1,14 @@
+{
+  "description": "Разлогин пользователя из приложения СМ",
+  "properties": {
+    "uuid": {
+      "description": "Аналогично userId или backend_user_uuid в traits - id юзера на бэке",
+      "type": "string"
+    }
+  },
+  "required": [
+    "uuid"
+  ],
+  "title": "Logout",
+  "type": "object"
+}

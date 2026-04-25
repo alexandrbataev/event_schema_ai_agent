@@ -1,0 +1,45 @@
+{
+  "description": "Любое изменение свитчера программы лояльности B2B на новом чекауте (например, при рендере страницы, после применения промокода)",
+  "properties": {
+    "is_available": {
+      "description": "Доступен ли свитчер к активации",
+      "type": "boolean"
+    },
+    "is_active": {
+      "description": "Статус свитчера (включен или выключен).",
+      "type": "boolean"
+    },
+    "switcher_main_text": {
+      "description": "Основной текст, указанный в свитчере (например, 'Не работают с помокодом')",
+      "type": "string"
+    },
+    "switcher_additional_text": {
+      "description": "Дополнительный текст, указанный в свитчере (например, 'До 25% от стоимости заказа')",
+      "type": "string"
+    },
+    "loyalty_points_to_use": {
+      "description": "Количество баллов, доступных для списания. Передается только если is_available = true.",
+      "type": "number"
+    },
+    "loyalty_coverage_percentage": {
+      "description": "Процент стоимости заказа, который можно оплатить баллами. Передается только если is_available = true.",
+      "type": "number"
+    },
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    },
+    "order_id": {
+      "description": "ID заказа",
+      "type": "string"
+    }
+  },
+  "required": [
+    "is_available",
+    "is_active",
+    "switcher_text",
+    "order_id"
+  ],
+  "title": "B2B Loyalty Switcher Checkout Action",
+  "type": "object"
+}

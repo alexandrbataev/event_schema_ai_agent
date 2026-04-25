@@ -1,0 +1,31 @@
+{
+  "description": "Пользователь открыл один из новогодних b2b лэндингов",
+  "properties": {
+    "source": {
+      "description": "Источник (страница) откуда произведен переход на страницу лэндинга",
+      "type": "string",
+      "enum": [
+        "b2b_header",
+        "b2b_landing_banner",
+        "b2b_post_checkout_banner",
+        "b2b_landing_new_year_shelf",
+        "b2b_new_year_landing_banner"
+      ]
+    },
+    "landing_variant": {
+      "description": "Вариант новогоднего лэндинга. NG_Form_1 - Промо лендинг, NG_Form_2 - Лендинг сертификатов, NG_Form_3 - Лендинг подарочных наборов",
+      "type": "string",
+      "enum": [
+        "NG_Form_1",
+        "NG_Form_2",
+        "NG_Form_3"
+      ]
+    }
+  },
+  "required": [
+    "source",
+    "landing_variant"
+  ],
+  "title": "New Year Landing Viewed",
+  "type": "object"
+}

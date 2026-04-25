@@ -1,0 +1,19 @@
+{
+  "description": "Показан баланс компании на чекауте",
+  "properties": {
+    "inn": {
+      "description": "ИНН компании",
+      "type": "string"
+    },
+    "current_balance": {
+      "description": " Текущий баланс счета",
+      "type": "string"
+    }
+  },
+  "required": [
+    "inn",
+    "current_balance"
+  ],
+  "title": "B2B Checkout Company Balance Shown",
+  "type": "object"
+}

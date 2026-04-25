@@ -1,0 +1,23 @@
+{
+  "title": "PickupRetailer",
+  "type": "object",
+  "description": "Сущность ритейлера самовывоза",
+  "properties": {
+    "retailer_id": {
+      "description": "Идентификатор ритейлера",
+      "type": "number"
+    },
+    "position": {
+      "description": "Порядковый номер в списке",
+      "type": "number"
+    },
+    "store_id": {
+      "description": "Идентификатор магазина",
+      "type": "number"
+    }
+  },
+  "required": [
+    "retailer_id",
+    "position"
+  ]
+}

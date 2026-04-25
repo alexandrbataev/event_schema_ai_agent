@@ -1,0 +1,25 @@
+{
+  "title": "LoginSource",
+  "description": "Экран, на котором была открыта модалка авторизации",
+  "type": "string",
+  "enum": [
+    "address_modal",
+    "checkout_init",
+    "favourites_list",
+    "app_opened",
+    "profile",
+    "cart",
+    "goals_banner",
+    "raffle_landing",
+    "auth_error",
+    "additional_phone_auth",
+    "sberbank_online",
+    "make_review",
+    "b2b_deeplink",
+    "scan_pay_go",
+    "daas",
+    "deeplink",
+    "shared_cart"
+  ],
+  "$comment": "address_modal - модалка выбора адреса, checkout_init - кнопка Оформить в корзине, favourites_list - избранное, app_opened - при открытии приложения, profile - раздел Профиль, cart - из корзины, auth_error - из предыдущей попытки авторизации (от значения сорса отказываемся, вместо него будет приходить исходный экран клика на Войти, а факт ошибки можно будет увидеть в параметре is_after_error события Login), которая кончилась ошибкой, additional_phone_auth - дополнительная аутентификация по телефону в случае, когда регистрация происходит через сторонний сервис, sberbank_online - авторизация через сбер_айди, не шлется на привязку сбер_айди, make_review - авторизация, которая произошла после попытки оставить отзыв, b2b_deeplink - диплинк на авторизацию с предвыбранной вкладой б2б, scan_pay_go - логин из кнопки Оформить на чекауте во флоу скан_пей_го, daas - логин из раздела доставка посылки, shared_cart - если логин произошел после перехода по ссылке пошаренной корзины"
+}

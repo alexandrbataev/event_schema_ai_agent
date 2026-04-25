@@ -1,0 +1,14 @@
+{
+  "title": "AlcoholPickupPopupSource",
+  "description": "С какого экрана был вызван попап алкоголя",
+  "type": "string",
+  "enum": [
+    "category",
+    "product",
+    "search_regular",
+    "favourite",
+    "search_multiretail",
+    "cart"
+  ],
+  "$comment": "category - из категории; product - из карточки продукта; search_regular - из поиска обычного, после выбора ритейлера; favourite - из любимых; search_multiretail - из межритейлерного поиска, до выбора магазина"
+}

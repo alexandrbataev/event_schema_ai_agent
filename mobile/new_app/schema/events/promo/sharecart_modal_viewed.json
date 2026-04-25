@@ -1,0 +1,27 @@
+{
+  "description": "Каждый раз, когда пользователю показывается модалка временной корзины",
+  "properties": {
+    "store_id": {
+      "description": "Идентификатор магазина во временной корзине",
+      "type": "number"
+    },
+    "product_skus": {
+      "description": "Массив словарей товаров во временной корзине (sku и quantity по каждому товару)",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ShareCartProduct"
+      }
+    },
+    "cart_id": {
+      "description": "Идентификатор временной корзины",
+      "type": "string"
+    }
+  },
+  "required": [
+    "retailer_id",
+    "product_skus",
+    "cart_id"
+  ],
+  "title": "Sharecart Modal Viewed",
+  "type": "object"
+}

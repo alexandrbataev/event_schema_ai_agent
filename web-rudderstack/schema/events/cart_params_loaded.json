@@ -1,0 +1,19 @@
+{
+  "description": "Событие показа баннера для дозаказа в корзине веба",
+  "properties": {
+    "forgot_items_banner_available": {
+      "description": "Флаг был ли показан пользователю баннер",
+      "type": "number"
+    },
+    "shipments_merge_info": {
+      "description": "Информация о предыдущем заказе, к которому могут быть добавлены товары",
+      "type": "string"
+    }
+  },
+  "required": [
+    "forgot_items_banner_available",
+    "shipments_merge_info"
+  ],
+  "title": "Cart Params Loaded",
+  "type": "object"
+}

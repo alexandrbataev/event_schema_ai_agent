@@ -1,0 +1,25 @@
+{
+  "title": "WeightInfo",
+  "type": "object",
+  "description": "Словарь с информацией о весе корзины для каждого ритейлера",
+  "properties": {
+    "notification_type": {
+      "description": "Если показывается плашка о перевесе или её отсутствие",
+      "type": "string"
+    },
+    "retailer_id": {
+      "description": "Id ритейлера",
+      "type": "number"
+    },
+    "weight": {
+      "description": "Вес корзины в граммах",
+      "type": "number"
+    }
+  },
+  "required": [
+    "notification_type",
+    "retailer_id",
+    "weight"
+  ]
+}
+

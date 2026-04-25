@@ -1,0 +1,46 @@
+{
+  "description": "Каждый раз, когда пользователь видит превью сторис",
+  "properties": {
+    "shelf_position": {
+      "description": "На какой позиции находится полка с историями",
+      "type": "number"
+    },
+    "story_type": {
+      "description": "Страница, на которой показана история",
+      "type": "string",
+      "enum": [
+        "loyalty",
+        "main_page",
+        "retailer_page",
+        "onboarding",
+        "promo_macro_page"
+      ]
+    },
+    "source": {
+      "description": "Страница, на которой показана превью истории",
+      "type": "string",
+      "enum": [
+        "loyalty",
+        "main_page",
+        "retailer_page",
+        "onboarding",
+        "promo_macro_page"
+      ]
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника, где была увидена сторис",
+      "type": "string",
+      "$comment": "deeplink макроакции, если source = promo_macro_page"
+    },
+    "source_type": {
+      "description": "Если баннер показан на странице ритейлера - {{retailer_id}}",
+      "type": "string"
+    }
+  },
+  "required": [
+    "story_type",
+    "source"
+  ],
+  "title": "Preview Stories Viewed",
+  "type": "object"
+}

@@ -1,0 +1,45 @@
+{
+  "description": "Каждый раз, когда пользователь кликает на “Поиск по магазину” или ”Поиск”, то есть при клике по поисковой строке. Срабатывает повторно при повторном клике/тапе на поисковую строку, то есть каждый клик/тап должен тригерить отправку события. НЕ отправляется повторно при сортировке/фильтрации/смене ритейлера в межрите и так далее",
+  "properties": {
+    "source": {
+      "description": "Где именно случилось событие клика по поисковой строке",
+      "$ref": "#/definitions/SearchSource"
+    },
+    "store_id": {
+      "description": "Значение актуального магазина - выбранный магазин или, в случае межрит поиска, магазин соответствующей корзины",
+      "type": "number"
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника, откуда произошел клик по поисковой строке",
+      "$ref": "#/definitions/SearchSourceIdentifier"
+    },
+    "is_multiretail_promo_category": {
+      "description": "True, если поиск внутри промо подборки, False иначе",
+      "type": "boolean"
+    },
+    "multiretail_promo_category_id": {
+      "description": "id промо подборки. Заполняется только в случае поиска внутри промо подборки",
+      "type": "string"
+    },
+    "search_multiretail_source": {
+      "description": "Параметр отправляется ТОЛЬКО при source = search_multiretail и показывает, откуда был совершен клик по поисковой строке в межрите - с главной главной сбермаркета (main_main), или из просмотра выдачи (search_results), или из сео-каталога (category_multiretail_seo), или из промокатегории (",
+      "type": "string",
+      "enum": [
+        "main_main",
+        "search_results",
+        "category_multiretail_seo",
+        "multiretail_promo_category"
+      ]
+    },
+    "is_search_rte": {
+      "description": "Флаг того, что поисковая выдача была реализована через поисковик РТЕ вертикали в списке ресторанов или внутри конкретного ресторана",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "source",
+    "store_id"
+  ],
+  "title": "Search Started",
+  "type": "object"
+}

@@ -1,0 +1,17 @@
+{
+  "description": "Отправляется каждый раз, когда пользователь нажал значок 'перезагрузить страницу'",
+  "properties": {
+    "type": {
+      "description": "тип ошибки, которую словили",
+      "type": "string",
+      "enum": [
+        "500"
+      ]
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "title": "Reload page after error",
+  "type": "object"
+}

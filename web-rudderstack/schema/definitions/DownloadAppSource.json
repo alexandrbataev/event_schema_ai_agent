@@ -1,0 +1,14 @@
+{
+  "title": "DownloadAppSource",
+  "description": "Источник клика на кнопку скачивания приложения",
+  "type": "string",
+  "enum": [
+    "main_page_block",
+    "popup",
+    "smart_banner",
+    "footer",
+    "referral_onboarding",
+    "eta"
+  ],
+  "$comment": "main_page_block - блок с кнопками на глгл, popup - кнопка в попапе, smart_banner - кнопка в смарт-баннере, footer - кнопки в футере, referral_onboarding - кнопки на странице рефералки для приглашенного пользователя, eta - кнопка 'Скачать приложение' внизу экрана (под кукис)"
+}

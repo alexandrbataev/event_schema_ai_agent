@@ -1,0 +1,7 @@
+{
+  "description": "При отправке сообщения \"Не получилось сохранить изменения\"",
+  "properties": {},
+  "required": [],
+  "title": "SberID Address Change Error",
+  "type": "object"
+}

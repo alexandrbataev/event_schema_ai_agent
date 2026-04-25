@@ -1,0 +1,6 @@
+{
+  "description": "Каждый раз когда пользователь увидел баннер 'Новые условия СберПрайм' на главном экране",
+  "properties": {},
+  "title": "Sber Prime New Offer Banner Viewed",
+  "type": "object"
+}

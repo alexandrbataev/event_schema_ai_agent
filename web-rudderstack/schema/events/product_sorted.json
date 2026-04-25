@@ -1,0 +1,41 @@
+{
+  "description": "Применение типа сортировки к выдаче",
+  "properties": {
+    "source": {
+      "description": "Источник клика по сортировке",
+      "type": "string",
+      "enum": [
+        "category",
+        "search",
+        "search_multiretail"
+      ]
+    },
+    "store_id": {
+      "description": "Актуальный стор в случае межрителейрного опыта",
+      "type": "number"
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника клика - category_id или поисковый запрос",
+      "type": "string"
+    },
+    "sorting_type": {
+      "description": "Тип примененной сортировки",
+      "type": "string",
+      "enum": [
+        "price_desc",
+        "price_asc",
+        "popularity",
+        "unit_price_asc"
+      ],
+      "$comment": "price_desc - сначала дорогие; price_asc - сначала дешевы; popularity - По популярности; unit_price_asc - Выгоднее по весу"
+    }
+  },
+  "required": [
+    "source",
+    "source_identifier",
+    "sorting_type",
+    "store_id"
+  ],
+  "title": "Product Sorted",
+  "type": "object"
+}

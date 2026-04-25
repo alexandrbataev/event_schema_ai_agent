@@ -1,0 +1,32 @@
+{
+  "description": "Рендер выпадающего списка документов по заказу (каждый раз, когда пользователь видит список документов или их отсутсвие)",
+  "properties": {
+    "order_id": {
+      "description": "ID заказа",
+      "type": "string"
+    },
+    "documents_count": {
+      "description": "Количество доступных документов",
+      "type": "number"
+    },
+    "documents_list": {
+      "description": "Список доступных документов (например, Счет на оплату, Счет-фактура, Товарная накладаная, УПД, Сертификаты)",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/OrderExportDocuments"
+      }
+    },
+    "has_request_act_button": {
+      "description": "Есть ли в списке кнопка 'Запросить акт приема-передачи'",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "order_id",
+    "documents_count",
+    "documents_list",
+    "has_request_act_button"
+  ],
+  "title": "B2B Order Documents Dropdown Rendered",
+  "type": "object"
+}

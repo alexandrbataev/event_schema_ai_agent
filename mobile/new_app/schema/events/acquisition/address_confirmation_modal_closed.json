@@ -1,0 +1,19 @@
+{
+  "description": "Пользователь закрыл модальное окно 'Заказ на этот адрес?' при клике на крестик или на пустую темную область",
+  "properties": {
+    "distance": {
+      "description": "Расстояние между текущей геопозицией пользователя и его последним выбранным адресом в метрах",
+      "type": "number"
+    },
+    "source": {
+      "description": "На каком экране было показано модальное окно",
+      "$ref": "#/definitions/AddressSelectionSource"
+    }
+  },
+  "required": [
+    "source",
+    "distance"
+  ],
+  "title": "Address Confirmation Modal Closed",
+  "type": "object"
+}

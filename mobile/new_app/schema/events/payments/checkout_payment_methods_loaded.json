@@ -1,0 +1,41 @@
+{
+  "description": "Каждый раз, когда загружаются доступные способы оплаты на экране чекаута (новый чекаут)",
+  "properties": {
+    "available_payment_methods_info": {
+      "description": "Массив словарей отображаемых методов оплаты с ключами: payment_method - название способа оплаты; payment_tool_id - id связки выбранной карты онлайн или sberpay (id из spree_payment_tools).Если это новая Карта онлайн или новая карта Sberpay, то отдавать 0. ; bank_name - наименование банка; is_corporate - true если это бизнес карта; is_available - доступность отображаемого метода оплаты; is_bank_discount_available - наличие шильда с доп. скидкой сбера ; payment_kind - тип метода оплаты. Элементы в массиве расположены в том же порядке что и на экране пользователя",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PaymentMethodInfo"
+      }
+    },
+    "shipping_method": {
+      "type": "string",
+      "description": "Способ доставки",
+      "enum": [
+        "by_courier",
+        "pickup"
+      ]
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера",
+      "$ref": "#/definitions/RetailerVertical"
+    },
+    "order_number": {
+      "description": "Строковый ID заказа",
+      "type": "string"
+    },
+    "shipment_number": {
+      "description": "К какому шипменту относится заказ",
+      "type": "string"
+    }
+  },
+  "required": [
+    "available_payment_methods_info",
+    "shipping_method",
+    "retailer_vertical",
+    "order_number",
+    "shipment_number"
+  ],
+  "title": "Checkout Payment Methods Loaded",
+  "type": "object"
+}

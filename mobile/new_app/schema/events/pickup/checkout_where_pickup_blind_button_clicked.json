@@ -1,0 +1,14 @@
+{
+  "description": "Каждый раз когда пользователь нажимает на кнопку 'Как найти зоны выдачи' в шторке 'как забрать заказ самовывоза' на чекауте",
+  "properties": {
+    "order_number": {
+      "description": "Строковый id заказа",
+      "type": "string"
+    }
+  },
+  "required": [
+    "order_number"
+  ],
+  "title": "Checkout Where Pickup Blind Button Clicked",
+  "type": "object"
+}

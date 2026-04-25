@@ -1,0 +1,30 @@
+{
+  "description": "На экране пользователя отрисовалась модалка «Цены»",
+  "properties": {
+    "product_sku": {
+      "description": "SKU товара, в карточке которого произошел просмотр блока",
+      "type": "string"
+    },
+    "retailer_ids": {
+      "description": "Массив ритейлеров, доступных в блоке",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "product_prices": {
+      "description": "Массив цен, доступных в блоке",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "product_sku",
+    "retailer_ids",
+    "product_prices"
+  ],
+  "title": "Alternative Prices Modal Viewed",
+  "type": "object"
+}

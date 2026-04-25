@@ -1,0 +1,7 @@
+{
+  "description": "Событие происходит после того как пользователь нажимает на кнопку Копировать на модалке VPN для копирования системной информации",
+  "properties": {},
+  "required": [],
+  "title": "VPN Modal Copy Button Clicked",
+  "type": "object"
+}

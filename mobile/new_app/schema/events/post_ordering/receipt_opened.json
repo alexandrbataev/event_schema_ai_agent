@@ -1,0 +1,14 @@
+{
+  "description": "Событие открытия чека пользователем",
+  "properties": {
+    "receipt_names": {
+      "description": "Название открытого чека,",
+      "type": "string"
+    }
+  },
+  "required": [
+    "receipt_names"
+  ],
+  "title": "Receipt Opened",
+  "type": "object"
+}

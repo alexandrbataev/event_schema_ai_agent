@@ -1,0 +1,7 @@
+{
+  "description": "Получение ошибки (Что-то пошло не так. Попробуйте позже)",
+  "properties": {},
+  "required": [],
+  "title": "BNPL Other Error",
+  "type": "object"
+}

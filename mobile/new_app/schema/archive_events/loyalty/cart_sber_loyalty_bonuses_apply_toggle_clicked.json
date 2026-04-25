@@ -1,0 +1,7 @@
+{
+  "description": "Тап на тоггл 'Списать бонусы' в корзине",
+  "properties": {},
+  "required": [],
+  "title": "Cart Sber Loyalty Bonuses Apply Toggle Clicked",
+  "type": "object"
+}

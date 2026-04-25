@@ -1,0 +1,55 @@
+{
+  "description": "Каждый раз, когда пользователь заходит на лендинг или переключает на лендинге тип доставки",
+  "properties": {
+    "header_city_id": {
+      "description": "id города в шапке профиля",
+      "type": "number"
+    },
+    "header_city_name": {
+      "description": "название города в шапке профиля",
+      "type": "string"
+    },
+    "landing_type": {
+      "description": "тип лендинга - доставки или самовывоза",
+      "type": "string",
+      "enum": [
+        "pickup",
+        "by_courier"
+      ]
+    },
+    "landing_version": {
+      "description": "версия лендинга",
+      "type": "string",
+      "enum": [
+        "new_landing_b2c",
+        "old_landing_b2b",
+        "old_landing_b2c"
+      ]
+    },
+    "retailers": {
+      "description": "TBD",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Retailers"
+      }
+    },
+    "header_type": {
+      "$ref": "#/definitions/HeaderType"
+    },
+    "has_delivery_address": {
+      "description": "Флаг наличия введенного адреса на момент просмотра пользователем лендинга: если есть введенный адрес - 1, иначе 0",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "header_city_id",
+    "header_city_name",
+    "landing_type",
+    "landing_version",
+    "retailers",
+    "header_type",
+    "has_delivery_address"
+  ],
+  "title": "Landing Viewed",
+  "type": "object"
+}

@@ -1,0 +1,14 @@
+{
+  "description": "При клике пользователя на кнопку \"Удалить\" в модалке \"Удалить тег?\"",
+  "properties": {
+    "tag": {
+      "description": "Удаляемый тег",
+      "type": "string"
+    }
+  },
+  "required": [
+    "tag"
+  ],
+  "title": "Address Tag Delete Button Clicked",
+  "type": "object"
+}

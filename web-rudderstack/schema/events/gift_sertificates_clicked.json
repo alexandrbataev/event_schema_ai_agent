@@ -1,0 +1,7 @@
+{
+  "description": "срабатывает каждый раз когда пользователь нажимает на \"подарить сертификаты\" из popup с предложением конструктора",
+  "properties": {},
+  "title": "Gift Сertificates Clicked",
+  "type": "object"
+}
+

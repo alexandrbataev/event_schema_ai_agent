@@ -1,0 +1,28 @@
+{
+  "description": "Переход на страницу истории заказов компании",
+  "properties": {
+    "source": {
+      "description": "Источник (страница) откуда произведен переход на страницу истории заказов компании",
+      "type": "string",
+      "enum": [
+        "company_profile_page",
+        "landing_last_shipment_widget",
+        "profile_last_shipment_widget"
+      ]
+    },
+    "landing_type": {
+      "description": "Тип лендинга, на котором сработало событие",
+      "type": "string",
+      "enum": [
+        "office",
+        "traders",
+        "horeca"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "B2B Order History Clicked",
+  "type": "object"
+}

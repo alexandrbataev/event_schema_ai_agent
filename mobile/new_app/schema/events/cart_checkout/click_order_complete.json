@@ -1,0 +1,126 @@
+{
+  "description": "Каждый раз, когда пользователь нажимает кнопку “Оформить заказ” и валидация проходит (здесь есть заказы BNPL) ",
+  "properties": {
+    "coupon": {
+      "description": "Введенный пользователем купон (его текст)",
+      "type": "string"
+    },
+    "order_number": {
+      "description": "Строковый ID заказа",
+      "type": "string"
+    },
+    "order_seq": {
+      "description": "Порядковый номер заказа",
+      "type": "number"
+    },
+    "payment_method": {
+      "description": "Метод оплаты, включая BNPL",
+      "type": "string"
+    },
+    "total": {
+      "description": "Сумма заказа, которую видит пользователь. Сумма без учета долга",
+      "type": "number"
+    },
+    "shipment_number": {
+      "description": "К какому шипменту относится заказ",
+      "type": "string"
+    },
+    "type_delivery": {
+      "description": "Обозначает способ получения для заказа",
+      "$ref": "#/definitions/TypeDelivery"
+    },
+    "cartType": {
+      "description": "Тип корзины",
+      "type": "string",
+      "enum": [
+        "alcohol",
+        "default",
+        "mix"
+      ],
+      "$comment": "в событиях летит как cart_type"
+    },
+    "pickup_way": {
+      "description": "Способ, которым забирают заказ самовывоза. Заполняется для всех заказов самовывоза.",
+      "type": "string",
+      "enum": [
+        "store",
+        "park"
+      ],
+      "$comment": "store - в магазине, park - на парковке"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (grocery, pharm или restaurant)",
+      "type": "string"
+    },
+    "payment_tool_id": {
+      "description": "id связки выбранной карты онлайн или sberpay  (id из spree_payment_tools).  Если это новая Карта онлайн или новая карта Sberpay, то отдавать 0.",
+      "type": "number"
+    },
+    "bank_name": {
+      "description": "Наименование банка выбранного способа оплаты (для карт онлайн и sberpay)",
+      "type": "string"
+    },
+    "is_corporate": {
+      "description": "True если это бизнес-карта",
+      "type": "boolean"
+    },
+    "bank_discount_amount": {
+      "description": "Сумма примененной доп. скидки при оплате картой сбера. Если скидка сбера не была применена, то присылать 0",
+      "type": "number"
+    },
+    "is_contactless_selected": {
+      "description": "Выбрана ли бесконтактная доставка",
+      "type": "boolean"
+    },
+    "store_id": {
+      "description": "id магазина, в котором пользователь пытается оформить заказ",
+      "type": "number"
+    },
+    "b2b_flg": {
+      "description": "Является ли пользователь представителем компании (б2б)",
+      "type": "boolean",
+      "$comment": "в какой-то момент стало приходит в событиях как params['b2_b_flg'] вместо b2b_flg"
+    },
+    "prereplacement_info": {
+      "description": "Словарь с оформленными скю, есть ли у скю пометка Может закончиться и предзаменами, если они выбраны",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PrereplacementInfo"
+      }
+    },
+    "payment_kind": {
+      "description": "Тип метода оплаты. check - Наличными в Сбере ; direct_bank_invoice - По счёту для бизнеса ; lifepay - Картой курьеру ; external_partner_pay - Внешний провайдер ; tinkoff_dolyame - Частями ; direct_bnpl - Частями ; external_invoice - По счёту (внешний банковский перевод) ; cloud_payments - Картой онлайн (новая карта резерв cloud payments) ; direct - Картой онлайн (новая карта основной шлюз) ; credit_card - Картой онлайн (сохраненная карта) ; direct_pay_v2 - SberPay (сохраненная карта и новая) ; plati_qr - PlatiQR ; cash_desk - Картой на кассе. Больше информации: https://wiki.sbmt.io/pages/viewpage.action?pageId=3187542389#APIendpoint'sПСО+ПСП-Контрактыдляполяkind",
+      "type": "string"
+    },
+    "gift_flg": {
+      "description": "Флаг что товар является подарком в рамках фичи подарки в корзине https://wiki.sbmt.io/pages/viewpage.action?pageId=3383236905",
+      "type": "number",
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "debt_total": {
+      "description": "Сумма долга в рублях. Если долга нет, отправлять 0. ",
+      "type": "number"
+    }
+  },
+  "required": [
+    "order_number",
+    "order_seq",
+    "payment_method",
+    "total",
+    "shipment_number",
+    "type_delivery",
+    "cartType",
+    "retailer_vertical",
+    "payment_tool_id",
+    "is_contactless_selected",
+    "store_id",
+    "b2b_flg",
+    "prereplacement_info",
+    "payment_kind"
+  ],
+  "title": "Click Order Complete",
+  "type": "object"
+}

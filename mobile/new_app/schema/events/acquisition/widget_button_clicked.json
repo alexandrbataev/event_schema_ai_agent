@@ -1,0 +1,14 @@
+{
+  "description": "Каждый раз при клике на элемент виджета на Главной-главной.",
+  "properties": {
+    "name": {
+      "description": "Название виджета по которому кликнул пользователь: Бонусы, ScanPay, Выгода, Покупали, Заказы, Любимое, Посылки",
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "title": "Widget Button Clicked",
+  "type": "object"
+}

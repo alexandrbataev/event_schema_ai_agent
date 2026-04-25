@@ -1,0 +1,11 @@
+{
+  "description": "Клик на кнопку Реквизиты Купера при пополнении баланса в профиле компании",
+  "properties": {
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    }
+  },
+  "title": "B2B Company Profile Banking Details Clicked",
+  "type": "object"
+}

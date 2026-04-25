@@ -1,0 +1,6 @@
+{
+  "description": "Каждый раз, когда пользователю отрисовывается окно с информацией об уровне лояльности",
+  "properties": {},
+  "title": "B2B Loyalty Program Level Information Shown",
+  "type": "object"
+}

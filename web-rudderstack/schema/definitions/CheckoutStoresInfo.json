@@ -1,0 +1,61 @@
+{
+  "title": "СheckoutStoresInfo",
+  "type": "object",
+  "description": "Массив из словарей с информацией по магазинам из которых происходит чекаут",
+  "properties": {
+    "address": {
+      "description": "Адрес магазина",
+      "type": "string"
+    },
+    "expressDelivery": {
+      "description": "Флаг быстрой достаки из магазина",
+      "type": "boolean"
+    },
+    "id": {
+      "description": "ID магазина",
+      "type": "number"
+    },
+    "name": {
+      "description": "Имя магазина",
+      "type": "string"
+    },
+    "operationalZone": {
+      "description": "Операционная зона магазина",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/OperationalZone"
+      }
+    },
+    "pickupAvailable": {
+      "description": "Доступен ли самовывоз из магазина",
+      "type": "boolean"
+    },
+    "retailerId": {
+      "description": "ID ретейлера",
+      "type": "number"
+    },
+    "retailerName": {
+      "description": "Имя ретейлера",
+      "type": "string"
+    },
+    "uuid": {
+      "description": "UUID магазина",
+      "type": "string"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (groccery, pharmacy или restaurant)",
+      "type": "string"
+    }
+  },
+  "required": [
+    "address",
+    "expressDelivery",
+    "id",
+    "name",
+    "operationalZone",
+    "pickupAvailable",
+    "retailerId",
+    "retailerName",
+    "uuid"
+  ]
+}

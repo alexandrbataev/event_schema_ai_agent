@@ -1,0 +1,29 @@
+{
+  "description": "Загрузка отобразившихся пользователю промо-кампаний в Центре Уведомлений",
+  "properties": {
+    "promotions": {
+      "description": "Массив диплинков, загрузившихся пользователю. Ждем с бэкэнда",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "deeplink"
+      }
+    },
+    "type": {
+      "description": "Тип загруженной страницы уведомлений (promotions,system, all)",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник, откуда была открыта страница уведомлений",
+      "type": "string",
+      "enum": [
+        "main_main",
+        "profile",
+        "deeplink"
+      ]
+    }
+  },
+  "title": "Notifications Loaded",
+  "type": "object",
+  "$comment": "Отправляется каждый раз по факту загрузки батча диплинков при просмотре раздела"
+}

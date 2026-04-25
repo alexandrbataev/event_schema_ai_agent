@@ -1,0 +1,9 @@
+{
+  "title": "BankingDetailsAddSource",
+  "description": "Источник добавления реквизитов компании",
+  "type": "string",
+  "enum": [
+    "checkout",
+    "profile_company"
+  ]
+}

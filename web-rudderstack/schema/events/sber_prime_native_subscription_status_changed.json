@@ -1,0 +1,33 @@
+{
+  "description": "Каждый раз когда пользователь оформляет подписку на СберПрайм",
+  "properties": {
+    "is_successful": {
+      "description": "Успешно ли оформлена подписка",
+      "type": "boolean"
+    },
+    "error_title": {
+      "description": "Название ошибки",
+      "type": "string"
+    },
+    "error_message": {
+      "description": "Описание ошибки",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник, откуда была открыта модалка продажи прайм",
+      "type": "string",
+      "enum": [
+        "profile",
+        "balance",
+        "menu",
+        "cart"
+      ]
+    }
+  },
+  "required": [
+    "error_message",
+    "is_successful"
+  ],
+  "title": "Sber Prime Subscription Status",
+  "type": "object"
+}

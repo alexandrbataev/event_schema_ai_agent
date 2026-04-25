@@ -1,0 +1,29 @@
+{
+  "description": "Клик на Заказать во вкладке Заказать документы в разделе Документы в профиле компании",
+  "properties": {
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    },
+    "year": {
+      "description": "Год",
+      "type": "string"
+    },
+    "month_start": {
+      "description": "Начало периода",
+      "type": "string"
+    },
+    "month_end": {
+      "description": "Конец периода",
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_id",
+    "year",
+    "month_start",
+    "month_end"
+  ],
+  "title": "B2B Profile Company Documents Order Clicked",
+  "type": "object"
+}

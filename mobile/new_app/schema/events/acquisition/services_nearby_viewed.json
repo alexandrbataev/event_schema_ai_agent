@@ -1,0 +1,23 @@
+{
+  "description": "Каждый раз при просмотре экрана \"Услуги около вас\".",
+  "properties": {
+    "services_count": {
+      "description": "Количество доступных услуг в списке",
+      "type": "number"
+    },
+    "available_tags": {
+      "description": "Массив с доступными категориями",
+      "type": "array",
+      "items": {
+        "description": "Название категории",
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "services_count",
+    "available_tags"
+  ],
+  "title": "Services Nearby Viewed",
+  "type": "object"
+}

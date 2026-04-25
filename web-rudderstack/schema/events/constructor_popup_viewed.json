@@ -1,0 +1,7 @@
+{
+  "description": "срабатывает когда на главной появляется popup с конструктором",
+  "properties": {},
+  "title": "Constructor Popup Viewed",
+  "type": "object"
+}
+

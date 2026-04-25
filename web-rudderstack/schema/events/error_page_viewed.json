@@ -1,0 +1,28 @@
+{
+  "description": "Отправляется каждый раз, когда пользователь попал на страничку с ошибкой",
+  "properties": {
+    "type": {
+      "description": "тип ошибки, которую словили",
+      "type": "string",
+      "enum": [
+        "404",
+        "500"
+      ]
+    },
+    "source": {
+      "description": "откуда пользователь попал на страничку с ошибкой",
+      "type": "string",
+      "enum": [
+        "seo",
+        "sbermarket",
+        "smbusiness"
+      ]
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "title": "Error Page Viewed",
+  "type": "object"
+}
+  

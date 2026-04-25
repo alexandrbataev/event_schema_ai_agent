@@ -1,0 +1,14 @@
+{
+  "description": "При клике на значок i на баннере, уведомляющем о возможности получения дополнительных бонусов за выбранную категорию кешбека при оплате картой Сбера",
+  "properties": {
+    "amount": {
+      "description": "Отображаемая сумма возможных начислений",
+      "type": "number"
+    }
+  },
+  "required": [
+    "amount"
+  ],
+  "title": "Sber Loyalty Bank Extra Bonuses Info Clicked",
+  "type": "object"
+}

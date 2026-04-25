@@ -1,0 +1,19 @@
+{
+  "description": "Каждый раз при отображении модалки регистрации в программе лояльности с кнопкой 'Участвовать'",
+  "properties": {
+    "source": {
+      "description": "После нажатия на какой элемент пользователь попал на модалку",
+      "type": "string",
+      "enum": [
+        "button",
+        "banner",
+        "cart"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Sber Loyalty Reg Form Viewed",
+  "type": "object"
+}

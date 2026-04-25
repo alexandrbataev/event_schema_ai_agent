@@ -1,0 +1,23 @@
+{
+  "description": "Закрытие формы добавления новой банковской карты",
+  "properties": {
+    "is_save_button_available": {
+      "description": "Была ли доступна кнопка сохранить при закрытии",
+      "type": "boolean"
+    },
+    "errors": {
+      "description": "Ошибки, с которыми столкнулся пользователь в форме",
+      "type": "array",
+      "items": {
+        "description": "Текст ошибки",
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "is_save_button_available",
+    "errors"
+  ],
+  "title": "Checkout Bank Card Add Form Closed",
+  "type": "object"
+}

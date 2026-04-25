@@ -1,0 +1,57 @@
+{
+  "description": "Каждый раз, когда пользователь попадает на экран с измененинием составляющих комбо-обеда.",
+  "properties": {
+    "source": {
+      "description": "Источник, откуда пользователь попал на экран с измененинием составляющих комбо-обеда. Если у пользователя всего 1 комбо, то  он может попасть на экран настройки состава комбо напрямую через main_page – главная приложения, rte_selection_started - список ресторанов, rte_combo_lunch_selection_started - список ресторанов с комбо-обедами. Если 2 и более комбо, то он может попасть только с промежуточного экрана со списком всех комбо - combos_settings",
+      "type": "string",
+      "enum": [
+        "main_page",
+        "rte_selection_started",
+        "rte_combo_lunch_selection_started",
+        "combos_settings"
+      ]
+    },
+    "store_id": {
+      "description": "id стора комбо, которого пользователь хочет изменить состав",
+      "type": "number"
+    },
+    "amount_combo": {
+      "description": "Кол-во комбо-обедов, выбранных у пользователя",
+      "type": "number"
+    },
+    "combo_number": {
+      "description": "Порядковый номер комбо, нумерация начинается с 1. Отправляется только при source = combos_settings. То есть если у пользователя 2 или более комбо, отправляется позиция комбо на экране, для которого он меняет состав",
+      "type": "number"
+    },
+    "dish_type_list": {
+      "description": "Список типов блюд комбо",
+      "type": "array",
+      "items": {
+        "description": "Тип блюда. Стартер - 1, Суп - 2, Основное - 3, Напиток - 4, Десерт - 5",
+        "type": "number"
+      }
+    },
+    "selected_products_sku": {
+      "description": "Массив со списком sku товаров, которые были предвыбраны изначально для комбо",
+      "type": "array",
+      "items": {
+        "description": "SKU товара",
+        "type": "string"
+      }
+    },
+    "available_products_sku": {
+      "description": "Массив со списком sku товаров, которые доступны для выбора",
+      "type": "array",
+      "items": {
+        "description": "SKU товара",
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "source",
+    "store_id"
+  ],
+  "title": "Restaurant Combo Lunch Options Settings Opened",
+  "type": "object"
+}

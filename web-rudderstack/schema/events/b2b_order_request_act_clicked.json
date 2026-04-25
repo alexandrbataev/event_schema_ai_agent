@@ -1,0 +1,14 @@
+{
+  "description": "Клик по кнопке 'Запросить акт приема-передачи' в блоке Документы в Истории заказов",
+  "properties": {
+    "order_id": {
+      "description": "ID заказа",
+      "type": "string"
+    }
+  },
+  "required": [
+    "order_id"
+  ],
+  "title": "B2B Order Request Act Clicked",
+  "type": "object"
+}

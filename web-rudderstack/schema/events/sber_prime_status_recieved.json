@@ -1,0 +1,28 @@
+{
+  "description": "Проверка на наличие действующей подписки СберПрайм (каждый ответ с бека, в том числе при оформлении подписки). Для пользователей, не подключенных к СберПрайм, отправляется только параметр is_active",
+  "properties": {
+    "is_active": {
+      "description": "Если пользователь пользователь подключен к СберПрайм - 1, если нет - 0",
+      "type": "boolean"
+    },
+    "prime_lvl": {
+      "description": "Уровень подписки",
+      "type": "string",
+      "enum": [
+        "prime",
+        "prime_plus",
+        "other"
+      ]
+    },
+    "expirated": {
+      "description": "Дата окончания подписки в формате yyyy-mm-dd",
+      "type": "string"
+    }
+  },
+  "required": [
+    "is_active"
+  ],
+  "title": "Sber Prime Status Recieved",
+  "type": "object"
+}
+

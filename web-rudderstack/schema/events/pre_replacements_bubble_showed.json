@@ -1,0 +1,24 @@
+{
+  "description": "Каждый раз, когда пользователю был показан баббл о том, что можно выбрать предзамены",
+  "properties": {
+    "added_order_item_sku": {
+      "description": "sku товара",
+      "type": "string"
+    },
+    "added_order_item_retailer_sku": {
+      "description": "sku товара у ритейлера",
+      "type": "string"
+    },
+    "added_order_item_name": {
+      "description": "название товара",
+      "type": "string"
+    }
+  },
+  "required": [
+    "added_order_item_sku",
+    "added_order_item_retailer_sku",
+    "added_order_item_name"
+  ],
+  "title": "Pre Replacements Bubble Showed",
+  "type": "object"
+}

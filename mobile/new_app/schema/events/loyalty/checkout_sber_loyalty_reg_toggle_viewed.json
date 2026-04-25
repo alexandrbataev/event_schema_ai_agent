@@ -1,0 +1,7 @@
+{
+  "description": "Отображение тоггла регистрации в СберЛоялти на чекауте, отправляется единожды за сессию",
+  "properties": {},
+  "required": [],
+  "title": "Checkout Sber Loyalty Reg Toggle Viewed",
+  "type": "object"
+}

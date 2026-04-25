@@ -1,0 +1,25 @@
+{
+  "description": "Логи камеры SPG (для задачи с багом с чёрной камерой)",
+  "properties": {
+    "error": {
+      "type": "string",
+      "description": "Ошибка",
+      "enum": [
+        "main"
+      ]
+    },
+    "state": {
+      "type": "string",
+      "description": "Состояние",
+      "enum": [
+        "main"
+      ]
+    }
+  },
+  "required": [
+    "error",
+    "state"
+  ],
+  "title": "Spg Camera Logs",
+  "type": "object"
+}

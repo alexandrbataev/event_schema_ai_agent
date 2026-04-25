@@ -1,0 +1,6 @@
+{
+  "description": "Нажатие на таб Компании в мобильном приложении",
+  "properties": {},
+  "title": "Company Profile Tab Clicked",
+  "type": "object"
+}

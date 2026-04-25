@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз, когда юзер, авторизованный под СберID открывает приложение (ответ с бэка)",
+  "properties": {},
+  "required": [],
+  "title": "SberID Authorised",
+  "type": "object"
+}

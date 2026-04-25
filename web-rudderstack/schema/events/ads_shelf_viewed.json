@@ -1,0 +1,68 @@
+{
+  "description": "срабатывает при первом попадании блока спонсорской полки в видимую область пользователя",
+  "properties": {
+    "impression_id": {
+      "description": "Уникальный идентификатор взаимодействия",
+      "type": "string"
+    },
+    "asset_id": {
+      "description": "Уникальный идентификатор ассета первого товара в текущей выдаче",
+      "type": "string"
+    },
+    "product_ids": {
+      "description": "Список sku товаров, которые доступны в полке",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "sku товара"
+      }
+    },
+    "source": {
+      "description": "Где именно была размещена полка",
+      "$ref": "#/definitions/AdsBannerSource"
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника, если есть. Если баннер показан в категории - category_id",
+      "type": "string"
+    },
+    "retailer_id": {
+      "description": "Идентификатор ритейлера, который был при запросе полки",
+      "type": "number"
+    },
+    "store_id": {
+      "description": "Идентификатор магазина, который был при запросе полки",
+      "type": "number"
+    },
+    "has_next_page_url": {
+      "description": "Есть ли кликабельная стрелочка справа от заголовка полки",
+      "type": "boolean"
+    },
+    "next_page_url": {
+      "description": "Url страницы на которую ведет ссылка",
+      "type": "string"
+    },
+    "is_clickout": {
+      "description": "Если полка кликаут",
+      "type": "boolean"
+    },
+    "is_complementary": {
+      "description": "Если полка комплиментарная",
+      "type": "boolean"
+    },
+    "is_already_ordered": {
+      "description": "Если полка Уже заказывали",
+      "type": "boolean"
+    },
+    "is_interactive": {
+      "description": "Если полка интерактивная",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "impression_id",
+    "asset_id",
+    "source"
+  ],
+  "title": "Ads Shelf Viewed",
+  "type": "object"
+}

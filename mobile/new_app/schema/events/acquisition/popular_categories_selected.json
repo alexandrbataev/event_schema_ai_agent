@@ -1,0 +1,33 @@
+{
+  "description": "Каждый раз при клике пользователя на плитку категории в полке 'Популярные категории' или на полке 'Подборки'",
+  "properties": {
+    "category": {
+      "description": "Название выбранной категории",
+      "type": "string"
+    },
+    "block_position": {
+      "description": "Порядковый номер блока на полке",
+      "type": "number"
+    },
+    "shelf_position": {
+      "description": "Порядковый номер полки, начиная сверху на Главной-Главной",
+      "type": "number"
+    },
+    "source": {
+      "description": "С какой полки был сделан клик",
+      "type": "string",
+      "enum": [
+        "popular_categories_shelf",
+        "collection_shelf"
+      ]
+    }
+  },
+  "required": [
+    "category",
+    "block_position",
+    "shelf_position",
+    "source"
+  ],
+  "title": "Popular Categories Selected",
+  "type": "object"
+}

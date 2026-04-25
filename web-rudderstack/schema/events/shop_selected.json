@@ -1,0 +1,135 @@
+{
+  "description": "Каждый раз, когда пользователь намеренно выбирает ритейлера. 1) При любом действии которое привело к переходу на экран ритейлера 2) При выборе адреса магазина для самовывоза",
+  "properties": {
+    "address": {
+      "description": "адрес пользователя",
+      "type": "string"
+    },
+    "available_stores": {
+      "description": "доступные магазина",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/AvailableStores"
+      }
+    },
+    "available_tabs": {
+      "description": "Доступные табы (джобы)",
+      "type": "array",
+      "items": {
+        "description": "Название таба (джоба)",
+        "type": "string"
+      }
+    },
+    "applied_filters": {
+      "description": "Массив с выбранными фильтрами при выборе магазина с экрана полки/джоба",
+      "type": "array",
+      "items": {
+        "description": "Название фильтра",
+        "type": "string"
+      }
+    },
+    "closest_delivery_time_displayed": {
+      "description": "сколько в минутах до левой границы ближайшего слота доставки из этого магазина",
+      "type": "number"
+    },
+    "delivery_window_estimate_type": {
+      "description": "параметр показвает, по какому принципу рассчитано окно доставки",
+      "type": "string"
+    },
+    "closest_delivery_time_right_bound": {
+      "description": "сколько в минутах до правой границы ближайшего слота доставки из этого магазина",
+      "type": "number"
+    },
+    "has_delivery_address": {
+      "description": "Флаг наличия введенного адреса на момент клика",
+      "type": "boolean"
+    },
+    "position": {
+      "description": "позиция выбранного магазина",
+      "type": "number"
+    },
+    "selected_store": {
+      "description": "выбранный магазин",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/SelectedStore"
+      }
+    },
+    "source": {
+      "description": "где был выбран магазин",
+      "type": "string",
+      "enum": [
+        "landing_retailer_list",
+        "address_modal",
+        "landing_recent_store",
+        "landing",
+        "search_multiretail",
+        "from_shelf",
+        "store_filter",
+        "main_page_popular_retailers",
+        "catalogue_popular_retailers",
+        "main_page_popular_restaurants",
+        "landing_popular_retailers",
+        "landing_popular_restaurants"
+      ]
+    },
+    "tab": {
+      "description": "вкладка, из которой был выбран магазин",
+      "type": "string"
+    },
+    "your_shop_tab": {
+      "description": "флаг выбора магазина через плашку 'Ваш магазин'",
+      "type": "boolean"
+    },
+    "vat_refund": {
+      "description": "возмещение НДС полностью за заказ или только доставка и сборка",
+      "type": "string",
+      "enum": [
+        "full",
+        "service"
+      ]
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (groccery, pharmacy или restaurant)",
+      "type": "string"
+    },
+    "shelf_info": {
+      "description": "Массив с информацией c какой полки был выбран ритейлер",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/FromShelfInfo"
+      }
+    },
+    "rte_collection_info": {
+      "description": "uuid и название подборки из списка ресторанов, из которой перешли на ритейлера",
+      "$ref": "#/definitions/RestaurantCollectionInfo"
+    },
+    "rte_ordered_earlier_shelf": {
+      "description": "Флаг, что ресторан был выбран в карусели РТЕ - Вы заказывали",
+      "type": "boolean"
+    },
+    "type_delivery": {
+      "description": "способ доставки ",
+      "type": "string",
+      "enum": [
+        "by_courier",
+        "pickup"
+      ]
+    }
+  },
+  "required": [
+    "address",
+    "available_stores",
+    "available_tabs",
+    "closest_delivery_time_displayed",
+    "delivery_window_estimate_type",
+    "closest_delivery_time_right_bound",
+    "position",
+    "selected_store",
+    "source",
+    "tab",
+    "your_shop_tab"
+  ],
+  "title": "Shop Selected",
+  "type": "object"
+}

@@ -1,0 +1,56 @@
+{
+  "description": "Уменьшение количества товаров или полное удаление товара из корзины самим пользователем (ответ с бэка). Событие противоположенное Product Added. Фиксирует не каждое нажатие на '-', а ответ с бека об успешном удалении товара из корзины или уменьшении его количества.",
+  "properties": {
+    "is_available": {
+      "description": "Флаг, доступен ли товар к заказу",
+      "type": "boolean"
+    },
+    "line_item_uuid": {
+      "description": "uuid из таблицы spree_line_items",
+      "type": "string"
+    },
+    "source": {
+      "description": "Окно, на котором пользователь удалил товар.",
+      "$ref": "#/definitions/ProductSource"
+    },
+    "product_sku": {
+      "description": "sku товара, который удалили",
+      "type": "string"
+    },
+    "is_discount": {
+      "description": "Флаг, есть ли скидка на удаленном товаре",
+      "type": "boolean"
+    },
+    "source_type": {
+      "description": "Откуда удален товар - из карточки или из выдачи, сниппета",
+      "$ref": "#/definitions/ProductSourceType"
+    },
+    "final_quantity": {
+      "description": "Конечное количество товара. Если = 0, то товар был удален полностью",
+      "type": "number"
+    },
+    "cnt_stock_for_discount": {
+      "description": "Отображаемое кол-во доступных товаров для покупки по акции Скидка за сток. Отправлять только для акционных товаров.",
+      "type": "number"
+    },
+    "gift_flg": {
+      "description": "Флаг что товар является подарком в рамках фичи подарки в корзине https://wiki.sbmt.io/pages/viewpage.action?pageId=3383236905",
+      "type": "number",
+      "enum": [
+        0,
+        1
+      ]
+    }
+  },
+  "required": [
+    "is_available",
+    "line_item_uuid",
+    "source",
+    "product_sku",
+    "is_discount",
+    "source_type",
+    "final_quantity"
+  ],
+  "title": "Product Removed",
+  "type": "object"
+}

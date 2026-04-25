@@ -1,0 +1,47 @@
+{
+  "description": "Каждый раз, когда происходит ошибка при попытке добавить товар в корзину",
+  "properties": {
+    "fail_reason": {
+      "description": "Причина, по которой не удалось добавить товар в корзину",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник, откуда была попытка добавления товара",
+      "$ref": "#/definitions/ProductSource"
+    },
+    "store_id": {
+      "description": "Идентификатор конкретного магазина, в котором пользователь пытался добавить товар в корзину",
+      "type": "number"
+    },
+    "retailer_id": {
+      "description": "Идентификатор ретейлера, к которому относится магазин",
+      "type": "number"
+    },
+    "product_name": {
+      "description": "Отображаемое название товара на момент ошибки добавления в корзину",
+      "type": "string"
+    },
+    "product_sku": {
+      "description": "SKU товара",
+      "type": "string"
+    },
+    "default_price": {
+      "description": "Цена товара (без скидки, если скидка есть)",
+      "type": "number"
+    },
+    "price": {
+      "description": "Фактическая, отображаемая цена товара (со скидкой)",
+      "type": "number"
+    }
+  },
+  "required": [
+    "fail_reason",
+    "source",
+    "store_id",
+    "retailer_id",
+    "product_sku",
+    "price"
+  ],
+  "title": "Add To Cart Error",
+  "type": "object"
+}

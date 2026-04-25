@@ -1,0 +1,14 @@
+{
+  "description": "Пользователь кликнул на кнопку баланса баллов Программы лояльности B2B в выпадающем меню личного кабинета",
+  "properties": {
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_id"
+  ],
+  "title": "B2B Loyalty Program LK Menu Balance Button Clicked",
+  "type": "object"
+}

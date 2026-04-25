@@ -1,0 +1,36 @@
+{
+  "description": "При каждой отрисовке баннера промо",
+  "properties": {
+    "name": {
+      "description": "Название промо",
+      "type": "string"
+    },
+    "source": {
+      "description": "Место, где произошла отрисовка",
+      "type": "string",
+      "enum": [
+        "main_page_shelf",
+        "promo_macro_page",
+        "promo_page"
+      ]
+    },
+    "promo_id": {
+      "description": "ID промо",
+      "type": "number"
+    },
+    "position": {
+      "description": "Порядковый номер баннера в карусели",
+      "type": "number"
+    },
+    "size": {
+      "description": "Размер баннера (S, M, L)",
+      "type": "string"
+    },
+    "link": {
+      "description": "deeplink",
+      "type": "string"
+    }
+  },
+  "title": "Promo Banner Viewed",
+  "type": "object"
+}

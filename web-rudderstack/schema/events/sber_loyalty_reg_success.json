@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз при отображении модалки успешной регистрации в программе лояльности",
+  "properties": {},
+  "required": [],
+  "title": "Sber Loyalty Reg Success",
+  "type": "object"
+}

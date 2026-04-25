@@ -1,0 +1,19 @@
+{
+  "description": "Показ экрана с инструкцией",
+  "properties": {
+    "screen_name": {
+      "description": "pwa_or_app_install_instruction_screen - экран с инструкцией по установке ПВА/app",
+      "type": "string"
+    },
+    "source": {
+      "description": "Экран с которого пользователь перешел к инструкции",
+      "$ref": "#/definitions/InstructionSoure"
+    }
+  },
+  "required": [
+    "screen_name",
+    "source"
+  ],
+  "title": "Instruction Screen View",
+  "type": "object"
+}

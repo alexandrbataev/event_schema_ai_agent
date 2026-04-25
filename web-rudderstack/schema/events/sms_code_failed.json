@@ -1,0 +1,29 @@
+{
+  "description": "Появилась ошибка под полем ввода СМС-кода",
+  "properties": {
+    "is_signed_in": {
+      "description": "залогинен ли пользователь",
+      "type": "boolean"
+    },
+    "fail_reason": {
+      "description": "Текст ошибки",
+      "type": "string"
+    },
+    "scenario": {
+      "description": "сценарий, для которого был ввод телефона: verification | edit | auth",
+      "type": "string",
+      "enum": [
+        "verification",
+        "edit",
+        "auth"
+      ]
+    }
+  },
+  "required": [
+    "is_signed_in",
+    "fail_reason",
+    "scenario"
+  ],
+  "title": "Sms Code Failed",
+  "type": "object"
+}

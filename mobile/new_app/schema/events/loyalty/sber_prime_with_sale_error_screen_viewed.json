@@ -1,0 +1,25 @@
+{
+  "description": "Каждый раз когда пользователь видит ошибку при переходе на экран нативной продажи подписки Прайм",
+  "properties": {
+    "source": {
+      "description": "Откуда была открыта модалка",
+      "type": "string",
+      "enum": [
+        "profile",
+        "balance_modal",
+        "cart",
+        "deeplink",
+        "payment processing"
+      ]
+    },
+    "error_text": {
+      "description": "Текст отображаемой ошибки",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Sber Prime With Sale Error Screen Viewed",
+  "type": "object"
+}

@@ -1,0 +1,7 @@
+{
+  "description": "Срабатывает когда кликают на \"Изменить\" в блоке \"Реквизиты\"",
+  "properties": {},
+  "title": "Checkout Change Banking Details Clicked",
+  "type": "object"
+}
+

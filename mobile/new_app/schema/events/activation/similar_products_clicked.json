@@ -1,0 +1,21 @@
+{
+  "description": "Клик на кнопку Похожие на сниппете товара",
+  "properties": {
+    "source": {
+      "description": "Источник, откуда произошел клик на кнопку",
+      "type": "string",
+      "enum": [
+        "favourites_liked",
+        "favourites_bought",
+        "favourites_wishlist",
+        "cart",
+        "search"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Similar Products Clicked",
+  "type": "object"
+}

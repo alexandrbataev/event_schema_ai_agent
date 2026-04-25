@@ -1,0 +1,38 @@
+{
+  "description": "Каждый раз, когда пользователь в корзине пытается перейти на чекаут (кликает на Оформить) и сталкивается с ошибкой. Не срабатывает на появление плашки о том, что в корзине есть изменения или на любую другую фичу, которая проверяет сток перед тем, как перейти на чекаут и высвечивает плашку (исключение - если все товары недоступны или из-за того, что части товаров нет мы не добираем до мин. корзины)",
+  "properties": {
+    "order_number": {
+      "description": "Номер заказа, с которым пытаются перейти на чекаут",
+      "type": "string"
+    },
+    "store_id": {
+      "description": "Стор, в котором собрана корзина",
+      "type": "number"
+    },
+    "fail_reason": {
+      "description": "Ошибка, которая заблокировала переход к чекауту",
+      "type": "string",
+      "enum": [
+        "rte_high_demand_surge",
+        "rte_delivery",
+        "min_cart_remaining",
+        "cart_is_overloaded",
+        "generic_error",
+        "unavailable_cart",
+        "initialize_by_clusters_error"
+      ],
+      "$comment": "rte_high_demand_surge - ресторан на паузе из-за высокого спроса, rte_delivery - нет доставки (магазин закрыт), min_cart_remaining - не набрана мин сумма, cart_is_overloaded - перевес (не отправляется в рамках фичи https://wiki.sbmt.io/pages/viewpage.action?pageId=3352560662), generic_error - внутренняя ошибка, которую не смогли однозначно идентифицировать, unavailable_cart - корзина недоступна (например, из-за отсутствия стоков), initialize_by_clusters_error - ошибка, возникшая при попытке инициализировать по кластерам, возвращаемая ручкой https://api.kuper.ru/v2/checkout/carts/cartUUid/initialize_by_clusters. Ошибка может возникнуть не только из-за запроса, но и по иным причинам."
+    },
+    "initialize_by_clusters_error": {
+      "description": "ошибка, возвращаемая ручкой https://api.kuper.ru/v2/checkout/carts/cartUUid/initialize_by_clusters. Ошибка может возникнуть не только из-за запроса, но и по иным причинам (human_message)",
+      "type": "string"
+    }
+  },
+  "required": [
+    "order_number",
+    "store_id",
+    "fail_reason"
+  ],
+  "title": "Checkout Button Click Failed",
+  "type": "object"
+}

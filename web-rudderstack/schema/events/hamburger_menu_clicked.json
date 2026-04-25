@@ -1,0 +1,18 @@
+{
+  "description": "Каждый раз при клике пользователя на кнопку меню-бургера",
+  "properties": {
+    "source": {
+      "description": "С какого экрана пользователь совершил клик",
+      "type": "string",
+      "enum": [
+        "app_opened",
+        "landing"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Hamburger Menu Clicked",
+  "type": "object"
+}

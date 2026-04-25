@@ -1,0 +1,19 @@
+{
+  "title": "RetailerInfo",
+  "type": "object",
+  "description": "Информация о ритейлере",
+  "properties": {
+    "retailer_id": {
+      "description": "Идентификатор ритейлера",
+      "type": "number"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (grocery, pharmacy или restaurant)",
+      "type": "string"
+    }
+  },
+  "required": [
+    "retailer_id",
+    "retailer_vertical"
+  ]
+}

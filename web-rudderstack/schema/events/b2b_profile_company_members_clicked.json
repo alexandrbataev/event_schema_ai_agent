@@ -1,0 +1,14 @@
+{
+  "description": "Клик на раздел Представители в профиле компании",
+  "properties": {
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_id"
+  ],
+  "title": "B2B Profile Company Members Clicked",
+  "type": "object"
+}

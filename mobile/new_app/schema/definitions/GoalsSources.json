@@ -1,0 +1,17 @@
+{
+  "title": "GoalsSources",
+  "description": "Место показа источника для перехода в экран управления целями",
+  "type": "string",
+  "enum": [
+    "retailer_main",
+    "balance_modal",
+    "post_checkout",
+    "deeplink",
+    "catalog",
+    "multiretailer_search",
+    "main_main",
+    "restaurant_main",
+    "rte_main_main",
+    "profile"
+  ]
+}

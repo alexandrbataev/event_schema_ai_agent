@@ -1,0 +1,19 @@
+{
+  "description": "Показ страницы \"Спасибо за заказ\", после оформления заказа",
+  "properties": {
+    "spasibo_bonuses": {
+      "description": "Кол-во заработанных бонусов спасибо отображаемых клиенту",
+      "type": "number"
+    },
+    "total_savings": {
+      "description": "Сумма сэкономленных рублей отображаемых клиенту",
+      "type": "number"
+    }
+  },
+  "required": [
+    "spasibo_bonuses",
+    "total_savings"
+  ],
+  "title": "Order Completed Spasibo Viewed",
+  "type": "object"
+}

@@ -1,0 +1,32 @@
+{
+  "description": "Просмотр пользователем модального окна согласия на обработку данных",
+  "properties": {
+    "user_id": {
+      "description": "ID пользователя",
+      "type": "string"
+    },
+    "company_name": {
+      "description": "Название компании, отображаемое в модальном окне",
+      "type": "string"
+    },
+    "company_inn": {
+      "description": "ИНН компании",
+      "type": "string"
+    },
+    "checkbox_status": {
+      "description": "Текущее состояние чекбокса «Получать выгодные предложения» при открытии окна (checked по-умолчанию)",
+      "type": "string",
+      "enum": [
+        "checked",
+        "unchecked"
+      ]
+    }
+  },
+  "required": [
+    "company_name",
+    "company_inn",
+    "checkbox_status"
+  ],
+  "title": "B2B Consent Viewed",
+  "type": "object"
+}

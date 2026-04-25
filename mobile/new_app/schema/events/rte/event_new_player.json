@@ -1,0 +1,20 @@
+{
+  "description": "Каждый раз, когда новый игрок присоединяется к игре",
+  "properties": {
+    "game_id": {
+      "description": "ID игры",
+      "type": "number"
+    },
+    "entrance_key": {
+      "description": "ID игры для функции поделиться",
+      "type": "string"
+    }
+  },
+  "required": [
+    "game_id",
+    "entrance_key"
+  ],
+  "title": "Event New Player",
+  "type": "object"
+}
+  

@@ -1,0 +1,7 @@
+{
+  "description": "Срабатывает когда в попапе \"Оформить документы\"  нажали на \"Выбрать\"",
+  "properties": {},
+  "title": "Issue Documents Popup Select Button Clicked",
+  "type": "object"
+}
+

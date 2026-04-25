@@ -1,0 +1,16 @@
+{
+  "description": "Срабатывает каждый раз когда пользователь кликает на баннер \"Здесь дешевле\"",
+  "properties": {
+    "landing_type": {
+      "description": "Тип лендинга, на котором сработало событие",
+      "type": "string",
+      "enum": [
+        "office",
+        "traders",
+        "horeca"
+      ]
+    }
+  },
+  "title": "B2B Cheaper Here Banner Clicked",
+  "type": "object"
+}

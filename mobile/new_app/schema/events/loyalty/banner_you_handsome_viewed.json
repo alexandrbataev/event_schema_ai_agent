@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз, когда пользователь видит точку входа в 'Вы красавчик'",
+  "properties": {},
+  "required": [],
+  "title": "Banner You Handsome Viewed",
+  "type": "object"
+}

@@ -1,0 +1,6 @@
+{
+  "description": "Каждый раз когда пользователь закрыл баннер 'Новые условия СберПрайм' на главном экране",
+  "properties": {},
+  "title": "Sber Prime New Offer Banner Closed",
+  "type": "object"
+}

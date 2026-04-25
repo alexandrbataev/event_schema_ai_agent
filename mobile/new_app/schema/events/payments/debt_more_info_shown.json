@@ -1,0 +1,19 @@
+{
+  "description": "Показ дополнительной инофрмации о долге после клика на нопку i на чекауте рядом с суммой долга",
+  "properties": {
+    "debt_order_number": {
+      "description": "Номер заказа к которому относится долг",
+      "type": "string"
+    },
+    "debt_sum": {
+      "description": "Сумма долга в рублях",
+      "type": "number"
+    }
+  },
+  "required": [
+    "debt_order_number",
+    "debt_sum"
+  ],
+  "title": "Debt More Info Shown",
+  "type": "object"
+}

@@ -1,0 +1,16 @@
+{
+  "description": "Возникла ошибка при вводе адреса",
+  "properties": {
+    "errors": {
+      "description": "список видимых пользователю ошибок",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "текст ошибки, отображаемой пользователю"
+      }
+    }
+  },
+  "required": [],
+  "title": "Daas Delivery Restriction Error",
+  "type": "object"
+}

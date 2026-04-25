@@ -1,0 +1,31 @@
+{
+  "description": "пользователь нажал кнопку \"участовать\" / \"начать гонку\" на лендинге НЕучастника",
+  "properties": {
+    "source": {
+      "description": "Страница, с которой пользователь перешел на экран розыгрыша",
+      "$ref": "#/definitions/RaffleSource"
+    },
+    "utm_source": {
+      "description": "utm параметр из внешней ссылки",
+      "type": "string"
+    },
+    "utm_medium": {
+      "description": "utm параметр из внешней ссылки",
+      "type": "string"
+    },
+    "utm_campaign": {
+      "description": "utm параметр из внешней ссылки",
+      "type": "string"
+    },
+    "campaign_name": {
+      "description": "Название кампании",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "campaign_name"
+  ],
+  "title": "Raffle Participate Button Clicked",
+  "type": "object"
+}

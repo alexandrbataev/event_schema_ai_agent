@@ -1,0 +1,14 @@
+{
+  "description": "Пользователь нажал на способ оплаты 'Кошелек от компании' ",
+  "properties": {
+    "available_sum": {
+      "description": "Пользователю отображена доступная ему сумма соц.пакета",
+      "type": "number"
+    }
+  },
+  "required": [
+    "available_sum"
+  ],
+  "title": "Checkout Social Package Tool Clicked",
+  "type": "object"
+}

@@ -1,0 +1,57 @@
+{
+  "title": "CartItems",
+  "type": "object",
+  "description": "Словарь с информацией о товарах в корзине",
+  "properties": {
+    "sku": {
+      "description": "Скю товара",
+      "type": "string"
+    },
+    "name": {
+      "description": "Название товара",
+      "type": "string"
+    },
+    "currency": {
+      "description": "Валюта ценника",
+      "type": "string"
+    },
+    "price": {
+      "description": "Цена",
+      "type": "number"
+    },
+    "total": {
+      "description": "Стоимость всех единиц этого товара",
+      "type": "number"
+    },
+    "quantity": {
+      "description": "Общее количество товара в корзине",
+      "type": "number"
+    },
+    "price_type": {
+      "description": "",
+      "type": "string"
+    },
+    "spree_line_item_uuid": {
+      "description": "Идентификатор товара",
+      "type": "string"
+    },
+    "store_id": {
+      "description": "Идентификатор магазина",
+      "type": "number"
+    },
+    "retailer_id": {
+      "description": "Идентификатор ритейлера",
+      "type": "number"
+    }
+  },
+  "required": [
+    "sku",
+    "name",
+    "price",
+    "total",
+    "quantity",
+    "price_type",
+    "spree_line_item_uuid",
+    "currency"
+  ]
+}

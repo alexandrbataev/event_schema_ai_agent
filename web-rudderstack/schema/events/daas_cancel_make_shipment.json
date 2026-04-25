@@ -1,0 +1,24 @@
+{
+  "description": "Перешли на окно отмены создания заявки",
+  "properties": {
+    "email": {
+      "description": "Почта пользователя",
+      "type": "string"
+    },
+    "source": {
+      "description": "С какой страницы нажали кнопку",
+      "type": "string"
+    },
+    "choosen": {
+      "description": "Выбранный вариант (Да/Нет)",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "email",
+    "source",
+    "choosen"
+  ],
+  "title": "DAAS Cancel Make Shipment",
+  "type": "object"
+}

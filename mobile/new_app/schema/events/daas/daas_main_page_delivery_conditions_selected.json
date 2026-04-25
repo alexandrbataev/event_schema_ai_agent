@@ -1,0 +1,19 @@
+{
+  "description": "Каждый раз, при скрытии шторки ввода адресов на экране с выбром адресов daas. Отправляется каждый раз при скрытии шторки, даже если изменений адреса не было.",
+  "properties": {
+    "address_from": {
+      "description": "Полный адрес из поля ввода адреса 'Откуда'",
+      "type": "string"
+    },
+    "address_to": {
+      "description": "Полный адрес из поля ввода адреса 'Куда'. Отправляется пустая строка, если поле не заполнено",
+      "type": "string"
+    }
+  },
+  "required": [
+    "address_from",
+    "address_to"
+  ],
+  "title": "Daas Main Page Delivery Conditions Selected",
+  "type": "object"
+}

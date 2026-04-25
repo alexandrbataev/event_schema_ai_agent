@@ -1,0 +1,111 @@
+{
+  "description": "Пользователь добавил товар в активный заказ (дозаказал), при дозаказе товар сразу дооформляется в активный заказ. Событие отличается от Product Added тем, что происходит не добавление в корзину, а оформление.",
+  "properties": {
+    "is_promo": {
+      "description": "Является ли товар промоутируемым (проплаченным, продвигаемым) (true/false)",
+      "type": "boolean"
+    },
+    "promo_id": {
+      "description": "Идентификаторы промо-кампании из Trading Desk",
+      "type": "string"
+    },
+    "weight": {
+      "description": "Сколько добавили по весу",
+      "type": "number"
+    },
+    "quantity": {
+      "description": "Сколько добавили",
+      "type": "number"
+    },
+    "target_order_id": {
+      "description": "Идентификатор заказа, к которому делают дозаказ",
+      "type": "string"
+    },
+    "price": {
+      "description": "Фактическая, отображаемая цена товара (со скидкой)",
+      "type": "number"
+    },
+    "has_sber_prime_badge": {
+      "description": "Был ли на карточке бейдж СберПрайм",
+      "type": "boolean"
+    },
+    "is_discount": {
+      "description": "Флаг, есть ли скидка (true/false)",
+      "type": "boolean"
+    },
+    "is_prime_user": {
+      "description": "Являлся ли клиент, который увидел карточку, подписчиком СберПрайм",
+      "type": "boolean"
+    },
+    "default_price": {
+      "description": "Цена товара (без скидки, если скидка есть)",
+      "type": "number"
+    },
+    "product_name": {
+      "description": "Название товара",
+      "type": "string"
+    },
+    "position": {
+      "description": "Позиция на момент открытия",
+      "type": "number"
+    },
+    "product_sku": {
+      "description": "Product sku товара",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник, откуда пользователь добавил товар напрямую в заказ: category - каталог; search - поиск; recommendations_order - рекомендации на постчекауте и над каталогом; recommendations_catalogue - рекомендации под каталогом; recommendations_product_card - рекомендации на карточке товара; ads_banner_catalog_toplevel - листинг товаров рекламы; ads_shelf_order - рекламная полка на постчекауте",
+      "type": "string",
+      "enum": [
+        "category",
+        "search",
+        "recommendations_order",
+        "recommendations_catalogue",
+        "recommendations_product_card",
+        "ads_banner_catalog_toplevel",
+        "ads_product_selection",
+        "ads_shelf_order",
+        "ads_shelf_additional_order_search",
+        "ads_shelf_additional_order_search_all",
+        "ads_shelf_additional_order_catalog_listview",
+        "ads_shelf_additional_order_catalog_listview_all"
+      ]
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника добавления товара. Для ads_shelf_order и ads_shelf_order_all передаются impression_id и asset_id из Trading Desk",
+      "type": "string"
+    },
+    "line_item_uuid": {
+      "description": "Идентификатор товара который добавили в дозаказ",
+      "type": "string"
+    },
+    "rec_block_name": {
+      "description": "Название блока рекомендаций, если добавление произошло из блока рекомендаций",
+      "type": "string"
+    },
+    "source_type": {
+      "description": "Тип источника (листинг товаров или карточка товара)",
+      "$ref": "#/definitions/ProductSourceType"
+    },
+    "is_outside": {
+      "description": "Параметр показывает, что товар был дозаказан не заходя в режим дозаказа непосредственно. Например, из рекламы или рекомендаций на постчекауте, которые не открывают режим дозаказа, а сразу ведут к возможности дозаказать единицу товара. 1, если товар добавлен без открытия режима дозаказа, 0, если товар добавлен изнутри режима дозаказа",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "is_promo",
+    "weight",
+    "quantity",
+    "target_order_id",
+    "price",
+    "has_sber_prime_badge",
+    "is_discount",
+    "is_prime_user",
+    "default_price",
+    "product_name",
+    "product_sku",
+    "source"
+  ],
+  "title": "Merge Mode Product Added",
+  "type": "object"
+}

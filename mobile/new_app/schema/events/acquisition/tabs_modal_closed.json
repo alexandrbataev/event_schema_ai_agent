@@ -1,0 +1,7 @@
+{
+  "description": "При закрытии модалки джобов любым способом",
+  "properties": {},
+  "required": [],
+  "title": "Tabs Modal Closed",
+  "type": "object"
+}

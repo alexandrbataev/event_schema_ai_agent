@@ -1,0 +1,136 @@
+{
+  "description": "Просмотр информации о конкретном заказе",
+  "properties": {
+    "is_merge_available": {
+      "description": "флаг показывает, может ли пользователь перейти в режим дозаказа",
+      "type": "boolean"
+    },
+    "order_number": {
+      "description": "номер заказа",
+      "type": "string"
+    },
+    "retailer_id": {
+      "description": "id ритейлера из которого сделан заказ",
+      "type": "number"
+    },
+    "source": {
+      "description": "источник перехода на страницу со статусом заказа",
+      "type": "string",
+      "enum": [
+        "main_retailer_page_active_order_banner",
+        "main_retailer_last_order_banner",
+        "main_retailer_widget",
+        "main_page_widget",
+        "profile_widget",
+        "profile_order_history",
+        "checkout",
+        "deep_link",
+        "shipment_review",
+        "order_info",
+        "history_orders",
+        "previous_order",
+        "shop_selection_current_order_banner",
+        "returns",
+        "debt_info"
+      ]
+    },
+    "status": {
+      "description": "статус shipment в момент открытия окна (принят, собирается и т.д.) - статус берется из ответа бэкенда. Во время оформления заказа в асинк чекауте статус pending",
+      "type": "string"
+    },
+    "time_to_delivery": {
+      "description": "Информация о времени прибытия заказа. Например, \"~5 минут\"",
+      "type": "string"
+    },
+    "delivery_label": {
+      "description": "Информация о статусе прибытия заказа (пояснение к нему). Например, \"Задерживаемся, но очень спешим\"",
+      "type": "string"
+    },
+    "has_returns": {
+      "description": "1, если на странице деталей заказов отрисовался блок возвратов, 0 иначе",
+      "type": "boolean"
+    },
+    "order_state": {
+      "description": "статус ordera при просмотре страницы, получаем с бэка. В асинк чекауте processing при процессе оформления и значение failed при ошибке оформления",
+      "type": "string"
+    },
+    "order_processing_failed_reason": {
+      "description": "Ошибка, которую выводим пользователю как причину неудачного оформления в случае асинхронного чекаута",
+      "type": "string"
+    },
+    "closest_delivery_time": {
+      "description": "Левая граница слота, который выбрал пользователь на этапе чекаута",
+      "type": "string"
+    },
+    "is_beyond_right_delivery_bound": {
+      "description": "Вышли ли за правую границу слота доставки, который выбрал пользователь на этапе чекаута",
+      "type": "boolean"
+    },
+    "is_prereplacement_available": {
+      "description": "Возможна ли фича на предзамены",
+      "type": "boolean"
+    },
+    "prereplacement_risky_items_cnt": {
+      "description": "Число, отрисованное на плашке 'Х товаров могут закончиться - подберите предзамены'. Если таких товаров нет, то шлем 0. Если для всех рисковых товаров уже подобраны замены, то 0. Если фича предзамен в целом невозможна, параметр пустой. ",
+      "type": "number"
+    },
+    "cancel_button_available_flg": {
+      "description": "Флаг доступности кнопки отмены 1 - если кнопка отмены доступна, 0 - если кнопка отмены НЕдоступна",
+      "type": "number",
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "will_deliver_at_left": {
+      "description": "Левая граница прогнозного/фактического времени прибытия заказа на момент просмотра экрана пользователем в формате UTC yyyy-mm-ddThh:nn:ss.",
+      "type": "string"
+    },
+    "will_deliver_at_right": {
+      "description": "Правая граница прогнозного/фактического времени прибытия заказа на момент просмотра экрана пользователем в формате UTC yyyy-mm-ddThh:nn:ss.",
+      "type": "string"
+    },
+    "cancellation_info": {
+      "description": "Текстовое поле в формате /Вернули n ₽ на карту После отмены заказа списали m ₽/. Если отмены не было отправляем пустую строку ",
+      "type": "string"
+    },
+    "shopper_uuid": {
+      "description": "uuid сборщика. Если сборщик не отображается, ничего не отправляем",
+      "type": "string"
+    },
+    "is_shopper_photo_enabled": {
+      "description": "отображается ли фотография у сборщика (не лого купера). Если сборщик не отображается, ничего не отправляем",
+      "type": "boolean"
+    },
+    "driver_uuid": {
+      "description": "uuid курьера. Если курьер не отображается, ничего не отправляем",
+      "type": "string"
+    },
+    "is_driver_photo_enabled": {
+      "description": "отображается ли фотография у курьера (не лого купера). Если курьер не отображается, ничего не отправляем",
+      "type": "boolean"
+    },
+    "is_biometrics": {
+      "description": "Есть ли баннер 'При получении заказа необходимо пройти проверку по биометрии'",
+      "type": "boolean"
+    },
+    "is_check_biometrics_button_available": {
+      "description": "Активна ли кнопка 'Проверить биометрию'",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "source",
+    "status",
+    "order_number",
+    "retailer_id",
+    "order_state",
+    "retailer_id",
+    "delivery_label",
+    "time_to_delivery",
+    "closest_delivery_time",
+    "is_beyond_right_delivery_bound"
+  ],
+  "title": "Order Info Viewed",
+  "type": "object"
+}

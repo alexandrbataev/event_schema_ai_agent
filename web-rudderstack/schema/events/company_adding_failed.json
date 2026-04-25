@@ -1,0 +1,18 @@
+{
+  "description": "При добавлении компании возникла ошибка",
+  "properties": {
+    "source": {
+      "$ref": "#/definitions/CompanyAddSource"
+    },
+    "error_text": {
+      "description": "Текст ошибки",
+      "type": "string"
+    },
+    "error_code": {
+      "description": "Код ошибки",
+      "type": "number"
+    }
+  },
+  "title": "Company Adding Failed",
+  "type": "object"
+}

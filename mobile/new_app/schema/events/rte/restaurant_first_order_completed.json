@@ -1,0 +1,42 @@
+{
+  "description": "Когда пользователь оформляет свой первый заказ в ресторане (не важно какой по счету в сервисе). Не будет приходить, если пользователь свернул приложение в момент оформления заказа в случае асинхронного чекаута - лучше использовать финвитрину и витрину с каунтером заказов",
+  "properties": {
+    "coupon": {
+      "description": "Введенный пользователем купон (его текст)",
+      "type": "string"
+    },
+    "order_number": {
+      "description": "Номер заказа",
+      "type": "string"
+    },
+    "shipment_number": {
+      "description": "К какому шипменту относится заказ",
+      "type": "string"
+    },
+    "payment_method": {
+      "description": "метод оплаты",
+      "type": "string"
+    },
+    "total": {
+      "description": "Сумма заказа, которую видит пользователь",
+      "type": "number"
+    },
+    "type_delivery": {
+      "description": "Обозначает тип доставки для заказа",
+      "type": "string",
+      "enum": [
+        "planned",
+        "asap",
+        "pickup"
+      ]
+    }
+  },
+  "required": [
+    "order_number",
+    "shipment_number",
+    "payment_method",
+    "total"
+  ],
+  "title": "Restaurant First Order Completed",
+  "type": "object"
+}

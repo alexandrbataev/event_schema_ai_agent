@@ -1,0 +1,21 @@
+{
+  "title": "CartSource",
+  "description": "C какого экрана был клик по корзине",
+  "type": "string",
+  "enum": [
+    "home_page",
+    "shelf_page",
+    "job_page",
+    "main_retailer_page",
+    "catalogue_page",
+    "favorites_page",
+    "regular_search_page",
+    "multiretail_search_page",
+    "product_card",
+    "multiretail_catalogue_page",
+    "modal_product_centricity",
+    "repeat_order_screen",
+    "preassembled_basket"
+  ],
+  "$comment": "home_page - c экрана главной-главной; shelf_page - с экрана полки; job_page - c экрана джоба; main_retailer_page - с экрана главной-ритейлера; catalogue_page - с экрана каталога, относится ко всем страницам корневой, дочерним категориям и категориям с товарной выдачей; favorites_page - c экран 'Любимые', для обеих вкладок 'Понравилось' и 'Уже покупали'; regular_search_page - c экрана поисковой выдачи по ритейлеру; multiretail_search_page - с экрана поисковой выдачи межрит. поиска.; product_card - с карточки товара; modal_product_centricity - модельное окно на нонфуде, открывается при добавлении товара без захода в карточку; multiretail_catalogue_page - межрит каталог, repeat_order_screen - после добавления товаров с помощью функционала повтора заказа."
+}

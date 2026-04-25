@@ -1,0 +1,30 @@
+{
+  "description": "При каждой загрузке экранов Понравилось или Уже покупали раздела Любимые",
+  "properties": {
+    "tab_name": {
+      "description": "Название экрана (Понравилось или Уже покупали)",
+      "type": "string"
+    },
+    "items_cnt": {
+      "type": "number",
+      "description": "Сколько уникальных sku находится в любимых у пользователя на момент загрузки экрана (0, если zero_screen)"
+    },
+    "source": {
+      "description": "Откуда пользователь попал в Любимые",
+      "type": "string",
+      "enum": [
+        "main_retailer",
+        "favourites_tab",
+        "button_on_main",
+        "profile"
+      ]
+    }
+  },
+  "required": [
+    "tab_name",
+    "items_cnt",
+    "source"
+  ],
+  "title": "Favourites Screen Loaded",
+  "type": "object"
+}

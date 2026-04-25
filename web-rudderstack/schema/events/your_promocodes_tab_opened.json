@@ -1,0 +1,24 @@
+{
+  "description": "Факт открытия какого либо модального окна с промокодом",
+  "properties": {
+    "success_opened": {
+      "description": "Флаг отсутствия ошибок при открытии раздела",
+      "type": "boolean"
+    },
+    "tab_name": {
+      "description": "На какую категорию акций кликнул",
+      "type": "string"
+    },
+    "is_referral": {
+      "description": "Открыл реферальную или с акцией",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "success_opened",
+    "is_referral"
+  ],
+  "title": "Your Promocodes Opened",
+  "type": "object",
+  "$comment": "https://wiki.sbmt.io/pages/viewpage.action?pageId=3120601966"
+}

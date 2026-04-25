@@ -1,0 +1,7 @@
+{
+  "description": "При клике пользователя по кнопке \"Продолжить\"  в модалке \"Адрес в Сбер ID\"",
+  "properties": {},
+  "required": [],
+  "title": "SberID Address Continue Button Clicked",
+  "type": "object"
+}

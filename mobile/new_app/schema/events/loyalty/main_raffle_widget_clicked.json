@@ -1,0 +1,17 @@
+{
+  "description": "Пользователь кликнул по баннеру розыгрыша на главной странице",
+  "properties": {
+    "source": {
+      "description": "Где был увиден баннер",
+      "type": "string",
+      "enum": [
+        "main_page"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Main Raffle Widget Clicked",
+  "type": "object"
+}

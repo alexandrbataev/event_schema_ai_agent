@@ -1,0 +1,62 @@
+{
+  "description": "После клика на кнопку повторить заказ, срабатывает после успешного ответа с бэка.",
+  "properties": {
+    "order_delivery_method": {
+      "description": "метод доставки, котрый был у повторяемого заказа",
+      "type": "string"
+    },
+    "order_number": {
+      "description": "Номер повторяемого заказа",
+      "type": "string"
+    },
+    "shipment_id": {
+      "description": "Номер повторяемой доставки, т.к. будут повторяться именно доставки, а не целые заказы",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник (страница) откуда нажата кнопка повторить заказ.",
+      "type": "string",
+      "enum": [
+        "main_retailer_page_active_order_banner",
+        "main_retailer_last_order_banner",
+        "profile_order_history",
+        "checkout",
+        "deep_link",
+        "shipment_review",
+        "order_info",
+        "history_orders",
+        "previous_order",
+        "main_retailer_last_order",
+        "main_retailer_last_order_purchases",
+        "order_info_purchases",
+        "orders_history",
+        "store_filter",
+        "main_page_widget",
+        "main_retailer_widget",
+        "profile_widget"
+      ]
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера",
+      "$ref": "#/definitions/RetailerVertical"
+    },
+    "shipment_state": {
+      "description": "shipment_state на момент нажатия кнопки, для заказов с неудачным оформлением в асинк чекауте может приходить значение pending",
+      "type": "string"
+    },
+    "order_state": {
+      "description": "статус ordera на момент нажатия кнопки. Значение failed придет, если заказ не смог оформиться в асинк чекауте и отобразился пользователю как отмененный",
+      "type": "string"
+    }
+  },
+  "required": [
+    "order_number",
+    "source",
+    "order_delivery_method",
+    "shipment_id",
+    "shipment_state",
+    "order_state"
+  ],
+  "title": "Repeat Order Button Clicked",
+  "type": "object"
+}

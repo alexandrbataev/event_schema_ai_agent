@@ -1,0 +1,17 @@
+{
+  "title": "Search History Deleted",
+  "description": "Очищена история садджестов",
+  "type": "object",
+  "properties": {
+    "block_suggestions": {
+      "description": "Массив словарей с перечислением названий и позиций отображенных элементов",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/BlockSuggestion"
+      }
+    }
+  },
+  "required": [
+    "block_suggestions"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "description": "Каждый раз, когда пользователь кликает на блок Ваша Выгода в личном кабинете",
+  "properties": {},
+  "title": "B2B Loyalty Program Your Benefit Personal Account Clicked",
+  "type": "object"
+}

@@ -1,0 +1,38 @@
+{
+  "description": "Пользователь пытался выбрать товар как замену и получил ошибку с бэка",
+  "properties": {
+    "product_sku_orig": {
+      "description": "Скю оригинального товара, для которого выбирали замену и пришла ошибка",
+      "type": "string"
+    },
+    "product_sku_new": {
+      "description": "Скю товара, который выбрали в качестве замены, для которого пришла ошибка",
+      "type": "string"
+    },
+    "retailer_id": {
+      "description": "идентификатор ритейлера",
+      "type": "number"
+    },
+    "fail_reason": {
+      "description": "Текст ошибки",
+      "type": "string"
+    },
+    "source": {
+      "description": "Откуда выбиралась замена - из корзины или из модалки 'Корзине есть изменения'",
+      "type": "string",
+      "enum": [
+        "cart",
+        "change_in_cart_modal"
+      ]
+    }
+  },
+  "required": [
+    "product_sku_orig",
+    "product_sku_new",
+    "retailer_id",
+    "fail_reason",
+    "source"
+  ],
+  "title": "Cart Replacement Selection Failed",
+  "type": "object"
+}

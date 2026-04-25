@@ -1,0 +1,14 @@
+{
+  "description": "Клик на FAQ на экране коронок в правом верхнем углу",
+  "properties": {
+    "source": {
+      "type": "string",
+      "description": "Экран, с которого был совершён клик (например, handsome_screen)"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "FAQ Button Clicked",
+  "type": "object"
+}

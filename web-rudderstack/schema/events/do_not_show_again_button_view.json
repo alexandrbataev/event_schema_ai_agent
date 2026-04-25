@@ -1,0 +1,14 @@
+{
+  "description": "Показ кнопки Больше не показывать",
+  "properties": {
+    "screen_name": {
+      "description": "Экран показа кнопки: pwa_or_app_install_instruction_screen - экран с инструкцией по установке ПВА/app",
+      "type": "string"
+    }
+  },
+  "required": [
+    "screen_name"
+  ],
+  "title": "Do Not Show Again Button View",
+  "type": "object"
+}

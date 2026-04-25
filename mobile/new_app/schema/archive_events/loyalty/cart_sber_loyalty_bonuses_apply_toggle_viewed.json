@@ -1,0 +1,7 @@
+{
+  "description": "Отображение тоггла 'Списать бонусы' в корзине, отправляется один раз за сессию",
+  "properties": {},
+  "required": [],
+  "title": "Cart Sber Loyalty Bonuses Apply Toggle Viewed",
+  "type": "object"
+}

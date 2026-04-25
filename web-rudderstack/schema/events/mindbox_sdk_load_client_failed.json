@@ -1,0 +1,6 @@
+{
+  "description": "Пользователю не удалось загрузить SDK Mindbox",
+  "properties": {},
+  "title": "MindBox SDK Load Client Failed",
+  "type": "object"
+}

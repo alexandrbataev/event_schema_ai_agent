@@ -1,0 +1,24 @@
+{
+  "description": "Открытие онбординга",
+  "properties": {
+    "source": {
+      "type": "string",
+      "description": "Номер истории (экрана), на которой был закрыт онбординг"
+    },
+    "trigger": {
+      "type": "string",
+      "description": "что вызвало появление онбординга - первое открытие, самостоятельное открытие по кнопки или др",
+      "enum": [
+        "first_open",
+        "self_open",
+        "other"
+      ]
+    }
+  },
+  "required": [
+    "source",
+    "trigger"
+  ],
+  "title": "Spg Onbording Opened",
+  "type": "object"
+}

@@ -1,0 +1,21 @@
+{
+  "description": "Срабатывает при первом попадании полки на Главной-главной в видимую область пользователя.",
+  "properties": {
+    "shelf_info": {
+      "description": "Массив с информацией о полке",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/FromShelfInfo"
+      }
+    },
+    "has_delivery_address": {
+      "description": "Флаг наличия введенного адреса на момент просмотра",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "shelf_info"
+  ],
+  "title": "Shop Selection Page Shelf Viewed",
+  "type": "object"
+}

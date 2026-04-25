@@ -1,0 +1,13 @@
+{
+  "description": "Клик по конпке У меня нет кода безопасности при добавлении компании",
+  "properties": {
+    "source": {
+      "$ref": "#/definitions/CompanyAddSource"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Company Added No Security Code Clicked",
+  "type": "object"
+}

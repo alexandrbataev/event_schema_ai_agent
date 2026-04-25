@@ -1,0 +1,8 @@
+{
+  "title": "RequisiteSelectSource",
+  "description": "Источник выбора реквизита",
+  "type": "string",
+  "enum": [
+    "checkout"
+  ]
+}

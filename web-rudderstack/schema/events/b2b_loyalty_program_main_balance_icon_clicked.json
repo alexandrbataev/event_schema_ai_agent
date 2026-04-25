@@ -1,0 +1,14 @@
+{
+  "description": "Пользователь кликнул на иконку баланса баллов Программы лояльности B2B",
+  "properties": {
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_id"
+  ],
+  "title": "B2B Loyalty Program Main Balance Icon Clicked",
+  "type": "object"
+}

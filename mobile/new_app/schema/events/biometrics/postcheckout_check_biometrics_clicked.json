@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз, при клике по кнопке 'Проверить биометрию' на постчекауте",
+  "properties": {},
+  "required": [],
+  "title": "Postcheckout Check Biometrics Clicked",
+  "type": "object"
+}

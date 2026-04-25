@@ -1,0 +1,14 @@
+{
+  "description": "Пользователь нажал на кнопку копировать промокод",
+  "properties": {
+    "screen_name": {
+      "description": "Экран на котором пользователь нажал кнопку: pwa_or_app_install_instruction_screen - экран с инструкцией по установке ПВА/app",
+      "type": "string"
+    }
+  },
+  "required": [
+    "screen_name"
+  ],
+  "title": "Copy Promo Button Click",
+  "type": "object"
+}

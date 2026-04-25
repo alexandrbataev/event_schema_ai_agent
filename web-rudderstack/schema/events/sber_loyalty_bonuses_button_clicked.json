@@ -1,0 +1,18 @@
+{
+  "description": "Каждый раз, когда пользователь нажимает на кнопку 'Бонусы' в шапке",
+  "properties": {
+    "is_loyalty": {
+      "description": "Является ли пользователь участником лоялти",
+      "type": "boolean"
+    },
+    "source": {
+      "description": "Скрин, на котором была отрисована кнопка",
+      "type": "string"
+    }
+  },
+  "required": [
+    "is_loyalty"
+  ],
+  "title": "Sber Loyalty Bonuses Button Clicked",
+  "type": "object"
+}

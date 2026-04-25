@@ -1,0 +1,19 @@
+{
+  "description": "Ошибка на экране опроса на любом этапе",
+  "properties": {
+    "description": {
+      "description": "текстовое описание ошибки",
+      "type": "string"
+    },
+    "survey_id": {
+      "description": "идентификатор опроса",
+      "type": "string"
+    }
+  },
+  "required": [
+    "description",
+    "survey_id"
+  ],
+  "title": "Survey Error",
+  "type": "object"
+}

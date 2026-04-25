@@ -1,0 +1,7 @@
+{
+  "description": "Вызывается, когда пользователь закрыл попап оценки приложения с редиректом в AppStore(нажал на крестик)",
+  "properties": {},
+  "required": [],
+  "title": "App Review Popup AppStore Closed",
+  "type": "object"
+}

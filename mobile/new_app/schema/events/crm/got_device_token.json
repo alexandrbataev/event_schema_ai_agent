@@ -1,0 +1,6 @@
+{
+  "description": "Событие отправляется, когда в traits уже записаны anonymousId + Notification token. Событие для регистрации пользователя в push-sender",
+  "properties": {},
+  "title": "Got Device Token",
+  "type": "object"
+}

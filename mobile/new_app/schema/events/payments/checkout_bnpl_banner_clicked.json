@@ -1,0 +1,23 @@
+{
+  "description": "Вызывается, когда пользователь на чекауте нажимает на переключатель на баннере рассрочки (выбирается тип оплаты Частями)",
+  "properties": {
+    "banner_type": {
+      "description": "Тип баннера: С прогресс-баром и без прогресс-бара",
+      "type": "string",
+      "examples": [
+        "with_progress_bar",
+        "without_progress_bar"
+      ]
+    },
+    "payment_method": {
+      "description": "метод оплаты",
+      "type": "string"
+    }
+  },
+  "required": [
+    "banner_type",
+    "payment_method"
+  ],
+  "title": "Checkout BNPL Banner Clicked",
+  "type": "object"
+}

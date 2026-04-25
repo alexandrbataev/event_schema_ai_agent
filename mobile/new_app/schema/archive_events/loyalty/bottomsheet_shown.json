@@ -1,0 +1,19 @@
+{
+  "description": "Отправляется каждый раз, когда пользователь видит шторку рассрочки",
+  "properties": {
+    "name": {
+      "description": "Название шторки, например, 'Оплата частями'",
+      "type": "string"
+    },
+    "description": {
+      "description": "Описание шторки, например, 'Для любых нужных товаров'",
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "description"
+  ],
+  "title": "Bottomsheet Shown",
+  "type": "object"
+}

@@ -1,0 +1,34 @@
+{
+  "description": "Когда в поиске по ретейлеру или в корзине пользователю предлагается осуществить поиск по исходному, не исправленному запросу",
+  "properties": {
+    "search_query_orig": {
+      "description": "Запрос, который ввел пользователь (введен пользователем)",
+      "type": "string",
+      "$comment": "малоко"
+    },
+    "search_query_corrected": {
+      "description": "Исправленный запрос, по которому осуществлен поиск",
+      "type": "string",
+      "$commen": "молоко"
+    },
+    "store_id": {
+      "description": "Cтор, для которого была отрисована поисковая выдача",
+      "type": "number"
+    },
+    "source": {
+      "description": "Где именно пользователь просматривает выдачу. Только обычный поиск",
+      "type": "string",
+      "enum": [
+        "search_regular"
+      ]
+    }
+  },
+  "required": [
+    "search_query_orig",
+    "search_query_corrected",
+    "store_id",
+    "source"
+  ],
+  "title": "Search Original Query Viewed",
+  "type": "object"
+}

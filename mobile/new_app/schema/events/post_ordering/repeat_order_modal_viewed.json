@@ -1,0 +1,62 @@
+{
+  "description": "Показ экрана повтора заказа со списком товаров для выбора. Срабатывает каждый раз при показе такого экрана. ",
+  "properties": {
+    "order_number": {
+      "description": "Номер повторяемого заказа",
+      "type": "string"
+    },
+    "shipment_number": {
+      "description": "Номер повторяемой доставки, т.к. будут повторяться именно доставки, а не целые заказы",
+      "type": "string"
+    },
+    "retailer_id": {
+      "description": "id ритейлера повторяемого заказа",
+      "type": "number"
+    },
+    "button_is_available": {
+      "description": "Доступна ли кнопка добавления товаров в корзину. Передавать то состояние, которое было на момент показа экрана после клика на кнопку Повторить заказ",
+      "type": "boolean"
+    },
+    "available_products_count": {
+      "description": "Количество товаров доступное к добавлению. Если таких товаров нет, слать 0. Передавать то количество, которое было на момент показа экрана после клика на кнопку Повторить заказ ",
+      "type": "number"
+    },
+    "disabled_products_count": {
+      "description": "Количество товаров недоступное к добавлению. Если таких товаров нет, слать 0. Передавать то количество, которое было на момент показа экрана после клика на кнопку Повторить заказ ",
+      "type": "number"
+    },
+    "source": {
+      "description": "Источник откуда открыли модалку с выбором товаров для повтора заказа",
+      "type": "string",
+      "enum": [
+        "main_retailer_page_active_order_banner",
+        "main_retailer_last_order_banner",
+        "profile_order_history",
+        "checkout",
+        "deep_link",
+        "shipment_review",
+        "order_info",
+        "history_orders",
+        "previous_order",
+        "main_retailer_last_order",
+        "main_retailer_last_order_purchases",
+        "order_info_purchases",
+        "orders_history",
+        "store_filter",
+        "main_page_widget",
+        "main_retailer_widget",
+        "profile_widget"
+      ]
+    }
+  },
+  "required": [
+    "order_number",
+    "shipment_number",
+    "retailer_id",
+    "button_is_available",
+    "available_products_count",
+    "disabled_products_count"
+  ],
+  "title": "Repeat Order Modal Viewed",
+  "type": "object"
+}

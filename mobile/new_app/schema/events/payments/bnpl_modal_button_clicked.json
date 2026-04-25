@@ -1,0 +1,42 @@
+{
+  "description": "Вызывается, когда пользователь тапает на какие-то элементы на модалке или шторке BNPL ",
+  "properties": {
+    "has_order": {
+      "description": "Есть два стейта этой модалки - когда заказ с рассрочкой еще не оформлен, и когда заказ с рассрочкой оформлен (в модалке есть кнопка 'Даты платежей')",
+      "type": "boolean"
+    },
+    "source": {
+      "description": "Откуда пришел на страницу модалки",
+      "type": "string",
+      "enum": [
+        "bottomsheet",
+        "cart_banner",
+        "lk",
+        "checkout_banner"
+      ]
+    },
+    "type": {
+      "description": "В зависимости от кнопки разное значение: dolyame - тап на кнопку Даты платежей;  details - подробнее об условиях (переход на внешний ресурс с информацией о BNPL); go_shopping - тап на кнопку За покупками; ok - тап на Понятно или на крестик; to_checkout - тап на кнопку К оформлению; deeplink - по диплинку",
+      "type": "string",
+      "enum": [
+        "dolyame",
+        "details",
+        "go_shopping",
+        "to_checkout",
+        "ok",
+        "deeplink"
+      ]
+    },
+    "retailer_id": {
+      "description": "id ритейлера в котором пользователь находится в момент совершения события. В профиле и диплинке отправлять 0",
+      "type": "number"
+    }
+  },
+  "required": [
+    "has_order",
+    "source",
+    "type"
+  ],
+  "title": "BNPL Modal Button Clicked",
+  "type": "object"
+}

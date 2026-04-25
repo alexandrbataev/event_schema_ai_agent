@@ -1,0 +1,63 @@
+{
+  "description": "Отправляется каждый раз, когда пользователь уходит с экрана оценки заказа при нажатии крестика или кнопки \"Оценить\"",
+  "properties": {
+    "tags": {
+      "description": "Массив тегов, которые выбрал пользователь. Если пользователь не выбрал теги, то массив пустой. Заполняется если пользователь оценил заказ (нажал кнопку \"Оценить\"), иначе пустое значение",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Выбранный тег на экране оценки"
+      }
+    },
+    "source": {
+      "description": "С какого экрана пользователь перешел к модалке оценки заказа",
+      "$ref": "#/definitions/ReviewOrderSource"
+    },
+    "call_me_flag": {
+      "description": "Поставил галочку \"Позвонить мне\" на экране оценки заказа",
+      "type": "boolean"
+    },
+    "is_review_done": {
+      "description": "Пользователь вышел после нажатия на крестик или после написания отзыва. Если если пользователь оценил заказ (нажал кнопку \"Оценить\") то 1, если через крестик то 0",
+      "type": "boolean"
+    },
+    "shipment_number": {
+      "description": "Идентификатор заказа",
+      "type": "string"
+    },
+    "order_number": {
+      "description": "Номер заказа",
+      "type": "string"
+    },
+    "delivery_rate": {
+      "description": "Оценка доставки  от 1 до 5. Если оценка не проставлена, то отправлять 0",
+      "type": "number"
+    },
+    "products_rate": {
+      "description": "Оценка сборки/продуктов/блюд  от 1 до 5. Если оценка не проставлена, то отправлять 0",
+      "type": "number"
+    },
+    "delivery_comment_length": {
+      "description": "Количество знаков в отзыве доставки. Если отзыва нет, отправлять 0",
+      "type": "number"
+    },
+    "products_comment_length": {
+      "description": "Количество знаков в отзыве о сборке/продуктах/блюдах. Если отзыва нет, отправлять 0",
+      "type": "number"
+    }
+  },
+  "required": [
+    "tags",
+    "source",
+    "call_me_flag",
+    "is_review_done",
+    "shipment_number",
+    "order_number",
+    "delivery_rate",
+    "products_rate",
+    "delivery_comment_length",
+    "products_comment_length"
+  ],
+  "title": "Review Screen Closed",
+  "type": "object"
+}

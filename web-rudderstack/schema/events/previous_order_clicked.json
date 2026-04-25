@@ -1,0 +1,15 @@
+{
+  "description": "Срабатывает при клике на полку Вы покупали ранее",
+  "properties": {
+    "store_id": {
+      "description": "Идентификатор магазина, который был при запросе доступных баннеров",
+      "type": "number"
+    }
+  },
+  "required": [
+    "store_id"
+  ],
+  "title": "Previous Order Clicked",
+  "type": "object"
+}
+

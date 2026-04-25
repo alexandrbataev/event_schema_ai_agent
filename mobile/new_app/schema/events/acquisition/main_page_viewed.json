@@ -1,0 +1,67 @@
+{
+  "description": "Каждый раз, когда пользователь просматривает главную страницу с выбранным магазином",
+  "properties": {
+    "closest_delivery_time_displayed": {
+      "description": "сколько в минутах до левой границы ближайшего слота доставки из этого магазина",
+      "type": "number"
+    },
+    "closest_delivery_time_right_bound": {
+      "description": "сколько в минутах до правой границы ближайшего слота доставки из этого магазина",
+      "type": "number"
+    },
+    "delivery_window_estimate_type": {
+      "description": "параметр показвает, по какому принципу рассчитано окно доставки",
+      "type": "string"
+    },
+    "is_merge_available": {
+      "description": "флаг показывает, может ли пользователь перейти в режим дозаказа",
+      "type": "boolean"
+    },
+    "is_delivery_change_available": {
+      "description": "Доступна ли смена способа доставки - переключалка 'доставка-самовывоз' как на скрине http://joxi.ru/KAxkwZqHvEQ3v2, уже есть в событии Cart Viewed",
+      "type": "boolean"
+    },
+    "source": {
+      "description": "Откуда перешли на главную ритейлера",
+      "$ref": "#/definitions/ShopSelectionSource"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (grocery, pharmacy или restaurant)",
+      "type": "string"
+    },
+    "promo_badge_info": {
+      "description": "Список с объектами, содержащими параметры бейджа (текст, цвет и тип), по порядку отображения бейджей",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/RestaurantPromoBadge"
+      }
+    },
+    "is_cart_available": {
+      "description": "У пользователя собрана корзина, есть кнопка для перехода в нее",
+      "type": "boolean"
+    },
+    "search_multiretail_source": {
+      "description": "Параметр отправляется только при source = search_multiretail и показывает, откуда был совершен клик по поисковой строке в межрите - с главной главной (main_main), из просмотра выдачи (search_results) или с джобы самовывоза (pickup_page)",
+      "type": "string",
+      "enum": [
+        "main_main",
+        "search_results",
+        "pickup_page",
+        "favourites_wishlist"
+      ]
+    },
+    "search_multiretail_job": {
+      "description": "Параметр отправляется только при  source = search_multiretail и показывает на каком фильтре 2го уровня (на каком джобе) находится строка межрит поиска. Отправляется код джобы. Аналогично параметру tab_clicked в Shop Selection Tab Clicked",
+      "type": "string"
+    }
+  },
+  "required": [
+    "closest_delivery_time_displayed",
+    "closest_delivery_time_right_bound",
+    "is_delivery_change_available",
+    "retailer_vertical",
+    "source"
+  ],
+  "title": "Main Page Viewed",
+  "type": "object"
+}

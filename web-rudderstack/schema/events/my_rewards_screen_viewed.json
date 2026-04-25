@@ -1,0 +1,19 @@
+{
+  "description": "Открытие боттомшита с бенефитами на экране коронок",
+  "properties": {
+    "source": {
+      "type": "string",
+      "description": "Экран, с которого был открыт боттомшит (например, handsome_screen)"
+    },
+    "benefits_list": {
+      "type": "string",
+      "description": "Список предложенных бенефитов через разделитель (например, \"cashback_25,cashback_fri,goals\")"
+    }
+  },
+  "required": [
+    "source",
+    "benefits_list"
+  ],
+  "title": "My Rewards Screen Viewed",
+  "type": "object"
+}

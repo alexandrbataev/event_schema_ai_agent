@@ -1,0 +1,29 @@
+{
+  "description": "Пользователь кликает на кнопку 'Отменить заказ'. Действие ведет на модалку Отмены Заказа с выбором причины",
+  "properties": {
+    "shipment_number": {
+      "description": "Shipment_number отменяемой доставки",
+      "type": "string"
+    },
+    "order_number": {
+      "description": "Номер отменяемого заказа",
+      "type": "string"
+    },
+    "shipment_state": {
+      "description": "Shipment_state на момент отмены",
+      "type": "string"
+    },
+    "source": {
+      "description": "Страница, с которой пользователь перешел на постчекаут, где кликнул на кнопку Отменить заказ",
+      "$ref": "#/definitions/OrderCancellationSource"
+    }
+  },
+  "required": [
+    "shipment_number",
+    "order_number",
+    "shipment_state",
+    "source"
+  ],
+  "title": "Order Cancel Button Clicked",
+  "type": "object"
+}

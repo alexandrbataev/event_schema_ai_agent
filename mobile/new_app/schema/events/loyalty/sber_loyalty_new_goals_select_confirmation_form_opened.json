@@ -1,0 +1,32 @@
+{
+  "description": "Отправляется при отображении модалки выбора цели",
+  "properties": {
+    "source": {
+      "description": "Источник, где именно был увиден баннер, по нажатию на который был открыт экран",
+      "$ref": "#/definitions/GoalsSources"
+    },
+    "shown_at": {
+      "description": "Где отобразилась модалка выбора цели: на экране со списком целей, или нет",
+      "type": "string",
+      "enum": [
+        "base_screen",
+        "goals_list_page"
+      ]
+    },
+    "available_goals": {
+      "description": "Массив из id доступных для выбора целей (массив из 1 элемента, если цель совместимая)",
+      "type": "array",
+      "items": {
+        "description": "id доступной для выбора цели",
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "source",
+    "shown_at",
+    "available_goals"
+  ],
+  "title": "Sber Loyalty New Goals Select Confirmation Form Opened",
+  "type": "object"
+}

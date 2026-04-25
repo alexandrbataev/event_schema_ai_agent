@@ -1,0 +1,44 @@
+{
+  "description": "Неуспешное добавление товара в коризну SPG. Сначала получаем ответ бэка с ошибкой и после этого отправляем событие",
+  "properties": {
+    "error_type": {
+      "type": "string",
+      "description": "тип ошибки, с которой столкнулся пользователь (need_datamatrix - нужен датаматрикс или не нашли датаматриск в продакт хабе, invalid_ean - неверный формат еана, invalid_datamatrix - неверный формат датаматрикса, not_found - не смогли найти товар, heavy - пользователь пытается добавить тяжелый товар,  alco - пользователь пытается добавить алкоголь, alredy_have - уже есть в коризне -  other - другая причина)",
+      "enum": [
+        "not_found",
+        "heavy",
+        "unallowed_category",
+        "alredy_have",
+        "other",
+        "invalid_ean",
+        "invalid_datamatrix",
+        "need_datamatrix",
+        "datamatrix_mismatch_ean",
+        "from_shelf",
+        "excise_stamp",
+        "unallowed_time"
+      ]
+    },
+    "how_tried_to_add": {
+      "type": "string",
+      "description": "Тип флоу, через которое пользователь пытался добавить товар (scan - через камеру, manual_entry - ручной ввод, plus_button - через + в корзине, custom_input - ввод кол-ва в корзине)",
+      "enum": [
+        "scan",
+        "manual_entry",
+        "plus_button",
+        "custom_input"
+      ]
+    },
+    "ean": {
+      "description": "штрих-код товара",
+      "type": "string"
+    }
+  },
+  "required": [
+    "how_tried_to_add",
+    "error_type",
+    "ean"
+  ],
+  "title": "Spg Product Add Failed",
+  "type": "object"
+}

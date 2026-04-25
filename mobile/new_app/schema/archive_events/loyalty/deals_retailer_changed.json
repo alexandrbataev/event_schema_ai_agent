@@ -1,0 +1,9 @@
+{
+  "description": "Срабатывает при первом выборе другого ритейлера на странице 'Все скидки здесь'",
+  "properties": {},
+  "required": [],
+  "title": "Deals Retailer Changed",
+  "type": "object"
+}
+
+

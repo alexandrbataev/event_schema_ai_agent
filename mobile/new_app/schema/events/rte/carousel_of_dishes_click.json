@@ -1,0 +1,18 @@
+{
+  "description": "Каждый раз при клике на любую позицию из карусели. Карусель - отображение в каталоге помимо обложки стора, нескольких популярных блюд, если пролистать.",
+  "properties": {
+    "position_number": {
+      "description": "номер позиции, на которую кликнул пользователь",
+      "type": "number"
+    },
+    "store_id": {
+      "description": "id выбранного ресторана",
+      "type": "number"
+    }
+  },
+  "required": [
+    "store_id"
+  ],
+  "title": "Carousel Of Dishes Click",
+  "type": "object"
+}

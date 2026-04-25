@@ -1,0 +1,32 @@
+{
+  "description": "Каждый раз, когда пользователь закрыл модалку с изменением слота доставки",
+  "properties": {
+    "shipment_number": {
+      "description": "Идентификатор активного заказа",
+      "type": "string"
+    },
+    "old_window_delivery_id": {
+      "description": "Старое значение id слота доставки",
+      "type": "number"
+    },
+    "new_window_delivery_id": {
+      "description": "Старое значение id слота доставки",
+      "type": "number"
+    },
+    "old_delivery_price": {
+      "description": "Старое значение стоимости доставки",
+      "type": "number"
+    },
+    "new_delivery_price": {
+      "description": "Новое значение стоимости доставки",
+      "type": "number"
+    }
+  },
+  "required": [
+    "old_window_delivery_id",
+    "old_delivery_price",
+    "shipment_number"
+  ],
+  "title": "Changing Order Details Delivery Time Changed",
+  "type": "object"
+}

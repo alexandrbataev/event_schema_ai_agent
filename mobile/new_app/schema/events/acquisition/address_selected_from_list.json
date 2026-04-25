@@ -1,0 +1,37 @@
+{
+  "description": "Выбор адреса из списка адресов",
+  "properties": {
+    "source": {
+      "description": "Откуда перешли в список адресов (главная-главная, главная ритейлера, профиль)",
+      "$ref": "#/definitions/AddressSelectionSource"
+    },
+    "address_count": {
+      "description": "Количество сохраненных адресов",
+      "type": "number"
+    },
+    "address_full_title": {
+      "description": "Полный адрес",
+      "type": "string"
+    },
+    "address_subtitle": {
+      "description": "Subtitle адреса (то, что указано под основным адресом маленькими буквами - как правило страна, город)",
+      "type": "string"
+    },
+    "sberid_address_is_active": {
+      "description": "True - если для данного адреса включена синхронизация адресов e-com",
+      "type": "boolean"
+    },
+    "tag": {
+      "description": "Если включена синхронизация адресов e-com, Тег адреса",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "address_count",
+    "address_full_title",
+    "address_subtitle"
+  ],
+  "title": "Address Selected From List",
+  "type": "object"
+}

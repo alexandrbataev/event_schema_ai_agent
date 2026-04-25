@@ -1,0 +1,30 @@
+{
+  "description": "Каждый раз, при клике пользователя на кнопку 'Смотреть все' и/или стрелочки '>' на мобильной веб версии для открытия полки",
+  "properties": {
+    "click_source": {
+      "description": "Источник клика.  show_all_button - если клик был по кнопке 'Смотреть все'; arrow_button - если клик был по стрелочке в мобильной веб версии.",
+      "type": "string",
+      "enum": [
+        "show_all_button",
+        "arrow_button"
+      ]
+    },
+    "shelf_info": {
+      "description": "Массив с информацией о полке",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/FromShelfInfo"
+      }
+    },
+    "has_delivery_address": {
+      "description": "Флаг наличия введенного адреса на момент клика",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "click_source",
+    "shelf_info"
+  ],
+  "title": "Shop Selection Page Shelf Clicked",
+  "type": "object"
+}

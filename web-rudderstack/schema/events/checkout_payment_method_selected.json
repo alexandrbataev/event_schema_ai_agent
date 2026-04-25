@@ -1,0 +1,70 @@
+{
+  "description": "Выбран способ оплаты на чекауте",
+  "properties": {
+    "payment_method": {
+      "description": "Название основного способа оплаты",
+      "type": "string"
+    },
+    "payment_tools_available": {
+      "description": "Доступные инструменты оплаты по выбранному способу оплаты",
+      "type": "array",
+      "items": {
+        "description": "Имя инструмента оплаты",
+        "type": "string"
+      }
+    },
+    "payment_tool": {
+      "description": "Выбранный инструмент оплаты по способу оплаты",
+      "type": "string"
+    },
+    "shipment_number": {
+      "description": "Массив идентификаторов доставки. Для старого чекаута может быть мультиритейлерная корзина и с нового чекаута может приходить два идентификатора при заказе алкоголя",
+      "type": "array",
+      "items": {
+        "description": "Идентификатор доставки",
+        "type": "string"
+      }
+    },
+    "b2b_edm_flg": {
+      "description": "Флаг того, что при b2b заказе у пользователя подключен эдо",
+      "type": "boolean"
+    },
+    "available_payment_methods_info": {
+      "description": "Массив словарей доступных методов оплаты с ключами: payment_method - название способа оплаты; payment_tool_id - id связки выбранной карты онлайн (id из spree_payment_tools). Только для Какарт онлайн, для всего остального 0, в том числе и для новых карт онлайн; bank_name - наименование банка ; is_bank_discount_available - наличие шильда с доп. скидкой сбера ; Элементы в массиве расположены в том же порядке что и на экране пользователя, на первом месте предвыбранный способ",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PaymentMethodInfo"
+      }
+    },
+    "payment_tool_id": {
+      "description": "id связки выбранной карты (id из spree_payment_tools). Только для Какарт онлайн, для всего остального 0, в том числе и для новых карт онлайн",
+      "type": "string"
+    },
+    "shipping_method": {
+      "type": "string",
+      "description": "Способ доставки",
+      "enum": [
+        "by_courier",
+        "pickup"
+      ]
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера",
+      "$ref": "#/definitions/RetailerVertical"
+    },
+    "order_number": {
+      "description": "Строковый ID заказа",
+      "type": "string"
+    },
+    "bank_name": {
+      "description": "Наименование банка выбранного метода оплаты, только для Карт онлайн и SberPay",
+      "type": "string"
+    }
+  },
+  "required": [
+    "payment_method",
+    "shipment_number"
+  ],
+  "title": "Checkout Payment Method Selected",
+  "type": "object"
+}

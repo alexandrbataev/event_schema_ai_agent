@@ -1,0 +1,34 @@
+{
+  "description": "Каждый раз, когда пользователь просмотривает информацию о конкретном заказе в daas",
+  "properties": {
+    "claim_number": {
+      "description": "Номер заявки",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник перехода на страницу со статусом заказа",
+      "$ref": "#/definitions/DaasOrderInfoSource"
+    },
+    "status_displayed": {
+      "description": "Отображаемый клиенту статус заявки (принят, в пути и т.д.).",
+      "type": "string"
+    },
+    "status_backend": {
+      "description": "Бекенд статус заявки (new, updated, confirmed и т.д.). https://wiki.sbmt.io/pages/viewpage.action?pageId=3157862249",
+      "type": "string"
+    },
+    "delivery_label": {
+      "description": "Информация о статусе прибытия заказа. Например, \"Купер уже близко - будет с минуты на минуту\"",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "status_displayed",
+    "status_backend",
+    "claim_number",
+    "delivery_label"
+  ],
+  "title": "Daas Order Info Viewed",
+  "type": "object"
+}

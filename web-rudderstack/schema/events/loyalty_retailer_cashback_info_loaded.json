@@ -1,0 +1,28 @@
+{
+  "description": "При каждом отображении элемента с суммой начисляемых бонусов программы лояльности ритейлера за заказ",
+  "properties": {
+    "source": {
+      "description": "Место, где отображаются начисления",
+      "type": "string",
+      "enum": [
+        "checkout",
+        "post_checkout"
+      ]
+    },
+    "loyalty_id": {
+      "description": "Наименование ПЛ ретейлера, по которой отображаются начисления",
+      "type": "string"
+    },
+    "amount": {
+      "description": "Сумма отображаемых бонусов",
+      "type": "number"
+    }
+  },
+  "required": [
+    "source",
+    "loyalty_id",
+    "amount"
+  ],
+  "title": "Loyalty Retailer Cashback Info Loaded",
+  "type": "object"
+}

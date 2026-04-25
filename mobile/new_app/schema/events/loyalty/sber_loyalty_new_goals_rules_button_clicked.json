@@ -1,0 +1,15 @@
+{
+  "description": "Отправляется при каждом клике на кнопку 'Подробные условия' на экране подтверждения выбора 'Цели' (Только для групповых целей)",
+  "properties": {
+    "source": {
+      "description": "Источник, где именно был увиден баннер, по нажатию на который был открыт экран",
+      "$ref": "#/definitions/GoalsSources"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Sber Loyalty New Goals Rules Button Clicked",
+  "type": "object"
+}
+  

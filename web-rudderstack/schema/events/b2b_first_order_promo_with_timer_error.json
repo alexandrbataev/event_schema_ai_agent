@@ -1,0 +1,6 @@
+{
+  "description": "Ошибка при введении промокода (не выполнены условия)",
+  "properties": {},
+  "title": "B2B First Order Promo Timer Error",
+  "type": "object"
+}

@@ -1,0 +1,49 @@
+{
+  "description": "Клик на кнопку 'заберу отсюда' при выборе магазина на карте самовывоза",
+  "properties": {
+    "name": {
+      "description": "название ритейлера, на магазин которого кликнули",
+      "type": "string"
+    },
+    "retailer_id": {
+      "description": "id выбранного ритейлера",
+      "type": "number"
+    },
+    "store_count": {
+      "description": "количество логотипов и точек с магазинами",
+      "type": "number"
+    },
+    "store_id": {
+      "description": "id выбранного стора",
+      "type": "number"
+    },
+    "store_start_time": {
+      "description": "Только для самовывоза. Время начала работы магазина. Стрингой в формате hh:mm",
+      "type": "string"
+    },
+    "store_end_time": {
+      "description": "Только для самовывоза. Время окончания работы магазина. Стрингой в формате hh:mm",
+      "type": "string"
+    },
+    "is_open_store": {
+      "description": "Открыт ли магазин в момент срабатывания события",
+      "type": "boolean"
+    },
+    "from_now_to_store_time": {
+      "description": "Время, в минутах. Если магазин открыт, то кол-во минут от текущего момента до закрытия, если магазин закрыт, то от текущего момента до открытия",
+      "type": "number"
+    }
+  },
+  "required": [
+    "name",
+    "retailer_id",
+    "store_count",
+    "store_id",
+    "store_start_time",
+    "store_end_time",
+    "is_open_store",
+    "from_now_to_store_time"
+  ],
+  "title": "Map Pickup Shop Selected",
+  "type": "object"
+}

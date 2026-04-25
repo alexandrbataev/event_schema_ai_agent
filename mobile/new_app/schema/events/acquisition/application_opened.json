@@ -1,0 +1,35 @@
+{
+  "description": "Android Only. Юзер открыл приложение. Срабатывает только на холодный старт.",
+  "properties": {
+    "installation_source": {
+      "type": "string",
+      "description": "Android Applicaton ID приложения из которого было установлено приложение. Если не смогли определить - значение unknown",
+      "default": "unknown",
+      "examples": [
+        "com.android.vending",
+        "com.huawei.appmarket",
+        "unknown"
+      ]
+    },
+    "voiceover_enabled": {
+      "type": "boolean",
+      "description": "Если на девайсе включена функция VoiceOver принимает значение = 1"
+    },
+    "app_name": {
+      "type": "string",
+      "description": "Название приложения из которого осуществлен вход. Если не смогли определить - значение unknown",
+      "default": "unknown",
+      "examples": [
+        "Купер",
+        "Доставка супер",
+        "unknown"
+      ]
+    }
+  },
+  "required": [
+    "installation_source",
+    "app_name"
+  ],
+  "title": "Application Opened",
+  "type": "object"
+}

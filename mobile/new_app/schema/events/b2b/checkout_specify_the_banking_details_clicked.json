@@ -1,0 +1,17 @@
+{
+  "description": "Срабатывает когда в чекауте кликают на \"указать реквизиты\"",
+  "properties": {
+    "edm_flg": {
+      "description": "Флаг того, что подключен эдо",
+      "type": "boolean"
+    },
+    "source": {
+      "description": "Источник из которого нажата кнопка",
+      "type": "string"
+    }
+  },
+  "title": "Checkout Specify The Banking Details Clicked",
+  "type": "object"
+}
+  
+  

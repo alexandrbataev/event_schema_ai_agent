@@ -1,0 +1,14 @@
+{
+  "description": "Пользователь раскрыл ответ на вопрос в блоке FAQ на лид лендинге",
+  "properties": {
+    "question_name": {
+      "description": "Текст вопроса, который раскрыл пользователь",
+      "type": "string"
+    }
+  },
+  "required": [
+    "question_name"
+  ],
+  "title": "B2B LeadLanding Question Clicked",
+  "type": "object"
+}

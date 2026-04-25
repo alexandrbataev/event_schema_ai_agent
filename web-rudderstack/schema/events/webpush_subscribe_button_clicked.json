@@ -1,0 +1,6 @@
+{
+  "description": "Пользователь инициировал дать согласие на подписку WebPush",
+  "properties": {},
+  "title": "WebPush Subscribe Button Clicked",
+  "type": "object"
+}

@@ -1,0 +1,17 @@
+{
+  "description": "Каждый раз, когда пользователь видит модолку с выбором ритейлера для временной корзины",
+  "properties": {
+    "available_retailers": {
+      "description": "Массив с доступными ритейлерами. Аналогично Retailer Selection Started. Содержит retailer_id, position (начинается с 1), name (название ритейлера), store_id (id магазина, котоый уже был выбран для самовывоза), available_shop_count (сколько магазинов доступно у ритейлера, отрисовывается на странице) ",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PickupRetailer"
+      }
+    }
+  },
+  "required": [
+    "available_retailers"
+  ],
+  "title": "Sharecart Retailer Modal Viewed",
+  "type": "object"
+}

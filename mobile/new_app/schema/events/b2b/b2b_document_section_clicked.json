@@ -1,0 +1,7 @@
+{
+  "description": "Нажата кнопка \"Документы\" в ЛК компании в аппе B2B",
+  "properties": {},
+  "required": [],
+  "title": "B2B Document Section Clicked",
+  "type": "object"
+}

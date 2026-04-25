@@ -1,0 +1,45 @@
+{
+  "description": "Пользователю загрузился список акций",
+  "properties": {
+    "promotions": {
+      "description": "Список из promotion_id, которые прогрузились у пользователя (с бэкенда) для текущего состояния фильтров, может быть пустым в случае публичных промокодов",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "description": "promotion_id"
+      }
+    },
+    "promocodes": {
+      "description": "Список из текстов промокодов, которые прогрузились у пользователя (с бэкенда) для текущего состояния фильтров",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Текст промокода"
+      }
+    },
+    "tab_name": {
+      "description": "С какой категории акций загрузился список",
+      "type": "string"
+    },
+    "page_for_auth_users": {
+      "description": "Если открыта страница для авторизованных пользователей - True, иначе - False",
+      "type": "boolean"
+    },
+    "source": {
+      "description": "Откуда произошло открытие раздела",
+      "$ref": "#/definitions/PromoSource"
+    },
+    "success_loaded": {
+      "description": "Флаг отсутствия ошибок при открытии раздела (1 если успешно, 0 если нет)",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "promotions",
+    "source",
+    "page_for_auth_users"
+  ],
+  "title": "Your Promocodes Loaded",
+  "type": "object",
+  "$comment": "https://wiki.sbmt.io/pages/viewpage.action?pageId=3120601966"
+}

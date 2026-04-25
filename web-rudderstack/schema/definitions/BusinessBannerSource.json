@@ -1,0 +1,12 @@
+{
+  "title": "BusinessBannerSource",
+  "type": "string",
+  "description": "Источник баннера",
+  "enum": [
+    "landing",
+    "order_status",
+    "product_card",
+    "cart",
+    "companies"
+  ]
+}

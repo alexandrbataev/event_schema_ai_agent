@@ -1,0 +1,28 @@
+{
+  "description": "При подтверждении фильтра по ритейлерам в разделе Любимые, когда пользователь нажал кнопку Показать X товаров",
+  "properties": {
+    "retailer_ids": {
+      "description": "Массив с id выбранных ритейлеров",
+      "type": "array",
+      "items": {
+        "description": "Retailer ID",
+        "type": "number"
+      }
+    },
+    "source": {
+      "description": "В каком разделе Любимых пользователь кликнул на фильтр (Понравилось или Уже покупали)",
+      "type": "string",
+      "enum": [
+        "favourites_liked",
+        "favourites_bought",
+        "favourites_wishlist"
+      ]
+    }
+  },
+  "required": [
+    "retailer_ids",
+    "source"
+  ],
+  "title": "Favourites Filter Applied",
+  "type": "object"
+}

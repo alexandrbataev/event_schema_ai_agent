@@ -1,0 +1,67 @@
+{
+  "description": "клик на мастер-категорию  в саджестере или поисковой выдаче",
+  "properties": {
+    "source": {
+      "description": "Где было совершено взаимодействие с мастер-катергорией",
+      "type": "string",
+      "enum": [
+        "suggester",
+        "list"
+      ],
+      "$comment": "suggester - из саджестера; list - из поисковой выдачи"
+    },
+    "query": {
+      "description": "Запрос, на который была получена выдача.",
+      "type": "string"
+    },
+    "position_clicked": {
+      "description": "Позиция мастер категории, кот была выбрана.",
+      "type": "number"
+    },
+    "category_suggestions": {
+      "description": "Словарь предлагаемых мастер-категорий со следующими параметрами",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CategorySuggestions"
+      }
+    },
+    "category_filter": {
+      "description": "В значение записываем category_id, по кот фильтруем, при фильтрации по мастер-категории в саджесторе. Если выбирается таб Все сразу, то сетим значение ‘all’",
+      "type": "string"
+    },
+    "source_search": {
+      "description": "Источник клика (search_multiretail - поиск в межритейлерном режиме (на главной главной, в том числе на странице результатов межрит поиска), search_regular - обычный поиск не в межритейлерном режиме, multiretail_promo_category - при пустом запросе в межритейлерной промо подборке), category_multiretail - с полки 'Популярные категории'",
+      "type": "string",
+      "enum": [
+        "search_regular",
+        "search_multiretail",
+        "multiretail_promo_category",
+        "category_multiretail"
+      ]
+    },
+    "store_id": {
+      "description": "Значение актуального магазина - выбранный магазин или, в случае межрит поиска, магазин соответствующей корзины",
+      "type": "number"
+    },
+    "is_multiretail_promo_category": {
+      "description": "True, если товар был отрисован внутри промо подборки, False иначе",
+      "type": "boolean"
+    },
+    "multiretail_promo_category_id": {
+      "description": "id промо подборки. Заполняется только в случае поиска внутри промо подборки",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "query",
+    "position_clicked",
+    "category_suggestions",
+    "category_filter",
+    "source_search",
+    "is_multiretail_promo_category",
+    "multiretail_promo_category_id"
+  ],
+  "title": "Master Category Click",
+  "type": "object"
+}

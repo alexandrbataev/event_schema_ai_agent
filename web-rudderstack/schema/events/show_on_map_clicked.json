@@ -1,0 +1,19 @@
+{
+  "description": "Клик на кнопку Показать на карте на лендинге самовывоза, описание сорсов лежит в этой задаче - https://jira.sbmt.io/browse/DEMANDELA-3133",
+  "properties": {
+    "source": {
+      "description": "Где находится кнопка",
+      "type": "string",
+      "enum": [
+        "landing",
+        "store_list",
+        "banner"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Show On Map Clicked",
+  "type": "object"
+}

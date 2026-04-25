@@ -1,0 +1,19 @@
+{
+  "description": "Пользователь кликнул (мисклик) на категорию продуктов на лид лендинге",
+  "properties": {
+    "active_tab_name": {
+      "description": "Активный таб",
+      "type": "string"
+    },
+    "category_name": {
+      "description": "Категория, на которую нажал пользователь",
+      "type": "string"
+    }
+  },
+  "required": [
+    "active_tab_name",
+    "category_name"
+  ],
+  "title": "B2B LeadLanding Category Clicked",
+  "type": "object"
+}

@@ -1,0 +1,32 @@
+{
+  "description": "Каждый раз, когда пользователю добавляется (мерджится) вся временная корзина в основную корзину",
+  "properties": {
+    "store_id": {
+      "description": "Идентификатор магазина во временной корзине",
+      "type": "number"
+    },
+    "product_skus": {
+      "description": "Массив словарей товаров во временной корзине (sku и quantity по каждому товару)",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ShareCartProduct"
+      }
+    },
+    "cart_id": {
+      "description": "Идентификатор временной корзины",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник добавления (мерджа) временной корзины в основную",
+      "type": "string"
+    }
+  },
+  "required": [
+    "retailer_id",
+    "product_skus",
+    "cart_id",
+    "source"
+  ],
+  "title": "Sharecart Merged",
+  "type": "object"
+}

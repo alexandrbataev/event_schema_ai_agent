@@ -1,0 +1,42 @@
+{
+  "description": "При каждой загрузке страницы истории заказов и при каждой загрузке дополнительного бакета заказов (в 1 бакете 10 заказов)",
+  "properties": {
+    "tab_name": {
+      "description": "Название таба, на который перешел пользователь. orders_history - таб с историей заказов пользователя, packages_history - таб с историей посылок пользователя",
+      "type": "string",
+      "enum": [
+        "orders_history",
+        "packages_history"
+      ]
+    },
+    "active_orders": {
+      "description": "есть ли активные заказы в момент просмотра страницы (не доставленные и не отмененные)",
+      "type": "boolean"
+    },
+    "count_orders": {
+      "description": "Общее количество заказов у пользователя на момент просмотра страницы",
+      "type": "number"
+    },
+    "page_number": {
+      "description": "Номер текущей загруженной страницы у пользователя (1 страница - 10 заказов)",
+      "type": "number"
+    },
+    "source": {
+      "description": "заход через профиль на историю заказов",
+      "type": "string",
+      "enum": [
+        "profile",
+        "deeplink",
+        "sber_loyalty_modal",
+        "button_on_main"
+      ]
+    }
+  },
+  "required": [
+    "active_orders",
+    "page_number",
+    "source"
+  ],
+  "title": "Order History Viewed",
+  "type": "object"
+}

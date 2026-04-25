@@ -1,0 +1,7 @@
+{
+  "description": "Срабатывает когда в чекауте проставляется галочка \"Бесконтактная доставка\"",
+  "properties": {},
+  "title": "Contactless Delivery Tick Clicked",
+  "type": "object"
+}
+

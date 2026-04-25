@@ -1,0 +1,7 @@
+{
+  "description": "Срабатывает когда в чекауте кликают на \"Добавить компанию\"",
+  "properties": {},
+  "title": "Checkout Add Company Clicked",
+  "type": "object"
+}
+

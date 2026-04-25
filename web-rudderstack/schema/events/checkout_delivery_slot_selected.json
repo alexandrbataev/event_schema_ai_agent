@@ -1,0 +1,110 @@
+{
+  "description": "Выбор слота на чекауте",
+  "properties": {
+    "delivery_cost": {
+      "description": "Стоимость доставки, которую видит пользователь",
+      "type": "number"
+    },
+    "is_express": {
+      "description": "Выбран ли слот с быстрой доставкой",
+      "type": "boolean"
+    },
+    "is_auto_selected": {
+      "description": "Если слот предвыбран (проставлен автоматически), то значение параметра 1. Если слот выбран вручную клиентом, то значение параметра 0",
+      "type": "boolean"
+    },
+    "is_express_delivery_available": {
+      "description": "Была ли доступна быстрая доставка",
+      "type": "boolean"
+    },
+    "closest_delivery_time_displayed": {
+      "description": "сколько времени в минутах до левой границы выбранного слота",
+      "type": "number"
+    },
+    "delivery_window_estimate_type": {
+      "description": "Каким методом рассчитано время до выбранного слота",
+      "type": "string"
+    },
+    "closest_delivery_time_right_bound": {
+      "description": "Сколько времени в минутах до правой границы выбранного слота",
+      "type": "number"
+    },
+    "shipment_number": {
+      "description": "Массив идентификаторов доставки. Для старого чекаута может быть мультиритейлерная корзина и с нового чекаута может приходить два идентификатора при заказе алкоголя",
+      "type": "array",
+      "items": {
+        "description": "Идентификатор доставки",
+        "type": "string"
+      }
+    },
+    "retailer_verticals": {
+      "description": "Список вертикалей ритейлеров, так как возможен мультизаказ.",
+      "type": "array",
+      "items": {
+        "description": "Вертикаль ритейлера",
+        "type": "string"
+      }
+    },
+    "retailer_id": {
+      "description": "идентификатор ритейлера",
+      "type": "number"
+    },
+    "store_id": {
+      "description": "идентитфикатор стора",
+      "type": "number"
+    },
+    "slot_name": {
+      "description": "Название слота (fastest, most_optimal, cheapest, other, pickup). Для кастомных слотов отправляем other",
+      "type": "string",
+      "enum": [
+        "fastest",
+        "most_optimal",
+        "cheapest",
+        "other",
+        "pickup"
+      ]
+    },
+    "personal_price_available": {
+      "description": "Параметр принимает значение 1, если в выбранном слоте доступно персональное (безакцептное) промо предложение на условия доставки, 0 - если нет доступного предложения",
+      "type": "boolean"
+    },
+    "personal_price_applied": {
+      "description": "Параметр принимает значение 1, если применено персональное (безакцептное) промо предложение на условия доставки, 0 - если не применено",
+      "type": "boolean"
+    },
+    "personal_price_discount_type": {
+      "description": "Тип скидки в персональном (безакцептном) промо: фиксированная скидка или процент от стоимости каждого компонента",
+      "type": "string",
+      "enum": [
+        "absolute",
+        "relative"
+      ]
+    },
+    "personal_price_discount_amount": {
+      "description": "Размер скидки в персональном (безакцептном) промо: например, значение = 50 при personal_price_discount_type = 'absolute' значит 50 рублей, а при personal_price_discount_type = relative значит 50%",
+      "type": "number"
+    },
+    "personal_price_info": {
+      "description": "Содержит массив с информацией по компонентам условий доставки на которые пользователю доступно безакцептное промо предложение",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/DeliveryConditionsPersonalPrice"
+      }
+    }
+  },
+  "required": [
+    "is_express",
+    "is_express_delivery_available",
+    "closest_delivery_time_displayed",
+    "delivery_window_estimate_type",
+    "closest_delivery_time_right_bound",
+    "shipment_number",
+    "delivery_cost",
+    "is_auto_selected",
+    "retailer_id",
+    "store_id",
+    "personal_price_available"
+  ],
+  "title": "Checkout Delivery Slot Selected",
+  "type": "object"
+}

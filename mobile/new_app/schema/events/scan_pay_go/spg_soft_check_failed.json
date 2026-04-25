@@ -1,0 +1,23 @@
+{
+  "description": "(для заказов SPG). Срабатывает, когда обработка софт-чека происходит с ошибкой (вызов софт-чека идет после оформления заказа SPG на чекаута), ФТ - https://wiki.sbmt.io/pages/viewpage.action?pageId=3116872823",
+  "properties": {
+    "order_number": {
+      "type": "string",
+      "description": "Номер заказа, начинается с R или С, то что прилетает с БЭКа"
+    },
+    "error_type": {
+      "type": "string",
+      "description": "типы ошибок (ошибки прилетают с БЭКа), payment_error - ошибка прохождения софт-чека из-за оплаты (например, недостаточно средств), marking_erorr - ошибка с маркеровками в заказе, other - другое",
+      "enum": [
+        "payment_error",
+        "marking_erorr",
+        "other"
+      ]
+    }
+  },
+  "required": [
+    "order_number"
+  ],
+  "title": "Spg Soft Check Failed",
+  "type": "object"
+}

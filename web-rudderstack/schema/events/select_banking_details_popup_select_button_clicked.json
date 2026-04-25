@@ -1,0 +1,10 @@
+{
+  "description": "Срабатывает когда в попапе \"Выбрать реквизиты\" нажали на \"Выбрать реквизиты\"",
+  "properties": {
+    "source": {
+      "$ref": "#/definitions/RequisiteSelectSource"
+    }
+  },
+  "title": "Select Banking Details Popup Select Button Clicked",
+  "type": "object"
+}

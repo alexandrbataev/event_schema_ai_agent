@@ -1,0 +1,18 @@
+{
+  "description": "Прогрузка списка рекомендованных товаров на Главной-Главной",
+  "properties": {
+    "sku_numbers": {
+      "description": "массив с SKU товаров в прогруженном списке",
+      "type": "array",
+      "items": {
+        "description": "номера SKU товаров",
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "sku_numbers"
+  ],
+  "title": "Recommendation Feed Snippet Loaded",
+  "type": "object"
+}

@@ -1,0 +1,24 @@
+{
+  "description": "Отмена оформленного заказа",
+  "properties": {
+    "order_number": {
+      "description": "order_number отменяемого заказа",
+      "type": "string"
+    },
+    "shipment_number": {
+      "description": "shipment_number отменяемого заказа",
+      "type": "string"
+    },
+    "message_text": {
+      "description": "Текст уведомления",
+      "type": "string"
+    }
+  },
+  "required": [
+    "order_number",
+    "shipment_number",
+    "message_text"
+  ],
+  "title": "Order Cancel Conditions Changed Message Shown",
+  "type": "object"
+}

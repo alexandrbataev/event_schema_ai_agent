@@ -1,0 +1,27 @@
+{
+  "description": "Каждый раз при нажатии на кнопку 'Найти меня' на карте выбора адреса",
+  "properties": {
+    "address": {
+      "description": "Прогрузившийся после нажатия на кнопку адрес пользователя",
+      "type": "string",
+      "$comment": "Если адрес не прогрузился - пустая строка"
+    },
+    "latitude": {
+      "description": "Широта прогрузившегося адреса",
+      "type": "number",
+      "$comment": "Если адрес не прогрузился - 0"
+    },
+    "longitude": {
+      "description": "Долгота прогрузившегося адреса",
+      "type": "number",
+      "$comment": "Если адрес не прогрузился - 0"
+    }
+  },
+  "required": [
+    "address",
+    "latitude",
+    "longitude"
+  ],
+  "title": "Find Me Button Clicked",
+  "type": "object"
+}

@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз, когда прайм пользователь видит баннер СберПрайм на чекауте",
+  "properties": {},
+  "title": "Checkout Sberprime Banner Loaded",
+  "type": "object"
+}
+

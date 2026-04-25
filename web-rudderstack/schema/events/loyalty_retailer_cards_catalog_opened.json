@@ -1,0 +1,15 @@
+{
+  "description": "Пользователю показан раздел 'Карты лояльности', где показывается каталог со всеми добавленными и доступными к добавлению картами лояльности ретейлеров",
+  "properties": {
+    "source": {
+      "description": "Место, на котором был показан элемент, по нажатию на который совершен переход",
+      "$ref": "#/definitions/BonusesPageSource"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Loyalty Retailer Cards Catalog Opened",
+  "type": "object"
+}
+  

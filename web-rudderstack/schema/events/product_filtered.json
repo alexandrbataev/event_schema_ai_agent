@@ -1,0 +1,51 @@
+{
+  "description": "Клик на фильтр",
+  "properties": {
+    "source": {
+      "description": "Источника клика на фильтра ",
+      "type": "string",
+      "enum": [
+        "category",
+        "search"
+      ]
+    },
+    "source_identifier": {
+      "description": "Источник идентификатора клика: category_id в случае выдачи каталоге (category) и поисковый запрос в случае поисковой выдачи (search)",
+      "type": "string"
+    },
+    "source_type": {
+      "description": "Источник применения фильтра: через топ фильтры вверху выдачи или через кнопку всех фильтров. При клике на кнопку «Все фильтры» срабатывает всегда. В случае клика по топ фильтрам срабатывает только в случае, если фильтр имеет значения, которые нужно прокликать в отдельной открытой модалке. filter_chips - клик по топ фильтру вверху выдачи категории, filters_modal - клик по кнопке «Все фильтры»",
+      "type": "string",
+      "enum": [
+        "filter_chips",
+        "filters_modal"
+      ]
+    },
+    "filters": {
+      "description": "Массив с выбранными фильтрами",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Filters"
+      }
+    },
+    "filter_name": {
+      "description": "Название фильтра, на который нажали",
+      "type": "string",
+      "examples": [
+        "Бренд",
+        "Тип продукта"
+      ]
+    },
+    "is_cleared": {
+      "description": "Былв ли произведен сброс фильтра",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "filters",
+    "source_identifier",
+    "source"
+  ],
+  "title": "Product Filtered",
+  "type": "object"
+}

@@ -1,0 +1,59 @@
+{
+  "description": "1) Каждый раз, при клике на табы (джобы) на Главной-главной 2) Каждый раз, при клике на джоб-фильтры в полке \"Магазины\".",
+  "properties": {
+    "available_tabs": {
+      "description": "Массив с названиями доступных джобов/фильтров",
+      "type": "array",
+      "items": {
+        "description": "Название джоба/фильтра",
+        "type": "string"
+      }
+    },
+    "active_filters": {
+      "description": "Массив с названиями выбранных фильтров при обновлении экрана",
+      "type": "array",
+      "items": {
+        "description": "Название джоба/фильтра",
+        "type": "string"
+      }
+    },
+    "is_job_filters_enabled": {
+      "description": "Включение/отключение джоб-фильтра в полке \"Магазины\". Принимает значение 1, если пользователь кликает на джоб-фильтр и ограничивает себя магазинами этого фильтра. Принимает значение 0, если выключает фильтр.",
+      "type": "boolean"
+    },
+    "tab_clicked": {
+      "description": "Название джоба/фильтра на который кликнули",
+      "type": "string"
+    },
+    "filter_clicked_source": {
+      "description": "Заполняется только есть source='filter'. Название страницы с которой кликнули по фильтру, например с полки Магазины = shopsFilter, Продукты = grocery",
+      "type": "string"
+    },
+    "has_delivery_address": {
+      "description": "Флаг наличия введенного адреса на момент клика",
+      "type": "boolean"
+    },
+    "source": {
+      "description": "Откуда пользователь совершил действие",
+      "type": "string",
+      "enum": [
+        "landing_retailer_list",
+        "address_modal",
+        "landing_recent_store",
+        "landing",
+        "filter"
+      ]
+    },
+    "vertical_switcher_value": {
+      "description": "Какая из верхних вертикалей выбрана (shops, restaurants)",
+      "$ref": "#/definitions/VerticalSwitcherValue"
+    }
+  },
+  "required": [
+    "available_tabs",
+    "tab_clicked",
+    "source"
+  ],
+  "title": "Shop Selection Tab Clicked",
+  "type": "object"
+}

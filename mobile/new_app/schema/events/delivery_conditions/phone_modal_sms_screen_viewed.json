@@ -1,0 +1,14 @@
+{
+  "description": "Событие приходит каждый раз, когда экран ввода кода из смс стал видимым пользователю систему. Событие приходит для авторизаций через телефон и для регистраций",
+  "properties": {
+    "source": {
+      "description": "Откуда именно была открыта модалка",
+      "$ref": "#/definitions/LoginSource"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Phone Modal Sms Screen Viewed",
+  "type": "object"
+}

@@ -1,0 +1,28 @@
+{
+  "description": "Открытие модального окна промо",
+  "properties": {
+    "promotion_id": {
+      "description": "Идентификатор промоакции, присылает backend",
+      "type": "number"
+    },
+    "promocode": {
+      "description": "Текст промокода",
+      "type": "string"
+    },
+    "source": {
+      "description": "Наименование промо-фичи, которой принадлежит",
+      "$ref": "#/definitions/PromoModalSource"
+    },
+    "is_active": {
+      "description": "Активна ли кнопка 'Применить промокод'",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "source",
+    "is_active"
+  ],
+  "title": "Promocode Modal Opened",
+  "type": "object",
+  "$comment": "https://wiki.sbmt.io/pages/viewpage.action?pageId=3129587050"
+}

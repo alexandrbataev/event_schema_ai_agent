@@ -1,0 +1,14 @@
+{
+  "description": "Каждый раз, при удалении адреса из списка адресов",
+  "properties": {
+    "source": {
+      "description": "Откуда перешли в список адресов",
+      "$ref": "#/definitions/AddressChangeSource"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Address Deleted",
+  "type": "object"
+}

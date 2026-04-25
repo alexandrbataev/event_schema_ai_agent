@@ -1,0 +1,24 @@
+{
+  "description": "Кнопка «Поделиться» в постчекауте",
+  "properties": {
+    "source": {
+      "description": "источник, откуда был клик",
+      "type": "string",
+      "enum": [
+        "daas_postcheckout",
+        "profile_order_history",
+        "daas_order_history"
+      ]
+    },
+    "claim_number": {
+      "description": "номер заявки, которая сделана в рамках этой сессии",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "claim_number"
+  ],
+  "title": "Daas Share Order Clicked",
+  "type": "object"
+}

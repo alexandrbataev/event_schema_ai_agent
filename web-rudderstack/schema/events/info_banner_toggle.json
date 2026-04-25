@@ -1,0 +1,28 @@
+{
+  "description": "Клик на тоггл чтобы свернуть/развернуть подробности информационного баннера",
+  "properties": {
+    "banner_title": {
+      "description": "title из баннера",
+      "type": "string"
+    },
+    "source": {
+      "description": "Экран на котором пользователь кликнул свернуть баннер",
+      "$ref": "#/definitions/InfoBannerSource"
+    },
+    "switch_to": {
+      "description": "В какое состояние переключили баннер свернутый / развернутый",
+      "type": "string",
+      "enum": [
+        "open",
+        "close"
+      ]
+    }
+  },
+  "required": [
+    "banner_title",
+    "source",
+    "switch_to"
+  ],
+  "title": "Info Banner Toggle",
+  "type": "object"
+}

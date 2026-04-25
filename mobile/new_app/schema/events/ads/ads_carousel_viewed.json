@@ -1,0 +1,27 @@
+{
+  "description": "Срабатывает, когда пользователь впервые на странице видит не менее 50% площади карусели",
+  "properties": {
+    "assets": {
+      "description": "список идентификаторов пришедших баннеров",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "id баннера в карусели"
+      }
+    },
+    "source": {
+      "description": "источник, где показалась полка, аналогичен сорсу баннеров, которые крутсятся в карусели",
+      "$ref": "#/definitions/AdsBannerSource"
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника, если есть. Если баннер показан в категории - {{category_id}}, если на странице заказа - {{order_id}}",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "assets"
+  ],
+  "title": "Ads Carousel Viewed",
+  "type": "object"
+}

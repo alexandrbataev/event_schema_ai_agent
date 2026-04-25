@@ -1,0 +1,45 @@
+{
+  "description": "Каждый раз, когда у пользователя открывается модалка любимая категория",
+  "properties": {
+    "source": {
+      "description": "Источник откуда именно была открыта форма",
+      "type": "string",
+      "enum": [
+        "profile",
+        "main_page",
+        "checkout",
+        "post_checkout",
+        "deeplink_balance",
+        "deeplink_reg",
+        "banner_fav_category",
+        "profile_button_item",
+        "category",
+        "deeplink_fav_category",
+        "retailer_main"
+      ]
+    },
+    "is_category": {
+      "description": "Флаг, есть ли возможность выбрать категорию",
+      "type": "boolean"
+    },
+    "is_category_selected": {
+      "description": "Флаг, выбрана ли категория",
+      "type": "boolean"
+    },
+    "category_id": {
+      "description": "id категории",
+      "type": "number"
+    },
+    "source_category": {
+      "description": "id категории, откуда была открыта модалка любимая категория",
+      "type": "number"
+    }
+  },
+  "required": [
+    "source",
+    "is_category",
+    "is_category_selected"
+  ],
+  "title": "Favourite Category Loaded",
+  "type": "object"
+}

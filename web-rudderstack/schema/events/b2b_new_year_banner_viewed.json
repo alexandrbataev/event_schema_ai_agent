@@ -1,0 +1,18 @@
+{
+  "description": "Пользователь увидел отрисованный баннер b2b лэндингов",
+  "properties": {
+    "source": {
+      "description": "Источник (страница) где был отрисован баннер",
+      "type": "string",
+      "enum": [
+        "b2b_landing",
+        "b2b_post_checkout"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "New Year Banner Viewed",
+  "type": "object"
+}

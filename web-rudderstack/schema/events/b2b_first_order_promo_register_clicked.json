@@ -1,0 +1,12 @@
+{
+  "description": "срабатывает когда пользователь кликнул на \"зарегистрироваться\" в попапе с промо на первый заказ",
+  "properties": {
+    "source": {
+      "description": "источник показа попапа",
+      "type": "string"
+    }
+  },
+  "required": [],
+  "title": "B2B First Order Promo Popup Register Clicked",
+  "type": "object"
+}

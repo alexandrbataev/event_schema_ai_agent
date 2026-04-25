@@ -1,0 +1,20 @@
+{
+  "description": "Выбор одного из пунктов меню “О сервисе”",
+  "properties": {
+    "item_clicked": {
+      "description": "Параметр указывает на то, какой пункт меню был выбран.",
+      "type": "string",
+      "enum": [
+        "faq",
+        "service_rules",
+        "legal_notice",
+        "personal_info"
+      ]
+    }
+  },
+  "required": [
+    "item_clicked"
+  ],
+  "title": "About Service Item Selected",
+  "type": "object"
+}

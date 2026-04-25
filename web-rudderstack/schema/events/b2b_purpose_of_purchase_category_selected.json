@@ -1,0 +1,21 @@
+{
+  "description": "Каждый раз, когда пользователь выбирает цель закупки",
+  "properties": {
+    "category_name": {
+      "description": "Название выбранной категории: office - Офис, restaurant - Ресторан, cafe - Кафе, hotel - Гостиница, resale - Перепродажа",
+      "type": "string",
+      "enum": [
+        "office",
+        "restaurant",
+        "cafe",
+        "hotel",
+        "resale"
+      ]
+    }
+  },
+  "required": [
+    "category_name"
+  ],
+  "title": "B2B Purpose Of Purchase Category Selected",
+  "type": "object"
+}

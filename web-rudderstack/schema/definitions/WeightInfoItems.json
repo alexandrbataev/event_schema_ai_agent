@@ -1,0 +1,24 @@
+{
+  "title": "WeightInfoItems",
+  "type": "object",
+  "description": "Массив с информацией о весе",
+  "properties": {
+    "weight": {
+      "description": "Вес корзины",
+      "type": "number"
+    },
+    "retailer_id": {
+      "description": "Идентификатор ритейлера",
+      "type": "number"
+    },
+    "notification_text": {
+      "description": "Информация о перевесе",
+      "type": "string"
+    }
+  },
+  "required": [
+    "weight",
+    "retailer_id",
+    "notification_text"
+  ]
+}

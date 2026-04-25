@@ -1,0 +1,14 @@
+{
+  "description": "Клик на вкладку Заказать документы в разделе Документы в профиле компании",
+  "properties": {
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_id"
+  ],
+  "title": "Profile Company Documents Order Documents Clicked",
+  "type": "object"
+}

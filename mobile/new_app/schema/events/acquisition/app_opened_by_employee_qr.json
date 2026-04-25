@@ -1,0 +1,30 @@
+{
+  "description": "Отрабатывает при открытии приложения сотрудником сбера по QR, после установки приложения в офисе через imazing",
+  "properties": {
+    "employee_id": {
+      "description": "Идентификатор сотрудника",
+      "type": "string"
+    },
+    "adid": {
+      "description": "идентификатор аджаста, он уникален для устройства",
+      "type": "string"
+    },
+    "idfa": {
+      "description": "рекламный идентифкатор в ios",
+      "type": "string"
+    },
+    "oaid": {
+      "description": "рекламный идентифкатор в huawei/honor",
+      "type": "string"
+    },
+    "gps_adid": {
+      "description": "название gaid в данных аджаста, рекламный идентификатор для сервисов google play, проще говоря в андроидах",
+      "type": "string"
+    }
+  },
+  "required": [
+    "employee_id"
+  ],
+  "title": "App Opened By Employee Qr",
+  "type": "object"
+}

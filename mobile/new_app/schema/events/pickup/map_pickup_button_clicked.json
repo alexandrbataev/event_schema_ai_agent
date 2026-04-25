@@ -1,0 +1,14 @@
+{
+  "description": "клик на кнопку \"заказать самовывоз\" на карте ",
+  "properties": {
+    "has_address": {
+      "description": "если у человека уже введен адрес, но он попал на странцу с картой, то True, иначе False, провряем актуальную заполненность поля с адресом",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "has_address"
+  ],
+  "title": "Map Pickup Button Clicked",
+  "type": "object"
+}

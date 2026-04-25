@@ -1,0 +1,24 @@
+{
+  "description": "Отправляется, когда во флоу асинхронного оформления заказа синхронная часть закончилась успешно и без ошибок, заказ уходит дальше в асинхронный этап оформления, пользователю показывается экран постчекаута со статусом Заказ оформляется.",
+  "properties": {
+    "order_number": {
+      "description": "Номер заказа, который оформляют",
+      "type": "string"
+    },
+    "shipment_number": {
+      "description": "Номер шипмента, который офррмляют",
+      "type": "string"
+    },
+    "retailer_id": {
+      "description": "Ритейлер, из которого оформляют заказ",
+      "type": "number"
+    }
+  },
+  "required": [
+    "order_number",
+    "shipment_number",
+    "retailer_id"
+  ],
+  "title": "Async Order Processing Started",
+  "type": "object"
+}

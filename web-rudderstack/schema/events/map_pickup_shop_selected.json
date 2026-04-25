@@ -1,0 +1,29 @@
+{
+  "description": "Клик на кнопку 'заберу отсюда' при выборе магазина на карте самовывоза",
+  "properties": {
+    "retailer_name": {
+      "description": "название ритейлера, на магазин которого кликнули",
+      "type": "string"
+    },
+    "retailer_id": {
+      "description": "id выбранного ритейлера",
+      "type": "number"
+    },
+    "store_count": {
+      "description": "количество логотипов и точек с магазинами",
+      "type": "number"
+    },
+    "store_id": {
+      "description": "id выбранного стора",
+      "type": "number"
+    }
+  },
+  "required": [
+    "retailer_name",
+    "retailer_id",
+    "store_count",
+    "store_id"
+  ],
+  "title": "Map Pickup Shop Selected",
+  "type": "object"
+}

@@ -1,0 +1,18 @@
+{
+  "description": "Срабатывает, когда показали пользователю промо с таймером",
+  "properties": {
+    "source": {
+      "description": "Источник показа промо",
+      "type": "string",
+      "enum": [
+        "main_page",
+        "checkout"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "B2B First Order Promo Timer Showed",
+  "type": "object"
+}

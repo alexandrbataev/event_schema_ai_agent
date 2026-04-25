@@ -1,0 +1,15 @@
+{
+  "description": "Пользователь нажимает на кнопку Любимых (сердечко в хедере) или на Любимые в истории заказов",
+  "properties": {
+    "source": {
+      "description": "Источник нажатия на Любимые",
+      "type": "string",
+      "$comment": "tabbar - из хедера; orders_history - из истории заказов"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Favourites Tab Clicked",
+  "type": "object"
+}

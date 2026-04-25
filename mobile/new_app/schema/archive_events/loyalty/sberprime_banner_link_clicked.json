@@ -1,0 +1,19 @@
+{
+  "description": "переход по ссылке в банере",
+  "properties": {
+    "is_prime_user": {
+      "description": "Являлся ли клиент подписчиком СберПрайм",
+      "type": "boolean"
+    },
+    "product_sku": {
+      "description": "sku продукта",
+      "type": "string"
+    }
+  },
+  "required": [
+    "is_prime_user",
+    "product_sku"
+  ],
+  "title": "SberPrime Banner Link Clicked",
+  "type": "object"
+}

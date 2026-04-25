@@ -1,0 +1,19 @@
+{
+  "description": "Каждый раз когда пользователь делится корзиной или копирует ее в буфер обмена",
+  "properties": {
+    "cart_id": {
+      "description": "Идентификатор корзины (из скопированного URL)",
+      "type": "string"
+    },
+    "retailer_id": {
+      "description": "Идентификатор ритейлера корзины, которую шэрят",
+      "type": "number"
+    }
+  },
+  "required": [
+    "cart_id",
+    "retailer_id"
+  ],
+  "title": "Share Cart Link Copied",
+  "type": "object"
+}

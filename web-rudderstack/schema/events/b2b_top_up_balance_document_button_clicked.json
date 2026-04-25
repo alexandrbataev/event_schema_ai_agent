@@ -1,0 +1,19 @@
+{
+  "description": "Генерация счета на пополнение баланса пользователем (при пополнении баланса пользователем)",
+  "properties": {
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    },
+    "amount": {
+      "description": "Сумма к пополнению",
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_id",
+    "amount"
+  ],
+  "title": "B2B Top Up Balance Document Button Clicked",
+  "type": "object"
+}

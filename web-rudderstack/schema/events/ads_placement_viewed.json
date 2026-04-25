@@ -1,0 +1,35 @@
+{
+  "description": "При первом попадании рекламного блока в видимую область экрана на не менее 50% своей геометрической площади.",
+  "properties": {
+    "placement_id": {
+      "description": "идентификатор рекламного слота, по которому отправляется запрос в Ad Server",
+      "type": "string"
+    },
+    "source": {
+      "description": "Какой именно слот был показан",
+      "$ref": "#/definitions/AdsBannerSource"
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника, если есть. Если баннер показан в категории - {{category_id}}, если на странице заказа - {{order_id}}",
+      "type": "string"
+    },
+    "retailer_id": {
+      "description": "Идентификатор ритейлера, который был при запросе доступных баннеров",
+      "type": "number"
+    },
+    "store_id": {
+      "description": "Идентификатор магазина, который был при запросе доступных баннеров",
+      "type": "number"
+    },
+    "placement_position": {
+      "description": "Идентификатор позиции рекламного блока на экране. Передается только в том случае, если рекламный блок может дублироваться",
+      "type": "number"
+    }
+  },
+  "required": [
+    "source",
+    "placement_id"
+  ],
+  "title": "Ads Placement Viewed",
+  "type": "object"
+}

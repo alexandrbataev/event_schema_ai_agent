@@ -1,0 +1,14 @@
+{
+  "description": "Показ на Главной ретейлера бейджа -99%, при наведении на который появляется всплывающий баннер с доп. информацией",
+  "properties": {
+    "view_description": {
+      "description": "Если пользователю был показан высплывающий баннер - 1, если нет - 0",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "view_description"
+  ],
+  "title": "Sber Loyalty Hover Viewed",
+  "type": "object"
+}

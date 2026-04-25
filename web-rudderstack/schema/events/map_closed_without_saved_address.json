@@ -1,0 +1,10 @@
+{
+  "description": "Пользователь закрыл карту без сохранения/выбора адреса",
+  "properties": {
+    "source": {
+      "$ref": "#/definitions/AddressChangeSource"
+    }
+  },
+  "title": "Map Closed Without Saved Address",
+  "type": "object"
+}

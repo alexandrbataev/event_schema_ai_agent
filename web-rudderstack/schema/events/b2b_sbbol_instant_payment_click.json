@@ -1,0 +1,24 @@
+{
+  "description": "Клик по кнопке моментального платежа 'Оплата через Сбербизнес'",
+  "properties": {
+    "order_number": {
+      "description": "Строковый ID заказа",
+      "type": "string"
+    },
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    },
+    "shipment_number": {
+      "description": "Идентификатор доставки",
+      "type": "string"
+    }
+  },
+  "required": [
+    "order_number",
+    "company_id",
+    "shipment_number"
+  ],
+  "title": "B2B SBBOL Instant Payment Clicked",
+  "type": "object"
+}

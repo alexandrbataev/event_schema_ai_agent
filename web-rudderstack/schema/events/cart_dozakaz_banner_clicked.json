@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз, когда пользователь кликает на баннер дозаказа в корзине",
+  "properties": {},
+  "required": [],
+  "title": "Cart Dozakaz Banner Clicked",
+  "type": "object"
+}

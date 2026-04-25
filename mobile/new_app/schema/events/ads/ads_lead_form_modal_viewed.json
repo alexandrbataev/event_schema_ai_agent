@@ -1,0 +1,24 @@
+{
+  "description": "Срабатывает, когда пользователь впервые на странице видит не менее 50% площади загруженной шторки лид-формы.",
+  "properties": {
+    "form_id": {
+      "description": "Уникальный идентификатор лид-формы",
+      "type": "string"
+    },
+    "source_identifier": {
+      "description": "Идентификатор ассета баннера, с которого была открыта модалка",
+      "type": "string"
+    },
+    "source": {
+      "description": "Где именно была размещена шторка лид-формы",
+      "$ref": "#/definitions/AdsBannerSource"
+    }
+  },
+  "required": [
+    "form_id",
+    "source_identifier",
+    "source"
+  ],
+  "title": "Ads Lead Form Modal Viewed",
+  "type": "object"
+}

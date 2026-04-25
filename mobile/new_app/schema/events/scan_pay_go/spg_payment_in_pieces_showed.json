@@ -1,0 +1,17 @@
+{
+  "description": "Отправляем при показе шторки о новом способе оплаты - частями",
+  "properties": {
+    "source": {
+      "description": "Источник появляения картинки",
+      "type": "string",
+      "enum": [
+        "cart"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Spg Payment In Pieces Showed",
+  "type": "object"
+}

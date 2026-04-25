@@ -1,0 +1,14 @@
+{
+  "description": "Пользователь кликнул на предложенный прошлый адрес во время ввода адреса",
+  "properties": {
+    "address": {
+      "description": "адрес",
+      "type": "string"
+    }
+  },
+  "required": [
+    "address"
+  ],
+  "title": "Past Address Selected",
+  "type": "object"
+}

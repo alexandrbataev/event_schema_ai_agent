@@ -1,0 +1,34 @@
+{
+  "description": "Нажали кнопку Добавить пользователя",
+  "properties": {
+    "email": {
+      "description": "Почта пользователя",
+      "type": "string"
+    },
+    "source": {
+      "description": "С какой страницы нажали кнопку",
+      "type": "string"
+    },
+    "user_type": {
+      "description": "Тип добавленного пользователя",
+      "type": "string",
+      "enum": [
+        "admin",
+        "report_downloader",
+        "user"
+      ]
+    },
+    "added_user_email": {
+      "description": "Почта добавленного пользователя",
+      "type": "string"
+    }
+  },
+  "required": [
+    "email",
+    "source",
+    "user_type",
+    "added_user_email"
+  ],
+  "title": "DAAS Added User",
+  "type": "object"
+}

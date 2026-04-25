@@ -1,0 +1,29 @@
+{
+  "description": "При каждом отпускании слайдера в модалке списания после его передвижения",
+  "properties": {
+    "amount": {
+      "description": "Выбранное кол-во бонусов к списанию на момент отпускания слайдера",
+      "type": "number"
+    },
+    "amount_max": {
+      "description": "Максимально доступное кол-во бонусов к списанию",
+      "type": "number"
+    },
+    "amount_total": {
+      "description": "Баланс бонусов у пользователя",
+      "type": "number"
+    },
+    "is_activated": {
+      "description": "1, если в данный момент на чекауте активировано списание бонусов, 0 - иначе",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "amount",
+    "amount_max",
+    "amount_total",
+    "is_activated"
+  ],
+  "title": "Sber Loyalty Checkout Form Slider Moved",
+  "type": "object"
+}

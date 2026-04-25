@@ -1,0 +1,14 @@
+{
+  "description": "Нажатие на кнопку 'Продолжить' на экране персонализации категорий",
+  "properties": {
+    "selected_categories": {
+      "description": "Список выбранных категорий",
+      "type": "array"
+    }
+  },
+  "required": [
+    "selected_categories"
+  ],
+  "title": "Finish Personalization Clicked",
+  "type": "object"
+}

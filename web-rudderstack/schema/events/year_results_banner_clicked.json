@@ -1,0 +1,14 @@
+{
+  "description": "Каждый раз когда пользователь кликает на баннер итоги года",
+  "properties": {
+    "source": {
+      "description": "источник баннера",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Year Results Banner Clicked",
+  "type": "object"
+}

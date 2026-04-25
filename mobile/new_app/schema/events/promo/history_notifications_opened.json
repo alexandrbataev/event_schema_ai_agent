@@ -1,0 +1,27 @@
+{
+  "description": "При каждой загрузке страницы уведомлений и любого из разделов центра уведомлений",
+  "properties": {
+    "unread": {
+      "description": "Число непрочитанных и общее кол-во пушей каждого раздела",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/HistoryNotificationsUnreadCount"
+      }
+    },
+    "type": {
+      "description": "Тип загруженной страницы уведомлений (promotions,system, all)",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник, откуда была открыта страница уведомлений",
+      "type": "string",
+      "enum": [
+        "main_main",
+        "profile",
+        "deeplink"
+      ]
+    }
+  },
+  "title": "History Notifications Opened",
+  "type": "object"
+}

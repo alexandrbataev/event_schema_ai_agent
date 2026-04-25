@@ -1,0 +1,44 @@
+{
+  "description": "Событие отрабатывает, когда пользователь увидел карточку Ресторана в карусели (полке) с тайтлом Вы заказывали на экране списка ресторанов",
+  "properties": {
+    "max_sberloyalty_spend_percent": {
+      "description": "Значение максимальной скидки в процентах",
+      "type": "string"
+    },
+    "delivery_cost": {
+      "description": "Стоимость доставки. Если минимум и максимум совпадают, значит стоимость доставки фиксирована, если нет, значит что это лесенка.",
+      "type": "object",
+      "properties": {
+        "min": {
+          "description": "Минимальная стоимость доставки",
+          "type": "number"
+        },
+        "max": {
+          "description": "Максимальная стоимость доставки",
+          "type": "number"
+        }
+      }
+    },
+    "position": {
+      "description": "Позиция просмотренного ресторана на вкладке (нумерация с 1)",
+      "type": "number"
+    },
+    "store_id": {
+      "description": "id ресторана, который был просмотрен пользователем",
+      "type": "number"
+    },
+    "closest_delivery_time_displayed": {
+      "description": "Через сколько времени в минутах мы общаем доставку пользователю",
+      "type": "number"
+    }
+  },
+  "required": [
+    "max_sberloyalty_spend_percent",
+    "delivery_cost",
+    "position",
+    "store_id",
+    "closest_delivery_time_displayed"
+  ],
+  "title": "Ordered Earlier Restaurant Viewed",
+  "type": "object"
+}

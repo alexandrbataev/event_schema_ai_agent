@@ -1,0 +1,33 @@
+{
+  "description": "Клик на \"да\" в попапе с подтверждением возраста",
+  "properties": {
+    "product_sku": {
+      "description": "массив sku продукта, который клиент хотел открыть, добавить в корзину, открыть, массив sku продуктов, которые были в предыдущем заказе, который клиент захотел повторить или открыть с главной страницы",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "sku продукта"
+      }
+    },
+    "type": {
+      "description": "тип попапа",
+      "type": "string",
+      "enum": [
+        "add",
+        "open",
+        "order_repeat"
+      ]
+    },
+    "source": {
+      "description": "Источник откуда пришли на попап",
+      "$ref": "#/definitions/ProductSource"
+    }
+  },
+  "required": [
+    "source",
+    "product_sku",
+    "type"
+  ],
+  "title": "Age Confirmation Completed",
+  "type": "object"
+}

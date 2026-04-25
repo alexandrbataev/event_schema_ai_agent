@@ -1,0 +1,19 @@
+{
+  "description": "Срабатывает каждый раз когда показываем какой-то алерт связанный с повтором заказа в корзине  ",
+  "properties": {
+    "retailer_id": {
+      "description": "id ритейлера в корзине которого находится пользователь",
+      "type": "number"
+    },
+    "text_message": {
+      "description": "Текст сообщения, который видит пользователь",
+      "type": "string"
+    }
+  },
+  "required": [
+    "retailer_id",
+    "text_message"
+  ],
+  "title": "Cart Alert Repeat Order Shown",
+  "type": "object"
+}

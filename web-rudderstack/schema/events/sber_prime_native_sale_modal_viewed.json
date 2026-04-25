@@ -1,0 +1,20 @@
+{
+  "description": "Каждый раз при открытии модалки с информацией о СберПрайм",
+  "properties": {
+    "source": {
+      "description": "Источник, откуда была открыта модалка",
+      "type": "string",
+      "enum": [
+        "profile",
+        "balance",
+        "menu",
+        "landing",
+        "retailer",
+        "deeplink"
+      ]
+    }
+  },
+  "required": [],
+  "title": "Sber Prime Modal With Sale Opened",
+  "type": "object"
+}

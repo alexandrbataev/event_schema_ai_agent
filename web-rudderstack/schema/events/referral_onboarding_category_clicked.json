@@ -1,0 +1,24 @@
+{
+  "description": "Каждый раз при клике на категорию на лендинге для приглашенного по рефералке пользователя",
+  "properties": {
+    "offer": {
+      "description": "Сумма промокода в рублях",
+      "type": "string"
+    },
+    "promocode": {
+      "description": "Промокод",
+      "type": "string"
+    },
+    "category_name": {
+      "description": "Название категории",
+      "type": "string"
+    }
+  },
+  "required": [
+    "offer",
+    "promocode",
+    "category_name"
+  ],
+  "title": "Referral Onboarding Category Clicked",
+  "type": "object"
+}

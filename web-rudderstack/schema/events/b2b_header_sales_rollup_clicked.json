@@ -1,0 +1,8 @@
+{
+  "description": "Клик по одному из пунктов в выпадашке скидок в хэдере",
+  "properties": {},
+  "required": [],
+  "title": "B2B Header Sales Rollup Clicked",
+  "type": "object"
+}
+    

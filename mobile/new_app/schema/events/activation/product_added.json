@@ -1,0 +1,336 @@
+{
+  "description": "При создании line_item или увеличении quantit (кроме блока дозаказа, см Merge Mode Product Added)",
+  "properties": {
+    "ad_id": {
+      "description": "Идентификатор рекламной кампании, проставляется для всех промо-товаров.Возможные источники: recommendations_main_page,recommendations_cart,category",
+      "type": "string"
+    },
+    "algorithm": {
+      "description": "Параметр для различной техинфы команды RecSyS",
+      "type": "string"
+    },
+    "auction_id": {
+      "description": "id аукциона для конкретного товара, на конкретной позиции. Возможные источники: recommendations_main_page",
+      "type": "string"
+    },
+    "auction_req_id": {
+      "description": "id ответа",
+      "type": "string"
+    },
+    "bid": {
+      "description": "ставка за добавление на момент показа товара.Возможные источники: recommendations_main_page",
+      "type": "string"
+    },
+    "category_filter": {
+      "description": "В значение записываем category_id, по кот фильтруем, при фильтрации по мастер-категории в поиске и добавлении товара в корзину.",
+      "type": "string"
+    },
+    "default_price": {
+      "description": "Цена товара (без скидки, если скидка есть)",
+      "type": "number"
+    },
+    "has_sber_prime_badge": {
+      "description": "Был ли на карточке бейдж СберПрайм",
+      "type": "boolean"
+    },
+    "is_alcohol": {
+      "description": "является ли продукт алкоголем",
+      "type": "boolean"
+    },
+    "is_discount": {
+      "description": "Флаг, есть ли скидка (true/false)",
+      "type": "boolean"
+    },
+    "is_from_see_all_page": {
+      "description": "Если источник добавления товара - рекомендательный блок, который раскрывается по кнопке Показать все, или карточка товара, открытая из этого блока, или полка ритейлера в межрит поиске. В случае межрита - False добавлено из полочной выдачи, True добавлено из полной выдачи в рамках ритейлера",
+      "type": "boolean"
+    },
+    "is_prime_user": {
+      "description": "Являлся ли клиент, который увидел карточку, подписчиком СберПрайм",
+      "type": "boolean"
+    },
+    "is_promo": {
+      "description": "Является ли товар промоутируемым (проплаченным, продвигаемым) (true/false)",
+      "type": "boolean"
+    },
+    "promo_id": {
+      "description": "Идентификаторы промо-кампании из Trading Desk",
+      "type": "string"
+    },
+    "is_reviewed": {
+      "description": "Флаг, есть ли оценка/отзыв на этом товаре",
+      "type": "boolean"
+    },
+    "is_stock": {
+      "description": "Показывает, в наличии товар или нет",
+      "type": "boolean"
+    },
+    "line_item_uuid": {
+      "description": "uuid из таблицы spree_line_items",
+      "type": "string"
+    },
+    "position": {
+      "description": "Позиция на момент открытия",
+      "type": "number"
+    },
+    "price": {
+      "description": "Фактическая, отображаемая цена товара (со скидкой)",
+      "type": "number"
+    },
+    "sber_price": {
+      "description": "Фактическая, отображаемая цена товара (со скидкой по карте сбера)",
+      "type": "number"
+    },
+    "pricer": {
+      "description": "тип фасовки товара",
+      "type": "string"
+    },
+    "product_name": {
+      "description": "Название товара",
+      "type": "string"
+    },
+    "product_sku": {
+      "description": "sku товара",
+      "type": "string"
+    },
+    "review": {
+      "description": "{'Кол-во отзывов (текстовых комментариев)', 'Средний балл'} по карточке",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "TBD"
+      }
+    },
+    "source": {
+      "description": "Источник, откуда была добавлен товар",
+      "$ref": "#/definitions/ProductSource"
+    },
+    "source_screen_name": {
+      "description": "Уточнение источника клика при добавлении товара",
+      "type": "string",
+      "enum": [
+        "favourites",
+        "cart",
+        "deals"
+      ]
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника добавления в соответствии с источником - поисковый запрос, category_id, banner_id (banner_main_page) и {“banner_id”: {{banner_id}}, “category_id”: {{category_id}}} (banner_category), “collection_shelf” : {{category}}. Для источников рекомендаций везде должна быть пустая строка",
+      "type": "string",
+      "examples": [
+        "молоко",
+        "4621"
+      ]
+    },
+    "source_type": {
+      "description": "Тип источника добавления",
+      "$ref": "#/definitions/ProductSourceType"
+    },
+    "store_id": {
+      "description": "Значение стора для межритейлерного опыта - корзины или поиска",
+      "type": "number"
+    },
+    "is_prescription": {
+      "description": "Является ли продукт рецептурным",
+      "type": "boolean"
+    },
+    "is_emphasized": {
+      "description": "Есть ли синий шрифт (дозировка)  под карточкой товара для продуктов фармы в поиске",
+      "type": "boolean"
+    },
+    "rec_block_id": {
+      "description": "ID рекомендательного блока",
+      "type": "number"
+    },
+    "rec_block_position": {
+      "description": "Позиция рекомендательного блока на странице",
+      "type": "number"
+    },
+    "rec_block_name": {
+      "description": "Наименование рекомендательного блока",
+      "type": "string"
+    },
+    "is_from_product_quantity_block": {
+      "description": "Добавлен ли товар из блока с кастомным вводом товара. True, если добавлен через блок, False, иначе",
+      "type": "boolean"
+    },
+    "badges": {
+      "description": "Массив словарей с характеристиками отображенных на сниппете/карточке бейджей. Статус загрузки бейджей записывается в параметр badges_status",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Badge"
+      }
+    },
+    "badges_status": {
+      "description": "Статус запроса бейджей. initial - запрос по какой-то причине не отправился (есть ли бейджи на товаре не знаем); loading - ждем ответ по запросу (при этом badges null, не знаем есть ли они на товаре); failed - ошибка, при этом badges null (есть ли бейджи не знаем); success - бейджи пришли (если badges заполнен, значит бейджи есть, если null – бейджей нет)",
+      "type": "string",
+      "enum": [
+        "initial",
+        "loading",
+        "failed",
+        "success"
+      ]
+    },
+    "rte_selected_options": {
+      "description": "Массив с выбранными дополнительными опциями ресторана",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/RestaurantProductOption"
+      }
+    },
+    "is_multiretail_promo_category": {
+      "description": "True, если товар был добавлен внутри промо подборки, False иначе",
+      "type": "boolean"
+    },
+    "multiretail_promo_category_id": {
+      "description": "id промо подборки. Заполняется только в случае поиска внутри промо подборки",
+      "type": "string"
+    },
+    "is_from_recipes": {
+      "description": "Параметр указывает, что добавление товара произошло при поиске по рецептам (source для поиска по рецептам = search)",
+      "type": "boolean"
+    },
+    "recipe_id": {
+      "description": "Идентификатор рецепта в кликхаусе",
+      "type": "string"
+    },
+    "is_search_rte": {
+      "description": "Товар добавлен из поисковой выдачи внутри конкретного ресторана или из межрит выдачи после поиска в списке ресторанов",
+      "type": "boolean"
+    },
+    "is_gigachat_used": {
+      "description": "Флаг применения функционала гигачата. Был ли продукт выдан в поисковой выдачи гигачатом перед добавлением в корзину.",
+      "type": "boolean"
+    },
+    "is_rte_calories_available": {
+      "description": "Факт наличия КБЖУ у товара РТЕ",
+      "type": "boolean"
+    },
+    "is_multicard": {
+      "description": "Является ли карточка товара (pdp), откуда произошло добавление, мультикарточкой. Отправляется только для source_type = product_card",
+      "type": "boolean"
+    },
+    "is_from_multicard": {
+      "description": "Если добавление товара произошло из карточки товара, в которую попали через опции, мультикарточки",
+      "type": "boolean"
+    },
+    "is_bmpl": {
+      "description": "Если для товара доступна механика BMPL (скидка при увеличении количества товара в корзине)",
+      "type": "boolean"
+    },
+    "cnt_stock_for_discount": {
+      "description": "Отображаемое кол-во доступных товаров для покупки по акции Скидка за сток. Отправлять только для акционных товаров.",
+      "type": "number"
+    },
+    "product_centricity_flag": {
+      "description": "Событие сработало в рамкох товароцентричного флоу",
+      "type": "boolean"
+    },
+    "is_part_of_combo": {
+      "description": "Если добавленный товар является частью комбо обеда",
+      "type": "boolean"
+    },
+    "query_classifier": {
+      "description": "Массив предсказанных вертикалей (вертикаль, вероятность) по тексту запроса",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/SearchQueryClassifier"
+      }
+    },
+    "query_category": {
+      "description": "Массив предсказанных категорий товара (категория, вероятность) по тексту запроса",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/SearchQueryClassifier"
+      }
+    },
+    "search_category_id": {
+      "description": "Только для search при добавлении товара из поиска внутри категории каталога. Записываем значение category_id из выдачи с Search Results Viewed, имеющей параметр source_identifier = category_id",
+      "type": "string",
+      "examples": [
+        "4621"
+      ]
+    },
+    "is_suggested_query": {
+      "description": "Только для добавлений из поиска source in (search_multiretail, search, search_regular, regular_from_multi, search_cart). 1, Если выдача сформирована в ответ на запрос с саджестером, то есть пользователь кликнул на саджест поискового запроса. ",
+      "type": "boolean"
+    },
+    "position_suggester": {
+      "description": "Только для добавлений из поиска source in (search_multiretail, search, search_regular, regular_from_multi, search_cart). Если выдача сформирована в ответ на запрос с саджестером, то есть is_suggested_query = 1, то записываем позицию кликнутого саджестера из блока подсказок, нумерация начинается с 1. Если is_suggested_query = 0, то не записываем параметр",
+      "type": "number"
+    },
+    "search_block_name": {
+      "description": "Только для добавлений из поиска source in (search_multiretail, search, search_regular, regular_from_multi, search_cart). Название блока, элемент из которого был кликнут: популярные запросы, недавние запросы, текстовый запрос. Если выдача сформирована в ответ на запрос с саджестером, то есть is_suggested_query = 1, то записываем название блока подсказок, если is_suggested_query = 0, то не заполняем",
+      "type": "string",
+      "enum": [
+        "Recent items",
+        "Popular items",
+        "Text query",
+        "Custom items"
+      ]
+    },
+    "correction_query": {
+      "description": "Для source = search, search_multiretail. Если поисковая выдача сформирована с применением исправления запроса через опечаточник. original - опечаточник не применялся, corrected - опечаточник применялся, uncorrected - выдача построена по не исправленному запросу после клика по нему только для search_regular",
+      "type": "string",
+      "enum": [
+        "original",
+        "corrected",
+        "uncorrected"
+      ]
+    },
+    "is_soft_query": {
+      "description": "Только для source = search. Если поисковая выдача сформирована с применением ослабления запроса soft query",
+      "type": "boolean"
+    },
+    "position_retailer": {
+      "description": "Позиция ретейлера в межритейлерной выдаче, для которого отрисованы результаты поиска. Отправляем только для source=search_multiretail",
+      "type": "number"
+    },
+    "gift_flg": {
+      "description": "Флаг что товар является подарком в рамках фичи подарки в корзине https://wiki.sbmt.io/pages/viewpage.action?pageId=3383236905",
+      "type": "number",
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "delivery_method": {
+      "description": "Метод доставки магазина для межритейлерного поиска, on_demand- быстрая, planned - плановая, pickup - самовывоз",
+      "type": "string",
+      "enum": [
+        "on_demand",
+        "planned",
+        "pickup"
+      ]
+    },
+    "is_amazeme": {
+      "description": "Если подборка сформирована amazeme, то True, иначе False",
+      "type": "boolean"
+    },
+    "is_biometrics": {
+      "description": "нужна ли биометрия для данного товара",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "source",
+    "source_type",
+    "product_sku",
+    "product_name",
+    "line_item_uuid",
+    "price",
+    "default_price",
+    "is_discount",
+    "is_promo",
+    "has_sber_prime_badge",
+    "is_prime_user",
+    "is_stock",
+    "is_alcohol",
+    "is_reviewed",
+    "is_merge",
+    "pricer",
+    "is_prescription"
+  ],
+  "title": "Product Added",
+  "type": "object"
+}

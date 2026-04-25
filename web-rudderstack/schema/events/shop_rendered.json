@@ -1,0 +1,105 @@
+{
+  "description": "Событие отправляется, когда карточка магазина или ресторана показывается на экране пользователя впервые. Работает для любой вертикали, любого метода доставки, в любом месте (ГГ, межрит, полка). Событие включает условия доставки, которые были отображены на плитке ритейлера при ее рендере.",
+  "properties": {
+    "retailer_id": {
+      "description": "Идентификатор ритейлера/ресторана",
+      "type": "number"
+    },
+    "store_id": {
+      "description": "Идентификатор магазина/точки",
+      "type": "number"
+    },
+    "tab": {
+      "description": "Фильтр в рамках которого происходит просмотр списка ритейлеров (аптеки, алкоголь и тд)",
+      "type": "string"
+    },
+    "position_in_tab": {
+      "description": "Порядковый номер внутри выбранного фильтра в списке ресторанов (слева направо, сверху вниз)(нумерация с 1)",
+      "type": "number"
+    },
+    "vertical_switcher_value": {
+      "description": "Какая из верхних вертикалей выбрана (shops, restaurants)",
+      "type": "string",
+      "enum": [
+        "shops",
+        "restaurants"
+      ]
+    },
+    "closest_delivery_time_displayed": {
+      "description": "Время в минутах до левой границы интервала, который показали пользователю, вне зависимости от типа слота.",
+      "type": "number"
+    },
+    "closest_delivery_time_right_bound": {
+      "description": "Время в минутах до правой границы интервала, который показали пользователю, вне зависимости от типа слота.",
+      "type": "number"
+    },
+    "is_on_demand_store": {
+      "description": "1, если условия показаны для магазина быстрой доставки, 0, если иначе. Признак того, что на плитке ритейлера был бегущий человечек",
+      "type": "boolean"
+    },
+    "shelf_info": {
+      "description": "Информация о полке",
+      "$ref": "#/definitions/FromShelfInfo"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (grocery, pharmacy или restaurant)",
+      "type": "string",
+      "enum": [
+        "grocery",
+        "pharm",
+        "restaurant"
+      ]
+    },
+    "source": {
+      "description": "Место, где была отрисована плитка ритейлера - главная-главная (main_main), межрит (search_multiretail), полка на главной главной (main_main_shelf), мултиритейлерная промоподборка (multiretail_promo_category) или сео-каталог (category_multiretail_seo)",
+      "type": "string",
+      "enum": [
+        "main_main",
+        "search_multiretail",
+        "main_main_shelf",
+        "multiretail_promo_category",
+        "category_multiretail_seo"
+      ]
+    },
+    "min_cart_amount": {
+      "description": "Минимальная корзина в копейках, которую отобразили пользователю на главной-главной. Может быть пустой, если минимальную корзину не отобразили",
+      "type": "number"
+    },
+    "delivery_price": {
+      "description": "Стоимость доставки в копейках, которую отобразили пользователю. Может быть пустой, если стоимость доставки не отобразили на плитке ритейлера",
+      "type": "number"
+    },
+    "time_displayed_right_ts_utc": {
+      "description": "Таймстемп, отражающий правую границу слота или еты, отображенную пользователю - приходит как для доставки, так и для самовывоза. Таймстемп приходит в UTC. Может быть пустой, если правую границу интервала доставки не отобразили на плитке ритейлера",
+      "type": "string"
+    },
+    "time_displayed_left_ts_utc": {
+      "description": "Таймстемп, отражающий левую границу слота или еты, отображенную пользователю - приходит как для доставки, так и для самовывоза. Таймстемп приходит в UTC.",
+      "type": "string"
+    },
+    "is_surge_shown": {
+      "description": "Параметр принимает значение 1, если мы показываем сурж на фронте (красим плашку / подмечаем показ суржа), то есть обращаем внимание пользователя на изменившиеся условия доставки.",
+      "type": "boolean"
+    },
+    "rte_ordered_earlier_shelf": {
+      "description": "Флаг, что карточка ресторана показалась в карусели РТЕ - Вы заказывали",
+      "type": "boolean"
+    },
+    "promo_badge_info": {
+      "description": "Список с объектами, содержащими параметры бейджа (текст, цвет и тип), по порядку отображения бейджей",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/RetailerPromoBadge"
+      }
+    }
+  },
+  "required": [
+    "retailer_id",
+    "store_id",
+    "is_on_demand_store",
+    "retailer_vertical",
+    "time_displayed_left_ts_utc"
+  ],
+  "title": "Shop Rendered",
+  "type": "object"
+}

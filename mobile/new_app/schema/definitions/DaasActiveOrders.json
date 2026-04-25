@@ -1,0 +1,19 @@
+{
+  "title": "DaasActiveOrders",
+  "type": "object",
+  "description": "JSON активных заказов (в том числе тех, которые скрыты от пользователя) на главной daas",
+  "properties": {
+    "claim_number": {
+      "description": "номер заказа",
+      "type": "string"
+    },
+    "status": {
+      "description": "текущий статус заказа",
+      "type": "string"
+    }
+  },
+  "required": [
+    "claim_number",
+    "status"
+  ]
+}

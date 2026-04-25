@@ -1,0 +1,18 @@
+{
+  "description": "Пользователь кликнул на выбранную акцию",
+  "properties": {
+    "promotion_id": {
+      "description": "Идентификатор промоакции (с бэкенда)",
+      "type": "number"
+    },
+    "tab_name": {
+      "description": "Из какой категории выбрали акцию",
+      "type": "string"
+    }
+  },
+  "required": [
+    "promotion_id"
+  ],
+  "title": "Your Promocodes Promo Clicked",
+  "type": "object"
+}

@@ -1,0 +1,19 @@
+{
+  "description": "Нажата кнопка - скопировать адрес (link on picture - http://joxi.ru/p27eqdGTLXDBYr)",
+  "properties": {
+    "shipment_number": {
+      "description": "Номер шипмента",
+      "type": "string"
+    },
+    "store_id": {
+      "description": "id стора, в котором сделали заказ",
+      "type": "number"
+    }
+  },
+  "required": [
+    "shipment_number",
+    "store_id"
+  ],
+  "title": "Address Store Copied",
+  "type": "object"
+}

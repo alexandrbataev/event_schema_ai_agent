@@ -1,0 +1,43 @@
+{
+  "description": "Срабатывает, когда пользователь кликает на раздел Вся выгода",
+  "properties": {
+    "source": {
+      "description": "Где именно был размещен раздел Вся выгода",
+      "$ref": "#/definitions/AdsBannerSource"
+    },
+    "is_logo_all_benefits": {
+      "description": "Отображается ли логотип раздела Вся выгода",
+      "type": "boolean"
+    },
+    "position_clicked": {
+      "description": "Порядковый номер блока, на который кликнули в разделе Вся выгода. У блока logo_all_benefits позиция = 0, у остальных блоков нумерация начинается с 1 слева-направо/сверху-вниз (в зависимости от расположения)",
+      "type": "number"
+    },
+    "block_clicked": {
+      "description": "Объект с характеристиками блока. Отображаются характеристики только того предложения, на который кликнул пользователь в данный момент.",
+      "type": "object",
+      "items": {
+        "$ref": "#/definitions/AdsAllBenefitsBlock"
+      }
+    },
+    "retailer_id": {
+      "description": "Ритейлер, на экране которого располагается блок Вся выгода",
+      "type": "number"
+    },
+    "store_id": {
+      "description": "Магазин, на экране которого располагается блок Вся выгода",
+      "type": "number"
+    }
+  },
+  "required": [
+    "source",
+    "is_logo_all_benefits",
+    "position_clicked",
+    "block_clicked",
+    "retailer_id",
+    "store_id"
+  ],
+  "title": "Ads All Benefits Block Clicked",
+  "type": "object",
+  "$comment": "logo_all_benefits - Сам значок %(логотип) раздела Вся выгода. Блоки: timer_promo - Промокод с таймером для новичков; sber_spasibo - Оплата бонусами спасибо; offer - Акция; promocode - Промокод; achievements - Цели; present - Подарок; delivery - Доставка"
+}

@@ -1,0 +1,17 @@
+{
+  "description": "Каждый раз при клике пользователя на кнопку 'Промокоды Сбермаркета'",
+  "properties": {
+    "source": {
+      "description": "С какого экрана пользователь совершил клик",
+      "type": "string",
+      "enum": [
+        "profile"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Promocodes Button Clicked",
+  "type": "object"
+}

@@ -1,0 +1,14 @@
+{
+  "description": "Проверка на наличие действующей подписки СберПрайм (каждый ответ с бэка, в том числе при оформлении подписки СберПрайм)",
+  "properties": {
+    "is_active": {
+      "description": "Если подписка активна - 1, если нет - 0",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "is_active"
+  ],
+  "title": "Sber Prime Status Recieved",
+  "type": "object"
+}

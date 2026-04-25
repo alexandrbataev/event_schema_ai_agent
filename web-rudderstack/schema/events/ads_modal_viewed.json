@@ -1,0 +1,28 @@
+{
+  "description": "Срабатывает, когда пользователь впервые на странице видит не менее 50% площади загруженной шторки",
+  "properties": {
+    "impression_id": {
+      "description": "Уникальный идентификатор взаимодействия",
+      "type": "string"
+    },
+    "asset_id": {
+      "description": "Уникальный идентификатор ассета",
+      "type": "string"
+    },
+    "source": {
+      "description": "Где именно была размещена шторка",
+      "$ref": "#/definitions/AdsBannerSource"
+    },
+    "is_video": {
+      "description": "Если баннер на шторке с видео",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "impression_id",
+    "asset_id",
+    "source"
+  ],
+  "title": "Ads Modal Viewed",
+  "type": "object"
+}

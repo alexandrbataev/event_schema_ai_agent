@@ -1,0 +1,30 @@
+{
+  "description": "Срабатывает при первом попадании джоба в видимую область пользователя.",
+  "properties": {
+    "tab": {
+      "description": "Название джоба",
+      "type": "string"
+    },
+    "position": {
+      "description": "Порядковый номер джоба в выдаче",
+      "type": "number"
+    },
+    "source": {
+      "description": "Откуда был клик по табу (джобу): home_page - Главная-главная, pickup_page - экран Самовывоза, tabs_modal - модалка со списком всех джобов, filter - когда пользователь кликает по джоб-фильтру в полке \"Магазины\".",
+      "type": "string",
+      "enum": [
+        "home_page",
+        "pickup_page",
+        "tabs_modal",
+        "filter"
+      ]
+    }
+  },
+  "required": [
+    "tab",
+    "position",
+    "source"
+  ],
+  "title": "Shop Selection Tab Viewed",
+  "type": "object"
+}

@@ -1,0 +1,27 @@
+{
+  "description": "Нажата кнопка “Выбрать другое время“",
+  "properties": {
+    "payment_method": {
+      "description": "Метод оплаты",
+      "type": "string"
+    },
+    "total_cost": {
+      "description": "Сумма заказа, которую видит пользователь",
+      "type": "number"
+    },
+    "retailer_verticals": {
+      "description": "Список вертикалей ритейлеров, так как возможен мультизаказ.",
+      "type": "array",
+      "items": {
+        "description": "Вертикаль ритейлера",
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "payment_method",
+    "total_cost"
+  ],
+  "title": "Checkout Choose Another Time Button Clicked",
+  "type": "object"
+}

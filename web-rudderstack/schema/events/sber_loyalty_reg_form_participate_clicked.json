@@ -1,0 +1,18 @@
+{
+  "description": "Каждый раз при нажатии кнопки 'Участвовать' в модалке регистрации в программе лояльности",
+  "properties": {
+    "offer_tick": {
+      "description": "Пользователь нажал галочку 'получать полезные новости и предложения'",
+      "type": "boolean"
+    },
+    "source": {
+      "description": "После нажатия на какой элемент пользователь попал на модалку",
+      "type": "string"
+    }
+  },
+  "required": [
+    "offer_tick"
+  ],
+  "title": "Sber Loyalty Reg Form Participate Clicked",
+  "type": "object"
+}

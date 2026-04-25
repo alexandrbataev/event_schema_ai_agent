@@ -1,0 +1,24 @@
+{
+  "title": "AgePopUp",
+  "type": "object",
+  "description": "Словарь с информацией о триггере попапа подтверждения возраста",
+  "properties": {
+    "name": {
+      "description": "Название идентификатора",
+      "type": "string",
+      "enum": [
+        "category_id",
+        "product_sku",
+        "retailer_id"
+      ]
+    },
+    "value": {
+      "description": "Значение идентификатора",
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "value"
+  ]
+}

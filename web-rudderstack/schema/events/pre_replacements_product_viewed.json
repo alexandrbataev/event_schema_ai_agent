@@ -1,0 +1,38 @@
+{
+  "description": "Каждый раз, когда пользователь просматривает предзамены для товара в модалке (при изначальном открытии, потом на каждый скролл влево/вправо)",
+  "properties": {
+    "added_order_item_retailer_sku": {
+      "description": "sku товара у ритейлера, на который представлены замены",
+      "type": "string"
+    },
+    "possible_replacements_number": {
+      "description": "количество возможных замен товара",
+      "type": "number"
+    },
+    "added_order_item_name": {
+      "description": "название товара",
+      "type": "string"
+    },
+    "possible_replacements": {
+      "description": "массив sku возможных замен товара",
+      "type": "array",
+      "items": {
+        "description": "Sku товара",
+        "type": "string"
+      }
+    },
+    "added_order_item_sku": {
+      "description": "sku товара, на который представлены замены",
+      "type": "string"
+    }
+  },
+  "required": [
+    "added_order_item_retailer_sku",
+    "possible_replacements_number",
+    "added_order_item_name",
+    "possible_replacements",
+    "added_order_item_sku"
+  ],
+  "title": "Pre Replacements Product Viewed",
+  "type": "object"
+}

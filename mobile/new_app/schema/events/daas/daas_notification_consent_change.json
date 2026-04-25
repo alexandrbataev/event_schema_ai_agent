@@ -1,0 +1,23 @@
+{
+  "description": "Изменение статуса согласия на получение уведомлений (только успешное). При сохранении по нажатию на кнопку",
+  "properties": {
+    "consent": {
+      "description": "Состояние канала. Разрешил ли пользователь получение уведомление по каналу",
+      "type": "boolean"
+    },
+    "type": {
+      "description": "канал уведомления: sms или push",
+      "type": "string",
+      "enum": [
+        "sms",
+        "push"
+      ]
+    }
+  },
+  "required": [
+    "consent",
+    "type"
+  ],
+  "title": "Daas Notification Consent Change",
+  "type": "object"
+}

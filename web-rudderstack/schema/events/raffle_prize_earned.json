@@ -1,0 +1,12 @@
+{
+  "description": "При получении приза в розыгрыше (например, при открытии бокса)",
+  "properties": {
+    "campaign_name": {
+      "description": "Название кампании",
+      "type": "string"
+    }
+  },
+  "title": "Raffle Prize Earned",
+  "type": "object"
+}
+  

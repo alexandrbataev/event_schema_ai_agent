@@ -1,0 +1,32 @@
+{
+  "description": "Показ акции посетителю на странице Все акции ",
+  "properties": {
+    "promo_id": {
+      "description": "id промо, показанного клиенту",
+      "type": "number"
+    },
+    "dates": {
+      "description": "Даты начала и окончания промо",
+      "type": "array",
+      "items": {
+        "description": "Дата начала или окончания промо",
+        "type": "string"
+      }
+    },
+    "name": {
+      "description": "Название промо",
+      "type": "string"
+    },
+    "priority": {
+      "description": "Приоритетность промо",
+      "type": "number"
+    }
+  },
+  "required": [
+    "promo_id",
+    "dates",
+    "priority"
+  ],
+  "title": "Promo Rendered On Page",
+  "type": "object"
+}

@@ -1,0 +1,28 @@
+{
+  "description": "Каждый раз, когда пользователь кликает на Выбрать замену в блоке состава заказа в корзине",
+  "properties": {
+    "product_sku_orig": {
+      "description": "Скю оригинального товара, для которого выбирается замена",
+      "type": "string"
+    },
+    "retailer_id": {
+      "description": "идентификатор ритейлера",
+      "type": "number"
+    },
+    "source": {
+      "description": "Откуда выбиралась замена - из корзины или из модалки 'Корзине есть изменения'",
+      "type": "string",
+      "enum": [
+        "cart",
+        "change_in_cart_modal"
+      ]
+    }
+  },
+  "required": [
+    "product_sku_orig",
+    "retailer_id",
+    "source"
+  ],
+  "title": "Cart Replacement Selection Started",
+  "type": "object"
+}

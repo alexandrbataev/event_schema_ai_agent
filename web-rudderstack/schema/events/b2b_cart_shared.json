@@ -1,0 +1,25 @@
+{
+  "description": "Поделиться корзиной",
+  "properties": {
+    "cart_order_items": {
+      "description": "Массив со списоком товаров в корзине",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CartItems"
+      }
+    },
+    "weight_info": {
+      "description": "Массив с информацией о весе корзины",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/WeightInfoItems"
+      }
+    },
+    "cart_link": {
+      "description": "Ссылка на корзину",
+      "type": "string"
+    }
+  },
+  "title": "B2B Cart Shared",
+  "type": "object"
+}

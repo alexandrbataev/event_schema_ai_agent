@@ -1,0 +1,34 @@
+{
+  "description": "Пользователь перешел на конкретную подборку ресторанов или подгрузилась новая пачка ресторанов в подборке при скролле",
+  "properties": {
+    "available_restaurants": {
+      "description": "Объект с массивами параметров доступных ресторанов",
+      "$ref": "#/definitions/AvailableStores"
+    },
+    "collection_info": {
+      "description": "uuid и название подборки из списка ресторанов, на которую перешел пользователь",
+      "$ref": "#/definitions/RestaurantCollectionInfo"
+    },
+    "position": {
+      "description": "Порядковый номер подборки с единицы, отправляем ноль в случае перехода по диплинку, так как мы не знаем позицию подборки",
+      "type": "number"
+    },
+    "page_number": {
+      "description": "Какая это по счету страница для постраничной загрузки начиная с единицы",
+      "type": "number"
+    },
+    "total_restaurants_available": {
+      "description": "Сколько всего ресторанов в подборке",
+      "type": "number"
+    }
+  },
+  "required": [
+    "available_restaurants",
+    "collection_info",
+    "position",
+    "page_number",
+    "total_restaurants_available"
+  ],
+  "title": "Restaurant Collection Selection Started",
+  "type": "object"
+}

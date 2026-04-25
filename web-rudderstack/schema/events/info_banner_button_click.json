@@ -1,0 +1,19 @@
+{
+  "description": "Клик по кнопке на информационном баннер",
+  "properties": {
+    "banner_title": {
+      "description": "title из баннера",
+      "type": "string"
+    },
+    "source": {
+      "description": "Экран с которого пользователь кликнул по кнопке на инфо баннере",
+      "$ref": "#/definitions/InfoBannerSource"
+    }
+  },
+  "required": [
+    "banner_title",
+    "source"
+  ],
+  "title": "Info Banner Button Click",
+  "type": "object"
+}

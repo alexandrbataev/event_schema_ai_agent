@@ -1,0 +1,19 @@
+{
+  "description": "Нажата кнопка - Посмотреть инструкцию (link on picture - http://joxi.ru/YmEeQ7OTGKjwDm)",
+  "properties": {
+    "shipment_number": {
+      "description": "Номер шипмента",
+      "type": "string"
+    },
+    "store_id": {
+      "description": "id стора, в котором сделали заказ",
+      "type": "number"
+    }
+  },
+  "required": [
+    "shipment_number",
+    "store_id"
+  ],
+  "title": "View Instructions Clicked",
+  "type": "object"
+}

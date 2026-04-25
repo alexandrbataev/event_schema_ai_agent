@@ -1,0 +1,25 @@
+{
+  "description": "Клик по кнопке 'Чаевые' на постчекауте, оценке заказа или истории заказов",
+  "properties": {
+    "order_number": {
+      "description": "Строковый идентификатор заказа, которому оставляют чаевые",
+      "type": "string"
+    },
+    "source": {
+      "description": "Наименование экрана, на котором был клик. history_orders если клик был с экрана истории заказов, order_details если клик был с экрана деталей заказа, review - если клик был с экрана оставления отзыва о заказе, partner_photo - если клик был по иконке партнера в постчекауте",
+      "type": "string",
+      "enum": [
+        "history_orders",
+        "order_details",
+        "review",
+        "partner_photo"
+      ]
+    }
+  },
+  "required": [
+    "order_number",
+    "source"
+  ],
+  "title": "Order Tips Clicked",
+  "type": "object"
+}

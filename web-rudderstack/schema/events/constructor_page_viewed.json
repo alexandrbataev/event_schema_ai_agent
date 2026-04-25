@@ -1,0 +1,12 @@
+{
+  "description": "срабатывает каждый раз когда пользователь зашел на форму конструктора (просматривает ее)",
+  "properties": {
+    "source": {
+      "description": "источник захода",
+      "type": "string"
+    }
+  },
+  "title": "Constructor Page Viewed",
+  "type": "object"
+}
+

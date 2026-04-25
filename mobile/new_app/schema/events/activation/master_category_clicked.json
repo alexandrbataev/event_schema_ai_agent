@@ -1,0 +1,54 @@
+{
+  "description": "Клик на таксон (чипсу категории) при просмотре результатов поисковой выдачи",
+  "properties": {
+    "category_filter": {
+      "type": "string",
+      "description": "Slug категории"
+    },
+    "category_suggestions": {
+      "description": "Список предлагаемых категорий со следующими параметрами:{position: номер позиции, identifier: category_id}. «Все» в этот список записывается с нулевой позицией: {position:0, identifier: all}. Остальные категории имеют позиции в соответствии с их порядком в выдаче, начиная с 1",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CategorySuggestion"
+      }
+    },
+    "position_clicked": {
+      "description": "Позиция мастер категории, которая была выбрана. Для «Все» position_clicked=0. ",
+      "type": "number"
+    },
+    "query": {
+      "description": "Запрос, на кот была получена выдача",
+      "type": "string"
+    },
+    "source": {
+      "description": "Где было совершено взаимодействие с мастер-катергорией: round_button/burger_menu",
+      "type": "string"
+    },
+    "store_id": {
+      "description": "Именно тот стор, для которого была отрисована поисковая выдача",
+      "type": "number"
+    },
+    "source_search": {
+      "description": "Где именно случилось событие: при просмотре списка товаров в каталоге (category), в каталоге (catalogue), на главной (main_page), результатов поиска (search) или подсказки в поиске, обычный, после выбора ритейлера (search_regular), или межритейлерный опыт (search_multiretail)",
+      "$ref": "#/definitions/SearchSource"
+    },
+    "is_multiretail_promo_category": {
+      "description": "True, если товар был отрисован внутри промо подборки, False иначе",
+      "type": "boolean"
+    },
+    "multiretail_promo_category_id": {
+      "description": "id промо подборки. Заполняется только в случае поиска внутри промо подборки",
+      "type": "string"
+    }
+  },
+  "required": [
+    "category_suggestions",
+    "query",
+    "category_filter",
+    "position_clicked",
+    "source",
+    "source_search"
+  ],
+  "title": "Master Category Clicked",
+  "type": "object"
+}

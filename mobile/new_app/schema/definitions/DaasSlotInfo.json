@@ -1,0 +1,34 @@
+{
+  "title": "DaasSlotInfo",
+  "description": "Информация о доступных слотах доставки",
+  "type": "object",
+  "properties": {
+    "slot_id": {
+      "description": "идентификатор слота",
+      "type": "string"
+    },
+    "pickup_time_sec": {
+      "description": "сколько в секундах до времени, когда мы предположительно заберем посылку",
+      "type": "number"
+    },
+    "delivery_time_sec": {
+      "description": "сколько в секундах до времени, когда мы предположительно доставим посылку",
+      "type": "number"
+    },
+    "delivery_cost": {
+      "description": "стоимость доставки в копейках",
+      "type": "number"
+    },
+    "is_nearest_slot": {
+      "description": "самый быстрый слот (1 — да, 0 — нет)",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "slot_id",
+    "pickup_time_sec",
+    "delivery_time_sec",
+    "delivery_cost",
+    "is_nearest_slot"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "description": "При каждом отображении элемента с суммой начисляемых бонусов программы лояльности ритейлера за заказ",
+  "properties": {
+    "source": {
+      "description": "Источник отображения элемента",
+      "type": "string",
+      "enum": [
+        "cart",
+        "checkout",
+        "postcheckout"
+      ]
+    },
+    "amount": {
+      "description": "Сумма отображаемых бонусов к начислению",
+      "type": "number"
+    },
+    "loyalty_id": {
+      "description": "Наименование ПЛ ритейлера",
+      "type": "string"
+    },
+    "is_card_added": {
+      "description": "Добавлена ли карта на момент отображения информации о начислении, True(1) - да, False(0) - нет (сейчас показ начисления для юзера без карты возможен только в корзине)",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "source",
+    "amount",
+    "loyalty_id"
+  ],
+  "title": "Loyalty Retailer Cashback Info Loaded",
+  "type": "object"
+}

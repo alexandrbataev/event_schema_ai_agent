@@ -1,0 +1,12 @@
+{
+  "description": "срабатывает когда пользователь кликнул на \"Скопировать\"  в попапе \"Компания добавлена\"",
+  "properties": {
+    "source": {
+      "description": "источник показа попапа",
+      "type": "string"
+    }
+  },
+  "required": [],
+  "title": "Company Added Popup Copied Clicked",
+  "type": "object"
+}

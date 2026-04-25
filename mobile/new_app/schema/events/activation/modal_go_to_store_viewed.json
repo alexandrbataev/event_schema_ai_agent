@@ -1,0 +1,24 @@
+{
+  "description": "Каждый раз при открытии шторки, открывается при добавлении товара в корзину из блока «Тут можно сравнить цены».",
+  "properties": {
+    "store_id": {
+      "description": "Магазин, в котором была открыта модалка",
+      "type": "number"
+    },
+    "to_store_id": {
+      "description": "Магазин, в который пользователь хочет перейти",
+      "type": "number"
+    },
+    "product_sku": {
+      "description": "SKU товара, в котором показывается модалка",
+      "type": "string"
+    }
+  },
+  "required": [
+    "store_id",
+    "to_store_id",
+    "product_sku"
+  ],
+  "title": "Modal Go To Store Viewed",
+  "type": "object"
+}

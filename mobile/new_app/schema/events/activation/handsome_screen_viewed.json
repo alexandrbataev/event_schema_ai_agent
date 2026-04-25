@@ -1,0 +1,30 @@
+{
+  "description": "Показ экрана коронок",
+  "properties": {
+    "source": {
+      "type": "string",
+      "description": "Источник открытия экрана (tabbar — через таббар, profile — через профиль, bottomsheet_main_page - через боттомшит на гр)"
+    },
+    "benefits_list": {
+      "type": "string",
+      "description": "Список предложенных бенефитов через разделитель (например, \"cashback_25,cashback_fri,goals\")"
+    },
+    "has_my_rewards_button": {
+      "type": "boolean",
+      "description": "Отображается ли кнопка \"Мои награды\" на экране коронок"
+    },
+    "benefit_selected": {
+      "type": "boolean",
+      "description": "Если бенефиты еще не выбраны и отобржаются чекбоксы, то значение 0"
+    }
+  },
+  "required": [
+    "source",
+    "benefits_list",
+    "has_my_rewards_button",
+    "bottomsheet_main_page",
+    "benefit_selected"
+  ],
+  "title": "Handsome Screen Viewed",
+  "type": "object"
+}

@@ -1,0 +1,19 @@
+{
+  "description": "Рендер страницы Аналитики (страница фактически загружена)",
+  "properties": {
+    "user_uuid": {
+      "description": "UUID пользователя",
+      "type": "string"
+    },
+    "company_id": {
+      "description": "ID компании",
+      "type": "string"
+    }
+  },
+  "required": [
+    "user_uuid",
+    "company_id"
+  ],
+  "title": "B2B Analytics Page Rendered",
+  "type": "object"
+}

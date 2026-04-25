@@ -1,0 +1,91 @@
+{
+  "name": "@nstmrt/web-rudderstack",
+  "version": "3.1.114",
+  "description": "Sbermarket's web-rudderstack events",
+  "main": "dist/generated-events/index.js",
+  "types": "dist/generated-events/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/generated-events/index.d.ts",
+      "default": "./dist/generated-events/index.js"
+    },
+    "./request": {
+      "types": "./dist/request/index.d.ts",
+      "default": "./dist/request/index.js"
+    },
+    "./types": {
+      "types": "./dist/request/types.d.ts",
+      "default": "./dist/request/types.js"
+    },
+    "./methods/*": {
+      "types": "./dist/methods/*/index.d.ts",
+      "default": "./dist/methods/*/index.js"
+    },
+    "./methods-async/*": {
+      "types": "./dist/methods-async/*/index.d.ts",
+      "default": "./dist/methods-async/*/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "request": [
+        "./dist/request/index.d.ts"
+      ],
+      "types": [
+        "./dist/request/types.d.ts"
+      ],
+      ".": [
+        "./dist/generated-events/index.d.ts"
+      ],
+      "methods/*": [
+        "./dist/methods/*/index.d.ts"
+      ],
+      "methods-async/*": [
+        "./dist/methods-async/*/index.d.ts"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=20.10.0"
+  },
+  "repository": "git@gitlab.sbmt.io:analytics/event-schema/web-rudderstack.git",
+  "author": "sbermarket",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.sbmt.io/analytics/event-schema/web-rudderstack/-/issues"
+  },
+  "scripts": {
+    "commit": "cz",
+    "lint": "eslint '{generated-events,methods,schema}/**/*.{ts,json}'",
+    "build:events": "NODE_OPTIONS=--max-old-space-size=8192 zx ./node_modules/@nstmrt/event-client-generator/src/bin/generator.js generate --events-folder='./schema/events' --definitions-folder='./schema/definitions'",
+    "build:eventsSplit": "NODE_OPTIONS=--max-old-space-size=8192 zx ./node_modules/@nstmrt/event-client-generator/src/bin/generator.js generate --events-folder='./schema/events' --definitions-folder='./schema/definitions' --output='./request' --split-event='true' --generate-mode='async' --generate-mode='sync' --output-sync-methods='./methods' --output-async-methods='./methods-async'",
+    "build:types": "NODE_OPTIONS=--max-old-space-size=8192 tsc generated-events/index.ts request/*.ts methods/**/*.ts methods-async/**/*.ts --declaration --outDir dist",
+    "build": "yarn build:events && yarn build:eventsSplit && yarn build:types"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
+    "@babel/preset-typescript": "^7.17.12",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@commitlint/cz-commitlint": "^17.0.0",
+    "@nstmrt/eslint-config": "^5.7.12",
+    "@nstmrt/event-client-generator": "1.9.0",
+    "commitizen": "^4.2.4",
+    "eslint": "^8.16.0",
+    "eslint-plugin-json": "^3.1.0",
+    "husky": "^8.0.1",
+    "standard-version": "^9.5.0",
+    "typescript": "5.5.4"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

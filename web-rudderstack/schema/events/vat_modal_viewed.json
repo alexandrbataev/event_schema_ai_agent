@@ -1,0 +1,21 @@
+{
+  "description": "Показ модального окна про НДС",
+  "properties": {
+    "type": {
+      "description": "На какой тип НДС кликнул юзер. Full - НДС на весь заказ, Services_only - НДС только за услуги сервиса. Full_agent_retailer - ЦАC",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник откуда было открыто модальное окно, search_multiretail - межрит поиск, retailer_main - главная ритейлера, product_page - карточка товара",
+      "type": "string",
+      "enum": [
+        "search_multiretail",
+        "retailer_main",
+        "product_page"
+      ]
+    }
+  },
+  "required": [],
+  "title": "Vat Modal Viewed",
+  "type": "object"
+}

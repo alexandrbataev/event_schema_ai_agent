@@ -1,0 +1,42 @@
+{
+  "description": "Каждый раз, когда пользователь переходит на экран со списком ритейлеров.",
+  "properties": {
+    "available_stores": {
+      "description": "Объект с массивами параметров доступных магазинов",
+      "$ref": "#/definitions/AvailableStores"
+    },
+    "store_filter_name": {
+      "description": "Название фильтра, экран которого открылся",
+      "type": "string"
+    },
+    "source": {
+      "description": "Откуда был переход на экран, store_filter - сам фильтр 2-го уровня (джоб), from_shelf - с полки с Главной",
+      "type": "string",
+      "enum": [
+        "store_filter",
+        "from_shelf",
+        "from_deeplink",
+        "choose_another_restaurant_button"
+      ]
+    },
+    "is_filters_available": {
+      "description": "Доступны ли фильтры на метод доставки: pickup, by_courier, all",
+      "type": "boolean"
+    },
+    "is_cart_available": {
+      "description": "У пользователя собрана корзина, есть кнопка для перехода в нее",
+      "type": "boolean"
+    },
+    "product_centricity_flag": {
+      "description": "Событие сработало в рамкох товароцентричного флоу",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "available_stores",
+    "store_filter_name",
+    "source"
+  ],
+  "title": "Store Filter Opened",
+  "type": "object"
+}

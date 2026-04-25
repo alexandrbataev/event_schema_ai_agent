@@ -1,0 +1,7 @@
+{
+  "description": "Генерация счета на пополнение баланса пользователем",
+  "properties": {},
+  "title": "B2B Top Up Balance Document Button Clicked",
+  "type": "object"
+}
+  

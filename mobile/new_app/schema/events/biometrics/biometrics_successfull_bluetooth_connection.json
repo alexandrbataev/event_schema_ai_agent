@@ -1,0 +1,7 @@
+{
+  "description": "Каждый раз, когда клиент успешно коннектится с курьером по bluetooth при проверке биометрии",
+  "properties": {},
+  "required": [],
+  "title": "Biometrics Succesfull Bluetooth Connection",
+  "type": "object"
+}

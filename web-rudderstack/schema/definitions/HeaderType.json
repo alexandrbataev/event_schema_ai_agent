@@ -1,0 +1,10 @@
+{
+  "title": "Header Type",
+  "description": "Тип шапки, отображенный пользователю",
+  "type": "string",
+  "enum": [
+    "old_head_retailer",
+    "new_head_main"
+  ]
+}
+

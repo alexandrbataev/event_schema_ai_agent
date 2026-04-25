@@ -1,0 +1,19 @@
+{
+  "title": "UserCoordinate",
+  "type": "object",
+  "description": "Пара координат",
+  "properties": {
+    "lon": {
+      "description": "Долгота",
+      "type": "number"
+    },
+    "lat": {
+      "description": "Широта",
+      "type": "number"
+    }
+  },
+  "required": [
+    "lon",
+    "lat"
+  ]
+}

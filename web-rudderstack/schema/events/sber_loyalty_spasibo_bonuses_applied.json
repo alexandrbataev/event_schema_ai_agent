@@ -1,0 +1,14 @@
+{
+  "description": "По клику на тоггл, применяющий списание баллов, на чекауте",
+  "properties": {
+    "amount": {
+      "description": "Кол-во бонусов, примененных в заказе",
+      "type": "number"
+    }
+  },
+  "required": [
+    "amount"
+  ],
+  "title": "Sber Loyalty Spasibo Bonuses Applied",
+  "type": "object"
+}

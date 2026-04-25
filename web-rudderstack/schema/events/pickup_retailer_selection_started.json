@@ -1,0 +1,42 @@
+{
+  "description": "Начало выбора ритейлера самовывоза",
+  "properties": {
+    "available_retailers": {
+      "description": "сущность доступных ритейлеров самовывоза",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/AvailableRetailers"
+      }
+    },
+    "current_city": {
+      "description": "Город",
+      "type": "string"
+    },
+    "retailers": {
+      "description": "список доступных ритейлеров",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Retailers"
+      }
+    },
+    "store_selected": {
+      "description": "если какой-то магазин выбран, то заполнен, иначе отправляется пустой массив",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PickupStoreSelected"
+      }
+    },
+    "source": {
+      "$ref": "#/definitions/PickupRetailerSelectedSource"
+    }
+  },
+  "required": [
+    "current_city",
+    "retailers",
+    "available_retailers",
+    "store_selected",
+    "source"
+  ],
+  "title": "Pickup Retailer selection started",
+  "type": "object"
+}

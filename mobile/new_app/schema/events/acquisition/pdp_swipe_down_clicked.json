@@ -1,0 +1,28 @@
+{
+  "description": "Каждый раз при свайпе карточки товара.",
+  "properties": {
+    "depth": {
+      "description": "Уровень вложенности",
+      "type": "number"
+    },
+    "product_sku": {
+      "description": "sku товара",
+      "type": "string"
+    },
+    "source": {
+      "description": "Источник, откуда была открыта карточка товара",
+      "$ref": "#/definitions/ProductSource"
+    },
+    "source_identifier": {
+      "description": "Идентификатор источника открытия карточки в соответствии с источником - поисковый запрос, category_id, banner_id (banner_main_page) и {“banner_id”: {{banner_id}}, “category_id”: {{category_id}}} (banner_category). Для источников рекомендаций везде должна быть пустая строка",
+      "type": "string",
+      "examples": [
+        "молоко",
+        "4621"
+      ]
+    }
+  },
+  "required": [],
+  "title": "PDP Swipe Down Clicked",
+  "type": "object"
+}

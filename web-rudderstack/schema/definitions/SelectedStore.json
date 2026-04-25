@@ -1,0 +1,65 @@
+{
+  "title": "SelectedStore",
+  "type": "object",
+  "description": "Сущность выбранного магазина",
+  "properties": {
+    "address": {
+      "description": "адрес выбранного магазина",
+      "type": "string"
+    },
+    "express_delivery": {
+      "description": "флаг доступности быстрой доставки в выбранном магазине",
+      "type": "boolean"
+    },
+    "pickup_available": {
+      "description": "флаг доступности самовывоза в выбранном магазине",
+      "type": "boolean"
+    },
+    "id": {
+      "description": "id выбранного магазина",
+      "type": "number"
+    },
+    "name": {
+      "description": "название выбранного магазина",
+      "type": "string"
+    },
+    "operational_zone": {
+      "description": "операционная зона выбранного магазина",
+      "type": "string"
+    },
+    "position": {
+      "description": "позиция выбранного магазина",
+      "type": "number"
+    },
+    "retailer_id": {
+      "description": "id ритейлера выбранного магазина",
+      "type": "number"
+    },
+    "retailer_name": {
+      "description": "название ритейлера выбранного магазина",
+      "type": "string"
+    },
+    "tab": {
+      "description": "вкладка выбранного магазина",
+      "type": "string"
+    },
+    "uuid": {
+      "description": "uuid выбранного магазина",
+      "type": "string"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (groccery, pharmacy или restaurant)",
+      "type": "string"
+    },
+    "min_aov": {
+      "description": "Минимальная сумма, на которую нужно собрать заказ, чтобы осуществить доставку",
+      "type": "number"
+    }
+  },
+  "required": [
+    "id",
+    "uuid",
+    "tab",
+    "position"
+  ]
+}

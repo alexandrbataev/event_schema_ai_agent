@@ -1,0 +1,7 @@
+{
+  "description": "Нажатие на кнопку 'Добавить новый адрес' в списке адресов",
+  "properties": {},
+  "required": [],
+  "title": "Add New Address Clicked",
+  "type": "object"
+}

@@ -1,0 +1,6 @@
+{
+  "description": "Каждый раз, когда пользователь кликает на анонсирующий баннер",
+  "properties": {},
+  "title": "B2B Loyalty Program Announcement Banner Clicked",
+  "type": "object"
+}

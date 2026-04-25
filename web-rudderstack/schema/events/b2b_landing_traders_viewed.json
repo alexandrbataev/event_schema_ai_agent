@@ -1,0 +1,22 @@
+{
+  "description": "Каждый раз, когда пользователь заходит на лендинг трейдеров в B2B",
+  "properties": {
+    "source": {
+      "description": "Откуда пользователь попал на лендинг трейдеров в B2B",
+      "type": "string",
+      "enum": [
+        "landing_banner",
+        "landing_header",
+        "retailer_main_page_header",
+        "seo_header"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "B2B Landing Traders Viewed",
+  "type": "object"
+}
+
+

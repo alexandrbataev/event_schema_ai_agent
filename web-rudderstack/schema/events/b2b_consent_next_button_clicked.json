@@ -1,0 +1,33 @@
+{
+  "description": "Пользователь кликнул на кнопку 'Продолжить' в модальном окне согласия на обработку данных",
+  "properties": {
+    "user_id": {
+      "description": "ID пользователя",
+      "type": "string"
+    },
+    "company_name": {
+      "description": "Название компании",
+      "type": "string"
+    },
+    "company_inn": {
+      "description": "ИНН компании",
+      "type": "string"
+    },
+    "checkbox_status": {
+      "description": "Финальное состояние чекбокса в момент нажатия кнопки",
+      "type": "string",
+      "enum": [
+        "checked",
+        "unchecked"
+      ]
+    }
+  },
+  "required": [
+    "user_id",
+    "company_name",
+    "company_inn",
+    "checkbox_status"
+  ],
+  "title": "B2B Consent Next Button Clicked",
+  "type": "object"
+}

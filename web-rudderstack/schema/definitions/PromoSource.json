@@ -1,0 +1,29 @@
+{
+  "title": "PromoSource",
+  "description": "С какого экрана пользователь перешел на страницу промокода/списка промокодов",
+  "type": "string",
+  "enum": [
+    "profile",
+    "main_page",
+    "shop_selection",
+    "category",
+    "search",
+    "onboard_modal",
+    "external_search",
+    "other",
+    "order_completed_spasibo",
+    "checkout",
+    "deeplink",
+    "incut_main",
+    "your_promocodes",
+    "button_on_main",
+    "goals_banner",
+    "ads_product_selection",
+    "ads_modal_brand_screen",
+    "b2b_reg_first_company",
+    "rte_main",
+    "referral_screen",
+    "notifications"
+  ],
+  "$comment": "profile - профиль, main_page - главная ритейлера, shop_selection - главная-главная, category - категория ритейлера, search - поисковая выдача, external_search - из внешнего поисковика, onboard_modal - всплывающая модалка для одбординга в фичу, order_completed_spasibo - переход со спасибо-страницы, button_on_main - точка входа в промо на главной, incut_main - врезка на гл гл"
+}

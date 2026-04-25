@@ -1,0 +1,44 @@
+{
+  "description": "Каждый раз, когда пользователь двигает карту, определяется территория, которая отображается на карте и точка, где расположен пин",
+  "properties": {
+    "latitude_viewpoint_1": {
+      "description": "Широта - десятичная координата верхней правой точки отображаемой карты",
+      "type": "number"
+    },
+    "longitude_viewpoint_1": {
+      "description": "Долгота - десятичная координата верхней правой точки отображаемой карты",
+      "type": "number"
+    },
+    "latitude_viewpoint_2": {
+      "description": "Широта - десятичная координата нижней левой точки отображаемой карты",
+      "type": "number"
+    },
+    "longitude_viewpoint_2": {
+      "description": "Долгота - десятичная координата нижней левой точки отображаемой карты",
+      "type": "number"
+    },
+    "latitude": {
+      "description": "Широта - десятичная координата, определенная поставленым пином",
+      "type": "number"
+    },
+    "longitude": {
+      "description": "Долгота - десятичная координата, определенная поставленым пином",
+      "type": "number"
+    },
+    "zoom": {
+      "description": "Масштаб карты при открытии экрана с выбором адреса от 1 до 100",
+      "type": "number"
+    }
+  },
+  "required": [
+    "latitude_viewpoint_1",
+    "longitude_viewpoint_1",
+    "latitude_viewpoint_2",
+    "longitude_viewpoint_2",
+    "latitude",
+    "longitude",
+    "zoom"
+  ],
+  "title": "Address Map Viewport",
+  "type": "object"
+}

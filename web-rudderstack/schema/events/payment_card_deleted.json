@@ -1,0 +1,14 @@
+{
+  "description": "Успешное удаление банковской карты в разделе Банковские карты в Профиле",
+  "properties": {
+    "card": {
+      "description": "Номер карты в формате •••• 6712",
+      "type": "string"
+    }
+  },
+  "required": [
+    "card"
+  ],
+  "title": "Payment Card Deleted",
+  "type": "object"
+}

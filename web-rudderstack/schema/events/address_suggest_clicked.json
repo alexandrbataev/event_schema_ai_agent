@@ -1,0 +1,31 @@
+{
+  "description": "Кликнул на саджет в окне ввода адреса",
+  "properties": {
+    "position": {
+      "description": "Каким по порядку был саджест, на который кликнул юзер",
+      "type": "number"
+    },
+    "address_full_title": {
+      "description": "Полный адрес из саджеста",
+      "type": "string"
+    },
+    "coordinates": {
+      "description": "координаты адреса",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/UserCoordinate"
+      }
+    },
+    "source": {
+      "$ref": "#/definitions/AddressChangeSource"
+    }
+  },
+  "required": [
+    "position",
+    "address_full_title",
+    "coorfinates",
+    "source"
+  ],
+  "title": "Address Suggest Clicked",
+  "type": "object"
+}

@@ -1,0 +1,27 @@
+{
+  "description": "Нажата кнопка Перейти в магазин, переводящая из блока рекомендаций к ритейлеру",
+  "properties": {
+    "source": {
+      "description": "Источник рекомендаций, с которого совершен переход",
+      "type": "string"
+    },
+    "rec_block_id": {
+      "description": "ID рекомендательного блока, с которого совершен переход",
+      "type": "number"
+    },
+    "rec_block_name": {
+      "description": "Наименование рекомендательного блока, с которого совершен переход",
+      "type": "string"
+    },
+    "store_id": {
+      "description": "ID магазина, в который совершен переход",
+      "type": "number"
+    }
+  },
+  "required": [
+    "source",
+    "store_id"
+  ],
+  "title": "Recommendation Store Clicked",
+  "type": "object"
+}

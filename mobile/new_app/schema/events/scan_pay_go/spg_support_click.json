@@ -1,0 +1,24 @@
+{
+  "description": "При нажатии на кнопку помощи справа вверху на соответствующих экранах",
+  "properties": {
+    "source": {
+      "type": "string",
+      "description": "Экран, где нажал кнопку",
+      "enum": [
+        "cart_empty",
+        "cart",
+        "check_address_store",
+        "checkout",
+        "softcheck fail",
+        "how_leave_shop",
+        "how_return_goods",
+        "cash_register"
+      ]
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Spg Support Click",
+  "type": "object"
+}

@@ -1,0 +1,6 @@
+{
+  "description": "Запрос токена Салют при старте",
+  "properties": {},
+  "title": "Salut Token Requested",
+  "type": "object"
+}

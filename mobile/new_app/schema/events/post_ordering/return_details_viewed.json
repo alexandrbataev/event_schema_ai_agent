@@ -1,0 +1,48 @@
+{
+  "description": "Когда пользователь открывает страницу конкретного возврата для просмотра дополнительных деталей",
+  "properties": {
+    "line_item_uuid": {
+      "description": "line_item_uuid из стф для товара, который пытаются вернуть",
+      "type": "string"
+    },
+    "shipment_number": {
+      "description": "shipment_number заказа, к которому относится возврат",
+      "type": "string"
+    },
+    "applied_dt": {
+      "description": "Дата создания заявки на возврат",
+      "type": "string"
+    },
+    "status": {
+      "description": "Статус заявки в момент открытия (wait, need_return, review, accepted, declined)",
+      "type": "string",
+      "enum": [
+        "wait",
+        "need_return",
+        "review",
+        "accepted",
+        "declined"
+      ]
+    },
+    "applied_rub_amount": {
+      "description": "сумма, заявленная к возврату (в рублях)",
+      "type": "number"
+    },
+    "approved_rub_amount": {
+      "description": "сумма, одобренная к возврату (в рублях). пустое, если заявка не в статусе одобрена",
+      "type": "number"
+    },
+    "reason": {
+      "description": "Причина возврата (что не так с товаром)",
+      "type": "string"
+    }
+  },
+  "required": [
+    "line_item_uuid",
+    "shipment_number",
+    "applied_dt",
+    "status"
+  ],
+  "title": "Return Details Viewed",
+  "type": "object"
+}

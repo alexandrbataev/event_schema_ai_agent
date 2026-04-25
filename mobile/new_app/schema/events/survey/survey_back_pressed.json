@@ -1,0 +1,24 @@
+{
+  "description": "Нажатие на кнопку назад для перехода к предыдущему вопросу",
+  "properties": {
+    "step": {
+      "description": "Номер вопроса на котором произошло действие начиная с 1",
+      "type": "number"
+    },
+    "survey_id": {
+      "description": "идентификатор опроса",
+      "type": "string"
+    },
+    "question_id": {
+      "description": "идентификатор вопроса на котором произошло действие",
+      "type": "string"
+    }
+  },
+  "required": [
+    "step",
+    "survey_id",
+    "question_id"
+  ],
+  "title": "Survey Back Pressed",
+  "type": "object"
+}

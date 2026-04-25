@@ -1,0 +1,19 @@
+{
+  "title": "SberSpasiboError",
+  "type": "object",
+  "description": "Ошибка из сервиса Сбер Спасибо",
+  "properties": {
+    "code": {
+      "description": "Код ошибки",
+      "type": "string"
+    },
+    "message": {
+      "description": "Сообщение ошибки",
+      "type": "string"
+    }
+  },
+  "required": [
+    "code",
+    "message"
+  ]
+}

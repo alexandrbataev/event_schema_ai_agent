@@ -1,0 +1,14 @@
+{
+  "description": "клик на кнопку Выбрать самовывоз в попапе",
+  "properties": {
+    "source": {
+      "description": "тип действия из-за которого вызван попап - показать  товар/ добавить продукт, category - открыли категорию алкоголя",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Alcohol Pickup Button Clicked",
+  "type": "object"
+}

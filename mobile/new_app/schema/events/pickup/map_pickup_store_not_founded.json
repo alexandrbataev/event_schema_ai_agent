@@ -1,0 +1,15 @@
+{
+  "description": "Отправляем каждый раз, когда на карте самовывоза пользователь увидел всплывающее сообщение о том, что не получилось найти магазин (надо подвигать карту, может найдется). Обычно возникает после клика на фильтр, но не обязательно",
+  "properties": {
+    "filter_name": {
+      "description": "Название фильтра на который кликнули перед тем, как получить такое сообщение. Если получили сообщение без фильтров, то отправляем without_filter",
+      "type": "string",
+      "$comment": "without_filter - фильтр не выбран, либо название фильтра, например: drive_in, pharmacy, alcohol, wide_choice, cosmetics, for_home, zoo, flowers, sale_alcohol"
+    }
+  },
+  "required": [
+    "filter_name"
+  ],
+  "title": "Map Pickup Store Not Founded",
+  "type": "object"
+}

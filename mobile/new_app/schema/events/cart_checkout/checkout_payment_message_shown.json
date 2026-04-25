@@ -1,0 +1,36 @@
+{
+  "description": "Каждый раз когда пользователю приходит сообщение на чекауте с информацие или ошибкой в платежных методах. Не относится к ошибкам, которые приходят после попытки оформить заказ.",
+  "properties": {
+    "message": {
+      "description": "Сообщение которое видит пользователь",
+      "type": "string"
+    },
+    "retailer_vertical": {
+      "description": "Вертикаль ритейлера (grocery, pharm или restaurant)",
+      "$ref": "#/definitions/RetailerVertical"
+    },
+    "message_meaning": {
+      "description": "Причина возникновения сообщения",
+      "type": "string",
+      "enum": [
+        "the_gateway_fell_off",
+        "everything_is_fixed ",
+        "the_retailer_does_not_have_payment_methods",
+        "server_error_or_timeout",
+        "cannot_select_leave_at_door",
+        "all_payment_methods_are_not_available_due_to_internal_conditions",
+        "after_tapping_on_the_disabled_payment_method",
+        "payment_method_has_become_unavailable",
+        "bnpl_unavailable"
+      ],
+      "$comment": "https://wiki.sbmt.io/pages/viewpage.action?pageId=3167468324"
+    }
+  },
+  "required": [
+    "message",
+    "retailer_vertical",
+    "message_meaning"
+  ],
+  "title": "Checkout Payment Message Shown",
+  "type": "object"
+}

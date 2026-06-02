@@ -21,10 +21,17 @@ cd event-schema
 
 ### 2. Создать виртуальное окружение и установить зависимости
 
+**macOS / Linux:**
 ```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+**Windows:**
+```powershell
 python -m venv .venv
-source .venv/bin/activate   # macOS / Linux
-# .venv\Scripts\activate    # Windows
+.venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
@@ -81,6 +88,8 @@ python -m venv .venv
 pip install -r requirements.txt
 streamlit run main.py
 ```
+
+
 
 ## Структура проекта
 

@@ -15,7 +15,7 @@ Streamlit-приложение, которое помогает аналитик
 ### 1. Клонировать репозиторий
 
 ```bash
-git clone <URL твоего GitLab репозитория>
+git clone git@github.com:alexandrbataev/event_schema_ai_agent.git
 cd event-schema
 ```
 
@@ -94,7 +94,5 @@ event-schema/
 ├── .env                 # Конфигурация (в gitignore)
 ├── .env.example         # Шаблон конфигурации
 ├── .gitignore
-├── web-rudderstack/     # Подключённый репозиторий веб-схем
-├── mobile/              # Подключённый репозиторий мобильных схем
 └── README.md
 ```

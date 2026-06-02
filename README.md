@@ -71,15 +71,7 @@ MOBILE_REPO_PATH=/Users/you/path/to/mobile
 
 ### 4. Указать пути к репозиториям со схемами событий
 
-Агент читает существующие JSON-схемы из репозиториев `web-rudderstack` и `mobile`. Эти репозитории нужно скачать отдельно из GitLab и расположить в любом месте на диске.
-
-```bash
-# Пример: скачать репозитории рядом с проектом
-git clone <URL-web-rudderstack-из-GitLab> ../web-rudderstack
-git clone <URL-mobile-из-GitLab> ../mobile
-```
-
-Затем в `.env` указать абсолютные пути к этим папкам:
+Агент читает существующие JSON-схемы из репозиториев `web-rudderstack` и `mobile`. Эти репозитории нужно **скачать из GitLab** и расположить в любом месте на диске. В `.env` указать пути к ним:
 
 ```ini
 WEB_REPO_PATH=/Users/you/path/to/web-rudderstack

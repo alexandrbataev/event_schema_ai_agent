@@ -43,15 +43,31 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-Открой `.env` и заполни:
+Открой `.env` для редактирования:
+
+```bash
+nano .env
+```
+
+**Как работать в nano:**
+- `Ctrl+O` — сохранить файл (нажать `Enter` для подтверждения имени)
+- `Ctrl+X` — выйти
+- `Ctrl+K` — вырезать строку
+- Стрелками — перемещаться
+
+Заполни `.env`:
 
 ```ini
 OPENAI_API_KEY=sk-your-key-here
-OPENAI_BASE_URL=https://api.openai.com/v1
+OPENAI_BASE_URL=https://api.proxyapi.ru/openai/v1
 OPENAI_MODEL=gpt-4o-mini
 WEB_REPO_PATH=/Users/you/path/to/web-rudderstack
 MOBILE_REPO_PATH=/Users/you/path/to/mobile
 ```
+
+**Где взять ключ API:**
+- [ProxyAPI](https://console.proxyapi.ru/keys) — зарегистрироваться и создать ключ в личном кабинете
+- Если используешь другого провайдера — подставь его URL в `OPENAI_BASE_URL` (например, `https://api.openai.com/v1`, `https://api.vsegpt.ru/v1` и т.д.)
 
 ### 4. Запустить
 

@@ -60,7 +60,7 @@ nano .env
 ```ini
 OPENAI_API_KEY=sk-your-key-here
 OPENAI_BASE_URL=https://api.proxyapi.ru/openai/v1
-OPENAI_MODEL=gpt-4o-mini
+OPENAI_MODEL=gpt-5.4-mini
 WEB_REPO_PATH=/Users/you/path/to/web-rudderstack
 MOBILE_REPO_PATH=/Users/you/path/to/mobile
 ```
@@ -72,7 +72,7 @@ MOBILE_REPO_PATH=/Users/you/path/to/mobile
 
 **Какие модели использовать:**
 
-Рекомендуется `gpt-4o-mini` — она достаточно умная и при этом дешёвая. Если хочется ещё дешевле — можно `gpt-5.4-mini`. В `.env` по умолчанию стоит `gpt-4o-mini`, менять не нужно. Если хочешь другую — просто замени значение `OPENAI_MODEL` в `.env`.
+По умолчанию стоит `gpt-5.4-mini` — самая дешёвая, для базовых задач её хватает. Если нужно что-то мощнее — замени `OPENAI_MODEL` в `.env` на другую модель. Полный список моделей и цены: https://proxyapi.ru/pricing/list
 
 ### 4. Указать пути к репозиториям со схемами событий
 

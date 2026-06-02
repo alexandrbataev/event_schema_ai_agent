@@ -66,10 +66,32 @@ MOBILE_REPO_PATH=/Users/you/path/to/mobile
 ```
 
 **Где взять ключ API:**
-- [ProxyAPI](https://console.proxyapi.ru/keys) — зарегистрироваться и создать ключ в личном кабинете
-- Если используешь другого провайдера — подставь его URL в `OPENAI_BASE_URL` (например, `https://api.openai.com/v1`, `https://api.vsegpt.ru/v1` и т.д.)
+- [ProxyAPI](https://console.proxyapi.ru/keys) — зарегистрироваться и создать ключ в личном кабинете. **Работает без VPN** (в отличие от некоторых провайдеров, которые блокируют запросы из России)
+- Если используешь другого провайдера — подставь его URL в `OPENAI_BASE_URL` (например, `https://api.openai.com/v1`, `https://api.vsegpt.ru/v1` и т.д.) и, возможно, включи VPN
 
-### 4. Запустить
+### 4. Указать пути к репозиториям со схемами событий
+
+Агент читает существующие JSON-схемы из репозиториев `web-rudderstack` и `mobile`. Эти репозитории нужно скачать отдельно из GitLab и расположить в любом месте на диске.
+
+```bash
+# Пример: скачать репозитории рядом с проектом
+git clone <URL-web-rudderstack-из-GitLab> ../web-rudderstack
+git clone <URL-mobile-из-GitLab> ../mobile
+```
+
+Затем в `.env` указать абсолютные пути к этим папкам:
+
+```ini
+WEB_REPO_PATH=/Users/you/path/to/web-rudderstack
+MOBILE_REPO_PATH=/Users/you/path/to/mobile
+```
+
+**Как быстро скопировать путь на Mac:**
+1. В Finder нажми правой кнопкой мыши на папку
+2. Зажми клавишу `Option` (⌥) — пункт «Копировать ...» изменится на **«Копировать ... как путь»**
+3. Нажми его — полный путь скопирован в буфер
+
+### 5. Запустить
 
 ```bash
 streamlit run main.py

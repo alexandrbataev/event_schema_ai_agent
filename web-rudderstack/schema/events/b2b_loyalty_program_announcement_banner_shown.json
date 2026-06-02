@@ -1,6 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователю отрисовывается анонсирующий баннер о программе лояльности",
-  "properties": {},
-  "title": "B2B Loyalty Program Announcement Banner Shown",
-  "type": "object"
-}

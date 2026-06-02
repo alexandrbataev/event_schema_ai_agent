@@ -1,6 +1,0 @@
-{
-  "description": "Пользователь нажал кнопку 'Смотреть каталог' на лид лендинге",
-  "properties": {},
-  "title": "B2B LeadLanding View Catalog Clicked",
-  "type": "object"
-}

@@ -1,7 +1,0 @@
-{
-  "description": "Нажатие на кнопку 'Продолжить' при добавлении нового адреса",
-  "properties": {},
-  "required": [],
-  "title": "Continue Address Selection Clicked",
-  "type": "object"
-}

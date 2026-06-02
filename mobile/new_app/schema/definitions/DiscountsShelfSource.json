@@ -1,8 +1,0 @@
-{
-  "title": "DiscountsShelfSource",
-  "description": "Источник просмотра полки со скидками",
-  "type": "string",
-  "enum": [
-    "category"
-  ]
-}

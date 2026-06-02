@@ -1,9 +1,0 @@
-{
-  "title": "RedirectSource",
-  "description": "Источник редиректа пользователя",
-  "type": "string",
-  "enum": [
-    "storefront",
-    "b2b_leadlanding"
-  ]
-}

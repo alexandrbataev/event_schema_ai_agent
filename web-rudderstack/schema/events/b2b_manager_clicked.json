@@ -1,7 +1,0 @@
-{
-  "description": "Клик по кнопке ваш менеджер для b2b клиента",
-  "properties": {},
-  "required": [],
-  "title": "B2B Manager Clicked",
-  "type": "object"
-}

@@ -1,7 +1,0 @@
-{
-  "description": "Срабатывает когда в чекауте введен промокод в поле \"Промокод\"",
-  "properties": {},
-  "title": "Checkout Promo Code Entered",
-  "type": "object"
-}
-

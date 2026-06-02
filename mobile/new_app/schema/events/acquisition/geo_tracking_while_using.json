@@ -1,7 +1,0 @@
-{
-  "description": "Разрешение на отслеживание геолокации во время использования приложения (для ios)",
-  "properties": {},
-  "required": [],
-  "title": "Geo Tracking While Using",
-  "type": "object"
-}

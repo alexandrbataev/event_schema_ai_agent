@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователь останавливает проверку по биометрии принудительно (закрывает приложение, модалку или жмет на 'прервать' или не дает разрешение на bluetooth/камеру",
-  "properties": {},
-  "required": [],
-  "title": "Biometrics Stop Bluetooth Connection",
-  "type": "object"
-}

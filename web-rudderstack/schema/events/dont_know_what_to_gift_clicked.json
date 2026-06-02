@@ -1,7 +1,0 @@
-{
-  "description": "срабатывает когда пользователь нажал на \"не знаю что подарить\" (переход на ввод данных) из формы конструктора",
-  "properties": {},
-  "title": "Don’t Know What To Gift Clicked",
-  "type": "object"
-}
-

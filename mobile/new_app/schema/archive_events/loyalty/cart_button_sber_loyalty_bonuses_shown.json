@@ -1,7 +1,0 @@
-{
-  "description": "Отображение поля с начислениями на кнопке 'Оформить заказ' в корзине (ответ с бэка), отправляется один раз за сессию",
-  "properties": {},
-  "required": [],
-  "title": "Cart Button Sber Loyalty Bonuses Shown",
-  "type": "object"
-}

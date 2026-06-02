@@ -1,6 +1,0 @@
-{
-  "description": "Пользователь закрыл модалку предзамен на крестик или на кнопку Готово",
-  "properties": {},
-  "title": "Pre Replacements Popup Closed",
-  "type": "object"
-}

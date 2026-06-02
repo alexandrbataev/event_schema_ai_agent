@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, при показе сообщения \"Тег уже занят\"",
-  "properties": {},
-  "required": [],
-  "title": "Address Tag Already Exists",
-  "type": "object"
-}

@@ -1,9 +1,0 @@
-
-{
-  "description": "Показана модалка с предложнием добавить карты по Sberwallet",
-  "properties": {},
-  "required": [],
-  "title": "Sberwallet Modal Viewed",
-  "type": "object"
-}
-

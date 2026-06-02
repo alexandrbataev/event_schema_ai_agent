@@ -1,7 +1,0 @@
-{
-  "description": "Срабатывает когда на главной главной b2b кликают на кнопку \"получить\" в баннере",
-  "properties": {},
-  "title": "Get Button Clicked On B2B Landing Banner",
-  "type": "object"
-}
-

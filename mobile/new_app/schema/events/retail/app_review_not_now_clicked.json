@@ -1,7 +1,0 @@
-{
-  "description": "Вызывается, когда пользователь нажимает на кнопку Позже на попапе Оцените приложение",
-  "properties": {},
-  "required": [],
-  "title": "App Review Not Now Clicked",
-  "type": "object"
-}

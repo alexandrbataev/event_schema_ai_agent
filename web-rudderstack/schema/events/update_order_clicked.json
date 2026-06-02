@@ -1,6 +1,0 @@
-{
-  "description": "Нажатие на Перенести в корзине при дозаказе товаров",
-  "properties": {},
-  "title": "Update Order Clicked",
-  "type": "object"
-}

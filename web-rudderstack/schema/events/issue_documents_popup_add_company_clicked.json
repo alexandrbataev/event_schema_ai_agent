@@ -1,7 +1,0 @@
-{
-  "description": "Срабатывает когда в попапе \"Оформить документы\"  нажали на \"Добавить компанию\"",
-  "properties": {},
-  "title": "Issue Documents Popup Add Company Clicked",
-  "type": "object"
-}
-

@@ -1,6 +1,0 @@
-{
-  "description": "Клиент кликнул на выбор магазинов с самовывозом, после того как ввел адрес вне зоны доставки",
-  "properties": {},
-  "title": "Address Undelivery Pickup Clicked",
-  "type": "object"
-}

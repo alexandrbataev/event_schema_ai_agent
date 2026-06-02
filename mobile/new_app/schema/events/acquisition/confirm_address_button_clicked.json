@@ -1,7 +1,0 @@
-{
-  "description": "Нажатие на кнопку 'Подтвердить адрес' в модальном окне 'По этому адресу из магазина доставить не получится'",
-  "properties": {},
-  "required": [],
-  "title": "Confirm Address Button Clicked",
-  "type": "object"
-}

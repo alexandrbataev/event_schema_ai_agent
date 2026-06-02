@@ -1,6 +1,0 @@
-{
-  "description": "Пользователь кликнул на баннер дозаказа в корзине",
-  "properties": {},
-  "title": "Dozakaz Banner Cart Clicked",
-  "type": "object"
-}

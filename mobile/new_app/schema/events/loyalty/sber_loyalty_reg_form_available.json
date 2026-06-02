@@ -1,6 +1,0 @@
-{
-  "description": "Каждый раз когда пользователю доступна шторка 'начните копить бонусы' на главном экране",
-  "properties": {},
-  "title": "Sber Loyalty Reg Form Available",
-  "type": "object"
-}

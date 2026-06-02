@@ -1,6 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователь закрывает модальное окно для ввода ИНН при регистрации компании",
-  "properties": {},
-  "title": "B2B INN Modal Dismissed",
-  "type": "object"
-}

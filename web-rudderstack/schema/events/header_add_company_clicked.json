@@ -1,6 +1,0 @@
-{
-  "description": "Клик по кнопке \"Добавить профиль компании\" в шапке b2b витрины",
-  "properties": {},
-  "title": "Header Add Company Clicked",
-  "type": "object"
-}

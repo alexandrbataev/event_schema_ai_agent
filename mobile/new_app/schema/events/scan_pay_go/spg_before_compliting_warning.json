@@ -1,6 +1,0 @@
-{
-  "description": "Открывается шторка Перед оформлением заказа",
-  "properties": {},
-  "title": "Spg Before Compliting Warning",
-  "type": "object"
-}

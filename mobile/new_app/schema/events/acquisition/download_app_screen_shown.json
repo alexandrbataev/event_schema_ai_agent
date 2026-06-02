@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователю показывается блокирующий экран с просьбой обновить приложение.",
-  "properties": {},
-  "required": [],
-  "title": "Download App Screen Shown",
-  "type": "object"
-}

@@ -1,7 +1,0 @@
-{
-  "description": "Пользователь перешел по ссылке с истекшей/недействительной пошаренной корзиной",
-  "properties": {},
-  "required": [],
-  "title": "Shared Cart Link Expired",
-  "type": "object"
-}

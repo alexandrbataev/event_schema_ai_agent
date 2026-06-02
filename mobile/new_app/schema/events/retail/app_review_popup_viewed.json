@@ -1,7 +1,0 @@
-{
-  "description": "Вызывается, когда пользователь увидел попап Что думаете о приложении",
-  "properties": {},
-  "required": [],
-  "title": "App Review Popup Viewed",
-  "type": "object"
-}

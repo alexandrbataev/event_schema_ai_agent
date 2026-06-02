@@ -1,6 +1,0 @@
-{
-  "description": "Клик на элемент 'Банковские карты' в профиле",
-  "properties": {},
-  "title": "Profile Bank Cards Button Clicked",
-  "type": "object"
-}

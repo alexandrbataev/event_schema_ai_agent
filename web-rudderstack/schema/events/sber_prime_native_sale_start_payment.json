@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз когда пользователь кликнул по кнопке 'Попробовать' в модалке СберПрайма",
-  "properties": {},
-  "required": [],
-  "title": "Sber Prime Button In Modal With Sale Clicked",
-  "type": "object"
-}

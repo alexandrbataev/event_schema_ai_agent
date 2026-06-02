@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователь открывает модалку с изменением слота доставки",
-  "properties": {},
-  "required": [],
-  "title": "Changing Order Details Delivery Time Modal Showed",
-  "type": "object"
-}

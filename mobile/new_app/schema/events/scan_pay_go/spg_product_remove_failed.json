@@ -1,6 +1,0 @@
-{
-  "description": "Показали ошибку, связанную с неуспешным удалением товара с QR кодом (честный знак) SPG",
-  "properties": {},
-  "title": "Spg Product Remove Failed",
-  "type": "object"
-}

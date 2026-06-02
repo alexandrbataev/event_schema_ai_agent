@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователь закрыл баннер любимая категория",
-  "properties": {},
-  "required": [],
-  "title": "Favorite Category Banner Closed",
-  "type": "object"
-}

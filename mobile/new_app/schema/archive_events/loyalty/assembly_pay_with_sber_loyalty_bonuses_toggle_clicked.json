@@ -1,7 +1,0 @@
-{
-  "description": "Тап на тоггл 'Оплатить сборку бонусами' на главной ритейлера",
-  "properties": {},
-  "required": [],
-  "title": "Assembly Pay With Sber Loyalty Bonuses Toggle Clicked",
-  "type": "object"
-}

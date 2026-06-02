@@ -1,7 +1,0 @@
-{
-  "description": "Вызывается, когда пользователь ввел неверный код из смс",
-  "properties": {},
-  "required": [],
-  "title": "BNPL SMS Code Error",
-  "type": "object"
-}

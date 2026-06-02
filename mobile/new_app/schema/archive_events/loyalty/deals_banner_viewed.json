@@ -1,8 +1,0 @@
-{
-  "description": "Срабатывает, когда пользователь видит баннер 'Все скидки здесь' на главной странице",
-  "properties": {},
-  "required": [],
-  "title": "Deals Banner Viewed",
-  "type": "object"
-}
-

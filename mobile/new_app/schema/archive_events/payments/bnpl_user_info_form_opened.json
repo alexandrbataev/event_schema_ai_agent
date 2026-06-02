@@ -1,7 +1,0 @@
-{
-  "description": "Вызывается, когда пользователь открыл форму ввода данных",
-  "properties": {},
-  "required": [],
-  "title": "BNPL User Info Form Opened",
-  "type": "object"
-}

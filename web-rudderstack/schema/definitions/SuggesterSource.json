@@ -1,9 +1,0 @@
-{
-  "title": "SuggesterSource",
-  "description": "Источник саджестера: search_regular - в обычном поиске, в межрите пока не реализован",
-  "type": "string",
-  "enum": [
-    "search_regular",
-    "ght660_cart"
-  ]
-}

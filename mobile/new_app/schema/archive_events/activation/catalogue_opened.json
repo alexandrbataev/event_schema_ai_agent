@@ -1,7 +1,0 @@
-{
-  "description": "Клик по Открыть каталог",
-  "properties": {},
-  "required": [],
-  "title": "Catalogue Opened",
-  "type": "object"
-}

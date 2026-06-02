@@ -1,6 +1,0 @@
-{
-  "description": "Юзер открыл приложение. Срабатывает и на холодный, и на горячий старт. Существует только на iOS, на Android вместо него в аналитике используется ивент Application Opened",
-  "properties": {},
-  "title": "App Opened",
-  "type": "object"
-}

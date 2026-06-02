@@ -1,6 +1,0 @@
-{
-  "description": "Тап по кнопке Добавить новую карту на чекауте при выборе способа оплаты Новой картой онлайн",
-  "properties": {},
-  "title": "Checkout Add New Card Button Clicked",
-  "type": "object"
-}

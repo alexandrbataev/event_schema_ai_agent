@@ -1,6 +1,0 @@
-{
-  "description": "Клик на кнопку 'Показать все товары' на полке с рекомендуемыми товарами Популярные",
-  "title": "Show All Items Clicked",
-  "type": "object",
-  "properties": {}
-}

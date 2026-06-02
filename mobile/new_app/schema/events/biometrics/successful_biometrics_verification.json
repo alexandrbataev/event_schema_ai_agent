@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, когда биометрия успешно проверена",
-  "properties": {},
-  "required": [],
-  "title": "Successful Biometrics Verification",
-  "type": "object"
-}

@@ -1,7 +1,0 @@
-{
-  "description": "Клик по кнопке Записаться онлайн в деталях о точке.",
-  "properties": {},
-  "required": [],
-  "title": "Services Nearby Book Clicked",
-  "type": "object"
-}

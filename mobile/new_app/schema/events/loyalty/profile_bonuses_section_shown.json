@@ -1,6 +1,0 @@
-{
-  "description": "Пользователю отображается раздел Бонусы в Профиле",
-  "properties": {},
-  "title": "Profile Bonuses Section Shown",
-  "type": "object"
-}

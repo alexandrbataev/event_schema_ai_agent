@@ -1,6 +1,0 @@
-{
-  "description": "Каждый раз при клике на иконку i на СберПрайм прогресс баре в корзине",
-  "properties": {},
-  "title": "Cart Sberprime Progress Bar Clicked",
-  "type": "object"
-}

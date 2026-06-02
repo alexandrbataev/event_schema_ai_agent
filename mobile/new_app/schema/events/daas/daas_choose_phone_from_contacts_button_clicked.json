@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователь на странице чекаута в daas нажимает на иконку телефона, чтобы указать номер телефона из списка контактов",
-  "properties": {},
-  "required": [],
-  "title": "Daas Choose Phone From Contacts Button Clicked",
-  "type": "object"
-}

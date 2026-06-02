@@ -1,7 +1,0 @@
-{
-  "description": "Успешная подписка счета через СБП",
-  "properties": {},
-  "required": [],
-  "title": "Sbp Subscription Activated",
-  "type": "object"
-}

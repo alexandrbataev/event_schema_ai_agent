@@ -1,6 +1,0 @@
-{
-  "description": "Срабатывает каждый раз когда пользователь нажимает на \"Повторить заказ\"",
-  "properties": {},
-  "title": "B2B Landing Repeat Order Clicked",
-  "type": "object"
-}

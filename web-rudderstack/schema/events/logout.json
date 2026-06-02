@@ -1,6 +1,0 @@
-{
-  "description": "Разлогин пользователя из сервиса",
-  "properties": {},
-  "title": "Logout",
-  "type": "object"
-}

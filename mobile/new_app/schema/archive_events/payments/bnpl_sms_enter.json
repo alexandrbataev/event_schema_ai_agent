@@ -1,7 +1,0 @@
-{
-  "description": "Вызывается, когда пользователь начал вводить код",
-  "properties": {},
-  "required": [],
-  "title": "BNPL SMS Enter",
-  "type": "object"
-}

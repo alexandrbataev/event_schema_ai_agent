@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, когда номер телефона успешно подтягивается из списка контактов",
-  "properties": {},
-  "required": [],
-  "title": "Daas Phone From Contacts Inserted",
-  "type": "object"
-}

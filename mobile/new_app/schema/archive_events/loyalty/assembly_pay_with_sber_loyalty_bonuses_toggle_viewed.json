@@ -1,7 +1,0 @@
-{
-  "description": "Отображение тоггла 'Оплатить сборку бонусами' на главной ритейлера, отправляется один раз за сессию",
-  "properties": {},
-  "required": [],
-  "title": "Assembly Pay With Sber Loyalty Bonuses Toggle Viewed",
-  "type": "object"
-}

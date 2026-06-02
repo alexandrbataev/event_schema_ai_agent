@@ -1,7 +1,0 @@
-{
-  "description": "При ошибке привязки адреса к SberID и отправке сообщения \"Не получилось привязать адрес к Сбер ID. Попробуйте еще раз позже\"",
-  "properties": {},
-  "required": [],
-  "title": "SberID Address Link Error",
-  "type": "object"
-}

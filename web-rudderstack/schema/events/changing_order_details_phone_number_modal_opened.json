@@ -1,6 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователь открывает модалку с изменением номера телефона на экране активного заказа после оформления",
-  "properties": {},
-  "title": "Changing Order Details Phone Number Modal Opened",
-  "type": "object"
-}

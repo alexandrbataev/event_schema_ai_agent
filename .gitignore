@@ -17,3 +17,6 @@ dist/
 build/
 coverage/
 *.log
+
+web-rudderstack/
+mobile/

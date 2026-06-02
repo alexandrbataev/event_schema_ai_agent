@@ -1,7 +1,0 @@
-{
-  "description": "Срабатывает когда открылся попап \"Оформить документы\"",
-  "properties": {},
-  "title": "Issue Documents Popup Viewed",
-  "type": "object"
-}
-

@@ -1,7 +1,0 @@
-{
-  "description": "Клик на кнопку 'Назад' на карте выбора адреса",
-  "properties": {},
-  "required": [],
-  "title": "Address Change Closed",
-  "type": "object"
-}

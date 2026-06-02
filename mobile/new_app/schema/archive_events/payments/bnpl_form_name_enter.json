@@ -1,7 +1,0 @@
-{
-  "description": "Вызывается, когда пользователь ввел фио",
-  "properties": {},
-  "required": [],
-  "title": "BNPL Form Name Enter",
-  "type": "object"
-}

@@ -1,6 +1,0 @@
-{
-  "description": "Нажатие кнопки Подключить ЭДО",
-  "properties": {},
-  "title": "B2B Connect EDC Button Clicked",
-  "type": "object"
-}

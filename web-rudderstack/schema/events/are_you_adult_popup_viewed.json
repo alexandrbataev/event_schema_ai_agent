@@ -1,6 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователь видит  попап 'Вам есть 18 лет'",
-  "properties": {},
-  "title": "Are You Adult Popup Viewed",
-  "type": "object"
-}

@@ -1,7 +1,0 @@
-{
-  "description": "срабатывает когда пользователь нажал \"собрать подарки\" из popup с предложением конструктора",
-  "properties": {},
-  "title": "Constructor Clicked",
-  "type": "object"
-}
-

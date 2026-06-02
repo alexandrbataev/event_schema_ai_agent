@@ -1,6 +1,0 @@
-{
-  "description": "Клик по элементу Банковские карты во внутреннем меню Профиля",
-  "properties": {},
-  "title": "Profile Menu Cards Button Clicked",
-  "type": "object"
-}

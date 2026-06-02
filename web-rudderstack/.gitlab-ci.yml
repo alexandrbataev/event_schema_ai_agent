@@ -1,4 +1,0 @@
-include:
-  - project: 'analytics/event-schema/event-schema-ci'
-    ref: $SCHEMA_CI_VERSION
-    file: web.yml

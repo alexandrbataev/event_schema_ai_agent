@@ -1,7 +1,0 @@
-{
-  "description": "Клик по сайтам соц. сетей в разделе Сайты и соц.сети в деталях о точке.",
-  "properties": {},
-  "required": [],
-  "title": "Services Nearby Networks Clicked",
-  "type": "object"
-}

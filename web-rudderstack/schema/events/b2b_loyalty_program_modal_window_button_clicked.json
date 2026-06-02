@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователь кликает на модальном окне с условиями на кнопку подробнее",
-  "properties": {},
-  "title": "B2B Loyalty Program Modal Window Button Clicked",
-  "type": "object"
-}
-  

@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователь видит таб любимая категория в лк (участник лоялити)",
-  "properties": {},
-  "required": [],
-  "title": "Favorite Category Tab Viewed",
-  "type": "object"
-}

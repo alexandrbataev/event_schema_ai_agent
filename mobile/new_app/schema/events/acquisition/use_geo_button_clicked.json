@@ -1,7 +1,0 @@
-{
-  "description": "Клик на кнопку 'Использовать геопозицию' на экране онбординга после скачивания приложения",
-  "properties": {},
-  "required": [],
-  "title": "Use Geo Button Clicked",
-  "type": "object"
-}

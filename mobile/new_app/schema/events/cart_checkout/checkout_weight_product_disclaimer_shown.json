@@ -1,7 +1,0 @@
-{
-  "description": "Отправляем каждый раз при показе дисклеймера на чекауте о том, что в заказе есть весовые товары, стоимость заказа после сборки может измениться",
-  "properties": {},
-  "required": [],
-  "title": "Checkout Weight Product Disclaimer Shown",
-  "type": "object"
-}

@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователь видит баннер с предложением скачать новую версию приложения",
-  "properties": {},
-  "required": [],
-  "title": "Download App Banner Viewed",
-  "type": "object"
-}

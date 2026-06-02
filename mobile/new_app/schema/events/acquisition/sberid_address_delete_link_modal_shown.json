@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, при показе модалки \"Удалить адрес из Сбер ID\"",
-  "properties": {},
-  "required": [],
-  "title": "SberID Address Delete Link Modal Shown",
-  "type": "object"
-}

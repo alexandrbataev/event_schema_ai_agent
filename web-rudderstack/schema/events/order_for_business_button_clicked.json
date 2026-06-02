@@ -1,6 +1,0 @@
-{
-  "description": "Нажата кнопка \"Покупайте для бизнеса\" в шапке в любом месте кроме лендинга",
-  "properties": {},
-  "title": "Order for Business Button Clicked",
-  "type": "object"
-}

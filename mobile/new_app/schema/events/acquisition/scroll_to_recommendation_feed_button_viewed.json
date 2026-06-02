@@ -1,7 +1,0 @@
-{
-  "description": "Показ кнопки 'А тут не только продукты' ",
-  "properties": {},
-  "required": [],
-  "title": "Scroll To Recommendation Feed Button Viewed",
-  "type": "object"
-}

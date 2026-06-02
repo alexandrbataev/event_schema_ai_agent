@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, при показе модалки \"Удалить тег?\"",
-  "properties": {},
-  "required": [],
-  "title": "Address Tag Delete Modal Shown",
-  "type": "object"
-}

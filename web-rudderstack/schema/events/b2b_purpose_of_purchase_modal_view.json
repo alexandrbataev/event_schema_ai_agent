@@ -1,6 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователю отрисовывается модальное окно с выбором цели закупки",
-  "properties": {},
-  "title": "B2B Purpose Of Purchase Modal View",
-  "type": "object"
-}

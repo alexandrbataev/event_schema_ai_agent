@@ -1,6 +1,0 @@
-{
-  "description": "Клик по элементу Банковские карты в меню профиля в хедере",
-  "properties": {},
-  "title": "Header Profile Menu Cards Button Clicked",
-  "type": "object"
-}

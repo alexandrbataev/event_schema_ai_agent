@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователь открывает информацию о биометрии на чекауте",
-  "properties": {},
-  "required": [],
-  "title": "Checkout Biometrics Info Viewed",
-  "type": "object"
-}

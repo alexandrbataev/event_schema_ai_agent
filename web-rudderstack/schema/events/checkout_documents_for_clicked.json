@@ -1,7 +1,0 @@
-{
-  "description": "Срабатывает когда в чекауте кликают на выпадающий список (попап с компаниями) \"Документы для…\"",
-  "properties": {},
-  "title": "Checkout Documents For Clicked",
-  "type": "object"
-}
-

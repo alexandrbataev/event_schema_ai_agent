@@ -1,6 +1,0 @@
-{
-  "description": "Срабатывает когда на главной б2б нажимают на кнопку \"Позвоните мне\" в блоке \"Консультация менеджера\"",
-  "properties": {},
-  "title": "B2B Landing Manager Call Clicked",
-  "type": "object"
-}

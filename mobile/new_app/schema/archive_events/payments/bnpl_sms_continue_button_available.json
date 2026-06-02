@@ -1,7 +1,0 @@
-{
-  "description": "Вызывается, если кнопка продолжить стала доступна",
-  "properties": {},
-  "required": [],
-  "title": "BNPL SMS Continue Button Available",
-  "type": "object"
-}

@@ -1,6 +1,0 @@
-{
-  "description": "Каждый раз, когда отработал callback от SDK об обновлении cookie",
-  "properties": {},
-  "title": "SberID Cookie Updated",
-  "type": "object"
-}

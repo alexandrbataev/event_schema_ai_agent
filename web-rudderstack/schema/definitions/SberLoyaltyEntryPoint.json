@@ -1,8 +1,0 @@
-{
-  "title": "SberLoyaltyEntryPoint",
-  "description": "Источник открытия модалки регистрации в Sber ID/СберЛоялти",
-  "type": "string",
-  "enum": [
-    "order_completed_spasibo"
-  ]
-}

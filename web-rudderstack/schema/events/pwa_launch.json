@@ -1,6 +1,0 @@
-{
-  "description": "Событие запуска приложения в режиме PWA",
-  "properties": {},
-  "title": "PWA launch",
-  "type": "object"
-}

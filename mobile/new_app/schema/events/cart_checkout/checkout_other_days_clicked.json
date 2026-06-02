@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователь нажимает на Другие дни при выборе слотов (новый чекаут)",
-  "properties": {},
-  "required": [],
-  "title": "Checkout Other Days Clicked",
-  "type": "object"
-}

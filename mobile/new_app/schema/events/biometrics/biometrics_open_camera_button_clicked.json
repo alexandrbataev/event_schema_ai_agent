@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, при клика по кнопке 'Открыть камеру' на постчекауте",
-  "properties": {},
-  "required": [],
-  "title": "Biometrics Open Camera Button Clicked",
-  "type": "object"
-}

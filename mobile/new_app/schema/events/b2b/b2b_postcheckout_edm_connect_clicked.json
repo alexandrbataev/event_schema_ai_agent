@@ -1,7 +1,0 @@
-{
-  "description": "Нажата кнопка \"Подключить\" в шторке подключения ЭДО на постчекауте",
-  "properties": {},
-  "required": [],
-  "title": "B2B Postcheckout EDM Connect Clicked",
-  "type": "object"
-}

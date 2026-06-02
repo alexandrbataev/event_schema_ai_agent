@@ -1,7 +1,0 @@
-{
-  "description": "Нажата кнопка \"Связаться\" в ЛК B2B",
-  "properties": {},
-  "required": [],
-  "title": "B2B Manager Clicked",
-  "type": "object"
-}

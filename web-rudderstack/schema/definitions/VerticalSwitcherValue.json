@@ -1,9 +1,0 @@
-{
-  "title": "VerticalSwitcherValue",
-  "description": "Какая из верхних вертикалей выбрана (shops, restaurants)",
-  "type": "string",
-  "enum": [
-    "shops",
-    "restaurants"
-  ]
-}

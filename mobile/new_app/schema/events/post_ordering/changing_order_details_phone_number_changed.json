@@ -1,6 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователь успешно изменил номер телефона на экране активного заказа после оформления",
-  "properties": {},
-  "title": "Changing Order Details Phone Number Changed",
-  "type": "object"
-}

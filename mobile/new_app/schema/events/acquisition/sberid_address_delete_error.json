@@ -1,7 +1,0 @@
-{
-  "description": "При отправке сообщения \"Не получилось удалить адрес из SberID. Попробуйте еще раз позже\"",
-  "properties": {},
-  "required": [],
-  "title": "SberID Address Delete Error",
-  "type": "object"
-}

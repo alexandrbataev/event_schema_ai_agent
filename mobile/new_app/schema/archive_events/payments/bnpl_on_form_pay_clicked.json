@@ -1,7 +1,0 @@
-{
-  "description": "Вызывается, когда пользователь нажимает кнопку Оплатить после введения данных в форме (фио и дата рождения)",
-  "properties": {},
-  "required": [],
-  "title": "BNPL On Form Pay Clicked",
-  "type": "object"
-}

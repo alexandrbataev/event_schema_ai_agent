@@ -1,6 +1,0 @@
-{
-  "description": "Срабатывает, когда у пользователя запрашивается разрешение на геопозицию",
-  "properties": {},
-  "title": "Geo Allow Viewed",
-  "type": "object"
-}

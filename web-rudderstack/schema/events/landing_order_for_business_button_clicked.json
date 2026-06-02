@@ -1,6 +1,0 @@
-{
-  "description": "Нажата кнопка “Для бизнеса“ в шапке на лендинге",
-  "properties": {},
-  "title": "Landing Order for Business Button Clicked",
-  "type": "object"
-}

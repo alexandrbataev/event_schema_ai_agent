@@ -1,7 +1,0 @@
-{
-  "description": "Клик на График работы в деталях о точке.",
-  "properties": {},
-  "required": [],
-  "title": "Services Nearby Opening Hours Clicked",
-  "type": "object"
-}

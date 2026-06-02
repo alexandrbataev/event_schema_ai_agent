@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, при показе модалки \"Адрес в Сбер ID\"",
-  "properties": {},
-  "required": [],
-  "title": "SberID Address Modal Shown",
-  "type": "object"
-}

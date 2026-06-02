@@ -1,7 +1,0 @@
-{
-  "description": "Тап на тоггл регистрации в СберЛоялти на чекауте, отправляется единожды за сессию",
-  "properties": {},
-  "required": [],
-  "title": "Checkout Sber Loyalty Reg Toggle Clicked",
-  "type": "object"
-}

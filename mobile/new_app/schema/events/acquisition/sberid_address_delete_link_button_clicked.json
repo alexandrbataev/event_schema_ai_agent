@@ -1,7 +1,0 @@
-{
-  "description": "При клике на кнопку \"Отвязать\" в модалке \"Удалить адрес из Сбер ID\"",
-  "properties": {},
-  "required": [],
-  "title": "SberID Address Delete Link Button Clicked",
-  "type": "object"
-}

@@ -1,6 +1,0 @@
-{
-  "description": "Пользователь кликает на кнопку 'Как работает самовывоз' на экране с выбором ритейлера самовывоза",
-  "properties": {},
-  "title": "Instruction Pickup Button Clicked",
-  "type": "object"
-}

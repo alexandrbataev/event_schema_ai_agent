@@ -1,6 +1,0 @@
-{
-  "description": "Клик на элемент 'Оценить приложение' в профиле",
-  "properties": {},
-  "title": "Profile App Rate Button Clicked",
-  "type": "object"
-}

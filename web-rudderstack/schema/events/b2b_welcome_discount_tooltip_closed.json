@@ -1,6 +1,0 @@
-{
-  "description": "Каждый раз, когда авторизованный пользователь закрывает тултип с сообщением о доступности скидки 20% на первый заказ",
-  "properties": {},
-  "title": "B2B Welcome Discount Tooltip Closed",
-  "type": "object"
-}

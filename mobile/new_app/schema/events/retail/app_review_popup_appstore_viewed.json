@@ -1,7 +1,0 @@
-{
-  "description": "Вызывается, когда пользователь увидел попап оценки приложения с редиректом в AppStore",
-  "properties": {},
-  "required": [],
-  "title": "App Review Popup AppStore Viewed",
-  "type": "object"
-}

@@ -1,7 +1,0 @@
-{
-  "description": "Событие приходит каждый раз, когда пользователь заходит на business.kuper.ru и только тем, кто находится в контрольной группе по АБ-тесту",
-  "properties": {},
-  "required": [],
-  "title": "B2B Showcase Viewed",
-  "type": "object"
-}

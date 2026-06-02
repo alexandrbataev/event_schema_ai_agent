@@ -1,7 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователь видит баннер",
-  "properties": {},
-  "title": "Free Delivery Banner Viewed",
-  "type": "object"
-}
-

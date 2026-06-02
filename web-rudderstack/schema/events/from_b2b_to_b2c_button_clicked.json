@@ -1,6 +1,0 @@
-{
-  "description": "Каждый раз, когда пользователь кликает по 'Покупки для себя'",
-  "properties": {},
-  "title": "From B2B to B2C Button Clicked",
-  "type": "object"
-}

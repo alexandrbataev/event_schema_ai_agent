@@ -15,7 +15,7 @@ Streamlit-приложение, которое помогает аналитик
 ### 1. Клонировать репозиторий
 
 ```bash
-git clone git@github.com:alexandrbataev/event_schema_ai_agent.git
+git clone git@github.com:alexandrbataev/event_schema_ai_agent.git event-schema
 cd event-schema
 ```
 
